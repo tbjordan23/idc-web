@@ -1,0 +1,18 @@
+import type { Metadata } from "next"
+import { generatePageMetadata } from "@/lib/metadata"
+
+export const metadata: Metadata = generatePageMetadata({
+  title: "Contact Instructional Design Central",
+  description:
+    "Get in touch with the Instructional Design Central team. We'd love to hear from you.",
+  path: "/contactinstructionaldesigncentral",
+})
+
+export default function ContactPage() {
+  return (
+    <section className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:px-8">
+      <h1 className="text-4xl font-bold text-idc-primary">Contact Us</h1>
+      <p className="mt-4 text-gray-600">Placeholder content — migrate from Wix.</p>
+    </section>
+  )
+}
