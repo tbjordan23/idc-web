@@ -21,23 +21,23 @@ export default function Hero({
     <section className="border-b border-edge bg-canvas px-4 py-20 sm:px-6 lg:px-8">
       <div className={`mx-auto max-w-4xl ${centered ? "text-center" : ""}`}>
         {eyebrow && (
-          <p className="mb-4 text-xs font-bold uppercase tracking-widest text-accent">
+          <p className="hero-animate mb-4 text-xs font-bold uppercase tracking-widest text-accent">
             {eyebrow}
           </p>
         )}
         <h1
-          className="font-extrabold tracking-tight text-copy"
+          className="hero-animate hero-animate-delay-1 font-extrabold tracking-tight text-copy"
           style={{ fontSize: "clamp(32px,5vw,46px)", letterSpacing: "-0.075rem", lineHeight: 1.1 }}
         >
           {title}
         </h1>
         {subtitle && (
-          <p className={`mt-5 max-w-2xl text-lg font-medium text-copy-muted ${centered ? "mx-auto" : ""}`}>
+          <p className={`hero-animate hero-animate-delay-2 mt-5 max-w-2xl text-lg font-medium text-copy-muted ${centered ? "mx-auto" : ""}`}>
             {subtitle}
           </p>
         )}
         {(cta || secondaryCta) && (
-          <div className={`mt-10 flex flex-wrap gap-3 ${centered ? "justify-center" : ""}`}>
+          <div className={`hero-animate hero-animate-delay-3 mt-10 flex flex-wrap gap-3 ${centered ? "justify-center" : ""}`}>
             {cta && (
               <Link
                 href={cta.href}

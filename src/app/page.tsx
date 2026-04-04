@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import Hero from "@/components/ui/Hero"
 import Card from "@/components/ui/Card"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -66,7 +67,7 @@ export default function HomePage() {
 
       {/* Courses section */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between">
+        <ScrollReveal className="flex items-end justify-between">
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-accent">Courses</p>
             <h2
@@ -82,10 +83,12 @@ export default function HomePage() {
           >
             All courses →
           </Link>
-        </div>
+        </ScrollReveal>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          {featuredCourses.map((course) => (
-            <Card key={course.href} {...course} variant="course" />
+          {featuredCourses.map((course, i) => (
+            <ScrollReveal key={course.href} delay={(i + 1) as 1 | 2} className="h-full">
+              <Card {...course} variant="course" />
+            </ScrollReveal>
           ))}
         </div>
       </section>
@@ -93,16 +96,20 @@ export default function HomePage() {
       {/* Resources section */}
       <section className="border-y border-edge bg-surface py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-widest text-accent">Resources</p>
-          <h2
-            className="mt-2 font-extrabold tracking-tight text-copy"
-            style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
-          >
-            Free Tools &amp; Resources
-          </h2>
+          <ScrollReveal>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Resources</p>
+            <h2
+              className="mt-2 font-extrabold tracking-tight text-copy"
+              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+            >
+              Free Tools &amp; Resources
+            </h2>
+          </ScrollReveal>
           <div className="mt-8 grid gap-4 sm:grid-cols-3">
-            {featuredResources.map((resource) => (
-              <Card key={resource.href} {...resource} variant="resource" />
+            {featuredResources.map((resource, i) => (
+              <ScrollReveal key={resource.href} delay={(i + 1) as 1 | 2 | 3} className="h-full">
+                <Card {...resource} variant="resource" />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -110,24 +117,26 @@ export default function HomePage() {
 
       {/* Community CTA */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
-          <p className="text-xs font-bold uppercase tracking-widest text-accent">Community</p>
-          <h2
-            className="mx-auto mt-3 max-w-xl font-extrabold tracking-tight text-copy"
-            style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
-          >
-            Join the IDC Community
-          </h2>
-          <p className="mx-auto mt-4 max-w-lg text-base font-medium text-copy-muted">
-            Connect with instructional designers worldwide. Share ideas, get feedback, and grow your career.
-          </p>
-          <Link
-            href="/instructionaldesigncommunity"
-            className="mt-8 inline-block rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
-          >
-            Join for Free →
-          </Link>
-        </div>
+        <ScrollReveal>
+          <div className="rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Community</p>
+            <h2
+              className="mx-auto mt-3 max-w-xl font-extrabold tracking-tight text-copy"
+              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+            >
+              Join the IDC Community
+            </h2>
+            <p className="mx-auto mt-4 max-w-lg text-base font-medium text-copy-muted">
+              Connect with instructional designers worldwide. Share ideas, get feedback, and grow your career.
+            </p>
+            <Link
+              href="/instructionaldesigncommunity"
+              className="mt-8 inline-block rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+            >
+              Join for Free →
+            </Link>
+          </div>
+        </ScrollReveal>
       </section>
     </>
   )
