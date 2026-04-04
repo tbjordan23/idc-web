@@ -37,6 +37,11 @@ const config: Config = {
           navy: "#2b4171",
           orange: "#f26522",
           gray: "#a0a1a3",
+          blue: "#2e4057",
+        },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          glow: "var(--secondary-glow)",
         },
       },
       fontFamily: {

@@ -94,7 +94,7 @@ export default function HomePage() {
       </section>
 
       {/* Resources section */}
-      <section className="border-y border-edge bg-surface py-16">
+      <section className="border-y border-edge bg-surface py-16" style={{ backgroundImage: "linear-gradient(135deg, rgba(46,64,87,0.06) 0%, transparent 60%)" }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <p className="text-xs font-bold uppercase tracking-widest text-accent">Resources</p>
@@ -118,7 +118,7 @@ export default function HomePage() {
       {/* Community CTA */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <div className="rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
+          <div className="rounded-card border border-idc-blue/20 bg-surface-2 p-10 text-center shadow-card" style={{ backgroundImage: "linear-gradient(135deg, rgba(46,64,87,0.08) 0%, transparent 50%)" }}>
             <p className="text-xs font-bold uppercase tracking-widest text-accent">Community</p>
             <h2
               className="mx-auto mt-3 max-w-xl font-extrabold tracking-tight text-copy"
