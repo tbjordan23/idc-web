@@ -49,7 +49,7 @@ export default function Hero({
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="rounded-lg bg-idc-blue px-6 py-3 text-sm font-semibold text-white transition-all hover:brightness-110"
+                className="rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted transition-colors hover:border-edge-hover hover:text-copy"
               >
                 {secondaryCta.label}
               </Link>

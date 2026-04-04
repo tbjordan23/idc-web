@@ -12,7 +12,7 @@ interface CardProps {
 export default function Card({ title, description, href, tag, date, variant = "blog" }: CardProps) {
   const tagColors = {
     course: "bg-[var(--accent-glow)] text-accent",
-    resource: "bg-secondary/15 text-accent-2",
+    resource: "bg-[rgba(74,123,196,0.15)] text-accent-2",
     blog: "bg-surface-2 text-copy-muted",
   }[variant]
 
