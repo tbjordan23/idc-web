@@ -17,7 +17,7 @@ export default function ThemeToggle() {
     )
   }
 
-  const isDark = theme === "dark" || theme === ""
+  const isDark = theme === "dark"
 
   return (
     <button

@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 /* ─── Theme tokens ──────────────────────────────────────────────────────────── */
-:root {
+:root,
+.dark {
   /* Dark mode (default) — navy-tinted near-black */
   --bg: #0a0d12;
   --surface: #11151c;
