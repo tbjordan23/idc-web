@@ -15,7 +15,7 @@ export default function ScrollReveal({
   delay = 0,
   as: Tag = "div",
 }: ScrollRevealProps) {
-  const ref = useRef<HTMLElement>(null)
+  const ref = useRef<HTMLElement | null>(null)
 
   useEffect(() => {
     const el = ref.current
@@ -39,7 +39,7 @@ export default function ScrollReveal({
 
   return (
     <Tag
-      ref={ref as any}
+      ref={(el: HTMLElement | null) => { ref.current = el }}
       className={`reveal ${delayClass} ${className}`.trim()}
     >
       {children}
