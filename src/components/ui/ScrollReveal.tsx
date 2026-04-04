@@ -6,16 +6,14 @@ interface ScrollRevealProps {
   children: React.ReactNode
   className?: string
   delay?: 0 | 1 | 2 | 3 | 4
-  as?: keyof JSX.IntrinsicElements
 }
 
 export default function ScrollReveal({
   children,
   className = "",
   delay = 0,
-  as: Tag = "div",
 }: ScrollRevealProps) {
-  const ref = useRef<HTMLElement | null>(null)
+  const ref = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const el = ref.current
@@ -38,11 +36,11 @@ export default function ScrollReveal({
   const delayClass = delay > 0 ? `reveal-delay-${delay}` : ""
 
   return (
-    <Tag
-      ref={(el: HTMLElement | null) => { ref.current = el }}
+    <div
+      ref={ref}
       className={`reveal ${delayClass} ${className}`.trim()}
     >
       {children}
-    </Tag>
+    </div>
   )
 }
