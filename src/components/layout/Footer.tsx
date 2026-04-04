@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import NewsletterForm from "@/components/ui/NewsletterForm"
 
 const footerLinks = {
@@ -128,9 +129,12 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-edge pt-8 sm:flex-row">
-          <p className="text-xs font-medium text-copy-dim">
-            &copy; {new Date().getFullYear()} Instructional Design Central, LLC. All rights reserved.
-          </p>
+          <div className="flex items-center gap-2">
+            <Image src="/idc-logo.png" alt="IDC logo" width={20} height={20} className="h-5 w-5 object-contain" />
+            <p className="text-xs font-medium text-copy-dim">
+              &copy; {new Date().getFullYear()} Instructional Design Central, LLC. All rights reserved.
+            </p>
+          </div>
           <div className="flex items-center gap-3">
             {socialLinks.map((link) => (
               <a
