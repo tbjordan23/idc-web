@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import Hero from "@/components/ui/Hero"
+import HomeHero from "@/components/ui/HomeHero"
 import Card from "@/components/ui/Card"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
@@ -57,13 +57,7 @@ const featuredResources = [
 export default function HomePage() {
   return (
     <>
-      <Hero
-        eyebrow="Welcome to IDC"
-        title="Instructional Design Central"
-        subtitle="Helping course designers create brilliant learning experiences — online courses, community, and professional resources."
-        cta={{ label: "Explore Courses →", href: "/instructional-design-courses" }}
-        secondaryCta={{ label: "Join the Community", href: "/instructionaldesigncommunity" }}
-      />
+      <HomeHero />
 
       {/* Courses section */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">

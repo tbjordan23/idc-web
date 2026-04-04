@@ -19,6 +19,7 @@
   --accent-hover: #d4551c;
   --accent-2: #4a7bc4;
   --heading: #4a7bc4;
+  --dot-texture: rgba(255, 255, 255, 0.04);
   --nav-bg: rgba(10, 13, 18, 0.85);
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
@@ -37,6 +38,7 @@
   --accent-hover: #c44d14;
   --accent-2: #2b4171;
   --heading: #2e4057;
+  --dot-texture: rgba(46, 64, 87, 0.055);
   --nav-bg: rgba(255, 255, 255, 0.88);
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
@@ -105,3 +107,21 @@
 .hero-animate-delay-1 { animation-delay: 0.1s; }
 .hero-animate-delay-2 { animation-delay: 0.22s; }
 .hero-animate-delay-3 { animation-delay: 0.38s; }
+
+/* ─── Illustration float + pulse animations ─────────────────────────────── */
+@keyframes illus-float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-9px); }
+}
+@keyframes illus-pulse {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50%       { opacity: 0.9;  transform: scale(1.3); }
+}
+
+.illus-float   { animation: illus-float 4s   ease-in-out infinite;       transform-box: fill-box; transform-origin: center; }
+.illus-float-2 { animation: illus-float 5s   ease-in-out infinite 0.8s;  transform-box: fill-box; transform-origin: center; }
+.illus-float-3 { animation: illus-float 4.5s ease-in-out infinite 1.4s;  transform-box: fill-box; transform-origin: center; }
+.illus-float-4 { animation: illus-float 5.5s ease-in-out infinite 0.3s;  transform-box: fill-box; transform-origin: center; }
+.illus-pulse   { animation: illus-pulse 2.5s ease-in-out infinite;        transform-box: fill-box; transform-origin: center; }
+.illus-pulse-2 { animation: illus-pulse 3s   ease-in-out infinite 0.7s;  transform-box: fill-box; transform-origin: center; }
+.illus-pulse-3 { animation: illus-pulse 2.2s ease-in-out infinite 1.2s;  transform-box: fill-box; transform-origin: center; }
