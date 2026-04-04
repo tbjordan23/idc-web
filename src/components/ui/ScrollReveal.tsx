@@ -39,7 +39,7 @@ export default function ScrollReveal({
 
   return (
     <Tag
-      ref={ref as React.RefObject<HTMLDivElement>}
+      ref={ref as any}
       className={`reveal ${delayClass} ${className}`.trim()}
     >
       {children}
