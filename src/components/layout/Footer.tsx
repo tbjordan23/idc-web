@@ -84,7 +84,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-edge bg-surface">
       {/* Newsletter band */}
-      <div className="border-b border-edge">
+      <div className="border-b border-edge" style={{ backgroundImage: "linear-gradient(135deg, rgba(46,64,87,0.07) 0%, transparent 50%)" }}>
         <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
