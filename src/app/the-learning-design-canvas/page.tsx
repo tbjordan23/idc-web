@@ -12,9 +12,9 @@ export const metadata: Metadata = generatePageMetadata({
 export default function LearningDesignCanvas() {
   return (
     <>
-      <Hero title="The Learning Design Canvas" background="primary" />
+      <Hero title="The Learning Design Canvas" />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-gray-600">Placeholder — canvas download and content will appear here.</p>
+        <p className="text-copy-muted">Placeholder — canvas download and content will appear here.</p>
       </section>
     </>
   )

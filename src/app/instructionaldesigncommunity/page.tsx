@@ -16,10 +16,10 @@ export default function CommunityPage() {
         title="Instructional Design Community"
         subtitle="Connect with instructional designers from around the world."
         cta={{ label: "Join for Free", href: "https://instructional-design-central.mn.co/" }}
-        background="primary"
+       
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-gray-600">Placeholder content — migrate from Wix.</p>
+        <p className="text-copy-muted">Placeholder content — migrate from Wix.</p>
       </section>
     </>
   )

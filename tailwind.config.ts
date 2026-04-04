@@ -6,40 +6,55 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // dark mode is handled via .light class (dark is :root default)
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
+        // ── Theme-aware (CSS custom properties) ──────────────────────────
+        canvas: "var(--bg)",
+        surface: {
+          DEFAULT: "var(--surface)",
+          2: "var(--surface-2)",
+        },
+        edge: {
+          DEFAULT: "var(--border)",
+          hover: "var(--border-hover)",
+        },
+        copy: {
+          DEFAULT: "var(--text)",
+          muted: "var(--text-muted)",
+          dim: "var(--text-dim)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          hover: "var(--accent-hover)",
+          glow: "var(--accent-glow)",
+          2: "var(--accent-2)",
+        },
+        // ── Static IDC brand ─────────────────────────────────────────────
         idc: {
-          primary: {
-            DEFAULT: "#1a3a5c",
-            50: "#edf2f7",
-            100: "#d3e0ed",
-            200: "#a8c2db",
-            300: "#7da3c9",
-            400: "#5285b7",
-            500: "#2e6699",
-            600: "#1a3a5c",
-            700: "#142d47",
-            800: "#0e2133",
-            900: "#07141f",
-          },
-          accent: {
-            DEFAULT: "#0d9488",
-            50: "#f0fdfa",
-            100: "#ccfbf1",
-            200: "#99f6e4",
-            300: "#5eead4",
-            400: "#2dd4bf",
-            500: "#14b8a6",
-            600: "#0d9488",
-            700: "#0f766e",
-            800: "#115e59",
-            900: "#134e4a",
-          },
+          navy: "#2b4171",
+          orange: "#f26522",
+          gray: "#a0a1a3",
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ["var(--font-inter)", "-apple-system", "sans-serif"],
+      },
+      fontSize: {
+        "display": ["46px", { lineHeight: "1.1", letterSpacing: "-0.075rem", fontWeight: "800" }],
+        "heading": ["34px", { lineHeight: "1.15", letterSpacing: "-0.05rem", fontWeight: "800" }],
+      },
+      boxShadow: {
+        card: "var(--shadow)",
+        "card-hover": "0 16px 48px rgba(0,0,0,0.6)",
+      },
+      borderRadius: {
+        card: "12px",
+      },
+      backdropBlur: {
+        nav: "12px",
       },
     },
   },

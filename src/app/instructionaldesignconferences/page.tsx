@@ -12,9 +12,9 @@ export const metadata: Metadata = generatePageMetadata({
 export default function ConferencesPage() {
   return (
     <>
-      <Hero title="Top Instructional Design Conferences" background="primary" />
+      <Hero title="Top Instructional Design Conferences" />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-gray-600">Placeholder — conference list will appear here.</p>
+        <p className="text-copy-muted">Placeholder — conference list will appear here.</p>
       </section>
     </>
   )

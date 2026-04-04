@@ -15,11 +15,11 @@ export default function AboutPage() {
       <Hero
         title="About IDC"
         subtitle="Our mission is to help course designers create brilliant learning experiences."
-        background="primary"
+       
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <h2 className="text-2xl font-bold text-idc-primary">Our Story</h2>
-        <p className="mt-4 text-gray-600">
+        <h2 className="text-2xl font-bold text-copy">Our Story</h2>
+        <p className="mt-4 text-copy-muted">
           Placeholder content — migrate from Wix.
         </p>
       </section>

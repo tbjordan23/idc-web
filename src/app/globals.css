@@ -2,18 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Theme tokens ──────────────────────────────────────────────────────────── */
+:root {
+  /* Dark mode (default) — navy-tinted near-black */
+  --bg: #0a0d12;
+  --surface: #11151c;
+  --surface-2: #161c26;
+  --border: #222a36;
+  --border-hover: #2d3a4d;
+  --text: #f0f0f2;
+  --text-muted: #8a8a96;
+  --text-dim: #50566a;
+  --accent: #f26522;
+  --accent-glow: rgba(242, 101, 34, 0.15);
+  --accent-hover: #d4551c;
+  --accent-2: #4a7bc4;
+  --nav-bg: rgba(10, 13, 18, 0.85);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.light {
+  --bg: #ffffff;
+  --surface: #f5f5f7;
+  --surface-2: #ebebef;
+  --border: #e2e2e8;
+  --border-hover: #c8c8d4;
+  --text: #111114;
+  --text-muted: #6b6b78;
+  --text-dim: #a0a0b0;
+  --accent: #e05818;
+  --accent-glow: rgba(224, 88, 24, 0.1);
+  --accent-hover: #c44d14;
+  --accent-2: #2b4171;
+  --nav-bg: rgba(255, 255, 255, 0.88);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── Base ──────────────────────────────────────────────────────────────────── */
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply text-gray-900 bg-white;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-inter), -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+
+  * {
+    border-color: var(--border);
   }
 }
 
-@layer components {
-  .container-prose {
-    @apply max-w-3xl mx-auto px-4 sm:px-6;
+/* ─── Utilities ─────────────────────────────────────────────────────────────── */
+@layer utilities {
+  .accent-glow {
+    box-shadow: 0 0 0 1px var(--accent), 0 0 16px var(--accent-glow);
   }
 }

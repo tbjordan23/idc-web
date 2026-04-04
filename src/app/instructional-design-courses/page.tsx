@@ -33,7 +33,7 @@ export default function CoursesPage() {
       <Hero
         title="Instructional Design Courses"
         subtitle="Online courses designed for instructional designers at every level."
-        background="primary"
+       
       />
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

@@ -12,9 +12,9 @@ export const metadata: Metadata = generatePageMetadata({
 export default function TopElearningTools() {
   return (
     <>
-      <Hero title="Top Rated eLearning Tools" background="primary" />
+      <Hero title="Top Rated eLearning Tools" />
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-gray-600">Placeholder — tool reviews will appear here.</p>
+        <p className="text-copy-muted">Placeholder — tool reviews will appear here.</p>
       </section>
     </>
   )

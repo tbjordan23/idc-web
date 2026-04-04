@@ -1,20 +1,31 @@
-// Shared layout for content/learn pages (e.g. /whatisinstructionaldesign, /addie-model, etc.)
-
 interface ContentPageProps {
   title: string
   subtitle?: string
+  eyebrow?: string
   children: React.ReactNode
 }
 
-export default function ContentPage({ title, subtitle, children }: ContentPageProps) {
+export default function ContentPage({ title, subtitle, eyebrow, children }: ContentPageProps) {
   return (
     <article className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
       <header className="mb-10">
-        <h1 className="text-4xl font-bold tracking-tight text-idc-primary">{title}</h1>
-        {subtitle && <p className="mt-4 text-xl text-gray-600">{subtitle}</p>}
-        <div className="mt-6 h-1 w-16 rounded bg-idc-accent" />
+        {eyebrow && (
+          <p className="mb-3 text-xs font-bold uppercase tracking-widest text-accent">
+            {eyebrow}
+          </p>
+        )}
+        <h1
+          className="font-extrabold tracking-tight text-copy"
+          style={{ fontSize: "clamp(28px,4vw,40px)", letterSpacing: "-0.05rem", lineHeight: 1.1 }}
+        >
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="mt-4 text-lg font-medium text-copy-muted">{subtitle}</p>
+        )}
+        <div className="mt-6 h-0.5 w-12 rounded bg-accent" />
       </header>
-      <div className="prose prose-lg max-w-none prose-headings:text-idc-primary prose-a:text-idc-accent">
+      <div className="space-y-6 text-base font-medium leading-relaxed text-copy-muted">
         {children}
       </div>
     </article>

@@ -15,10 +15,10 @@ export default function NeedsAnalysisApp() {
       <Hero
         title="Needs Analysis Tool"
         subtitle="Identify performance gaps and design the right learning solutions."
-        background="primary"
+       
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-gray-600">Placeholder — interactive needs analysis tool will appear here.</p>
+        <p className="text-copy-muted">Placeholder — interactive needs analysis tool will appear here.</p>
       </section>
     </>
   )

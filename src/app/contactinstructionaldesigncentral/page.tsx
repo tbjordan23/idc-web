@@ -11,8 +11,8 @@ export const metadata: Metadata = generatePageMetadata({
 export default function ContactPage() {
   return (
     <section className="mx-auto max-w-2xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-idc-primary">Contact Us</h1>
-      <p className="mt-4 text-gray-600">Placeholder content — migrate from Wix.</p>
+      <h1 className="text-4xl font-bold text-copy">Contact Us</h1>
+      <p className="mt-4 text-copy-muted">Placeholder content — migrate from Wix.</p>
     </section>
   )
 }

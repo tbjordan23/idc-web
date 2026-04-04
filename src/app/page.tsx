@@ -57,24 +57,33 @@ export default function HomePage() {
   return (
     <>
       <Hero
+        eyebrow="Welcome to IDC"
         title="Instructional Design Central"
-        subtitle="Helping course designers create brilliant learning experiences"
-        cta={{ label: "Explore Courses", href: "/instructional-design-courses" }}
+        subtitle="Helping course designers create brilliant learning experiences — online courses, community, and professional resources."
+        cta={{ label: "Explore Courses →", href: "/instructional-design-courses" }}
         secondaryCta={{ label: "Join the Community", href: "/instructionaldesigncommunity" }}
       />
 
       {/* Courses section */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-bold text-idc-primary">Featured Courses</h2>
+        <div className="flex items-end justify-between">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Courses</p>
+            <h2
+              className="mt-2 font-extrabold tracking-tight text-copy"
+              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+            >
+              Learn from the Best
+            </h2>
+          </div>
           <Link
             href="/instructional-design-courses"
-            className="text-sm font-medium text-idc-accent hover:text-idc-accent-700"
+            className="hidden text-sm font-semibold text-accent hover:text-accent-hover sm:block"
           >
             All courses →
           </Link>
         </div>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {featuredCourses.map((course) => (
             <Card key={course.href} {...course} variant="course" />
           ))}
@@ -82,10 +91,16 @@ export default function HomePage() {
       </section>
 
       {/* Resources section */}
-      <section className="bg-gray-50 py-16">
+      <section className="border-y border-edge bg-surface py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-idc-primary">Free Resources & Tools</h2>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+          <p className="text-xs font-bold uppercase tracking-widest text-accent">Resources</p>
+          <h2
+            className="mt-2 font-extrabold tracking-tight text-copy"
+            style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+          >
+            Free Tools &amp; Resources
+          </h2>
+          <div className="mt-8 grid gap-4 sm:grid-cols-3">
             {featuredResources.map((resource) => (
               <Card key={resource.href} {...resource} variant="resource" />
             ))}
@@ -94,18 +109,23 @@ export default function HomePage() {
       </section>
 
       {/* Community CTA */}
-      <section className="bg-idc-primary py-16 text-white">
-        <div className="mx-auto max-w-7xl px-4 text-center sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold">Join the IDC Community</h2>
-          <p className="mt-4 text-lg text-blue-200">
-            Connect with instructional designers from around the world. Share ideas, get feedback,
-            and grow your career.
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
+          <p className="text-xs font-bold uppercase tracking-widest text-accent">Community</p>
+          <h2
+            className="mx-auto mt-3 max-w-xl font-extrabold tracking-tight text-copy"
+            style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+          >
+            Join the IDC Community
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-base font-medium text-copy-muted">
+            Connect with instructional designers worldwide. Share ideas, get feedback, and grow your career.
           </p>
           <Link
             href="/instructionaldesigncommunity"
-            className="mt-8 inline-block rounded-md bg-idc-accent px-8 py-3 text-base font-semibold text-white hover:bg-idc-accent-700"
+            className="mt-8 inline-block rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
           >
-            Join for Free
+            Join for Free →
           </Link>
         </div>
       </section>

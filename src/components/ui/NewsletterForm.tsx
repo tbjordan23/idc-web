@@ -13,11 +13,11 @@ export default function NewsletterForm() {
         id="newsletter-email"
         type="email"
         placeholder="you@example.com"
-        className="flex-1 rounded-md border-0 bg-white/10 px-4 py-2 text-sm text-white placeholder-blue-200 focus:outline-none focus:ring-2 focus:ring-idc-accent"
+        className="flex-1 rounded-lg border border-edge bg-surface-2 px-4 py-2 text-sm text-copy placeholder-copy-dim transition-colors focus:border-accent focus:outline-none"
       />
       <button
         type="submit"
-        className="rounded-md bg-idc-accent px-4 py-2 text-sm font-medium text-white hover:bg-idc-accent-700"
+        className="rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
       >
         Subscribe
       </button>
