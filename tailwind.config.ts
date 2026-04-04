@@ -48,7 +48,7 @@ const config: Config = {
       },
       boxShadow: {
         card: "var(--shadow)",
-        "card-hover": "0 16px 48px rgba(0,0,0,0.6)",
+        "card-hover": "0 4px 16px rgba(0,0,0,0.35)",
       },
       borderRadius: {
         card: "12px",
