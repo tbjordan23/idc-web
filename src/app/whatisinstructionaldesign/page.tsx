@@ -28,7 +28,7 @@ export default function WhatIsIDPage() {
       </p>
 
       {/* ── Instructional Design Definitions ───────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-copy">
+      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
         Instructional Design Definitions
       </h2>
 
@@ -71,7 +71,7 @@ export default function WhatIsIDPage() {
       </blockquote>
 
       {/* ── Educational Technology ──────────────────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-copy">
+      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
         Educational Technology
       </h2>
 
@@ -119,7 +119,7 @@ export default function WhatIsIDPage() {
       </blockquote>
 
       {/* ── Learning Experience (LX) Design ────────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-copy">
+      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
         Learning Experience (LX) Design
       </h2>
 
@@ -147,7 +147,7 @@ export default function WhatIsIDPage() {
       </blockquote>
 
       {/* ── What is an Instructional Designer? ─────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-copy">
+      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
         What is an Instructional Designer?
       </h2>
 

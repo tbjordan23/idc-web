@@ -71,7 +71,7 @@ export default function HomePage() {
           <div>
             <p className="text-xs font-bold uppercase tracking-widest text-accent">Courses</p>
             <h2
-              className="mt-2 font-extrabold tracking-tight text-copy"
+              className="mt-2 font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
               Learn from the Best
@@ -99,7 +99,7 @@ export default function HomePage() {
           <ScrollReveal>
             <p className="text-xs font-bold uppercase tracking-widest text-accent">Resources</p>
             <h2
-              className="mt-2 font-extrabold tracking-tight text-copy"
+              className="mt-2 font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
               Free Tools &amp; Resources
@@ -121,7 +121,7 @@ export default function HomePage() {
           <div className="rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
             <p className="text-xs font-bold uppercase tracking-widest text-accent">Community</p>
             <h2
-              className="mx-auto mt-3 max-w-xl font-extrabold tracking-tight text-copy"
+              className="mx-auto mt-3 max-w-xl font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
               Join the IDC Community

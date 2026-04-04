@@ -26,6 +26,7 @@ const config: Config = {
           muted: "var(--text-muted)",
           dim: "var(--text-dim)",
         },
+        heading: "var(--heading)",
         accent: {
           DEFAULT: "var(--accent)",
           hover: "var(--accent-hover)",

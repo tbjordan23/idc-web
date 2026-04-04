@@ -26,7 +26,7 @@ export default function Hero({
           </p>
         )}
         <h1
-          className="hero-animate hero-animate-delay-1 font-extrabold tracking-tight text-copy"
+          className="hero-animate hero-animate-delay-1 font-extrabold tracking-tight text-heading"
           style={{ fontSize: "clamp(32px,5vw,46px)", letterSpacing: "-0.075rem", lineHeight: 1.1 }}
         >
           {title}

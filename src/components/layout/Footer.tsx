@@ -91,7 +91,7 @@ export default function Footer() {
               <p className="text-xs font-bold uppercase tracking-widest text-accent">
                 Stay Sharp
               </p>
-              <h2 className="mt-1 text-lg font-bold text-copy">
+              <h2 className="mt-1 text-lg font-bold text-heading">
                 Get the latest IDC insights
               </h2>
               <p className="mt-1 text-sm font-medium text-copy-muted">

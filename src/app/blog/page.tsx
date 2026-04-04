@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import Card from "@/components/ui/Card"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Blog — Instructional Design Insights",
@@ -40,14 +41,18 @@ const placeholderPosts = [
 export default function BlogPage() {
   return (
     <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold text-copy">Blog</h1>
-      <p className="mt-4 text-lg text-copy-muted">
-        Insights and practical tips for instructional designers.
-      </p>
+      <ScrollReveal>
+        <h1 className="text-4xl font-bold text-heading">Blog</h1>
+        <p className="mt-4 text-lg text-copy-muted">
+          Insights and practical tips for instructional designers.
+        </p>
+      </ScrollReveal>
 
       <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {placeholderPosts.map((post) => (
-          <Card key={post.href} {...post} variant="blog" />
+        {placeholderPosts.map((post, i) => (
+          <ScrollReveal key={post.href} delay={(i + 1) as 1 | 2 | 3} className="h-full">
+            <Card {...post} variant="blog" />
+          </ScrollReveal>
         ))}
       </div>
     </div>

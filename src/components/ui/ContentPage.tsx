@@ -15,7 +15,7 @@ export default function ContentPage({ title, subtitle, eyebrow, children }: Cont
           </p>
         )}
         <h1
-          className="font-extrabold tracking-tight text-copy"
+          className="font-extrabold tracking-tight text-heading"
           style={{ fontSize: "clamp(28px,4vw,40px)", letterSpacing: "-0.05rem", lineHeight: 1.1 }}
         >
           {title}

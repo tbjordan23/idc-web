@@ -4,6 +4,7 @@
 
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 interface Props {
   params: { slug: string[] }
@@ -30,10 +31,14 @@ export default function BlogPostPage({ params }: Props) {
 
   return (
     <article className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
-      <h1 className="text-4xl font-bold capitalize text-copy">{title}</h1>
-      <div className="mt-8 text-copy-muted">
-        <p>Placeholder — blog post content will be rendered here from the CMS or MDX source.</p>
-      </div>
+      <ScrollReveal>
+        <h1 className="text-4xl font-bold capitalize text-heading">{title}</h1>
+      </ScrollReveal>
+      <ScrollReveal delay={1}>
+        <div className="mt-8 text-copy-muted">
+          <p>Placeholder — blog post content will be rendered here from the CMS or MDX source.</p>
+        </div>
+      </ScrollReveal>
     </article>
   )
 }
