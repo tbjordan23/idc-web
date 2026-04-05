@@ -95,8 +95,8 @@ export default function CommunityPage() {
       <Hero
         title="Instructional Design Central Community"
         subtitle="Connect with instructional designers from around the world."
-        cta={{ label: "Join for Free", href: "https://instructional-design-central.mn.co/" }}
-        secondaryCta={{ label: "Sign In", href: "https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F" }}
+        cta={{ label: "Join for Free", href: "https://instructional-design-central.mn.co/", target: "_blank" }}
+        secondaryCta={{ label: "Sign In", href: "https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F", target: "_blank" }}
       />
 
       {/* Intro paragraph */}
@@ -206,6 +206,8 @@ export default function CommunityPage() {
                 <div className="mt-8 flex flex-col gap-3">
                   <a
                     href="https://instructional-design-central.mn.co/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
                   >
                     <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -215,6 +217,8 @@ export default function CommunityPage() {
                   </a>
                   <a
                     href="https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center justify-center gap-2 rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy"
                   >
                     <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

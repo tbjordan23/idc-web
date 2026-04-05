@@ -4,8 +4,8 @@ interface HeroProps {
   eyebrow?: string
   title: string
   subtitle?: string
-  cta?: { label: string; href: string }
-  secondaryCta?: { label: string; href: string }
+  cta?: { label: string; href: string; target?: string }
+  secondaryCta?: { label: string; href: string; target?: string }
   centered?: boolean
 }
 
@@ -41,6 +41,8 @@ export default function Hero({
             {cta && (
               <Link
                 href={cta.href}
+                target={cta.target}
+                rel={cta.target === "_blank" ? "noopener noreferrer" : undefined}
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
               >
                 <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -52,6 +54,8 @@ export default function Hero({
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
+                target={secondaryCta.target}
+                rel={secondaryCta.target === "_blank" ? "noopener noreferrer" : undefined}
                 className="inline-flex items-center gap-2 rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy"
               >
                 <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -161,6 +161,8 @@ export default function Header() {
         <div className="ml-auto flex items-center gap-2">
           <a
             href="https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-copy-muted btn-shadow-neutral hover:text-copy lg:flex"
           >
             <svg className="h-3.5 w-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -170,6 +172,8 @@ export default function Header() {
           </a>
           <a
             href="https://instructional-design-central.mn.co/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white btn-shadow lg:flex hover:bg-accent-hover"
           >
             <svg className="h-3.5 w-3.5 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -261,6 +265,8 @@ export default function Header() {
             <li className="pt-2 flex flex-col gap-2">
               <a
                 href="https://instructional-design-central.mn.co/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-white btn-shadow"
                 onClick={() => setMobileOpen(false)}
               >
@@ -271,6 +277,8 @@ export default function Header() {
               </a>
               <a
                 href="https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 rounded-lg border border-edge px-4 py-2.5 text-sm font-semibold text-copy-muted btn-shadow-neutral"
                 onClick={() => setMobileOpen(false)}
               >
