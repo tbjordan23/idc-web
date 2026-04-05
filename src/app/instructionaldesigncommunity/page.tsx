@@ -93,7 +93,7 @@ export default function CommunityPage() {
   return (
     <>
       <Hero
-        title="Instructional Design Central Community"
+        title="Instructional Design Central (IDC) Community"
         subtitle="Connect with instructional designers from around the world."
         cta={{ label: "Join for Free", href: "https://instructional-design-central.mn.co/", target: "_blank" }}
         secondaryCta={{ label: "Sign In", href: "https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F", target: "_blank" }}

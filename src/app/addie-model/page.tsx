@@ -12,7 +12,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function ADDIEModelPage() {
   return (
     <ContentPage
-      title="The ADDIE Model"
+      title="ADDIE Model Course and Certificate"
       subtitle="Analysis, Design, Development, Implementation, and Evaluation — a complete guide."
     >
       <p>Placeholder — migrate content from Wix.</p>

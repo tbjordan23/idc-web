@@ -14,7 +14,7 @@ export default function ChatIDPage() {
   return (
     <>
       <Hero
-        title="ChatID: Your AI Instructional Design Assistant"
+        title="ChatID: Instructional Design GPT"
         subtitle="An AI assistant trained specifically for instructional designers."
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">

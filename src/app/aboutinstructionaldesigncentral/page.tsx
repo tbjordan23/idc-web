@@ -16,7 +16,7 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        title="About IDC"
+        title="Instructional Design Central"
         subtitle="Our mission is to help course designers create brilliant learning experiences."
       />
 

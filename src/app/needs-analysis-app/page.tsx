@@ -14,7 +14,7 @@ export default function NeedsAnalysisApp() {
   return (
     <>
       <Hero
-        title="Needs Analysis Tool"
+        title="IDC Needs Analysis App"
         subtitle="Identify performance gaps and design the right learning solutions."
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
