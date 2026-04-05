@@ -5,7 +5,7 @@ import ContentPage from "@/components/ui/ContentPage"
 export const metadata: Metadata = generatePageMetadata({
   title: "Needs Analysis",
   description:
-    "Learn how to conduct a needs analysis for learning and training programs. Steps, templates, and best practices.",
+    "What is a needs analysis? Overview of how to perform a needs analysis as a part of the instructional design process. Access instructional design and training needs analysis tools and resources.",
   path: "/needs-analysis",
 })
 

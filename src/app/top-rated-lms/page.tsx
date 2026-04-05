@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Top Rated LMS",
   description:
-    "Compare and review the top-rated Learning Management Systems for corporate training and academic use.",
+    "View top rated Learning Management Systems (LMS). IDC ranks the best Learning Management Systems (LMS) in the industry.",
   path: "/top-rated-lms",
 })
 

@@ -5,7 +5,7 @@ import ContentPage from "@/components/ui/ContentPage"
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Designer Salary",
   description:
-    "How much do instructional designers make? Explore salary ranges by experience, location, industry, and role type.",
+    "What is the average salary of an instructional designer? An instructional designer salary varies based on location and job type.",
   path: "/instructionaldesignersalary",
 })
 

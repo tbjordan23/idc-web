@@ -5,7 +5,7 @@ import ContentPage from "@/components/ui/ContentPage"
 export const metadata: Metadata = generatePageMetadata({
   title: "What is Instructional Design?",
   description:
-    "A complete guide to instructional design — what it is, what instructional designers do, key models, and how to get started in the field.",
+    "View definitions for instructional design, educational technology, educational psychology, instructional technology, curriculum design, & instructional systems",
   path: "/whatisinstructionaldesign",
 })
 

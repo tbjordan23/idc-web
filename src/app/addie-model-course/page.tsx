@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "ADDIE Model Course",
   description:
-    "Learn to apply the ADDIE instructional design model across real-world learning projects. Online course by Instructional Design Central.",
+    "Master the ADDIE instructional design model with this practical, expert-led course. Learn to design, develop, and evaluate effective learning experiences using industry-proven methods. Enroll today to boost your instructional design skills.",
   path: "/addie-model-course",
 })
 

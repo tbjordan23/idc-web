@@ -5,7 +5,7 @@ import ContentPage from "@/components/ui/ContentPage"
 export const metadata: Metadata = generatePageMetadata({
   title: "Adult Learning Theory",
   description:
-    "A guide to adult learning theory (andragogy) and how to apply Knowles' principles in instructional design.",
+    "View definitions for adult learning theory, andragogy, and adult education. Learning about core adult learning principles including those from Malcolm Knowles.",
   path: "/adult-learning-theory",
 })
 

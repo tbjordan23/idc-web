@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "The Learning Design Canvas",
   description:
-    "Download and use the Learning Design Canvas — a visual tool for planning and communicating your instructional design projects.",
+    "The Learning Design Canvas delivers the essential elements of a learning plan into a visually stunning one page canvas. This planning tool is founded upon modern instructional design and user experience design principles.",
   path: "/the-learning-design-canvas",
 })
 

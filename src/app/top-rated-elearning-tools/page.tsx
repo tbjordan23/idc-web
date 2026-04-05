@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Top Rated eLearning Tools",
   description:
-    "The best eLearning authoring tools, LMS platforms, and ID resources reviewed and rated by instructional designers.",
+    "View top ranked eLearning tools for business and education. IDC ranks best eLearning tools in the industry.",
   path: "/top-rated-elearning-tools",
 })
 

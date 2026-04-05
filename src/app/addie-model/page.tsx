@@ -5,7 +5,7 @@ import ContentPage from "@/components/ui/ContentPage"
 export const metadata: Metadata = generatePageMetadata({
   title: "ADDIE Model",
   description:
-    "Everything you need to know about the ADDIE instructional design model: Analysis, Design, Development, Implementation, and Evaluation.",
+    "What is the ADDIE Model? The ADDIE instructional design model is the generic process traditionally used by instructional designers to create instruction.",
   path: "/addie-model",
 })
 

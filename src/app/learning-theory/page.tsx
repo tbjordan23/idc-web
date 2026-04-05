@@ -5,7 +5,7 @@ import ContentPage from "@/components/ui/ContentPage"
 export const metadata: Metadata = generatePageMetadata({
   title: "Learning Theory Overview",
   description:
-    "An overview of major learning theories — behaviorism, cognitivism, constructivism, connectivism — and their application in instructional design.",
+    "View definitions and history of learning theory including behaviorist learning theory, constructivist learning theory, and cognitivism learning theory.",
   path: "/learning-theory",
 })
 

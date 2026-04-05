@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = generatePageMetadata({
   title: "Resources, Community and Content",
   description:
-    "Learn about Instructional Design Central (IDC) — our mission, story, and the team behind the #1 resource hub for instructional designers.",
+    "Instructional Design Central's (IDC) mission is to provide instructional design professionals access to brilliant resources, content, and networking.",
   path: "/aboutinstructionaldesigncentral",
 })
 

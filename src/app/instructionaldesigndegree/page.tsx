@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Top Instructional Design Degrees",
   description:
-    "Explore the best instructional design degree programs — online and on-campus options for bachelor's, master's, and doctoral studies.",
+    "View top rated instructional design programs & instructional design degree (PhD, MS, EdD). Also, view instructional design certificate programs.",
   path: "/instructionaldesigndegree",
 })
 

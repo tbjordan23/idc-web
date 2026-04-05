@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "ChatID: Instructional Design AI",
   description:
-    "ChatID is an AI assistant trained specifically for instructional designers. Get expert guidance on ID models, eLearning, and learning design.",
+    "Meet ChatID, your new AI-powered helper for instructional design. Ideal for both professionals and students, this tool helps you create learning materials and custom templates. It covers everything from needs analysis and learning objectives to evaluation plans and project plans.",
   path: "/chatid-instructional-design-ai",
 })
 

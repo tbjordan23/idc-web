@@ -5,7 +5,7 @@ import ContentPage from "@/components/ui/ContentPage"
 export const metadata: Metadata = generatePageMetadata({
   title: "History of Instructional Design",
   description:
-    "A timeline of instructional design history — from WWII military training to modern eLearning and AI-driven learning experiences.",
+    "View an interactive instructional design timeline that displays the evolution and history of instructional design and instructional technology.",
   path: "/instructional-design-history",
 })
 

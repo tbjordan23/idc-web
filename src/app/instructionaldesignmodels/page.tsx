@@ -5,7 +5,7 @@ import ContentPage from "@/components/ui/ContentPage"
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Models",
   description:
-    "An overview of the most important instructional design models — ADDIE, SAM, Bloom's Taxonomy, Kirkpatrick, Gagne's Nine Events, and more.",
+    "View industry standard instructional design models, learning theory, methods, learning strategies, & instructional design principles such as the ADDIE model.",
   path: "/instructionaldesignmodels",
 })
 
