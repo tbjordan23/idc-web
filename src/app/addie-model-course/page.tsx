@@ -4,7 +4,7 @@ import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Mastering the ADDIE Model Course",
+  title: "ADDIE Model Course",
   description:
     "Learn to apply the ADDIE instructional design model across real-world learning projects. Online course by Instructional Design Central.",
   path: "/addie-model-course",

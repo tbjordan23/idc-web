@@ -4,7 +4,7 @@ import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Instructional Design Foundations Course",
+  title: "Instructional Design Foundations Course and Certification",
   description:
     "Master the fundamentals of instructional design. This online course covers ID models, learning theory, and real-world application.",
   path: "/instructional-design-course",
