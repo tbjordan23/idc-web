@@ -102,7 +102,7 @@ export default function CommunityPage() {
       {/* Intro paragraph */}
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <p className="text-xl font-medium leading-relaxed text-copy-muted sm:text-2xl">
+          <p className="text-base font-medium leading-relaxed text-copy-muted">
             Whether you&rsquo;re a seasoned instructional designer, a transitioning teacher, or brand new to the field of learning design, our community will provide you with the networking platform, content, and resources you need to get ahead in the field. Join our vibrant community of like-minded individuals who are passionate about creating brilliant learning experiences. Together, we collaborate, learn, share insights, and empower each other to inspire learners all around the world!
           </p>
         </ScrollReveal>
