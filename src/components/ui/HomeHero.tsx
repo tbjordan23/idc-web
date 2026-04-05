@@ -114,22 +114,19 @@ function CourseIllustration() {
         <rect x="358" y="256" width="122" height="74" rx="12" filter="url(#cs)" style={{ fill: "var(--surface)", stroke: "var(--border)" }} strokeWidth="1" />
         {/* AI icon bg */}
         <circle cx="391" cy="284" r="17" fill="rgba(242,101,34,0.1)" />
-        {/* Neural network — AI icon */}
-        <circle cx="391" cy="284" r="4" fill="#f26522" opacity="0.85" />
-        <circle cx="381" cy="277" r="2.5" fill="#f26522" opacity="0.55" />
-        <circle cx="401" cy="277" r="2.5" fill="#f26522" opacity="0.55" />
-        <circle cx="381" cy="291" r="2.5" fill="#f26522" opacity="0.55" />
-        <circle cx="401" cy="291" r="2.5" fill="#f26522" opacity="0.55" />
-        <circle cx="391" cy="271" r="2" fill="#f26522" opacity="0.4" />
-        <circle cx="391" cy="297" r="2" fill="#f26522" opacity="0.4" />
-        <line x1="381" y1="277" x2="391" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.45" />
-        <line x1="401" y1="277" x2="391" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.45" />
-        <line x1="381" y1="291" x2="391" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.45" />
-        <line x1="401" y1="291" x2="391" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.45" />
-        <line x1="391" y1="271" x2="391" y2="280" stroke="#f26522" strokeWidth="1" opacity="0.35" />
-        <line x1="391" y1="288" x2="391" y2="297" stroke="#f26522" strokeWidth="1" opacity="0.35" />
-        <line x1="381" y1="277" x2="381" y2="291" stroke="#f26522" strokeWidth="0.6" opacity="0.2" />
-        <line x1="401" y1="277" x2="401" y2="291" stroke="#f26522" strokeWidth="0.6" opacity="0.2" />
+        {/* Neural network — AI icon (3-layer: 2 inputs, 1 hidden, 1 output) */}
+        {/* Input nodes */}
+        <circle cx="383" cy="280" r="2.2" fill="#f26522" opacity="0.7" />
+        <circle cx="383" cy="288" r="2.2" fill="#f26522" opacity="0.7" />
+        {/* Hidden node */}
+        <circle cx="391" cy="284" r="2.8" fill="#f26522" opacity="0.9" />
+        {/* Output node */}
+        <circle cx="399" cy="284" r="2.2" fill="#f26522" opacity="0.7" />
+        {/* Connections: inputs → hidden */}
+        <line x1="385" y1="280" x2="388" y2="283" stroke="#f26522" strokeWidth="1" opacity="0.5" />
+        <line x1="385" y1="288" x2="388" y2="285" stroke="#f26522" strokeWidth="1" opacity="0.5" />
+        {/* Connection: hidden → output */}
+        <line x1="394" y1="284" x2="397" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.5" />
         {/* Text */}
         <rect x="414" y="274" width="54" height="7" rx="3.5" fill="#2e4057" opacity="0.65" />
         <rect x="414" y="287" width="38" height="5" rx="2.5" style={{ fill: "var(--border-hover)" }} />

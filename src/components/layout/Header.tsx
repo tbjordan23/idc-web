@@ -165,13 +165,13 @@ export default function Header() {
             </svg>
             Join Free
           </a>
-          <ThemeToggle />
           <Link
             href="/instructional-design-courses"
             className="hidden rounded-lg border border-edge px-4 py-2 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy xl:block"
           >
             Explore Courses →
           </Link>
+          <ThemeToggle />
 
           {/* Mobile hamburger */}
           <button
