@@ -73,9 +73,44 @@ const courseTiles = [
   },
 ]
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What instructional design courses are available at Instructional Design Central?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Instructional Design Central offers two professional online courses: Instructional Design Foundations — a beginner-friendly course covering core ID principles — and Mastering the ADDIE Model — a practical, project-based course for applying the ADDIE framework. Both courses include practical templates, AI tools, and professional certifications.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Are the IDC instructional design courses self-paced?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, the instructional design courses at Instructional Design Central are self-paced online courses. Learners can complete the material on their own schedule, making them ideal for working professionals and career changers looking to build or advance their instructional design skills.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do IDC courses come with a certificate?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, both the Instructional Design Foundations course and the Mastering the ADDIE Model course include a professional certificate upon completion. These certificates demonstrate your instructional design knowledge and can be shared on professional profiles such as LinkedIn.",
+      },
+    },
+  ],
+}
+
 export default function CoursesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero
         title="Instructional Design Courses and Certificates"
         subtitle="Online courses designed for instructional designers at every level."

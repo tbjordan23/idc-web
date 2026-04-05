@@ -9,9 +9,45 @@ export const metadata: Metadata = generatePageMetadata({
   path: "/whatisinstructionaldesign",
 })
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is Instructional Design?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Instructional design is the process by which learning products and experiences are designed, developed, and delivered. These learning products include online courses, instructional manuals, video tutorials, learning simulations, and more. Instructional designers are the architects of the learning experience and the directors of the Instructional Systems Design (ISD) process.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is an Instructional Designer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "An instructional designer is a professional who applies instructional design principles, models, and processes to create effective learning experiences. Instructional designers work across corporate, government, non-profit, and academic sectors to design training programs, eLearning courses, instructor-led training, and other learning solutions.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What skills does an instructional designer need?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Instructional designers typically need skills in needs analysis, curriculum development, eLearning authoring tools (such as Articulate Storyline or Adobe Captivate), learning management systems (LMS), project management, writing and communication, and an understanding of learning theories such as behaviorism, cognitivism, and constructivism.",
+      },
+    },
+  ],
+}
+
 export default function WhatIsIDPage() {
   return (
-    <ContentPage
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <ContentPage
       eyebrow="The Field"
       title="What is Instructional Design?"
       subtitle="A complete guide to the field, the role, and how to get started."
@@ -234,5 +270,6 @@ export default function WhatIsIDPage() {
         </cite>
       </blockquote>
     </ContentPage>
+    </>
   )
 }

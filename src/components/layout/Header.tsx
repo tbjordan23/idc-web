@@ -46,6 +46,7 @@ const navigation = {
         { label: "Learning Theory", href: "/learning-theory" },
         { label: "ID History", href: "/instructional-design-history" },
         { label: "ADDIE Model", href: "/addie-model" },
+        { label: "FAQ", href: "/faq" },
       ],
     },
   ],

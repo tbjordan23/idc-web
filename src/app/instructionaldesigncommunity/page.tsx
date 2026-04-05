@@ -89,9 +89,44 @@ const highlights = [
   },
 ]
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the Instructional Design Central Community?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Instructional Design Central (IDC) Community is a free professional network connecting instructional design professionals from around the world. Members can network, share resources, ask questions, access free events, and collaborate with peers. The community serves over 10,000 members globally.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is the IDC Community free to join?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, the Instructional Design Central Community is completely free to join. Membership gives you access to networking with ID professionals globally, free templates and micro-courses, live events and webinars, and a supportive community of peers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who should join the IDC instructional design community?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The IDC Community is built for instructional designers at every career stage — from beginners and career changers to experienced professionals and thought leaders. It is especially valuable for those looking to network, find job leads, stay current with industry trends, and get support from peers and experts in the field.",
+      },
+    },
+  ],
+}
+
 export default function CommunityPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero
         title="Instructional Design Central (IDC) Community"
         subtitle="Connect with instructional designers from around the world."

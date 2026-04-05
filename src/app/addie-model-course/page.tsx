@@ -10,9 +10,36 @@ export const metadata: Metadata = generatePageMetadata({
   path: "/addie-model-course",
 })
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the Mastering the ADDIE Model course?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mastering the ADDIE Model is a practical, project-based online course offered by Instructional Design Central. It walks instructional designers step-by-step through the ADDIE framework — Analysis, Design, Development, Implementation, and Evaluation — giving learners the skills to design and build effective courses. The course includes a professional certificate upon completion.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Who is the ADDIE Model course for?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The Mastering the ADDIE Model course is ideal for instructional designers who want to deepen their understanding and application of the ADDIE framework, as well as trainers, educators, and curriculum designers looking to apply a structured design process to their work. It is suitable for intermediate learners who already have a basic understanding of instructional design.",
+      },
+    },
+  ],
+}
+
 export default function ADDIECourse() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero
         title="ADDIE Model Course and Certificate"
         subtitle="A practical, project-based online course for instructional designers."

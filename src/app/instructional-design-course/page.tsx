@@ -10,9 +10,36 @@ export const metadata: Metadata = generatePageMetadata({
   path: "/instructional-design-course",
 })
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What is the Instructional Design Foundations course?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Instructional Design Foundations is a beginner-friendly online course offered by Instructional Design Central that teaches the core principles, language, and practices of instructional design. It is designed for aspiring instructional designers, transitioning teachers, and curriculum designers who want to build a strong foundation and start creating effective learning experiences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What will I learn in the Instructional Design Foundations course?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "In the Instructional Design Foundations course, you will learn the core principles of instructional design, key instructional design models and frameworks, how to write learning objectives, the basics of needs analysis, how to design and develop effective learning experiences, and how to use AI tools and professional templates in your design workflow.",
+      },
+    },
+  ],
+}
+
 export default function IDFoundationsCourse() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <Hero
         title="Instructional Design Foundations Course and Certificate"
         subtitle="Master the fundamentals of instructional design with this comprehensive online course."
