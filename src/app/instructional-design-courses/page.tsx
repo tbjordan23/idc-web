@@ -195,17 +195,31 @@ export default function CoursesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
-              {/* Text */}
+              {/* Text + inline photo header */}
               <div className="flex-1">
-                <p className="text-xs font-bold uppercase tracking-widest text-accent">Meet Your Teacher</p>
-                <h2
-                  className="mt-2 font-extrabold tracking-tight text-heading"
-                  style={{ fontSize: "clamp(20px,3vw,30px)", letterSpacing: "-0.04rem" }}
-                >
-                  About the Instructor
-                </h2>
-                <p className="mt-1 text-lg font-bold text-copy">Travis Jordan</p>
-                <div className="mt-3 h-0.5 w-8 rounded bg-accent opacity-60" />
+                {/* Photo sits left of the three header lines */}
+                <div className="flex items-center gap-5">
+                  <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-full border-2 border-edge shadow-card">
+                    <Image
+                      src="/travis-jordan.jpg"
+                      alt="Travis Jordan, Founder and Owner of Instructional Design Central"
+                      fill
+                      className="object-cover"
+                      sizes="64px"
+                    />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-accent">Meet Your Teacher</p>
+                    <h2
+                      className="mt-1 font-extrabold tracking-tight text-heading"
+                      style={{ fontSize: "clamp(18px,2.5vw,26px)", letterSpacing: "-0.04rem" }}
+                    >
+                      About the Instructor
+                    </h2>
+                    <p className="mt-0.5 text-base font-bold text-copy">Travis Jordan</p>
+                  </div>
+                </div>
+                <div className="mt-4 h-0.5 w-8 rounded bg-accent opacity-60" />
                 <ul className="mt-6 space-y-3">
                   {instructorCredentials.map((item) => (
                     <li key={item} className="flex items-start gap-3">
@@ -218,19 +232,6 @@ export default function CoursesPage() {
                     </li>
                   ))}
                 </ul>
-              </div>
-
-              {/* Photo */}
-              <div className="shrink-0 lg:pt-8">
-                <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full border-4 border-edge shadow-card lg:mx-0">
-                  <Image
-                    src="/travis-jordan.jpg"
-                    alt="Travis Jordan, Founder and Owner of Instructional Design Central"
-                    fill
-                    className="object-cover"
-                    sizes="160px"
-                  />
-                </div>
               </div>
             </div>
           </ScrollReveal>
