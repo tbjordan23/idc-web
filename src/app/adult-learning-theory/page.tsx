@@ -12,7 +12,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function AdultLearningTheoryPage() {
   return (
     <ContentPage
-      title="What is Adult Learning Theory?"
+      title="What is Adult Learning Theory"
       subtitle="Understanding andragogy and how adults learn — essential knowledge for every instructional designer."
     >
       <p>Placeholder — migrate content from Wix.</p>

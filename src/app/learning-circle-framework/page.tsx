@@ -13,7 +13,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function LearningCircleFramework() {
   return (
     <>
-      <Hero title="The Learning Circle Framework" />
+      <Hero title="The Learning Circle Framework™" />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="text-copy-muted">Placeholder — framework content will appear here.</p>

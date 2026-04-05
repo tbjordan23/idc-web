@@ -12,7 +12,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function LearningTheoryPage() {
   return (
     <ContentPage
-      title="Learning Theory"
+      title="What is Learning Theory?"
       subtitle="The major learning theories and how to apply them in your instructional design practice."
     >
       <p>Placeholder — migrate content from Wix.</p>

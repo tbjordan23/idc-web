@@ -14,7 +14,7 @@ export default function ADDIECourse() {
   return (
     <>
       <Hero
-        title="Mastering the ADDIE Model"
+        title="ADDIE Model Course and Certificate"
         subtitle="A practical, project-based online course for instructional designers."
         cta={{ label: "Enroll Now", href: "#enroll" }}
       />

@@ -14,7 +14,7 @@ export default function IDFoundationsCourse() {
   return (
     <>
       <Hero
-        title="Instructional Design Foundations"
+        title="Instructional Design Foundations Course and Certificate"
         subtitle="Master the fundamentals of instructional design with this comprehensive online course."
         cta={{ label: "Enroll Now", href: "#enroll" }}
       />
