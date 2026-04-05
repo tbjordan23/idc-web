@@ -19,10 +19,23 @@ export default function AboutPage() {
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <h2 className="text-2xl font-bold text-heading">Our Story</h2>
-          <p className="mt-4 text-copy-muted">
-            Placeholder content — migrate from Wix.
-          </p>
+          <h2 className="text-xl font-extrabold tracking-tight text-heading">Our Story</h2>
+          <div className="mt-6 space-y-6 text-base font-medium leading-relaxed text-copy-muted">
+            <p>
+              IDC was created to provide instructional design and learning design related professionals
+              access to brilliant resources, tools, and content so that they can be successful in their
+              career and education.
+            </p>
+            <p>
+              Instructional Design Central (IDC) is also a vibrant community that connects over 40,000
+              instructional design related professionals across its platforms in more than 20 countries
+              worldwide.
+            </p>
+            <p>
+              Instructional Design Central (IDC) is a privately owned and operated company launched in
+              2011 out of Saratoga Springs, Utah in the shadows of Silicon Slopes.
+            </p>
+          </div>
         </ScrollReveal>
       </section>
     </>
