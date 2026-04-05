@@ -18,7 +18,7 @@
   --accent-glow: rgba(242, 101, 34, 0.15);
   --accent-hover: #d4551c;
   --accent-2: #4a7bc4;
-  --heading: #4a7bc4;
+  --heading: #ffffff;
   --dot-texture: rgba(255, 255, 255, 0.04);
   --nav-bg: rgba(10, 13, 18, 0.85);
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
@@ -67,6 +67,18 @@
 @layer utilities {
   .accent-glow {
     box-shadow: 0 0 0 1px var(--accent), 0 0 16px var(--accent-glow);
+  }
+  .btn-shadow {
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-shadow:hover {
+    box-shadow: 0 4px 16px rgba(242, 101, 34, 0.32);
+  }
+  .btn-shadow-neutral {
+    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn-shadow-neutral:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
   }
 }
 

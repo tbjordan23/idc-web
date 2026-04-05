@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Mastering the ADDIE Model Course",
@@ -16,10 +17,11 @@ export default function ADDIECourse() {
         title="Mastering the ADDIE Model"
         subtitle="A practical, project-based online course for instructional designers."
         cta={{ label: "Enroll Now", href: "#enroll" }}
-       
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-copy-muted">Placeholder — course detail content will appear here.</p>
+        <ScrollReveal>
+          <p className="text-copy-muted">Placeholder — course detail content will appear here.</p>
+        </ScrollReveal>
       </section>
     </>
   )

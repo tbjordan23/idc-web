@@ -41,16 +41,22 @@ export default function Hero({
             {cta && (
               <Link
                 href={cta.href}
-                className="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+                className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
               >
+                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
                 {cta.label}
               </Link>
             )}
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted transition-colors hover:border-edge-hover hover:text-copy"
+                className="inline-flex items-center gap-2 rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy"
               >
+                <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
                 {secondaryCta.label}
               </Link>
             )}

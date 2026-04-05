@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Needs Analysis Tool",
@@ -15,10 +16,11 @@ export default function NeedsAnalysisApp() {
       <Hero
         title="Needs Analysis Tool"
         subtitle="Identify performance gaps and design the right learning solutions."
-       
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-copy-muted">Placeholder — interactive needs analysis tool will appear here.</p>
+        <ScrollReveal>
+          <p className="text-copy-muted">Placeholder — interactive needs analysis tool will appear here.</p>
+        </ScrollReveal>
       </section>
     </>
   )

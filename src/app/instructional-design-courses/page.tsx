@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import Card from "@/components/ui/Card"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Courses",
@@ -33,12 +34,13 @@ export default function CoursesPage() {
       <Hero
         title="Instructional Design Courses"
         subtitle="Online courses designed for instructional designers at every level."
-       
       />
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {courses.map((course) => (
-            <Card key={course.href} {...course} variant="course" />
+          {courses.map((course, i) => (
+            <ScrollReveal key={course.href} delay={(i + 1) as 1 | 2} className="h-full">
+              <Card {...course} variant="course" />
+            </ScrollReveal>
           ))}
         </div>
       </section>

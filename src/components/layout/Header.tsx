@@ -147,10 +147,28 @@ export default function Header() {
 
         {/* Right side */}
         <div className="ml-auto flex items-center gap-2">
+          <a
+            href="https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F"
+            className="hidden items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-copy-muted btn-shadow-neutral hover:text-copy lg:flex"
+          >
+            <svg className="h-3.5 w-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM12 14a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7z" />
+            </svg>
+            Login
+          </a>
+          <a
+            href="https://instructional-design-central.mn.co/"
+            className="hidden items-center gap-1.5 rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white btn-shadow lg:flex hover:bg-accent-hover"
+          >
+            <svg className="h-3.5 w-3.5 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Join Free
+          </a>
           <ThemeToggle />
           <Link
             href="/instructional-design-courses"
-            className="hidden rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-accent-hover sm:block"
+            className="hidden rounded-lg border border-edge px-4 py-2 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy xl:block"
           >
             Explore Courses →
           </Link>
@@ -228,10 +246,30 @@ export default function Header() {
                 </li>
               )
             })}
-            <li className="pt-2">
+            <li className="pt-2 flex flex-col gap-2">
+              <a
+                href="https://instructional-design-central.mn.co/"
+                className="flex items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-white btn-shadow"
+                onClick={() => setMobileOpen(false)}
+              >
+                <svg className="h-3.5 w-3.5 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                Join Free
+              </a>
+              <a
+                href="https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F"
+                className="flex items-center justify-center gap-2 rounded-lg border border-edge px-4 py-2.5 text-sm font-semibold text-copy-muted btn-shadow-neutral"
+                onClick={() => setMobileOpen(false)}
+              >
+                <svg className="h-3.5 w-3.5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM12 14a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7z" />
+                </svg>
+                Login
+              </a>
               <Link
                 href="/instructional-design-courses"
-                className="block rounded-lg bg-accent px-4 py-2.5 text-center text-sm font-semibold text-white"
+                className="block rounded-lg border border-edge px-4 py-2.5 text-center text-sm font-semibold text-copy-muted btn-shadow-neutral"
                 onClick={() => setMobileOpen(false)}
               >
                 Explore Courses →

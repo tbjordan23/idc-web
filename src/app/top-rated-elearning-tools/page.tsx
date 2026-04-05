@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Top Rated eLearning Tools",
@@ -14,7 +15,9 @@ export default function TopElearningTools() {
     <>
       <Hero title="Top Rated eLearning Tools" />
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <p className="text-copy-muted">Placeholder — tool reviews will appear here.</p>
+        <ScrollReveal>
+          <p className="text-copy-muted">Placeholder — tool reviews will appear here.</p>
+        </ScrollReveal>
       </section>
     </>
   )

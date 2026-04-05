@@ -58,14 +58,16 @@ function CourseIllustration() {
       <rect x="173" y="232" width="122" height="6" rx="3" fill="#f26522" />
       <rect x="286" y="228" width="32" height="13" rx="4" fill="rgba(242,101,34,0.15)" />
 
-      {/* ── Card 1 — Course Design (top-left) ──────────────────────────── */}
+      {/* ── Card 1 — Learning (top-left) ────────────────────────────────── */}
       <g className="illus-float">
         <rect x="12" y="42" width="122" height="82" rx="12" filter="url(#cs)" style={{ fill: "var(--surface)", stroke: "var(--border)" }} strokeWidth="1" />
         {/* Icon bg */}
         <circle cx="43" cy="74" r="17" fill="rgba(242,101,34,0.1)" />
-        {/* Pencil icon */}
-        <rect x="37" y="66" width="7" height="16" rx="2" transform="rotate(-45 40.5 74)" fill="#f26522" opacity="0.85" />
-        <polygon points="33,83 38,88 43,83" fill="#f26522" opacity="0.55" />
+        {/* Graduation cap — education icon */}
+        <path d="M43 64 L55 70 L43 76 L31 70 Z" fill="#f26522" opacity="0.85" />
+        <path d="M37 72.5 L37 80 Q43 83.5 49 80 L49 72.5" fill="#f26522" opacity="0.35" stroke="#f26522" strokeWidth="0.75" />
+        <line x1="55" y1="70" x2="55" y2="78" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
+        <circle cx="55" cy="79.5" r="1.8" fill="#f26522" opacity="0.6" />
         {/* Text */}
         <rect x="67" y="64" width="58" height="7" rx="3.5" fill="#2e4057" opacity="0.65" />
         <rect x="67" y="77" width="42" height="5" rx="2.5" style={{ fill: "var(--border-hover)" }} />
@@ -107,22 +109,36 @@ function CourseIllustration() {
         <rect x="22" y="306" width="70" height="9" rx="4.5" fill="rgba(74,123,196,0.28)" />
       </g>
 
-      {/* ── Card 4 — Certificate (bottom-right) ────────────────────────── */}
+      {/* ── Card 4 — AI (bottom-right) ──────────────────────────────────── */}
       <g className="illus-float-4">
         <rect x="358" y="256" width="122" height="74" rx="12" filter="url(#cs)" style={{ fill: "var(--surface)", stroke: "var(--border)" }} strokeWidth="1" />
-        {/* Badge bg */}
+        {/* AI icon bg */}
         <circle cx="391" cy="284" r="17" fill="rgba(242,101,34,0.1)" />
-        {/* Star */}
-        <path d="M391 271 L393.5 279 L402 279 L395.5 284 L398 292 L391 287 L384 292 L386.5 284 L380 279 L388.5 279 Z" fill="#f26522" opacity="0.75" />
+        {/* Neural network — AI icon */}
+        <circle cx="391" cy="284" r="4" fill="#f26522" opacity="0.85" />
+        <circle cx="381" cy="277" r="2.5" fill="#f26522" opacity="0.55" />
+        <circle cx="401" cy="277" r="2.5" fill="#f26522" opacity="0.55" />
+        <circle cx="381" cy="291" r="2.5" fill="#f26522" opacity="0.55" />
+        <circle cx="401" cy="291" r="2.5" fill="#f26522" opacity="0.55" />
+        <circle cx="391" cy="271" r="2" fill="#f26522" opacity="0.4" />
+        <circle cx="391" cy="297" r="2" fill="#f26522" opacity="0.4" />
+        <line x1="381" y1="277" x2="391" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.45" />
+        <line x1="401" y1="277" x2="391" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.45" />
+        <line x1="381" y1="291" x2="391" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.45" />
+        <line x1="401" y1="291" x2="391" y2="284" stroke="#f26522" strokeWidth="1" opacity="0.45" />
+        <line x1="391" y1="271" x2="391" y2="280" stroke="#f26522" strokeWidth="1" opacity="0.35" />
+        <line x1="391" y1="288" x2="391" y2="297" stroke="#f26522" strokeWidth="1" opacity="0.35" />
+        <line x1="381" y1="277" x2="381" y2="291" stroke="#f26522" strokeWidth="0.6" opacity="0.2" />
+        <line x1="401" y1="277" x2="401" y2="291" stroke="#f26522" strokeWidth="0.6" opacity="0.2" />
         {/* Text */}
         <rect x="414" y="274" width="54" height="7" rx="3.5" fill="#2e4057" opacity="0.65" />
         <rect x="414" y="287" width="38" height="5" rx="2.5" style={{ fill: "var(--border-hover)" }} />
-        {/* Star rating dots */}
-        <circle cx="368" cy="316" r="3.5" fill="#f26522" opacity="0.75" />
-        <circle cx="377" cy="316" r="3.5" fill="#f26522" opacity="0.75" />
-        <circle cx="386" cy="316" r="3.5" fill="#f26522" opacity="0.75" />
-        <circle cx="395" cy="316" r="3.5" fill="#f26522" opacity="0.75" />
-        <circle cx="404" cy="316" r="3.5" fill="#f26522" opacity="0.28" />
+        {/* Pulse dots */}
+        <circle cx="368" cy="316" r="3" fill="#f26522" opacity="0.75" />
+        <circle cx="377" cy="316" r="3" fill="#f26522" opacity="0.6" />
+        <circle cx="386" cy="316" r="3" fill="#f26522" opacity="0.45" />
+        <circle cx="395" cy="316" r="3" fill="#f26522" opacity="0.3" />
+        <circle cx="404" cy="316" r="3" fill="#f26522" opacity="0.15" />
       </g>
 
       {/* ── Accent sparkle dots ─────────────────────────────────────────── */}
@@ -170,14 +186,21 @@ export default function HomeHero() {
             <div className="hero-animate hero-animate-delay-3 mt-10 flex flex-wrap justify-center gap-3 lg:justify-start">
               <Link
                 href="/instructional-design-courses"
-                className="rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+                className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
               >
-                Explore Courses →
+                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+                Explore Courses
               </Link>
               <Link
                 href="/instructionaldesigncommunity"
-                className="rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted transition-colors hover:border-edge-hover hover:text-copy"
+                className="inline-flex items-center gap-2 rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy"
               >
+                <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
                 Join the Community
               </Link>
             </div>
