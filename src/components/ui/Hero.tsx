@@ -18,7 +18,7 @@ export default function Hero({
   centered = true,
 }: HeroProps) {
   return (
-    <section className="border-b border-edge bg-canvas px-4 py-20 sm:px-6 lg:px-8">
+    <section className="border-b border-edge bg-canvas px-4 py-20 sm:px-6 lg:px-8" style={{ boxShadow: "0 4px 28px rgba(0,0,0,0.07)" }}>
       <div className={`mx-auto max-w-4xl ${centered ? "text-center" : ""}`}>
         {eyebrow && (
           <p className="hero-animate mb-4 text-xs font-bold uppercase tracking-widest text-accent">
