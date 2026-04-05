@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
-import Card from "@/components/ui/Card"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import Image from "next/image"
+import Link from "next/link"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Instructional Design Courses",
+  title: "Instructional Design Courses and Certificates",
   description:
     "Browse all Instructional Design Central courses. Master instructional design, the ADDIE model, eLearning development, and more.",
   path: "/instructional-design-courses",
@@ -15,33 +16,193 @@ const courses = [
   {
     title: "Instructional Design Foundations",
     description:
-      "Build a solid foundation in instructional design principles, models, and practical application.",
+      "Instructional Design Foundations is a beginner-friendly course that teaches you the core principles, language, and practices of instructional design—giving you the confidence to start creating effective learning experiences from day one.",
     href: "/instructional-design-course",
+    image: "/course-id-foundations.jpg",
+    imageAlt: "Student working on instructional design course",
     tag: "Foundations",
   },
   {
     title: "Mastering the ADDIE Model",
     description:
-      "Deep-dive into the ADDIE model and learn how to apply it across real-world learning projects.",
+      "This practical course walks you step-by-step through the ADDIE framework—widely recognized as the gold standard in instructional design—giving you the skills to confidently design and build effective courses that work!",
     href: "/addie-model-course",
+    image: "/course-addie-model.jpg",
+    imageAlt: "Professional learning the ADDIE model",
     tag: "ADDIE",
   },
 ]
+
+const instructorCredentials = [
+  "Founder and Owner of Instructional Design Central (IDC)",
+  "Adjunct Faculty at Brigham Young University in the Instructional Psychology and Technology Department",
+  "Product leader at Adobe",
+  "15 years experience designing, developing, and delivering learning experiences and products",
+  "Former Head of Learning for two global organizations",
+  "Expert trainer, presenter, and consultant",
+  "Master of Science (M.S.) in Instructional Technology from Utah State University",
+]
+
+/* ── IDC Certified Badge (SVG) ───────────────────────────────────────── */
+function CertifiedBadge() {
+  return (
+    <svg viewBox="0 0 160 160" className="h-36 w-36" aria-label="IDC Certified Learning">
+      {/* Outer ring */}
+      <circle cx="80" cy="80" r="76" fill="none" stroke="#2e4057" strokeWidth="3" />
+      <circle cx="80" cy="80" r="68" fill="none" stroke="#2e4057" strokeWidth="1" strokeDasharray="3 4" />
+      {/* Inner fill */}
+      <circle cx="80" cy="80" r="64" fill="#2e4057" />
+      {/* Gear/badge notches */}
+      {Array.from({ length: 16 }).map((_, i) => {
+        const angle = (i * 360) / 16
+        const rad = (angle * Math.PI) / 180
+        const x1 = 80 + 70 * Math.cos(rad)
+        const y1 = 80 + 70 * Math.sin(rad)
+        const x2 = 80 + 76 * Math.cos(rad)
+        const y2 = 80 + 76 * Math.sin(rad)
+        return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#2e4057" strokeWidth="4" />
+      })}
+      {/* IDC logo text */}
+      <text x="80" y="72" textAnchor="middle" fill="white" fontSize="26" fontWeight="800" fontFamily="system-ui, sans-serif" letterSpacing="-1">IDC</text>
+      {/* Divider */}
+      <line x1="52" y1="80" x2="108" y2="80" stroke="#f26522" strokeWidth="1.5" />
+      {/* Certified text */}
+      <text x="80" y="96" textAnchor="middle" fill="white" fontSize="9.5" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="1.5">CERTIFIED</text>
+      <text x="80" y="109" textAnchor="middle" fill="#f26522" fontSize="9" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="1">LEARNING</text>
+    </svg>
+  )
+}
+
+/* ── Course image placeholder ────────────────────────────────────────── */
+function CourseImagePlaceholder({ gradient }: { gradient: string }) {
+  return (
+    <div className={`h-full min-h-[240px] w-full rounded-card bg-gradient-to-br ${gradient}`} />
+  )
+}
 
 export default function CoursesPage() {
   return (
     <>
       <Hero
-        title="Instructional Design Courses"
+        title="Instructional Design Courses and Certificates"
         subtitle="Online courses designed for instructional designers at every level."
       />
+
+      {/* Intro */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ScrollReveal>
+          <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-center">
+            <p className="flex-1 text-base font-medium leading-relaxed text-copy-muted">
+              Welcome to Instructional Design Central courses—your go-to destination for building and
+              advancing your instructional design expertise. Start with Instructional Design Foundations
+              to learn the core principles and confidently step into the field, then dive into Mastering
+              the ADDIE Model to master a full-cycle framework for designing impactful learning
+              experiences. Both courses are packed with interactive content, professional certifications,
+              practical templates, and tools to help you apply what you learn in real time. It&rsquo;s
+              everything you need to grow your skills—and your career—in instructional design.
+            </p>
+            <div className="shrink-0">
+              <CertifiedBadge />
+            </div>
+          </div>
+        </ScrollReveal>
+      </section>
+
+      {/* Course listings */}
+      <section className="border-t border-edge">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {courses.map((course, i) => (
-            <ScrollReveal key={course.href} delay={(i + 1) as 1 | 2} className="h-full">
-              <Card {...course} variant="course" />
+            <ScrollReveal key={course.href} delay={1}>
+              <div className={`flex flex-col gap-10 py-16 lg:flex-row lg:items-center lg:gap-16 ${i > 0 ? "border-t border-edge" : ""}`}>
+                {/* Image */}
+                <div className="w-full shrink-0 overflow-hidden rounded-card lg:w-80">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card">
+                    <Image
+                      src={course.image}
+                      alt={course.imageAlt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 320px"
+                      onError={undefined}
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="flex-1">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-accent">
+                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    </svg>
+                    {course.tag}
+                  </span>
+                  <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-heading">
+                    {course.title}
+                  </h2>
+                  <div className="mt-3 h-0.5 w-8 rounded bg-accent opacity-60" />
+                  <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
+                    {course.description}
+                  </p>
+                  <Link
+                    href={course.href}
+                    className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+                  >
+                    Learn More
+                    <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
             </ScrollReveal>
           ))}
+        </div>
+      </section>
+
+      {/* About the Instructor */}
+      <section className="border-t border-edge bg-surface py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:gap-16">
+              {/* Text */}
+              <div className="flex-1">
+                <p className="text-xs font-bold uppercase tracking-widest text-accent">Meet Your Teacher</p>
+                <h2
+                  className="mt-2 font-extrabold tracking-tight text-heading"
+                  style={{ fontSize: "clamp(20px,3vw,30px)", letterSpacing: "-0.04rem" }}
+                >
+                  About the Instructor
+                </h2>
+                <p className="mt-1 text-lg font-bold text-copy">Travis Jordan</p>
+                <div className="mt-3 h-0.5 w-8 rounded bg-accent opacity-60" />
+                <ul className="mt-6 space-y-3">
+                  {instructorCredentials.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)]">
+                        <svg className="h-3 w-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <span className="text-sm font-medium leading-relaxed text-copy-muted">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Photo */}
+              <div className="shrink-0 lg:pt-8">
+                <div className="relative mx-auto h-40 w-40 overflow-hidden rounded-full border-4 border-edge shadow-card lg:mx-0">
+                  <Image
+                    src="/travis-jordan.jpg"
+                    alt="Travis Jordan, Founder and Owner of Instructional Design Central"
+                    fill
+                    className="object-cover"
+                    sizes="160px"
+                  />
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>
