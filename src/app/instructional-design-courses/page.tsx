@@ -18,7 +18,7 @@ const courses = [
     description:
       "Instructional Design Foundations is a beginner-friendly course that teaches you the core principles, language, and practices of instructional design—giving you the confidence to start creating effective learning experiences from day one.",
     href: "/instructional-design-course",
-    image: "/course-id-foundations.jpg",
+    image: "/course-id-foundations.png",
     imageAlt: "Student working on instructional design course",
     tag: "Foundations",
   },
@@ -27,7 +27,7 @@ const courses = [
     description:
       "This practical course walks you step-by-step through the ADDIE framework—widely recognized as the gold standard in instructional design—giving you the skills to confidently design and build effective courses that work!",
     href: "/addie-model-course",
-    image: "/course-addie-model.jpg",
+    image: "/course-addie-model.png",
     imageAlt: "Professional learning the ADDIE model",
     tag: "ADDIE",
   },
