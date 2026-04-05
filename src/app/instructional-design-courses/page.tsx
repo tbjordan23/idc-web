@@ -43,73 +43,35 @@ const instructorCredentials = [
   "Master of Science (M.S.) in Instructional Technology from Utah State University",
 ]
 
-/* ── IDC Certified Badge (SVG) ───────────────────────────────────────── */
-function CertifiedBadge() {
-  return (
-    <svg viewBox="0 0 200 200" className="h-44 w-44 drop-shadow-lg" aria-label="IDC Certified Learning">
-      {/* Outermost thin solid ring */}
-      <circle cx="100" cy="100" r="96" fill="none" stroke="#2e4057" strokeWidth="2.5" />
-      {/* Dashed ring — the "seal" track */}
-      <circle cx="100" cy="100" r="87" fill="none" stroke="#2e4057" strokeWidth="2" strokeDasharray="5 4.2" strokeLinecap="round" />
-      {/* Solid inner ring border */}
-      <circle cx="100" cy="100" r="79" fill="none" stroke="#2e4057" strokeWidth="2" />
-      {/* Main filled disc */}
-      <circle cx="100" cy="100" r="77" fill="#2e4057" />
-
-      {/* IDC — large, bold */}
-      <text
-        x="100" y="94"
-        textAnchor="middle"
-        dominantBaseline="middle"
-        fill="white"
-        fontSize="34"
-        fontWeight="800"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        letterSpacing="-0.5"
-      >
-        IDC
-      </text>
-
-      {/* Orange accent line */}
-      <rect x="62" y="103" width="76" height="2.5" rx="1.25" fill="#f26522" />
-
-      {/* CERTIFIED */}
-      <text
-        x="100" y="121"
-        textAnchor="middle"
-        dominantBaseline="middle"
-        fill="white"
-        fontSize="11.5"
-        fontWeight="700"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        letterSpacing="3"
-      >
-        CERTIFIED
-      </text>
-
-      {/* LEARNING */}
-      <text
-        x="100" y="137"
-        textAnchor="middle"
-        dominantBaseline="middle"
-        fill="#f26522"
-        fontSize="11"
-        fontWeight="700"
-        fontFamily="system-ui, -apple-system, sans-serif"
-        letterSpacing="3"
-      >
-        LEARNING
-      </text>
-    </svg>
-  )
-}
-
-/* ── Course image placeholder ────────────────────────────────────────── */
-function CourseImagePlaceholder({ gradient }: { gradient: string }) {
-  return (
-    <div className={`h-full min-h-[240px] w-full rounded-card bg-gradient-to-br ${gradient}`} />
-  )
-}
+const courseTiles = [
+  {
+    stat: "2,500+",
+    label: "Enrollments",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+      </svg>
+    ),
+  },
+  {
+    stat: "Affordable",
+    label: "Cost",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    stat: "Certified",
+    label: "Learning",
+    icon: (
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      </svg>
+    ),
+  },
+]
 
 export default function CoursesPage() {
   return (
@@ -120,21 +82,33 @@ export default function CoursesPage() {
       />
 
       {/* Intro */}
-      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <section className="mx-auto max-w-4xl px-4 pt-16 pb-10 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <div className="flex flex-col items-start gap-10 lg:flex-row lg:items-center">
-            <p className="flex-1 text-base font-medium leading-relaxed text-copy-muted">
-              Welcome to Instructional Design Central courses—your go-to destination for building and
-              advancing your instructional design expertise. Start with Instructional Design Foundations
-              to learn the core principles and confidently step into the field, then dive into Mastering
-              the ADDIE Model to master a full-cycle framework for designing impactful learning
-              experiences. Both courses are packed with interactive content, professional certifications,
-              practical templates, and tools to help you apply what you learn in real time. It&rsquo;s
-              everything you need to grow your skills—and your career—in instructional design.
-            </p>
-            <div className="shrink-0">
-              <CertifiedBadge />
-            </div>
+          <p className="text-center text-base font-medium leading-relaxed text-copy-muted">
+            Welcome to Instructional Design Central courses—your go-to destination for building and
+            advancing your instructional design expertise. Start with Instructional Design Foundations
+            to learn the core principles and confidently step into the field, then dive into Mastering
+            the ADDIE Model to master a full-cycle framework for designing impactful learning
+            experiences. Both courses are packed with interactive content, professional certifications,
+            practical templates, and tools to help you apply what you learn in real time. It&rsquo;s
+            everything you need to grow your skills—and your career—in instructional design.
+          </p>
+        </ScrollReveal>
+      </section>
+
+      {/* Stat tiles */}
+      <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {courseTiles.map((tile) => (
+              <div key={tile.label} className="flex flex-col items-center rounded-card border border-edge bg-surface p-8 text-center shadow-card">
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+                  {tile.icon}
+                </div>
+                <p className="text-2xl font-extrabold tracking-tight text-heading">{tile.stat}</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-widest text-copy-muted">{tile.label}</p>
+              </div>
+            ))}
           </div>
         </ScrollReveal>
       </section>
