@@ -3,7 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Instructional Designer Salary Guide",
+  title: "Instructional Designer Salary",
   description:
     "How much do instructional designers make? Explore salary ranges by experience, location, industry, and role type.",
   path: "/instructionaldesignersalary",
