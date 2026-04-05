@@ -3,7 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Contact Instructional Design Central",
+  title: "Contact Us",
   description:
     "Get in touch with the Instructional Design Central team. We'd love to hear from you.",
   path: "/contactinstructionaldesigncentral",

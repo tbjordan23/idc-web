@@ -3,7 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "The ADDIE Model — A Complete Guide",
+  title: "ADDIE Model",
   description:
     "Everything you need to know about the ADDIE instructional design model: Analysis, Design, Development, Implementation, and Evaluation.",
   path: "/addie-model",

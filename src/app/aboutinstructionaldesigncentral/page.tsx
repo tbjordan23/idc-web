@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "About Instructional Design Central",
+  title: "Resources, Community and Content",
   description:
     "Learn about Instructional Design Central (IDC) — our mission, story, and the team behind the #1 resource hub for instructional designers.",
   path: "/aboutinstructionaldesigncentral",

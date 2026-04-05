@@ -5,7 +5,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Instructional Design Community",
+  title: "Join Community Free",
   description:
     "Join the Instructional Design Central community. Connect with instructional designers worldwide, share resources, and grow your career.",
   path: "/instructionaldesigncommunity",

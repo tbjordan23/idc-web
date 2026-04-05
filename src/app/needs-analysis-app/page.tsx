@@ -4,7 +4,7 @@ import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Needs Analysis Tool",
+  title: "Free Needs Analysis App",
   description:
     "Use the IDC Needs Analysis Tool to identify performance gaps, root causes, and the right learning solutions for your organization.",
   path: "/needs-analysis-app",

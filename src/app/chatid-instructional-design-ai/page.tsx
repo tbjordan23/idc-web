@@ -4,7 +4,7 @@ import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "ChatID: Instructional Design GPT",
+  title: "ChatID: Instructional Design AI",
   description:
     "ChatID is an AI assistant trained specifically for instructional designers. Get expert guidance on ID models, eLearning, and learning design.",
   path: "/chatid-instructional-design-ai",

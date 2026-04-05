@@ -4,7 +4,7 @@ import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Top Rated LMS Platforms",
+  title: "Top Rated LMS",
   description:
     "Compare and review the top-rated Learning Management Systems for corporate training and academic use.",
   path: "/top-rated-lms",

@@ -3,7 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Learning Theory for Instructional Designers",
+  title: "Learning Theory Overview",
   description:
     "An overview of major learning theories — behaviorism, cognitivism, constructivism, connectivism — and their application in instructional design.",
   path: "/learning-theory",

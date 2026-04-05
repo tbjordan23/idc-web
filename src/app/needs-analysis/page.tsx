@@ -3,7 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Needs Analysis in Instructional Design",
+  title: "Needs Analysis",
   description:
     "Learn how to conduct a needs analysis for learning and training programs. Steps, templates, and best practices.",
   path: "/needs-analysis",

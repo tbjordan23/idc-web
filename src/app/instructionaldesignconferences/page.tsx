@@ -4,7 +4,7 @@ import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Top Instructional Design Conferences",
+  title: "Instructional Design Conferences",
   description:
     "The top instructional design, eLearning, and L&D conferences to attend this year.",
   path: "/instructionaldesignconferences",

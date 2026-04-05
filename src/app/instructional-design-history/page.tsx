@@ -3,7 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "The History of Instructional Design",
+  title: "History of Instructional Design",
   description:
     "A timeline of instructional design history — from WWII military training to modern eLearning and AI-driven learning experiences.",
   path: "/instructional-design-history",
