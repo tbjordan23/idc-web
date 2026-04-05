@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
@@ -57,33 +57,45 @@ type NavItem =
 
 function DropdownMenu({ items }: { items: { label: string; href: string }[] }) {
   return (
-    <div className="absolute top-full left-0 z-50 mt-2 w-60 overflow-hidden rounded-card border border-edge bg-surface shadow-card">
-      <ul className="py-1">
-        {items.map((item) => (
-          <li key={item.href}>
-            <Link
-              href={item.href}
-              className="block px-4 py-2 text-sm font-medium text-copy-muted transition-colors hover:bg-surface-2 hover:text-copy"
-            >
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+    /* pt-2 keeps the invisible bridge in the hover zone so diagonal movement doesn't close the menu */
+    <div className="absolute top-full left-0 z-50 pt-2">
+      <div className="w-60 overflow-hidden rounded-card border border-edge bg-surface shadow-card">
+        <ul className="py-1">
+          {items.map((item) => (
+            <li key={item.href}>
+              <Link
+                href={item.href}
+                className="block px-4 py-2.5 text-sm font-medium text-copy-muted transition-colors hover:bg-surface-2 hover:text-copy"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   )
 }
 
 function NavLink({ item, onClose }: { item: NavItem; onClose?: () => void }) {
   const [open, setOpen] = useState(false)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
   const pathname = usePathname()
 
   if (item.dropdown) {
+    const handleMouseEnter = () => {
+      if (closeTimer.current) clearTimeout(closeTimer.current)
+      setOpen(true)
+    }
+    const handleMouseLeave = () => {
+      closeTimer.current = setTimeout(() => setOpen(false), 120)
+    }
+
     return (
       <div
         className="group relative"
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         <button
           className="flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium text-copy-muted transition-colors hover:text-copy"
