@@ -6,7 +6,7 @@ import Image from "next/image"
 import Link from "next/link"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Instructional Design Courses and Certificates",
+  title: "Instructional Design Courses",
   description:
     "Browse all Instructional Design Central courses. Master instructional design, the ADDIE model, eLearning development, and more.",
   path: "/instructional-design-courses",

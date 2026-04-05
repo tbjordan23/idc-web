@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
     default: "Instructional Design Central | Community and Resources",
-    template: "%s | Instructional Design Central",
+    template: "%s | Instructional Design Central (IDC)",
   },
   description:
     "Instructional Design Central (IDC) helps instructional design related professionals stay sharp and create amazing learning experiences by providing access to online learning, community connections, and professional resources.",
