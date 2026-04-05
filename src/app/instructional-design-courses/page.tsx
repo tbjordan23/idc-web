@@ -46,29 +46,60 @@ const instructorCredentials = [
 /* ── IDC Certified Badge (SVG) ───────────────────────────────────────── */
 function CertifiedBadge() {
   return (
-    <svg viewBox="0 0 160 160" className="h-36 w-36" aria-label="IDC Certified Learning">
-      {/* Outer ring */}
-      <circle cx="80" cy="80" r="76" fill="none" stroke="#2e4057" strokeWidth="3" />
-      <circle cx="80" cy="80" r="68" fill="none" stroke="#2e4057" strokeWidth="1" strokeDasharray="3 4" />
-      {/* Inner fill */}
-      <circle cx="80" cy="80" r="64" fill="#2e4057" />
-      {/* Gear/badge notches */}
-      {Array.from({ length: 16 }).map((_, i) => {
-        const angle = (i * 360) / 16
-        const rad = (angle * Math.PI) / 180
-        const x1 = 80 + 70 * Math.cos(rad)
-        const y1 = 80 + 70 * Math.sin(rad)
-        const x2 = 80 + 76 * Math.cos(rad)
-        const y2 = 80 + 76 * Math.sin(rad)
-        return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="#2e4057" strokeWidth="4" />
-      })}
-      {/* IDC logo text */}
-      <text x="80" y="72" textAnchor="middle" fill="white" fontSize="26" fontWeight="800" fontFamily="system-ui, sans-serif" letterSpacing="-1">IDC</text>
-      {/* Divider */}
-      <line x1="52" y1="80" x2="108" y2="80" stroke="#f26522" strokeWidth="1.5" />
-      {/* Certified text */}
-      <text x="80" y="96" textAnchor="middle" fill="white" fontSize="9.5" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="1.5">CERTIFIED</text>
-      <text x="80" y="109" textAnchor="middle" fill="#f26522" fontSize="9" fontWeight="600" fontFamily="system-ui, sans-serif" letterSpacing="1">LEARNING</text>
+    <svg viewBox="0 0 200 200" className="h-44 w-44 drop-shadow-lg" aria-label="IDC Certified Learning">
+      {/* Outermost thin solid ring */}
+      <circle cx="100" cy="100" r="96" fill="none" stroke="#2e4057" strokeWidth="2.5" />
+      {/* Dashed ring — the "seal" track */}
+      <circle cx="100" cy="100" r="87" fill="none" stroke="#2e4057" strokeWidth="2" strokeDasharray="5 4.2" strokeLinecap="round" />
+      {/* Solid inner ring border */}
+      <circle cx="100" cy="100" r="79" fill="none" stroke="#2e4057" strokeWidth="2" />
+      {/* Main filled disc */}
+      <circle cx="100" cy="100" r="77" fill="#2e4057" />
+
+      {/* IDC — large, bold */}
+      <text
+        x="100" y="94"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fill="white"
+        fontSize="34"
+        fontWeight="800"
+        fontFamily="system-ui, -apple-system, sans-serif"
+        letterSpacing="-0.5"
+      >
+        IDC
+      </text>
+
+      {/* Orange accent line */}
+      <rect x="62" y="103" width="76" height="2.5" rx="1.25" fill="#f26522" />
+
+      {/* CERTIFIED */}
+      <text
+        x="100" y="121"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fill="white"
+        fontSize="11.5"
+        fontWeight="700"
+        fontFamily="system-ui, -apple-system, sans-serif"
+        letterSpacing="3"
+      >
+        CERTIFIED
+      </text>
+
+      {/* LEARNING */}
+      <text
+        x="100" y="137"
+        textAnchor="middle"
+        dominantBaseline="middle"
+        fill="#f26522"
+        fontSize="11"
+        fontWeight="700"
+        fontFamily="system-ui, -apple-system, sans-serif"
+        letterSpacing="3"
+      >
+        LEARNING
+      </text>
     </svg>
   )
 }
