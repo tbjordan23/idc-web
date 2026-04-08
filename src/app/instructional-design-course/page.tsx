@@ -47,7 +47,9 @@ export default function IDFoundationsCourse() {
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
-          <p className="text-copy-muted">Placeholder — course detail content will appear here.</p>
+          <p className="text-base font-medium leading-relaxed text-copy-muted">
+            Whether you&rsquo;re brand new to instructional design or looking to fill in the gaps, this course gives you a real foundation — the kind that changes how you approach every project. Over 11 engaging lessons, you&rsquo;ll learn how to apply core ID principles in real-world scenarios, not just theory. You&rsquo;ll walk away knowing how to design learning that genuinely works for your learners, with access to premium templates that speed up your workflow and make your work look polished from day one. If you&rsquo;ve been doing this by instinct and wondering if there&rsquo;s a better way — there is, and this is it.
+          </p>
         </ScrollReveal>
       </section>
     </>
