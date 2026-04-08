@@ -47,8 +47,6 @@ const courseFeatures = [
         <rect x="9" y="11" width="9" height="2" rx="1" fill="#4a7bc4" opacity="0.45" />
         <circle cx="4" cy="18" r="2" stroke="#f26522" strokeWidth="1.5" fill="none" opacity="0.5" />
         <rect x="9" y="17" width="10" height="2" rx="1" fill="currentColor" opacity="0.15" />
-        <rect x="0" y="22" width="24" height="1.5" rx="0.75" fill="currentColor" opacity="0.1" />
-        <rect x="0" y="22" width="14" height="1.5" rx="0.75" fill="#f26522" opacity="0.5" />
       </svg>
     ),
   },
@@ -59,9 +57,9 @@ const courseFeatures = [
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
         <rect x="1" y="4" width="16" height="12" rx="2" stroke="#4a7bc4" strokeWidth="1.5" opacity="0.8" />
-        <path d="M17 9l6-4v14l-6-4V9z" fill="#4a7bc4" fillOpacity="0.5" stroke="#4a7bc4" strokeWidth="1" strokeLinejoin="round" />
-        <circle cx="9" cy="10" r="2.5" fill="#4a7bc4" opacity="0.2" />
-        <path d="M8 8.8l3.5 1.2-3.5 1.2V8.8z" fill="#4a7bc4" opacity="0.9" />
+        <path d="M17 9l6-4v10l-6-4V9z" fill="#4a7bc4" fillOpacity="0.5" stroke="#4a7bc4" strokeWidth="1" strokeLinejoin="round" />
+        <circle cx="9" cy="10" r="3" fill="#4a7bc4" opacity="0.2" />
+        <path d="M7.8 8.5l4 1.5-4 1.5V8.5z" fill="#4a7bc4" opacity="0.9" />
       </svg>
     ),
   },
@@ -174,12 +172,9 @@ const courseFeatures = [
       "Pass the final exam and earn a certificate you can share on LinkedIn or your resume — tangible proof of what you know and what you've built.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="2" y="4" width="20" height="14" rx="2" stroke="#f26522" strokeWidth="1.5" opacity="0.7" fill="#f26522" fillOpacity="0.05" />
-        <circle cx="12" cy="11" r="3.5" stroke="#f26522" strokeWidth="1.5" opacity="0.8" />
-        <path d="M9.5 15l1.5 5 1-2 1 2 1.5-5" stroke="#f26522" strokeWidth="1.25" strokeLinejoin="round" opacity="0.6" />
-        <path d="M10.5 10.5l1 1 2-2" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
-        <rect x="5" y="7" width="4" height="1" rx="0.5" fill="#f26522" opacity="0.3" />
-        <rect x="15" y="7" width="4" height="1" rx="0.5" fill="#f26522" opacity="0.3" />
+        <circle cx="12" cy="10" r="4.5" stroke="#f26522" strokeWidth="1.5" opacity="0.8" fill="#f26522" fillOpacity="0.08" />
+        <path d="M9.5 14.5l1.5 5.5 1-2.5 1 2.5 1.5-5.5" stroke="#f26522" strokeWidth="1.25" strokeLinejoin="round" strokeLinecap="round" opacity="0.7" />
+        <path d="M10.5 9.5l1.2 1.2 2.5-2.5" stroke="#f26522" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" opacity="0.95" />
       </svg>
     ),
   },
