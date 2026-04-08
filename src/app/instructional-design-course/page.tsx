@@ -3,6 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
+import Image from "next/image"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Foundations Course and Certification",
@@ -39,149 +40,61 @@ const courseFeatures = [
     title: "11 Lessons",
     description:
       "Four chapters, 11 lessons — and something to engage with in every single one. Videos, activities, quizzes, reflections, and downloads. You'll never just stare at a wall of text.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <circle cx="4" cy="6" r="2" fill="#f26522" opacity="0.9" />
-        <rect x="9" y="5" width="11" height="2" rx="1" fill="#f26522" opacity="0.5" />
-        <circle cx="4" cy="12" r="2" fill="#4a7bc4" opacity="0.9" />
-        <rect x="9" y="11" width="9" height="2" rx="1" fill="#4a7bc4" opacity="0.45" />
-        <circle cx="4" cy="18" r="2" stroke="#f26522" strokeWidth="1.5" fill="none" opacity="0.5" />
-        <rect x="9" y="17" width="10" height="2" rx="1" fill="currentColor" opacity="0.15" />
-        <rect x="0" y="22" width="24" height="1.5" rx="0.75" fill="currentColor" opacity="0.1" />
-        <rect x="0" y="22" width="14" height="1.5" rx="0.75" fill="#f26522" opacity="0.5" />
-      </svg>
-    ),
+    image: "/feature-lessons.png",
   },
   {
     title: "Videos",
     description:
       "Learn from Travis Jordan, Founder of IDC, through engaging video lessons that feel like a real conversation — demonstrating key ID principles the way he'd actually use them.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="1" y="4" width="16" height="12" rx="2" stroke="#4a7bc4" strokeWidth="1.5" opacity="0.8" />
-        <path d="M17 9l6-4v14l-6-4V9z" fill="#4a7bc4" fillOpacity="0.5" stroke="#4a7bc4" strokeWidth="1" strokeLinejoin="round" />
-        <circle cx="9" cy="10" r="2.5" fill="#4a7bc4" opacity="0.2" />
-        <path d="M8 8.8l3.5 1.2-3.5 1.2V8.8z" fill="#4a7bc4" opacity="0.9" />
-      </svg>
-    ),
+    image: "/feature-videos.png",
   },
   {
     title: "Templates",
     description:
       "Hit the ground running with five professional ID templates included with the course — a $35 value. Built to use in your real work, not just sit in a downloads folder.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="3" y="2" width="18" height="20" rx="2" stroke="#f26522" strokeWidth="1.5" opacity="0.7" />
-        <rect x="6" y="6" width="12" height="2" rx="1" fill="#f26522" opacity="0.6" />
-        <rect x="6" y="10" width="7" height="1.5" rx="0.75" fill="currentColor" opacity="0.25" />
-        <rect x="6" y="13" width="10" height="1.5" rx="0.75" fill="currentColor" opacity="0.2" />
-        <rect x="6" y="16" width="5" height="1.5" rx="0.75" fill="currentColor" opacity="0.2" />
-        <rect x="13" y="10" width="5" height="6" rx="1" fill="#f26522" opacity="0.15" stroke="#f26522" strokeWidth="1" />
-      </svg>
-    ),
+    image: "/feature-templates.png",
   },
   {
     title: "Quizzes",
     description:
       "Check your understanding as you go. Each quiz gives you immediate feedback so you know exactly what clicked — and what might need a second look before moving on.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#f26522" strokeWidth="1.5" opacity="0.7" />
-        <circle cx="6" cy="8" r="1.5" fill="#f26522" opacity="0.9" />
-        <path d="M4.5 8l1 1 2-2" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-        <rect x="10" y="7" width="9" height="2" rx="1" fill="currentColor" opacity="0.2" />
-        <circle cx="6" cy="13" r="1.5" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.3" />
-        <rect x="10" y="12" width="9" height="2" rx="1" fill="currentColor" opacity="0.15" />
-        <circle cx="6" cy="18" r="1.5" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.3" />
-        <rect x="10" y="17" width="6" height="2" rx="1" fill="currentColor" opacity="0.15" />
-      </svg>
-    ),
+    image: "/feature-quizzes.png",
   },
   {
     title: "Course Downloads",
     description:
       "Take the learning offline. Downloadable handouts at the end of each chapter capture key points and visuals — great for reference, review, or sharing with your team.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="4" y="2" width="13" height="16" rx="2" stroke="#4a7bc4" strokeWidth="1.5" opacity="0.7" />
-        <path d="M17 6l3 0v14a2 2 0 01-2 2H6" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-        <path d="M10 7v7m0 0l-2.5-2.5M10 14l2.5-2.5" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.85" />
-        <rect x="7" y="17.5" width="6" height="1.5" rx="0.75" fill="#4a7bc4" opacity="0.5" />
-      </svg>
-    ),
+    image: "/feature-downloads.png",
   },
   {
     title: "Interactive Activities",
     description:
       "This course is built for active learning. Challenge activities, hot spots, interactive slides — you'll be doing things, not just watching.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <circle cx="12" cy="12" r="9" stroke="#f26522" strokeWidth="1.5" opacity="0.2" />
-        <circle cx="12" cy="12" r="3" fill="#f26522" opacity="0.6" />
-        <circle cx="5" cy="6" r="1.5" fill="#4a7bc4" opacity="0.5" />
-        <circle cx="19" cy="6" r="1.5" fill="#f26522" opacity="0.5" />
-        <circle cx="19" cy="18" r="1.5" fill="#4a7bc4" opacity="0.5" />
-        <circle cx="5" cy="18" r="1.5" fill="#f26522" opacity="0.4" />
-        <line x1="7" y1="7" x2="10.5" y2="10.5" stroke="#f26522" strokeWidth="1" opacity="0.35" />
-        <line x1="17" y1="7" x2="13.5" y2="10.5" stroke="#4a7bc4" strokeWidth="1" opacity="0.35" />
-        <line x1="17" y1="17" x2="13.5" y2="13.5" stroke="#4a7bc4" strokeWidth="1" opacity="0.35" />
-        <line x1="7" y1="17" x2="10.5" y2="13.5" stroke="#f26522" strokeWidth="1" opacity="0.35" />
-      </svg>
-    ),
+    image: "/feature-interactive.png",
   },
   {
     title: "Mobile Ready",
     description:
       "Learn on your terms, wherever you are. Fully mobile-responsive, so your phone or tablet works just as well as your laptop — no excuses, no friction.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="5" y="1" width="14" height="22" rx="3" stroke="#4a7bc4" strokeWidth="1.5" opacity="0.8" />
-        <circle cx="12" cy="19.5" r="1" fill="#4a7bc4" opacity="0.6" />
-        <rect x="9" y="3.5" width="6" height="1" rx="0.5" fill="#4a7bc4" opacity="0.4" />
-        <rect x="8" y="7" width="8" height="1.5" rx="0.75" fill="currentColor" opacity="0.2" />
-        <rect x="8" y="10" width="6" height="1.5" rx="0.75" fill="currentColor" opacity="0.15" />
-        <rect x="8" y="13" width="7" height="1.5" rx="0.75" fill="currentColor" opacity="0.15" />
-      </svg>
-    ),
+    image: "/feature-mobile.png",
   },
   {
     title: "Challenge Activities",
     description:
       "Real learning happens when you apply it. Challenge activities give you space to connect concepts to your actual work — and think through how you'd really use them.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <path d="M12 2l2.5 5 5.5.8-4 3.9.95 5.5L12 14.5 7.05 17.2 8 11.7 4 7.8l5.5-.8L12 2z" fill="#f26522" fillOpacity="0.18" stroke="#f26522" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M9 21h6m-3-3v3" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-        <path d="M10.5 8.5l1 1 2.5-2.5" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
-      </svg>
-    ),
+    image: "/feature-challenges.png",
   },
   {
     title: "Discussions",
     description:
       "Each lesson comes with instructor-led discussion prompts so you can go deeper, ask questions, and hear how other learners are approaching the same material.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="#4a7bc4" strokeWidth="1.5" strokeLinejoin="round" fill="#4a7bc4" fillOpacity="0.07" />
-        <rect x="7" y="8" width="10" height="1.5" rx="0.75" fill="#4a7bc4" opacity="0.45" />
-        <rect x="7" y="11.5" width="7" height="1.5" rx="0.75" fill="#4a7bc4" opacity="0.3" />
-      </svg>
-    ),
+    image: "/feature-discussions.png",
   },
   {
     title: "Professional Certificate",
     description:
       "Pass the final exam and earn a certificate you can share on LinkedIn or your resume — tangible proof of what you know and what you've built.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="2" y="4" width="20" height="14" rx="2" stroke="#f26522" strokeWidth="1.5" opacity="0.7" fill="#f26522" fillOpacity="0.05" />
-        <circle cx="12" cy="11" r="3.5" stroke="#f26522" strokeWidth="1.5" opacity="0.8" />
-        <path d="M9.5 15l1.5 5 1-2 1 2 1.5-5" stroke="#f26522" strokeWidth="1.25" strokeLinejoin="round" opacity="0.6" />
-        <path d="M10.5 10.5l1 1 2-2" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
-        <rect x="5" y="7" width="4" height="1" rx="0.5" fill="#f26522" opacity="0.3" />
-        <rect x="15" y="7" width="4" height="1" rx="0.5" fill="#f26522" opacity="0.3" />
-      </svg>
-    ),
+    image: "/feature-certificate.png",
   },
 ]
 
@@ -269,7 +182,7 @@ export default function IDFoundationsCourse() {
       <Hero
         title="Instructional Design Foundations Course and Certificate"
         subtitle="Build the confidence and skills to design learning experiences that truly make a difference."
-        cta={{ label: "Enroll Now", href: "#enroll" }}
+        cta={{ label: "Enroll Now", href: "https://idcentral.thinkific.com/courses/instructional-design-foundations" }}
       />
 
       {/* Intro paragraph */}
@@ -296,11 +209,17 @@ export default function IDFoundationsCourse() {
           <div className="mt-10 grid gap-5 sm:grid-cols-2">
             {courseFeatures.map((feature, i) => (
               <ScrollReveal key={feature.title} delay={(i % 2 + 1) as 1 | 2} className="h-full">
-                <div className="flex h-full gap-5 rounded-card border border-edge bg-surface-2 p-6 shadow-card transition-all duration-200 hover:border-edge-hover">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
-                    {feature.icon}
+                <div className="flex h-full flex-col overflow-hidden rounded-card border border-edge bg-surface-2 shadow-card transition-all duration-200 hover:border-edge-hover">
+                  <div className="relative aspect-[16/10] w-full overflow-hidden border-b border-edge">
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      fill
+                      className="object-cover object-top"
+                      sizes="(max-width: 640px) 100vw, 50vw"
+                    />
                   </div>
-                  <div className="min-w-0">
+                  <div className="flex flex-1 flex-col p-6">
                     <h3 className="text-xs font-extrabold uppercase tracking-widest text-heading">
                       {feature.title}
                     </h3>
@@ -460,8 +379,14 @@ export default function IDFoundationsCourse() {
               <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
                 Join 2,500+ instructional designers who&rsquo;ve already taken this course and walked away with the skills, confidence, and certificate to show for it.
               </p>
+              {/* Pricing */}
+              <div className="flex items-baseline gap-3">
+                <span className="text-3xl font-extrabold tracking-tight text-heading">$97</span>
+                <span className="text-lg font-semibold text-copy-muted line-through opacity-60">$149</span>
+                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 35%</span>
+              </div>
               <Link
-                href="#enroll"
+                href="https://idcentral.thinkific.com/courses/instructional-design-foundations"
                 className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
               >
                 <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -469,6 +394,7 @@ export default function IDFoundationsCourse() {
                 </svg>
                 Enroll Now
               </Link>
+              <p className="text-xs text-copy-muted opacity-70">One-time payment &middot; Lifetime access &middot; Certificate included</p>
             </div>
           </ScrollReveal>
         </div>
