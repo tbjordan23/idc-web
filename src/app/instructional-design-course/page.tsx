@@ -364,6 +364,41 @@ export default function IDFoundationsCourse() {
         </div>
       </section>
 
+      {/* Mid-page Enroll CTA */}
+      <section className="border-t border-edge bg-surface py-16">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="flex flex-col items-center gap-4 rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent">Ready to Start?</p>
+              <h2
+                className="font-extrabold tracking-tight text-heading"
+                style={{ fontSize: "clamp(20px,2.5vw,28px)", letterSpacing: "-0.04rem" }}
+              >
+                Your next step starts here.
+              </h2>
+              <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
+                Join 2,500+ instructional designers who&rsquo;ve already taken this course and walked away with the skills, confidence, and certificate to show for it.
+              </p>
+              <div className="flex items-baseline gap-3">
+                <span className="text-3xl font-extrabold tracking-tight text-heading">$75</span>
+                <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$100</span>
+                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
+              </div>
+              <Link
+                href="https://idcentral.thinkific.com/courses/instructional-design-foundations"
+                className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+              >
+                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+                Enroll Now
+              </Link>
+              <p className="text-xs text-copy-muted opacity-70">One-time payment &middot; Lifetime access &middot; Certificate included</p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* Course Curriculum */}
       <section className="border-t border-edge bg-surface py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -462,9 +497,9 @@ export default function IDFoundationsCourse() {
               </p>
               {/* Pricing */}
               <div className="flex items-baseline gap-3">
-                <span className="text-3xl font-extrabold tracking-tight text-heading">$97</span>
-                <span className="text-lg font-semibold text-copy-muted line-through opacity-60">$149</span>
-                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 35%</span>
+                <span className="text-3xl font-extrabold tracking-tight text-heading">$75</span>
+                <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$100</span>
+                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
                 href="https://idcentral.thinkific.com/courses/instructional-design-foundations"
