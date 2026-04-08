@@ -133,26 +133,26 @@ export default function CoursesPage() {
 
       {/* Stat tiles */}
       <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
-        <ScrollReveal>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-            {courseTiles.map((tile) => (
-              <div key={tile.label} className="flex flex-col items-center rounded-card border border-edge bg-surface p-8 text-center shadow-card">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {courseTiles.map((tile, i) => (
+            <ScrollReveal key={tile.label} delay={(i + 1) as 1 | 2 | 3}>
+              <div className="flex flex-col items-center rounded-card border border-edge bg-surface p-8 text-center shadow-card">
                 <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
                   {tile.icon}
                 </div>
                 <p className="text-2xl font-extrabold tracking-tight text-heading">{tile.stat}</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-widest text-copy-muted">{tile.label}</p>
               </div>
-            ))}
-          </div>
-        </ScrollReveal>
+            </ScrollReveal>
+          ))}
+        </div>
       </section>
 
       {/* Course listings */}
       <section className="border-t border-edge">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {courses.map((course, i) => (
-            <ScrollReveal key={course.href} delay={1}>
+            <ScrollReveal key={course.href}>
               <div className={`flex flex-col gap-10 py-16 lg:flex-row lg:items-center lg:gap-16 ${i > 0 ? "border-t border-edge" : ""}`}>
                 {/* Image */}
                 <div className="w-full shrink-0 overflow-hidden rounded-card lg:w-80">
