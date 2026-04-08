@@ -290,7 +290,7 @@ const courseBenefits = [
   { label: "Shareable Certificate" },
 ]
 
-const ENROLL_URL = "https://idcentral.thinkific.com/products/courses/addiemodel/enroll"
+const ENROLL_URL = "https://idcentral.thinkific.com/courses/addiemodel/enroll"
 
 export default function ADDIECourse() {
   return (
