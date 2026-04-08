@@ -264,7 +264,7 @@ export default function IDFoundationsCourse() {
       <Hero
         title="Instructional Design Foundations Course and Certificate"
         subtitle="Build the confidence and skills to design learning experiences that truly make a difference."
-        cta={{ label: "Enroll Now", href: "https://idcentral.thinkific.com/order?ct=fc76671c-406a-4b2c-a646-ebcc044ec0b3", target: "_blank" }}
+        cta={{ label: "Enroll Now", href: "https://idcentral.thinkific.com/courses/instructional-design-foundations-course/enroll", target: "_blank" }}
       />
 
       {/* Intro paragraph */}
@@ -380,7 +380,7 @@ export default function IDFoundationsCourse() {
                 <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
-                href="https://idcentral.thinkific.com/order?ct=fc76671c-406a-4b2c-a646-ebcc044ec0b3"
+                href="https://idcentral.thinkific.com/courses/instructional-design-foundations-course/enroll"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
@@ -499,7 +499,7 @@ export default function IDFoundationsCourse() {
                 <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
-                href="https://idcentral.thinkific.com/order?ct=fc76671c-406a-4b2c-a646-ebcc044ec0b3"
+                href="https://idcentral.thinkific.com/courses/instructional-design-foundations-course/enroll"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
