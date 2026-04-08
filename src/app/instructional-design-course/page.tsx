@@ -269,7 +269,7 @@ export default function IDFoundationsCourse() {
       <Hero
         title="Instructional Design Foundations Course and Certificate"
         subtitle="Build the confidence and skills to design learning experiences that truly make a difference."
-        cta={{ label: "Enroll Now", href: "https://idcentral.thinkific.com/courses/instructional-design-foundations" }}
+        cta={{ label: "Enroll Now", href: "https://idcentral.thinkific.com/order?ct=a6e82386-6144-475c-9a84-23f2c5cda2ff", target: "_blank" }}
       />
 
       {/* Intro paragraph */}
@@ -385,7 +385,9 @@ export default function IDFoundationsCourse() {
                 <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
-                href="https://idcentral.thinkific.com/courses/instructional-design-foundations"
+                href="https://idcentral.thinkific.com/order?ct=a6e82386-6144-475c-9a84-23f2c5cda2ff"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
               >
                 <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -502,7 +504,9 @@ export default function IDFoundationsCourse() {
                 <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
-                href="https://idcentral.thinkific.com/courses/instructional-design-foundations"
+                href="https://idcentral.thinkific.com/order?ct=a6e82386-6144-475c-9a84-23f2c5cda2ff"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
               >
                 <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
