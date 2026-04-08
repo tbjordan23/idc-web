@@ -53,13 +53,15 @@ export default function WhatIsIDPage() {
       subtitle="A complete guide to the field, the role, and how to get started."
     >
       <p>
-        Instructional design is the process by which learning products and experiences are designed,
-        developed, and delivered. These learning products include online courses, instructional
-        manuals, video tutorials, learning simulations, and more. Instructional designers are the
-        &ldquo;architects&rdquo; of the learning experience and the &ldquo;directors&rdquo; of the
-        Instructional Systems Design (ISD) process. The terms <em>instructional design</em>,{" "}
-        <em>instructional technology</em>, <em>learning experience (LX) design</em>,{" "}
-        <em>curriculum design</em>, and <em>instructional systems design (ISD)</em> are sometimes
+        Instructional design is the craft of creating learning experiences that actually work. If
+        you&rsquo;ve ever built a course, designed a training program, or helped someone develop a
+        new skill — you&rsquo;ve done instructional design. At its core, it&rsquo;s a systematic
+        process for designing, developing, and delivering learning products: online courses, video
+        tutorials, training manuals, simulations, and more. Instructional designers are the
+        architects behind those experiences — shaping how knowledge gets structured, delivered, and
+        retained. You might also hear the terms <em>instructional technology</em>,{" "}
+        <em>learning experience (LX) design</em>, <em>curriculum design</em>, and{" "}
+        <em>instructional systems design (ISD)</em> — they overlap significantly and are often
         used interchangeably.
       </p>
 
@@ -188,13 +190,12 @@ export default function WhatIsIDPage() {
       </h2>
 
       <p>
-        What exactly is an instructional designer and what do they do? Instructional designers create
-        and deliver learning products for business, K&ndash;12, higher education, and government
-        organizations. They are the &ldquo;architects&rdquo; of the learning experience and the
-        &ldquo;directors&rdquo; of the Instructional Systems Design (ISD) process. Instructional
-        designers are in high demand worldwide&mdash;particularly in North America, Asia, and
-        Europe&mdash;as organizations turn to instructional designers to solve business performance
-        problems through the delivery of effective learning experiences.
+        So what does an instructional designer actually do? In short: they make learning work.
+        IDs create and deliver learning solutions across industries — from corporate training and
+        K&ndash;12 education to higher ed and government. If an organization needs people to learn
+        something, change behavior, or perform better, an instructional designer figures out how
+        to make that happen. The role is in high demand globally, and for good reason — effective
+        learning design directly impacts performance, and organizations know it.
       </p>
 
       <h3 className="mt-8 text-lg font-bold text-copy">Instructional Designer</h3>

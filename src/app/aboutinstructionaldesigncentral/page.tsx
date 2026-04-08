@@ -17,7 +17,7 @@ export default function AboutPage() {
     <>
       <Hero
         title="Instructional Design Central"
-        subtitle="Our mission is to help course designers create brilliant learning experiences."
+        subtitle="We built IDC because great instructional designers deserve a home — with the resources, community, and support to do their best work."
       />
 
       {/* Our Story */}
@@ -26,18 +26,13 @@ export default function AboutPage() {
           <h2 className="text-xl font-extrabold tracking-tight text-heading">Our Story</h2>
           <div className="mt-6 space-y-6 text-base font-medium leading-relaxed text-copy-muted">
             <p>
-              IDC was created to provide instructional design and learning design related professionals
-              access to brilliant resources, tools, and content so that they can be successful in their
-              career and education.
+              IDC was built on a simple belief: instructional designers do important work, and they deserve real support. We created a place where you can find the tools, knowledge, and community you need to grow — whether you&rsquo;re just starting out or deep into your career.
             </p>
             <p>
-              Instructional Design Central (IDC) is also a vibrant community that connects over 40,000
-              instructional design related professionals across its platforms in more than 20 countries
-              worldwide.
+              Today, IDC connects over 40,000 professionals across more than 20 countries — a global network of people who care deeply about how learning is designed, built, and delivered.
             </p>
             <p>
-              Instructional Design Central (IDC) is a privately owned and operated company launched in
-              2011 out of Saratoga Springs, Utah in the shadows of Silicon Slopes.
+              We&rsquo;ve been proudly independent since 2011, launched out of Saratoga Springs, Utah.
             </p>
           </div>
         </ScrollReveal>
@@ -78,25 +73,13 @@ export default function AboutPage() {
               {/* Bio */}
               <div className="mt-8 space-y-6 text-base font-medium leading-relaxed text-copy-muted">
                 <p>
-                  Travis founded Instructional Design Central (IDC) in 2011 with the vision of
-                  supporting instructional design professionals and students by providing access to
-                  industry insights, valuable resources, and opportunities for connection and
-                  collaboration. Today, IDC serves a global community of over 40,000 instructional
-                  design professionals across more than 20 countries.
+                  Travis started IDC in 2011 because he saw how isolated instructional designers could feel — without a community, without quality resources, without a real professional home. He wanted to change that. Today, IDC serves over 40,000 professionals across more than 20 countries, and that original mission hasn&rsquo;t changed.
                 </p>
                 <p>
-                  With over 15 years of experience in the learning and development industry, Travis
-                  has held a variety of roles across corporate, non-profit, and academic sectors. He
-                  has served as Head of Learning for two large global organizations, where he led
-                  learning strategy, development, and operations. As an experienced consultant and
-                  coach, he is passionate about empowering instructional designers and learning
-                  leaders to thrive in their careers.
+                  With over 15 years of experience across corporate, non-profit, and academic sectors, Travis has led learning strategy and operations as Head of Learning for two global organizations. He&rsquo;s an experienced consultant, coach, and presenter who genuinely cares about helping instructional designers and learning leaders find their footing — and build something they&rsquo;re proud of.
                 </p>
                 <p>
-                  In addition to his work in learning and development, Travis has several years of
-                  experience as a Product Leader in the high-tech sector, including roles at companies
-                  such as Adobe. He holds a Master of Science (MS) degree in Instructional Technology
-                  from Utah State University.
+                  Outside of IDC, Travis has worked as a Product Leader in tech, including time at Adobe. He holds a Master of Science in Instructional Technology from Utah State University.
                 </p>
               </div>
 

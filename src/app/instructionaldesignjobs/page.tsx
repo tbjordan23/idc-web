@@ -13,7 +13,10 @@ export const metadata: Metadata = generatePageMetadata({
 export default function IDJobsPage() {
   return (
     <>
-      <Hero title="Instructional Design Jobs" />
+      <Hero
+        title="Instructional Design Jobs"
+        subtitle="Find your next opportunity — remote and in-person roles for instructional designers at every level."
+      />
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="text-copy-muted">Placeholder — job listings will appear here.</p>

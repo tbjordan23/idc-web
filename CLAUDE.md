@@ -127,3 +127,22 @@ Copy `.env.example` to `.env` and fill in values. See README for details.
 
 ## Deployment
 Push to GitHub → Railway autodeploys. See README for Railway setup steps.
+
+---
+
+## Target Audience & Content Tone
+
+**Audience:** Instructional design professionals and career changers — 70% female, ages 25–40.
+
+**Tone principles — always write this way:**
+- **Warm and community-forward** — this audience responds to belonging and connection, not just credentials and stats. Lead with "you're in the right place" energy.
+- **Career empowerment framing** — less "here are the numbers," more "here's what becomes possible for you." Focus on outcomes and transformation, not features and statistics.
+- **Conversational but professional** — not corporate, not casual. Write like a trusted colleague who knows their stuff, not a textbook or a sales pitch.
+- **Inclusive and relatable** — language that feels written specifically for this person, not a generic professional audience. Avoid jargon-heavy or overly masculine achievement framing (e.g., avoid "dominate," "crush," "win"). Prefer "grow," "build," "explore," "connect."
+- **Direct but human** — get to the point, but don't strip out the warmth doing it.
+
+**Red flags to avoid:**
+- Stat-heavy intros that feel like a press release
+- Generic motivational language ("take your career to the next level")
+- Cold, credentials-first framing without context for why it matters to the reader
+- Passive, distant voice — write in second person ("you") whenever natural

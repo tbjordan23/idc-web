@@ -50,7 +50,7 @@ export default function TemplatesPage() {
       />
       <Hero
         title="Instructional Design Templates"
-        subtitle="Ready-to-use templates that accelerate your ID workflow."
+        subtitle="Free, professionally designed templates so you can spend less time formatting and more time designing."
       />
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>

@@ -17,14 +17,14 @@ const featuredCourses = [
   {
     title: "Instructional Design Foundations",
     description:
-      "Build a solid foundation in instructional design principles, models, and practical application.",
+      "Start with confidence. This course gives you the principles, language, and frameworks to step into the field — or strengthen the foundation you already have.",
     href: "/instructional-design-course",
     tag: "Course",
   },
   {
     title: "Mastering the ADDIE Model",
     description:
-      "Deep-dive into the ADDIE model and learn how to apply it across real-world learning projects.",
+      "Take the guesswork out of course design. A practical deep-dive into ADDIE — the most trusted framework in the field — with templates and a certificate included.",
     href: "/addie-model-course",
     tag: "Course",
   },
@@ -34,21 +34,21 @@ const featuredResources = [
   {
     title: "Instructional Design Templates",
     description:
-      "A comprehensive library of ID templates to accelerate your design process.",
+      "Skip the blank page. Professionally designed templates you can download and use in your projects right now.",
     href: "/instructionaldesigntemplates",
     tag: "Templates",
   },
   {
     title: "Needs Analysis Tool",
     description:
-      "A practical app to guide your needs analysis process from start to finish.",
+      "Know exactly where to start. This tool walks you through a complete needs analysis so your designs solve the right problem.",
     href: "/needs-analysis-app",
     tag: "Tool",
   },
   {
     title: "ChatID: Instructional Design GPT",
     description:
-      "AI-powered assistant trained specifically for instructional designers.",
+      "An AI assistant that actually understands instructional design — built to help you think, write, and design better.",
     href: "/chatid-instructional-design-ai",
     tag: "AI Tool",
   },
@@ -68,7 +68,7 @@ export default function HomePage() {
               className="mt-2 font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
-              Learn from the Best
+              Build Skills That Open Doors
             </h2>
           </div>
           <Link
@@ -121,7 +121,7 @@ export default function HomePage() {
               Join the IDC Community
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-base font-medium text-copy-muted">
-              Connect with instructional designers worldwide. Share ideas, get feedback, and grow your career.
+              You don&rsquo;t have to figure this out alone. IDC connects you with thousands of instructional designers who get it — and genuinely want to see you succeed.
             </p>
             <Link
               href="/instructionaldesigncommunity"

@@ -13,7 +13,7 @@ export default function IDSalaryPage() {
   return (
     <ContentPage
       title="Instructional Designer Salary Guide"
-      subtitle="How much do instructional designers make? Explore salary ranges by experience, location, and industry."
+      subtitle="Know your worth. Explore what instructional designers earn by experience, location, and industry — so you can advocate for yourself with confidence."
     >
       <p>Placeholder — salary data and analysis will appear here.</p>
     </ContentPage>

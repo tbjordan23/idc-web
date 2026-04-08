@@ -42,7 +42,7 @@ export default function IDFoundationsCourse() {
       />
       <Hero
         title="Instructional Design Foundations Course and Certificate"
-        subtitle="Master the fundamentals of instructional design with this comprehensive online course."
+        subtitle="Build the confidence and skills to design learning experiences that truly make a difference."
         cta={{ label: "Enroll Now", href: "#enroll" }}
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">

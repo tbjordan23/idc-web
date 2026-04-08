@@ -48,7 +48,10 @@ export default function IDDegreePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Hero title="Top Instructional Design Degrees" />
+      <Hero
+        title="Top Instructional Design Degrees"
+        subtitle="Explore degree and certificate programs that can open the door to a career you love."
+      />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="text-copy-muted">Placeholder — degree program listings will appear here.</p>

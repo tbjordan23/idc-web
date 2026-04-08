@@ -16,7 +16,7 @@ const courses = [
   {
     title: "Instructional Design Foundations",
     description:
-      "Instructional Design Foundations is a beginner-friendly course that teaches you the core principles, language, and practices of instructional design—giving you the confidence to start creating effective learning experiences from day one.",
+      "If you've ever wondered whether you're doing it 'right,' this course is for you. ID Foundations gives you the vocabulary, principles, and hands-on practice to design with real confidence — from day one.",
     href: "/instructional-design-course",
     image: "/course-id-foundations.png",
     imageAlt: "Student working on instructional design course",
@@ -25,7 +25,7 @@ const courses = [
   {
     title: "Mastering the ADDIE Model",
     description:
-      "This practical course walks you step-by-step through the ADDIE framework—widely recognized as the gold standard in instructional design—giving you the skills to confidently design and build effective courses that work!",
+      "ADDIE is the framework most experienced designers reach for — and this course shows you exactly how to use it. Walk through every phase with practical examples, templates, and a certificate to show you've done the work.",
     href: "/addie-model-course",
     image: "/course-addie-model.png",
     imageAlt: "Professional learning the ADDIE model",
@@ -46,7 +46,7 @@ const instructorCredentials = [
 const courseTiles = [
   {
     stat: "2,500+",
-    label: "Enrollments",
+    label: "Designers Enrolled",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -63,8 +63,8 @@ const courseTiles = [
     ),
   },
   {
-    stat: "Certified",
-    label: "Learning",
+    stat: "Certificate",
+    label: "Included",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
@@ -113,20 +113,14 @@ export default function CoursesPage() {
       />
       <Hero
         title="Instructional Design Courses and Certificates"
-        subtitle="Online courses designed for instructional designers at every level."
+        subtitle="Whether you're just getting started or ready to go deeper — these courses meet you where you are."
       />
 
       {/* Intro */}
       <section className="mx-auto max-w-4xl px-4 pt-16 pb-10 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="text-center text-base font-medium leading-relaxed text-copy-muted">
-            Welcome to Instructional Design Central courses—your go-to destination for building and
-            advancing your instructional design expertise. Start with Instructional Design Foundations
-            to learn the core principles and confidently step into the field, then dive into Mastering
-            the ADDIE Model to master a full-cycle framework for designing impactful learning
-            experiences. Both courses are packed with interactive content, professional certifications,
-            practical templates, and tools to help you apply what you learn in real time. It&rsquo;s
-            everything you need to grow your skills—and your career—in instructional design.
+            These courses were built for instructional designers like you — people who care about creating learning that actually works. Whether you&rsquo;re transitioning into the field or leveling up your existing skills, you&rsquo;ll leave with frameworks you can apply immediately, a certificate that reflects your commitment, and the confidence that comes from really knowing your craft.
           </p>
         </ScrollReveal>
       </section>
@@ -229,6 +223,9 @@ export default function CoursesPage() {
                   </div>
                 </div>
                 <div className="mt-4 h-0.5 w-8 rounded bg-accent opacity-60" />
+                <p className="mt-5 text-sm font-medium leading-relaxed text-copy-muted">
+                  Travis built IDC because he believes instructional designers deserve better support — better tools, better community, and better ways to grow. He brings real-world experience from across the industry, and he designed these courses to be the resource he wished had existed when he was starting out.
+                </p>
                 <ul className="mt-6 space-y-3">
                   {instructorCredentials.map((item) => (
                     <li key={item} className="flex items-start gap-3">

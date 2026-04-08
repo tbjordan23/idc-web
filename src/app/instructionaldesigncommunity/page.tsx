@@ -13,9 +13,9 @@ export const metadata: Metadata = generatePageMetadata({
 
 const features = [
   {
-    title: "Connect, Learn, and Share",
+    title: "Find Your People",
     description:
-      "Connect, learn, and share with hundreds of instructional design related professionals around the globe.",
+      "Real conversations with instructional designers at every stage — from early career to seasoned veteran. Ask questions, share wins, and learn from people who've been exactly where you are.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -25,9 +25,9 @@ const features = [
     accent: "text-accent",
   },
   {
-    title: "Free Templates and Courses",
+    title: "Resources That Actually Help",
     description:
-      "Access free instructional design templates and micro-courses to help you get ahead and grow in your career.",
+      "Members get access to a growing library of free templates and micro-courses — practical tools you can use in your real work, not just theory.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
@@ -37,9 +37,9 @@ const features = [
     accent: "text-accent-2",
   },
   {
-    title: "Free Events and Support",
+    title: "Stay Connected and Current",
     description:
-      "Join free events, and ask questions from the pros to get just-in-time support on current learning design topics.",
+      "Live events, expert Q&As, and a community that shows up for you. Get support right when you need it, on topics that matter to your work.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -129,7 +129,7 @@ export default function CommunityPage() {
       />
       <Hero
         title="Instructional Design Central (IDC) Community"
-        subtitle="Connect with instructional designers from around the world."
+        subtitle="You belong here — a community built by instructional designers, for instructional designers."
         cta={{ label: "Join for Free", href: "https://instructional-design-central.mn.co/", target: "_blank" }}
         secondaryCta={{ label: "Sign In", href: "https://instructional-design-central.mn.co/sign_in?from=https%3A%2F%2Finstructional-design-central.mn.co%2F", target: "_blank" }}
       />
@@ -138,7 +138,7 @@ export default function CommunityPage() {
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="text-base font-medium leading-relaxed text-copy-muted">
-            Whether you&rsquo;re a seasoned instructional designer, a transitioning teacher, or brand new to the field of learning design, our community will provide you with the networking platform, content, and resources you need to get ahead in the field. Join our vibrant community of like-minded individuals who are passionate about creating brilliant learning experiences. Together, we collaborate, learn, share insights, and empower each other to inspire learners all around the world!
+            Whether you&rsquo;re just discovering instructional design or you&rsquo;ve been doing this work for years, you&rsquo;ll feel at home here. The IDC Community is where designers come to ask hard questions, share what&rsquo;s working, and connect with others who genuinely understand the work. More than 10,000 members worldwide — and the kind of conversations you can&rsquo;t have anywhere else.
           </p>
         </ScrollReveal>
       </section>
@@ -152,7 +152,7 @@ export default function CommunityPage() {
               className="mt-2 font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
-              Everything You Need to Grow
+              What You&rsquo;ll Find Here
             </h2>
           </ScrollReveal>
           <div className="mt-10 grid gap-6 sm:grid-cols-3">
@@ -203,19 +203,19 @@ export default function CommunityPage() {
                 className="mt-2 font-extrabold tracking-tight text-heading"
                 style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
               >
-                A Community Built for ID Professionals
+                A Place That Gets It
               </h2>
               <p className="mt-5 text-base font-medium leading-relaxed text-copy-muted">
-                The IDC Community is the go-to networking and learning hub for instructional designers at every stage of their career. Whether you have a quick question or want deep collaboration, you&rsquo;ll find your people here.
+                Instructional design can feel isolating — especially if no one else in your organization does what you do. IDC exists to change that. Whether you have a quick question or want to go deep, you&rsquo;ll find people here who understand the work and want to support yours.
               </p>
               <ul className="mt-8 space-y-4">
                 {[
-                  "Network with thousands of ID professionals globally",
-                  "Get answers from experienced designers and thought leaders",
-                  "Access exclusive templates, tools, and micro-courses",
-                  "Stay current with free live events and webinars",
-                  "Share your work and get meaningful feedback",
-                  "Find job leads and career growth opportunities",
+                  "Connect with thousands of ID professionals who understand what you do",
+                  "Get real answers from people who've been in your exact situation",
+                  "Access templates and tools that save you hours of work",
+                  "Stay sharp with free events and expert-led sessions",
+                  "Share your work and get feedback that actually helps",
+                  "Discover job leads and new directions for your career",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)]">
@@ -233,10 +233,10 @@ export default function CommunityPage() {
               <div className="rounded-card border border-edge bg-surface-2 p-10 shadow-card">
                 <p className="text-xs font-bold uppercase tracking-widest text-accent">Ready to Join?</p>
                 <h3 className="mt-3 text-2xl font-extrabold tracking-tight text-heading">
-                  It&rsquo;s Free — Always
+                  Ready? It&rsquo;s Free.
                 </h3>
                 <p className="mt-4 text-sm font-medium leading-relaxed text-copy-muted">
-                  Membership is completely free. Sign up in seconds and start connecting with the instructional design community today.
+                  No cost, no catch. Create your free account and start connecting today — you&rsquo;ll wonder why you waited.
                 </p>
                 <div className="mt-8 flex flex-col gap-3">
                   <a

@@ -42,7 +42,7 @@ export default function ADDIECourse() {
       />
       <Hero
         title="ADDIE Model Course and Certificate"
-        subtitle="A practical, project-based online course for instructional designers."
+        subtitle="Learn the framework the pros trust — and walk away knowing how to use it in your own work."
         cta={{ label: "Enroll Now", href: "#enroll" }}
       />
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
