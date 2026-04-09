@@ -72,23 +72,22 @@ export default function WhatIsIDPage() {
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;Instructional Design is defined as &lsquo;a systematic process that is employed to
-          develop education and training programs in a consistent and reliable fashion&rsquo; (Reiser,
-          Dempsey, 2007). In addition, it may be thought of as a framework for developing modules or
-          lessons that (Merrill, Drake, Lacy, Pratt, 1996).&rdquo;
+          &ldquo;Instructional design, also known as instructional systems design or instructional
+          systems development (ISD), is the practice of creating learning experiences to support
+          long term learning. It&rsquo;s a systems approach to analyzing, designing, developing,
+          implementing, and evaluating any instructional experience.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.nwlink.com
+          — www.td.org (Association for Talent Development)
         </cite>
       </blockquote>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;Instructional design, also known as instructional systems design, is the analysis of
-          learning needs and systematic development of instruction. Instructional designers often use
-          instructional technology as a method for developing instruction. Instructional design models
-          typically specify a method that, if followed, will facilitate the transfer of knowledge,
-          skills and attitude to the recipient or acquirer of the instruction.&rdquo;
+          &ldquo;Instructional design (ID), also known as instructional systems design, is the
+          practice of systematically designing, developing and delivering instructional materials
+          and experiences, both digital and physical, in a consistent and reliable fashion toward
+          an efficient, effective, appealing, engaging and inspiring acquisition of knowledge.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
           — www.wikipedia.org
@@ -97,14 +96,14 @@ export default function WhatIsIDPage() {
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;Instructional Design is the systematic development of instructional specifications
-          using learning and instructional theory to ensure the quality of instruction. It is the
-          entire process of analysis of learning needs and goals and the development of a delivery
-          system to meet those needs. It includes development of instructional materials and
-          activities; and tryout and evaluation of all instruction and learner activities.&rdquo;
+          &ldquo;Instructional design is the behind-the-scenes blueprint that shapes how people
+          learn. Whether it&rsquo;s an employee onboarding session or an online course for adult
+          learners, instructional designers create experiences that are clear, engaging, and
+          effective. This field uses a systematic process to analyze learning needs, define goals,
+          and create learning materials that support specific learning outcomes.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.umich.edu
+          — education.purdue.edu (Purdue University College of Education, 2024)
         </cite>
       </blockquote>
 
@@ -115,25 +114,24 @@ export default function WhatIsIDPage() {
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;Educational technology is the study and ethical practice of facilitating learning
-          and improving performance by creating, using and managing appropriate technological
-          processes and resources.&rdquo;
+          &ldquo;Educational technology is the ethical study and application of theory, research,
+          and practices to advance knowledge, improve learning and performance, and empower learners
+          through strategic design, management, implementation, and evaluation of learning
+          experiences and environments using appropriate processes and resources.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.cjlt.ca
+          — www.aect.org (Association for Educational Communications and Technology, 2023 Definition Task Force)
         </cite>
       </blockquote>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;The term educational technology is often associated with, and encompasses,
-          instructional theory and learning theory. While instructional technology is &lsquo;the
-          theory and practice of design, development, utilization, management, and evaluation of
-          processes and resources for learning,&rsquo; according to the Association for Educational
-          Communications and Technology (AECT) Definitions and Terminology Committee, educational
-          technology includes other systems used in the process of developing human capability.
-          Educational technology includes, but is not limited to, software, hardware, as well as
-          Internet applications, such as wikis and blogs, and activities.&rdquo;
+          &ldquo;Educational technologies refer to the set of digital tools, resources,
+          applications, and methodologies used to facilitate the teaching&ndash;learning process.
+          These technologies include software, online platforms, hardware devices (such as tablets,
+          computers, and interactive whiteboards), and assistive technologies, all aimed at
+          improving access to education, personalizing learning paths, and fostering a more dynamic
+          interaction between students and teachers.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
           — www.wikipedia.org
@@ -142,17 +140,14 @@ export default function WhatIsIDPage() {
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;Educational technology, sometimes termed EdTech, is the study and ethical practice
-          of facilitating e-learning, which is the learning and improving performance by creating,
-          using and managing appropriate technological processes and resources. The term educational
-          technology is often associated with, and encompasses, instructional theory and learning
-          theory. While instructional technology is &lsquo;the theory and practice of design,
-          development, utilization, management, and evaluation of processes and resources for
-          learning,&rsquo; according to the AECT Definitions and Terminology Committee, educational
-          technology includes other systems used in the process of developing human capability.&rdquo;
+          &ldquo;Education Technology (EdTech) is the strategic integration of digital tools,
+          software, and hardware into the learning environment to enhance pedagogical outcomes.
+          The integration of digital tools such as interactive software, cloud-based platforms,
+          and adaptive learning systems has shifted traditional educational models towards more
+          personalized, flexible, and engaging learning experiences.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.edtech.wikia.com
+          — research.com
         </cite>
       </blockquote>
 
@@ -163,24 +158,24 @@ export default function WhatIsIDPage() {
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;An emerging discipline, learning experience design (LX) draws from other disciplines
-          including experiential learning, cognitive psychology, interaction design, user experience
-          design, instructional design and design thinking.&rdquo;
+          &ldquo;Learning experience design is the process of creating learning experiences that
+          enable the learner to achieve the desired learning outcome in a human-centered and
+          goal-oriented way.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.learningexperiencedesign.com
+          — www.lxd.org (Niels Floor, pioneer of the LXD discipline)
         </cite>
       </blockquote>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;Learning Experience Design&trade; (LX or LX Design)&mdash;a synthesis of
-          instructional design, educational pedagogy, neuroscience, social sciences, design thinking,
-          and UI/UX&mdash;is critical for any organization looking to compete in the modern
-          educational marketplace.&rdquo;
+          &ldquo;At its core, LXD is a human-centered, research-driven approach to learning design
+          that integrates UX principles with learning science. While instructional design
+          traditionally centered on delivering content efficiently, LXD adds a new dimension —
+          designing for emotion, engagement, and human connection.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.sixredmarbles.com
+          — www.devlinpeck.com (Devlin Peck, 2024)
         </cite>
       </blockquote>
 
@@ -202,21 +197,28 @@ export default function WhatIsIDPage() {
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;An instructional designer is somebody who applies a systematic methodology based on
-          instructional theory to create content for learning events.&rdquo;
+          &ldquo;An instructional designer is a learning professional who specializes in
+          instructional design — the process of creating educational materials and training
+          programs that are engaging, accessible, and aligned with desired learning outcomes.
+          Instructional designers work with subject matter experts to identify learning needs,
+          apply instructional design theories and methods, and create learning materials and
+          assessments.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.eng.wayne.edu
+          — education.purdue.edu (Purdue University College of Education, 2024)
         </cite>
       </blockquote>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;An instructional designer is an individual who develops the methodology and delivery
-          systems for presenting course content.&rdquo;
+          &ldquo;An instructional designer applies learning theory to design course content,
+          learning activities, and other training solutions to support the acquisition of new
+          knowledge or real-world skills. They take on multiple roles: analyst (identifying
+          performance gaps), architect (designing the learning experience), creator (building the
+          content), and evaluator (measuring effectiveness).&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.syberworks.com
+          — www.td.org (Association for Talent Development)
         </cite>
       </blockquote>
 
@@ -247,27 +249,28 @@ export default function WhatIsIDPage() {
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;An educational technologist is someone who is trained in the field of educational
-          technology. Educational technologists try to analyze, design, develop, implement and
-          evaluate process and tools to enhance learning.&rdquo;
+          &ldquo;An Educational Technologist is a professional who applies technology to the field
+          of education, working to design, develop, and implement technology-based solutions for
+          educational institutions and organizations. Educational technologists analyze, design,
+          develop, implement, and evaluate processes and tools to make learning easier and more
+          effective.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.wikipedia.org
+          — www.ziprecruiter.com
         </cite>
       </blockquote>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
-          &ldquo;As online technologies have exploded into mainstream education and corporate
-          training, the need for professionals who are highly qualified in designing, developing,
-          implementing, and assessing instruction has increased. However, the roles and
-          responsibilities of educational technologists have become as varied as the employers who
-          hire them and the tools they use. In order to shed some light on the matter, 161 EdTech
-          professionals were surveyed in order to define the role(s) they play in K&ndash;12, higher
-          education, corporate, and government work environments.&rdquo;
+          &ldquo;Educational Technologists are responsible for designing and implementing
+          technology-based solutions to support learning and teaching, working closely with
+          teachers, curriculum developers, and instructional designers to create engaging and
+          effective learning environments. They assess and evaluate the effectiveness of these
+          tools and make adjustments as necessary, and provide training and support to educators
+          on the use of technology.&rdquo;
         </p>
         <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.infogr.am
+          — research.com (2025)
         </cite>
       </blockquote>
     </ContentPage>
