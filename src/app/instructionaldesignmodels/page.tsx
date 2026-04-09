@@ -51,53 +51,57 @@ export default function IDModelsPage() {
       {/* ADDIE Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 520 160"
+          viewBox="0 0 590 218"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-2xl"
-          aria-label="ADDIE Model diagram showing five phases in sequence"
+          aria-label="ADDIE Model with iterative feedback loops between phases"
           role="img"
         >
-          {/* Arrow connectors */}
-          {[110, 210, 310, 410].map((x) => (
-            <g key={x}>
-              <line x1={x} y1="80" x2={x + 15} y2="80" stroke="#94a3b8" strokeWidth="2" />
-              <polygon points={`${x + 15},75 ${x + 22},80 ${x + 15},85`} fill="#94a3b8" />
+          <defs>
+            <marker id="addie-fwd" markerWidth="8" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <polygon points="0,0.5 0,6.5 6.5,3.5" fill="#f26522"/>
+            </marker>
+            <marker id="addie-back" markerWidth="8" markerHeight="7" refX="1" refY="3.5" orient="auto-start-reverse">
+              <polygon points="0,0.5 0,6.5 6.5,3.5" fill="#4a7bc4"/>
+            </marker>
+          </defs>
+
+          {/* Decorative dots */}
+          <circle cx="6"   cy="200" r="4"   fill="#f26522" opacity="0.45"/>
+          <circle cx="584" cy="200" r="3"   fill="#4a7bc4" opacity="0.5"/>
+          <circle cx="295" cy="7"   r="3"   fill="#f26522" opacity="0.35"/>
+          <circle cx="148" cy="210" r="2.5" fill="#4a7bc4" opacity="0.4"/>
+          <circle cx="442" cy="210" r="2.5" fill="#f26522" opacity="0.35"/>
+
+          {/* Five phase cards */}
+          {[
+            { x: 14,  letter: "A", name: "Analysis" },
+            { x: 122, letter: "D", name: "Design" },
+            { x: 230, letter: "D", name: "Development" },
+            { x: 338, letter: "I", name: "Implementation" },
+            { x: 446, letter: "E", name: "Evaluation" },
+          ].map(({ x, letter, name }) => (
+            <g key={name}>
+              <rect x={x} y="30" width="90" height="106" rx="10" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={x + 1} y="30" width="88" height="5" rx="2" fill="#f26522"/>
+              <text x={x + 45} y="90" textAnchor="middle" fill="#f26522" fontSize="34" fontWeight="800" fontFamily="sans-serif">{letter}</text>
+              <text x={x + 45} y="118" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">{name}</text>
             </g>
           ))}
 
-          {/* Phase boxes */}
-          {[
-            { x: 10,  label: "Analysis",       abbr: "A", color: "#6366f1" },
-            { x: 110, label: "Design",          abbr: "D", color: "#8b5cf6" },
-            { x: 210, label: "Development",     abbr: "D", color: "#a855f7" },
-            { x: 310, label: "Implementation",  abbr: "I", color: "#c084fc" },
-            { x: 410, label: "Evaluation",      abbr: "E", color: "#e879f9" },
-          ].map(({ x, label, abbr, color }) => (
-            <g key={label}>
-              <rect x={x} y="30" width="100" height="100" rx="8" fill={color} />
-              <text
-                x={x + 50}
-                y="68"
-                textAnchor="middle"
-                fill="white"
-                fontSize="28"
-                fontWeight="bold"
-                fontFamily="sans-serif"
-              >
-                {abbr}
-              </text>
-              <text
-                x={x + 50}
-                y="108"
-                textAnchor="middle"
-                fill="white"
-                fontSize="10"
-                fontFamily="sans-serif"
-              >
-                {label}
-              </text>
-            </g>
-          ))}
+          {/* Forward arrows (primary flow) */}
+          <line x1="105" y1="83" x2="120" y2="83" stroke="#f26522" strokeWidth="1.5" markerEnd="url(#addie-fwd)"/>
+          <line x1="213" y1="83" x2="228" y2="83" stroke="#f26522" strokeWidth="1.5" markerEnd="url(#addie-fwd)"/>
+          <line x1="321" y1="83" x2="336" y2="83" stroke="#f26522" strokeWidth="1.5" markerEnd="url(#addie-fwd)"/>
+          <line x1="429" y1="83" x2="444" y2="83" stroke="#f26522" strokeWidth="1.5" markerEnd="url(#addie-fwd)"/>
+
+          {/* Small backward iteration arrows above (phase-to-phase feedback) */}
+          <path d="M 224,32 Q 173,15 122,32" stroke="#4a7bc4" strokeWidth="1.2" fill="none" strokeDasharray="4 2" markerEnd="url(#addie-back)"/>
+          <path d="M 332,32 Q 281,15 230,32" stroke="#4a7bc4" strokeWidth="1.2" fill="none" strokeDasharray="4 2" markerEnd="url(#addie-back)"/>
+
+          {/* Main evaluation feedback arc: E → A */}
+          <path d="M 491,136 Q 295,198 59,136" stroke="#f26522" strokeWidth="1.8" fill="none" strokeDasharray="7 3" markerEnd="url(#addie-fwd)"/>
+          <text x="295" y="210" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">Evaluation informs continuous improvement — feedback loops back to any phase</text>
         </svg>
       </div>
 
@@ -202,42 +206,52 @@ export default function IDModelsPage() {
       {/* Agile ID Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 400 220"
+          viewBox="0 0 400 230"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-lg"
-          aria-label="Agile Instructional Design diagram showing iterative sprint cycle"
+          aria-label="Agile Instructional Design sprint cycle showing Plan, Build, Review, Reflect phases"
           role="img"
         >
-          {/* Central sprint circle */}
-          <circle cx="200" cy="110" r="55" fill="#6366f1" />
-          <text x="200" y="105" textAnchor="middle" fill="white" fontSize="13" fontWeight="bold" fontFamily="sans-serif">Sprint</text>
-          <text x="200" y="122" textAnchor="middle" fill="#e0e7ff" fontSize="10" fontFamily="sans-serif">1–4 weeks</text>
+          {/* Decorative dots */}
+          <circle cx="14"  cy="14"  r="3.5" fill="#f26522" opacity="0.4"/>
+          <circle cx="386" cy="216" r="4"   fill="#4a7bc4" opacity="0.45"/>
+          <circle cx="386" cy="14"  r="3"   fill="#f26522" opacity="0.35"/>
 
-          {/* Orbit labels */}
+          {/* Subtle orbit track */}
+          <circle cx="200" cy="115" r="82" fill="none" stroke="#2b4171" strokeWidth="1" strokeDasharray="3 4"/>
+
+          {/* Central sprint card */}
+          <rect x="148" y="83" width="104" height="64" rx="10" fill="#161c26" stroke="#f26522" strokeWidth="1.8"/>
+          <rect x="149" y="83" width="102" height="5"  rx="2"  fill="#f26522"/>
+          <text x="200" y="116" textAnchor="middle" fill="#f26522" fontSize="13" fontWeight="800" fontFamily="sans-serif">Sprint</text>
+          <text x="200" y="134" textAnchor="middle" fill="#8a8a96" fontSize="9"  fontFamily="sans-serif">1–4 weeks</text>
+
+          {/* Orbital node cards */}
           {[
-            { label: "Plan",     x: 200, y: 28  },
-            { label: "Build",    x: 340, y: 110 },
-            { label: "Review",   x: 200, y: 192 },
-            { label: "Reflect",  x: 60,  y: 110 },
-          ].map(({ label, x, y }) => (
+            { cx: 200, cy: 25,  label: "Plan"    },
+            { cx: 352, cy: 115, label: "Build"   },
+            { cx: 200, cy: 205, label: "Review"  },
+            { cx: 48,  cy: 115, label: "Reflect" },
+          ].map(({ cx, cy, label }) => (
             <g key={label}>
-              <circle cx={x} cy={y} r="26" fill="#8b5cf6" />
-              <text x={x} y={y + 5} textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="sans-serif">{label}</text>
+              <rect x={cx - 32} y={cy - 18} width="64" height="36" rx="8" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={cx - 31} y={cy - 18} width="62" height="4"  rx="1.5" fill="#4a7bc4"/>
+              <text x={cx} y={cy + 7} textAnchor="middle" fill="#f0f0f2" fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
             </g>
           ))}
 
-          {/* Curved arrows connecting orbit nodes */}
-          <path d="M 213,54  A 80,80 0 0,1 314,97"  stroke="#c4b5fd" strokeWidth="1.5" fill="none" strokeDasharray="4 2" />
-          <polygon points="314,97 320,91 321,100" fill="#c4b5fd" />
+          {/* Clockwise arrows between nodes */}
+          <path d="M 222,36 Q 295,44 334,95"  stroke="#4a7bc4" strokeWidth="1.4" fill="none" strokeDasharray="5 2"/>
+          <polygon points="334,95 340,89 341,98" fill="#4a7bc4"/>
 
-          <path d="M 314,123 A 80,80 0 0,1 213,166" stroke="#c4b5fd" strokeWidth="1.5" fill="none" strokeDasharray="4 2" />
-          <polygon points="213,166 207,172 206,163" fill="#c4b5fd" />
+          <path d="M 334,135 Q 295,186 222,194" stroke="#4a7bc4" strokeWidth="1.4" fill="none" strokeDasharray="5 2"/>
+          <polygon points="222,194 216,200 215,191" fill="#4a7bc4"/>
 
-          <path d="M 187,166 A 80,80 0 0,1 86,123"  stroke="#c4b5fd" strokeWidth="1.5" fill="none" strokeDasharray="4 2" />
-          <polygon points="86,123 79,128 80,119" fill="#c4b5fd" />
+          <path d="M 178,194 Q 105,186 66,135" stroke="#4a7bc4" strokeWidth="1.4" fill="none" strokeDasharray="5 2"/>
+          <polygon points="66,135 59,140 60,131" fill="#4a7bc4"/>
 
-          <path d="M 86,97  A 80,80 0 0,1 187,54"   stroke="#c4b5fd" strokeWidth="1.5" fill="none" strokeDasharray="4 2" />
-          <polygon points="187,54 193,48 194,57" fill="#c4b5fd" />
+          <path d="M 66,95 Q 105,44 178,36" stroke="#4a7bc4" strokeWidth="1.4" fill="none" strokeDasharray="5 2"/>
+          <polygon points="178,36 184,30 185,39" fill="#4a7bc4"/>
         </svg>
       </div>
 
@@ -273,167 +287,6 @@ export default function IDModelsPage() {
         </li>
       </ul>
 
-      {/* ── Action Mapping ───────────────────────────────────────────────── */}
-      <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
-        Action Mapping
-      </h2>
-
-      <p>
-        Action Mapping is a visual, performance-centered approach to learning design created by
-        Cathy Moore. Where many traditional models begin with content — &ldquo;what does the
-        learner need to know?&rdquo; — Action Mapping deliberately flips that question: &ldquo;what
-        does the learner need to <em>do</em> differently?&rdquo; The result is instructional
-        design that is tightly aligned to business goals and learner behavior, rather than to
-        information delivery. By mapping every learning activity back to a specific action that
-        supports a measurable business goal, Action Mapping helps instructional designers strip away
-        extraneous content, push back against stakeholder requests to &ldquo;cover everything,&rdquo;
-        and build experiences that are 100% dedicated to improving performance. It is well-suited
-        for eLearning, simulations, and in-person training events.
-      </p>
-
-      {/* Action Mapping Illustration */}
-      <div className="my-8 flex justify-center">
-        <svg
-          viewBox="0 0 400 300"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full max-w-lg"
-          aria-label="Action Mapping diagram showing a business goal branching to actions and practice activities"
-          role="img"
-        >
-          {/* Center goal circle */}
-          <circle cx="200" cy="150" r="45" fill="#6366f1" />
-          <text x="200" y="145" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="sans-serif">Business</text>
-          <text x="200" y="159" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="sans-serif">Goal</text>
-
-          {/* Action nodes and connectors */}
-          {[
-            { cx: 80,  cy: 60,  label: "Action 1" },
-            { cx: 320, cy: 60,  label: "Action 2" },
-            { cx: 80,  cy: 240, label: "Action 3" },
-            { cx: 320, cy: 240, label: "Action 4" },
-          ].map(({ cx, cy, label }) => (
-            <g key={label}>
-              <line
-                x1="200" y1="150"
-                x2={cx + (cx < 200 ? 28 : -28)}
-                y2={cy + (cy < 150 ? 18 : -18)}
-                stroke="#94a3b8" strokeWidth="1.5"
-              />
-              <circle cx={cx} cy={cy} r="28" fill="#8b5cf6" />
-              <text x={cx} y={cy + 5} textAnchor="middle" fill="white" fontSize="9" fontFamily="sans-serif">{label}</text>
-            </g>
-          ))}
-
-          {/* Practice activity nodes */}
-          {[
-            { cx: 30,  cy: 20,  parent: { cx: 80, cy: 60 } },
-            { cx: 130, cy: 20,  parent: { cx: 80, cy: 60 } },
-            { cx: 270, cy: 20,  parent: { cx: 320, cy: 60 } },
-            { cx: 370, cy: 20,  parent: { cx: 320, cy: 60 } },
-            { cx: 30,  cy: 280, parent: { cx: 80, cy: 240 } },
-            { cx: 130, cy: 280, parent: { cx: 80, cy: 240 } },
-            { cx: 270, cy: 280, parent: { cx: 320, cy: 240 } },
-            { cx: 370, cy: 280, parent: { cx: 320, cy: 240 } },
-          ].map(({ cx, cy, parent }, i) => (
-            <g key={i}>
-              <line
-                x1={parent.cx} y1={parent.cy}
-                x2={cx} y2={cy}
-                stroke="#c4b5fd" strokeWidth="1"
-              />
-              <rect x={cx - 18} y={cy - 10} width="36" height="20" rx="4" fill="#c084fc" />
-              <text x={cx} y={cy + 4} textAnchor="middle" fill="white" fontSize="7" fontFamily="sans-serif">Activity</text>
-            </g>
-          ))}
-        </svg>
-      </div>
-
-      <p>
-        The Action Mapping process begins by defining a measurable business goal — not a learning
-        objective, but a real organizational outcome such as &ldquo;reduce customer complaints by
-        20%.&rdquo; From there, the designer works with stakeholders to identify the specific
-        on-the-job <strong>actions</strong> people need to take (or stop taking) to reach that
-        goal. Each action then branches into targeted <strong>practice activities</strong> that
-        let learners rehearse those behaviors in context — scenarios, simulations, decision-making
-        exercises. Information is included only when it directly enables a required action; if a
-        piece of content can&rsquo;t be linked back to a behavior that supports the goal, it
-        doesn&rsquo;t make the cut. This discipline keeps courses lean, purposeful, and genuinely
-        useful. Action Mapping is especially powerful in corporate learning environments where
-        stakeholders have a tendency to equate &ldquo;more information&rdquo; with better
-        training.
-      </p>
-
-      {/* ── Learning Circle Framework ─────────────────────────────────────── */}
-      <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
-        Learning Circle Framework™
-      </h2>
-
-      <p>
-        The Learning Circle Framework™ is an original instructional design model created by
-        Instructional Design Central (IDC). Designed for today&rsquo;s fluid, fast-moving
-        workforce, it provides a simple, modern three-phase process for rapidly building and
-        presenting a complete learning design strategy. The framework is grounded in contemporary
-        learning design principles and product development thinking — making it accessible to both
-        seasoned IDs and those newer to the field who need a clear, actionable starting point. Its
-        circular structure reinforces the iterative nature of effective instructional design:
-        each project cycle generates insights that feed directly back into the next.
-      </p>
-
-      {/* Learning Circle Framework Illustration */}
-      <div className="my-8 flex justify-center">
-        <svg
-          viewBox="0 0 300 300"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full max-w-xs"
-          aria-label="Learning Circle Framework diagram showing three phases in a circular arrangement"
-          role="img"
-        >
-          {/* Outer ring segments using arcs */}
-          {/* Phase 1 — top */}
-          <path d="M150,150 L150,30 A120,120 0 0,1 253.9,90 Z" fill="#6366f1" opacity="0.9" />
-          <text x="185" y="80" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold" fontFamily="sans-serif" transform="rotate(30,185,80)">Discover</text>
-
-          {/* Phase 2 — bottom right */}
-          <path d="M150,150 L253.9,90 A120,120 0 0,1 150,270 Z" fill="#8b5cf6" opacity="0.9" />
-          <text x="230" y="190" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold" fontFamily="sans-serif">Design</text>
-
-          {/* Phase 3 — bottom left */}
-          <path d="M150,150 L150,270 A120,120 0 0,1 46.1,90 Z" fill="#c084fc" opacity="0.9" />
-          <text x="75" y="220" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold" fontFamily="sans-serif">Deliver</text>
-
-          {/* Connector arc back to top */}
-          <path d="M150,150 L46.1,90 A120,120 0 0,1 150,30 Z" fill="#6366f1" opacity="0.5" />
-
-          {/* Center circle */}
-          <circle cx="150" cy="150" r="50" fill="white" />
-          <text x="150" y="144" textAnchor="middle" fill="#6366f1" fontSize="10" fontWeight="bold" fontFamily="sans-serif">Learning</text>
-          <text x="150" y="158" textAnchor="middle" fill="#6366f1" fontSize="10" fontWeight="bold" fontFamily="sans-serif">Circle</text>
-          <text x="150" y="170" textAnchor="middle" fill="#8b5cf6" fontSize="9" fontFamily="sans-serif">Framework™</text>
-
-          {/* Rotation arrows */}
-          <path d="M150,38 Q175,25 185,45" stroke="white" strokeWidth="2" fill="none" markerEnd="url(#arrow)" />
-          <defs>
-            <marker id="arrow" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
-              <path d="M0,0 L0,6 L6,3 Z" fill="white" />
-            </marker>
-          </defs>
-        </svg>
-      </div>
-
-      <p>
-        The Learning Circle Framework™ organizes learning design into three intuitive phases that
-        move from understanding the problem, to crafting the solution, to putting it in front of
-        learners. The cyclical nature of the model reflects a core principle: learning design is
-        never truly &ldquo;done.&rdquo; Each delivery generates new data about what worked and
-        what didn&rsquo;t, feeding the next discovery phase and continuing the cycle of
-        improvement. This makes the framework well-suited for organizations looking to build a
-        sustainable, continuously improving learning culture rather than treating each training
-        project as a one-time event. For more detail on each phase, see the full{" "}
-        <a href="/learning-circle-framework" className="text-accent hover:underline">
-          Learning Circle Framework™ overview
-        </a>
-        .
-      </p>
 
       {/* ── Merrill's First Principles of Instruction ────────────────────── */}
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
@@ -456,31 +309,37 @@ export default function IDModelsPage() {
       {/* Merrill's First Principles Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 480 220"
+          viewBox="0 0 490 230"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-2xl"
-          aria-label="Merrill's First Principles diagram showing five principles building on a problem-centered foundation"
+          aria-label="Merrill's First Principles showing four pillars built on a problem-centered foundation"
           role="img"
         >
-          {/* Foundation bar */}
-          <rect x="20" y="160" width="440" height="44" rx="8" fill="#6366f1" />
-          <text x="240" y="179" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold" fontFamily="sans-serif">Problem-Centered</text>
-          <text x="240" y="195" textAnchor="middle" fill="white" fontSize="9" fontFamily="sans-serif">Real-world tasks as the organizing context</text>
+          {/* Decorative dots */}
+          <circle cx="8"   cy="10"  r="3"   fill="#f26522" opacity="0.4"/>
+          <circle cx="482" cy="10"  r="3.5" fill="#4a7bc4" opacity="0.4"/>
+          <circle cx="245" cy="222" r="3"   fill="#4a7bc4" opacity="0.35"/>
 
-          {/* Four phase pillars */}
+          {/* Foundation bar */}
+          <rect x="18" y="168" width="454" height="48" rx="10" fill="#f26522"/>
+          <text x="245" y="188" textAnchor="middle" fill="white" fontSize="12" fontWeight="800" fontFamily="sans-serif">Problem-Centered</text>
+          <text x="245" y="206" textAnchor="middle" fill="rgba(255,255,255,0.75)" fontSize="9" fontFamily="sans-serif">Real-world tasks as the organizing context for all learning</text>
+
+          {/* Four pillars */}
           {[
-            { x: 30,  label: "Activation",   sub: "Prior knowledge" },
-            { x: 135, label: "Demonstration", sub: "Show, don't just tell" },
-            { x: 240, label: "Application",  sub: "Learner practice" },
-            { x: 345, label: "Integration",  sub: "Real-world transfer" },
-          ].map(({ x, label, sub }) => (
+            { x: 28,  label: "Activation",    sub1: "Prior",       sub2: "Knowledge"  },
+            { x: 138, label: "Demonstration", sub1: "Show,",       sub2: "Don't Tell" },
+            { x: 248, label: "Application",   sub1: "Learner",     sub2: "Practice"   },
+            { x: 358, label: "Integration",   sub1: "Real-world",  sub2: "Transfer"   },
+          ].map(({ x, label, sub1, sub2 }) => (
             <g key={label}>
-              <rect x={x} y="30" width="95" height="120" rx="6" fill="#8b5cf6" />
-              <text x={x + 47.5} y="80" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="sans-serif">{label}</text>
-              <text x={x + 47.5} y="98" textAnchor="middle" fill="#e9d5ff" fontSize="8" fontFamily="sans-serif">{sub.split(" ")[0]}</text>
-              <text x={x + 47.5} y="110" textAnchor="middle" fill="#e9d5ff" fontSize="8" fontFamily="sans-serif">{sub.split(" ").slice(1).join(" ")}</text>
+              <rect x={x} y="28" width="96" height="130" rx="10" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={x + 1} y="28" width="94" height="5" rx="2" fill="#4a7bc4"/>
+              <text x={x + 48} y="84"  textAnchor="middle" fill="#f0f0f2" fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
+              <text x={x + 48} y="104" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">{sub1}</text>
+              <text x={x + 48} y="116" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">{sub2}</text>
               {/* Connector line to foundation */}
-              <line x1={x + 47.5} y1="150" x2={x + 47.5} y2="160" stroke="#c4b5fd" strokeWidth="1.5" />
+              <line x1={x + 48} y1="158" x2={x + 48} y2="168" stroke="#f26522" strokeWidth="1.5" strokeDasharray="3 2"/>
             </g>
           ))}
         </svg>
@@ -553,36 +412,42 @@ export default function IDModelsPage() {
       {/* Gagné's 9 Events Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 340 400"
+          viewBox="0 0 360 400"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-sm"
-          aria-label="Gagné's 9 Events of Instruction shown as a numbered vertical list"
+          aria-label="Gagné's 9 Events of Instruction shown as a numbered vertical sequence"
           role="img"
         >
+          {/* Decorative dots */}
+          <circle cx="350" cy="10"  r="3"   fill="#f26522" opacity="0.4"/>
+          <circle cx="350" cy="390" r="3.5" fill="#4a7bc4" opacity="0.4"/>
+
           {[
-            { n: 1, label: "Gain Attention",              color: "#6366f1" },
-            { n: 2, label: "Inform Learners of Objectives", color: "#7c3aed" },
-            { n: 3, label: "Stimulate Recall of Prior Learning", color: "#8b5cf6" },
-            { n: 4, label: "Present the Content",         color: "#9333ea" },
-            { n: 5, label: "Provide Learning Guidance",   color: "#a855f7" },
-            { n: 6, label: "Elicit Performance (Practice)", color: "#b45309" },
-            { n: 7, label: "Provide Feedback",            color: "#c084fc" },
-            { n: 8, label: "Assess Performance",          color: "#d946ef" },
-            { n: 9, label: "Enhance Retention & Transfer", color: "#e879f9" },
-          ].map(({ n, label, color }, i) => (
-            <g key={n}>
-              {/* Connector line */}
-              {i < 8 && (
-                <line x1="30" y1={30 + i * 40 + 16} x2="30" y2={30 + i * 40 + 40} stroke="#94a3b8" strokeWidth="1.5" />
-              )}
-              {/* Number circle */}
-              <circle cx="30" cy={30 + i * 40} r="14" fill={color} />
-              <text x="30" y={35 + i * 40} textAnchor="middle" fill="white" fontSize="11" fontWeight="bold" fontFamily="sans-serif">{n}</text>
-              {/* Label */}
-              <rect x="55" y={16 + i * 40} width="270" height="28" rx="5" fill={color} opacity="0.15" />
-              <text x="68" y={34 + i * 40} fill="#1e1b4b" fontSize="11" fontFamily="sans-serif">{label}</text>
-            </g>
-          ))}
+            { n: 1, label: "Gain Attention" },
+            { n: 2, label: "Inform Learners of Objectives" },
+            { n: 3, label: "Stimulate Recall of Prior Learning" },
+            { n: 4, label: "Present the Content" },
+            { n: 5, label: "Provide Learning Guidance" },
+            { n: 6, label: "Elicit Performance (Practice)" },
+            { n: 7, label: "Provide Feedback" },
+            { n: 8, label: "Assess Performance" },
+            { n: 9, label: "Enhance Retention & Transfer" },
+          ].map(({ n, label }, i) => {
+            const y = 20 + i * 42
+            const isOrange = n <= 5
+            return (
+              <g key={n}>
+                {i < 8 && (
+                  <line x1="30" y1={y + 15} x2="30" y2={y + 28} stroke="#2b4171" strokeWidth="1.5"/>
+                )}
+                <circle cx="30" cy={y} r="14" fill={isOrange ? "#f26522" : "#2b4171"}/>
+                <text x="30" y={y + 5} textAnchor="middle" fill="white" fontSize="11" fontWeight="800" fontFamily="sans-serif">{n}</text>
+                <rect x="54" y={y - 14} width="290" height="28" rx="7" fill="#161c26" stroke="#2b4171" strokeWidth="1"/>
+                <rect x="55" y={y - 14} width="4"   height="28" rx="1" fill={isOrange ? "#f26522" : "#4a7bc4"}/>
+                <text x="68" y={y + 5} fill="#f0f0f2" fontSize="10.5" fontFamily="sans-serif">{label}</text>
+              </g>
+            )
+          })}
         </svg>
       </div>
 
@@ -672,35 +537,33 @@ export default function IDModelsPage() {
       {/* Bloom's Taxonomy Illustration — pyramid */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 360 280"
+          viewBox="0 0 380 300"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-md"
-          aria-label="Bloom's Taxonomy pyramid showing six levels from Knowledge at the base to Evaluation at the top"
+          aria-label="Bloom's Taxonomy pyramid from Knowledge at the base to Evaluation at the top"
           role="img"
         >
+          {/* Decorative dots */}
+          <circle cx="8"   cy="150" r="3.5" fill="#f26522" opacity="0.4"/>
+          <circle cx="372" cy="150" r="3"   fill="#4a7bc4" opacity="0.4"/>
+
+          {/* Six pyramid levels — navy base to orange apex */}
           {[
-            { level: "Evaluation",   y: 10,  w: 80,  color: "#6366f1" },
-            { level: "Synthesis",    y: 54,  w: 130, color: "#7c3aed" },
-            { level: "Analysis",     y: 98,  w: 180, color: "#8b5cf6" },
-            { level: "Application",  y: 142, w: 230, color: "#a855f7" },
-            { level: "Comprehension",y: 186, w: 280, color: "#c084fc" },
-            { level: "Knowledge",    y: 230, w: 330, color: "#e879f9" },
-          ].map(({ level, y, w, color }) => (
+            { level: "Evaluation",    y: 12,  w: 80,  fill: "#f26522", stroke: "#f26522" },
+            { level: "Synthesis",     y: 56,  w: 132, fill: "#c44d14", stroke: "#c44d14" },
+            { level: "Analysis",      y: 100, w: 184, fill: "#4a7bc4", stroke: "#4a7bc4" },
+            { level: "Application",   y: 144, w: 236, fill: "#3d5b8c", stroke: "#3d5b8c" },
+            { level: "Comprehension", y: 188, w: 288, fill: "#2b4171", stroke: "#2b4171" },
+            { level: "Knowledge",     y: 232, w: 340, fill: "#1a2d4e", stroke: "#2b4171" },
+          ].map(({ level, y, w, fill, stroke }) => (
             <g key={level}>
-              <rect x={(360 - w) / 2} y={y} width={w} height="38" rx="4" fill={color} />
-              <text
-                x="180"
-                y={y + 24}
-                textAnchor="middle"
-                fill="white"
-                fontSize="12"
-                fontWeight="bold"
-                fontFamily="sans-serif"
-              >
-                {level}
-              </text>
+              <rect x={(380 - w) / 2} y={y} width={w} height="40" rx="5" fill={fill} stroke={stroke} strokeWidth="1"/>
+              <text x="190" y={y + 25} textAnchor="middle" fill="white" fontSize="12" fontWeight="700" fontFamily="sans-serif">{level}</text>
             </g>
           ))}
+
+          {/* "Higher order thinking" label */}
+          <text x="190" y="292" textAnchor="middle" fill="#8a8a96" fontSize="9" fontFamily="sans-serif">← Lower-order thinking · · · Higher-order thinking →</text>
         </svg>
       </div>
 
@@ -780,28 +643,35 @@ export default function IDModelsPage() {
       {/* Kirkpatrick Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 420 240"
+          viewBox="0 0 430 255"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-xl"
-          aria-label="Kirkpatrick's Four Levels shown as a four-step staircase ascending from Reaction to Results"
+          aria-label="Kirkpatrick's Four Levels as an ascending staircase from Reaction to Results"
           role="img"
         >
+          {/* Decorative dots */}
+          <circle cx="8"   cy="8"   r="3.5" fill="#4a7bc4" opacity="0.4"/>
+          <circle cx="422" cy="8"   r="3"   fill="#f26522" opacity="0.4"/>
+          <circle cx="215" cy="245" r="3"   fill="#f26522" opacity="0.35"/>
+
+          {/* Four ascending bars — navy to orange */}
           {[
-            { level: "Level 1", label: "Reaction",  x: 10,  y: 160, w: 90,  color: "#e879f9" },
-            { level: "Level 2", label: "Learning",  x: 110, y: 110, w: 90,  color: "#c084fc" },
-            { level: "Level 3", label: "Behavior",  x: 210, y: 60,  w: 90,  color: "#8b5cf6" },
-            { level: "Level 4", label: "Results",   x: 310, y: 10,  w: 90,  color: "#6366f1" },
-          ].map(({ level, label, x, y, w, color }) => (
+            { level: "Level 1", label: "Reaction",  x: 10,  y: 165, fill: "#1a2d4e", stroke: "#2b4171" },
+            { level: "Level 2", label: "Learning",  x: 110, y: 115, fill: "#2b4171", stroke: "#3d5b8c" },
+            { level: "Level 3", label: "Behavior",  x: 210, y: 65,  fill: "#c44d14", stroke: "#c44d14" },
+            { level: "Level 4", label: "Results",   x: 310, y: 15,  fill: "#f26522", stroke: "#f26522" },
+          ].map(({ level, label, x, y, fill, stroke }) => (
             <g key={level}>
-              <rect x={x} y={y} width={w} height={220 - y} rx="4" fill={color} />
-              <text x={x + w / 2} y={y + 24} textAnchor="middle" fill="white" fontSize="11" fontWeight="bold" fontFamily="sans-serif">{level}</text>
-              <text x={x + w / 2} y={y + 40} textAnchor="middle" fill="white" fontSize="10" fontFamily="sans-serif">{label}</text>
+              <rect x={x} y={y} width="90" height={225 - y} rx="6" fill={fill} stroke={stroke} strokeWidth="1.5"/>
+              <text x={x + 45} y={y + 22} textAnchor="middle" fill="white"          fontSize="10" fontWeight="800" fontFamily="sans-serif">{level}</text>
+              <text x={x + 45} y={y + 38} textAnchor="middle" fill="rgba(255,255,255,0.7)" fontSize="9"  fontFamily="sans-serif">{label}</text>
             </g>
           ))}
-          {/* Arrow indicating progression */}
-          <path d="M10,230 L400,230" stroke="#94a3b8" strokeWidth="1.5" />
-          <polygon points="400,226 408,230 400,234" fill="#94a3b8" />
-          <text x="210" y="248" textAnchor="middle" fill="#94a3b8" fontSize="9" fontFamily="sans-serif">Increasing complexity &amp; business impact</text>
+
+          {/* Baseline arrow */}
+          <line x1="10" y1="228" x2="408" y2="228" stroke="#2b4171" strokeWidth="1.5"/>
+          <polygon points="408,224 416,228 408,232" fill="#2b4171"/>
+          <text x="215" y="245" textAnchor="middle" fill="#8a8a96" fontSize="9" fontFamily="sans-serif">Increasing complexity &amp; organizational impact</text>
         </svg>
       </div>
 
@@ -866,43 +736,49 @@ export default function IDModelsPage() {
       {/* Design Thinking Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 540 120"
+          viewBox="0 0 560 130"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-2xl"
-          aria-label="Design Thinking process showing five phases: Empathize, Define, Ideate, Prototype, Test"
+          aria-label="Design Thinking five phases with iterative return loop"
           role="img"
         >
+          <defs>
+            <marker id="dt-fwd" markerWidth="8" markerHeight="7" refX="6" refY="3.5" orient="auto">
+              <polygon points="0,0.5 0,6.5 6.5,3.5" fill="#f26522"/>
+            </marker>
+            <marker id="dt-back" markerWidth="8" markerHeight="7" refX="1" refY="3.5" orient="auto-start-reverse">
+              <polygon points="0,0.5 0,6.5 6.5,3.5" fill="#4a7bc4"/>
+            </marker>
+          </defs>
+
+          {/* Decorative dots */}
+          <circle cx="8"   cy="8"   r="3"   fill="#f26522" opacity="0.4"/>
+          <circle cx="552" cy="8"   r="3.5" fill="#4a7bc4" opacity="0.4"/>
+
+          {/* Five phase cards */}
           {[
-            { x: 10,  label: "Empathize", color: "#6366f1" },
-            { x: 110, label: "Define",    color: "#7c3aed" },
-            { x: 210, label: "Ideate",    color: "#8b5cf6" },
-            { x: 310, label: "Prototype", color: "#a855f7" },
-            { x: 410, label: "Test",      color: "#c084fc" },
-          ].map(({ x, label, color }) => (
+            { x: 10,  label: "Empathize" },
+            { x: 118, label: "Define"    },
+            { x: 226, label: "Ideate"    },
+            { x: 334, label: "Prototype" },
+            { x: 442, label: "Test"      },
+          ].map(({ x, label }) => (
             <g key={label}>
-              <rect x={x} y="10" width="100" height="70" rx="8" fill={color} />
-              <text x={x + 50} y="52" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold" fontFamily="sans-serif">{label}</text>
+              <rect x={x} y="10" width="100" height="68" rx="10" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={x + 1} y="10" width="98" height="5" rx="2" fill="#f26522"/>
+              <text x={x + 50} y="52" textAnchor="middle" fill="#f0f0f2" fontSize="11" fontWeight="700" fontFamily="sans-serif">{label}</text>
             </g>
           ))}
 
           {/* Forward arrows */}
-          {[110, 210, 310, 410].map((x) => (
-            <g key={x}>
-              <line x1={x - 2} y1="45" x2={x + 8} y2="45" stroke="#94a3b8" strokeWidth="1.5" />
-              <polygon points={`${x + 8},41 ${x + 14},45 ${x + 8},49`} fill="#94a3b8" />
-            </g>
-          ))}
+          <line x1="111" y1="44" x2="116" y2="44" stroke="#f26522" strokeWidth="1.5" markerEnd="url(#dt-fwd)"/>
+          <line x1="219" y1="44" x2="224" y2="44" stroke="#f26522" strokeWidth="1.5" markerEnd="url(#dt-fwd)"/>
+          <line x1="327" y1="44" x2="332" y2="44" stroke="#f26522" strokeWidth="1.5" markerEnd="url(#dt-fwd)"/>
+          <line x1="435" y1="44" x2="440" y2="44" stroke="#f26522" strokeWidth="1.5" markerEnd="url(#dt-fwd)"/>
 
-          {/* Iterative return arrow */}
-          <path
-            d="M510,90 Q270,118 10,90"
-            stroke="#c4b5fd"
-            strokeWidth="1.5"
-            fill="none"
-            strokeDasharray="5 3"
-          />
-          <polygon points="10,86 4,90 10,94" fill="#c4b5fd" />
-          <text x="260" y="115" textAnchor="middle" fill="#94a3b8" fontSize="9" fontFamily="sans-serif">Iterative — return to any phase based on testing insights</text>
+          {/* Iterative return arc */}
+          <path d="M 497,86 Q 276,120 13,86" stroke="#4a7bc4" strokeWidth="1.5" fill="none" strokeDasharray="5 3" markerEnd="url(#dt-back)"/>
+          <text x="276" y="123" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">Iterative — return to any phase based on testing insights</text>
         </svg>
       </div>
 
@@ -965,26 +841,29 @@ export default function IDModelsPage() {
       {/* ARCS Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 440 130"
+          viewBox="0 0 460 140"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-xl"
-          aria-label="ARCS Model showing four components: Attention, Relevance, Confidence, Satisfaction"
+          aria-label="ARCS Model: Attention, Relevance, Confidence, Satisfaction"
           role="img"
         >
+          {/* Decorative dots */}
+          <circle cx="8"   cy="70"  r="4"   fill="#f26522" opacity="0.4"/>
+          <circle cx="452" cy="70"  r="3.5" fill="#4a7bc4" opacity="0.4"/>
+
           {[
-            { x: 10,  abbr: "A", label: "Attention",    sub: "Capture & sustain it",   color: "#6366f1" },
-            { x: 120, abbr: "R", label: "Relevance",    sub: "Connect to their goals",  color: "#8b5cf6" },
-            { x: 230, abbr: "C", label: "Confidence",   sub: "Build belief in success", color: "#a855f7" },
-            { x: 340, abbr: "S", label: "Satisfaction", sub: "Reward the effort",       color: "#c084fc" },
-          ].map(({ x, abbr, label, sub, color }) => (
+            { x: 14,  abbr: "A", label: "Attention",    sub1: "Capture &",    sub2: "sustain it",      accent: "#f26522" },
+            { x: 128, abbr: "R", label: "Relevance",    sub1: "Connect to",   sub2: "their goals",     accent: "#4a7bc4" },
+            { x: 242, abbr: "C", label: "Confidence",   sub1: "Build belief", sub2: "in success",      accent: "#f26522" },
+            { x: 356, abbr: "S", label: "Satisfaction", sub1: "Reward",       sub2: "the effort",      accent: "#4a7bc4" },
+          ].map(({ x, abbr, label, sub1, sub2, accent }) => (
             <g key={label}>
-              <rect x={x} y="10" width="100" height="110" rx="8" fill={color} />
-              <text x={x + 50} y="50" textAnchor="middle" fill="white" fontSize="30" fontWeight="bold" fontFamily="sans-serif">{abbr}</text>
-              <text x={x + 50} y="74" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="sans-serif">{label}</text>
-              <text x={x + 50} y="89" textAnchor="middle" fill="#e9d5ff" fontSize="8" fontFamily="sans-serif">{sub.split(" & ")[0]}</text>
-              {sub.includes("&") && (
-                <text x={x + 50} y="101" textAnchor="middle" fill="#e9d5ff" fontSize="8" fontFamily="sans-serif">{"& " + sub.split("& ")[1]}</text>
-              )}
+              <rect x={x} y="10" width="100" height="118" rx="10" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={x + 1} y="10" width="98" height="5" rx="2" fill={accent}/>
+              <text x={x + 50} y="57"  textAnchor="middle" fill={accent}   fontSize="32" fontWeight="800" fontFamily="sans-serif">{abbr}</text>
+              <text x={x + 50} y="80"  textAnchor="middle" fill="#f0f0f2"  fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
+              <text x={x + 50} y="96"  textAnchor="middle" fill="#8a8a96"  fontSize="8.5" fontFamily="sans-serif">{sub1}</text>
+              <text x={x + 50} y="108" textAnchor="middle" fill="#8a8a96"  fontSize="8.5" fontFamily="sans-serif">{sub2}</text>
             </g>
           ))}
         </svg>
@@ -1054,36 +933,37 @@ export default function IDModelsPage() {
       {/* 70-20-10 Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 420 160"
+          viewBox="0 0 430 175"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-xl"
-          aria-label="70-20-10 Framework showing three proportional bars: 70% experiential, 20% social, 10% formal"
+          aria-label="70-20-10 Framework: 70% experiential, 20% social, 10% formal learning"
           role="img"
         >
-          {/* Background track */}
-          <rect x="10" y="60" width="400" height="40" rx="6" fill="#e2e8f0" />
+          {/* Decorative dots */}
+          <circle cx="8"   cy="88"  r="4"   fill="#f26522" opacity="0.4"/>
+          <circle cx="422" cy="88"  r="3.5" fill="#4a7bc4" opacity="0.4"/>
 
-          {/* 70% bar */}
-          <rect x="10" y="60" width="280" height="40" rx="6" fill="#6366f1" />
-          <text x="150" y="86" textAnchor="middle" fill="white" fontSize="13" fontWeight="bold" fontFamily="sans-serif">70% — Experiential</text>
+          {/* Labels above bar */}
+          <text x="144" y="44" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">Stretch assignments, real projects, learning by doing</text>
+          <text x="328" y="44" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">Coaching, mentoring, peers</text>
+          <text x="400" y="44" textAnchor="middle" fill="#8a8a96" fontSize="8"   fontFamily="sans-serif">Courses</text>
 
-          {/* 20% bar overlay */}
-          <rect x="290" y="60" width="80" height="40" rx="0" fill="#a855f7" />
-          <text x="330" y="86" textAnchor="middle" fill="white" fontSize="11" fontWeight="bold" fontFamily="sans-serif">20%</text>
+          {/* 70% segment */}
+          <rect x="10"  y="52" width="268" height="48" rx="8" fill="#f26522"/>
+          <text x="144" y="82" textAnchor="middle" fill="white" fontSize="14" fontWeight="800" fontFamily="sans-serif">70% — Experiential</text>
 
-          {/* 10% bar overlay */}
-          <rect x="370" y="60" width="40" height="40" rx="0" fill="#e879f9" style={{ borderRadius: "0 6px 6px 0" }} />
-          <text x="390" y="86" textAnchor="middle" fill="white" fontSize="10" fontWeight="bold" fontFamily="sans-serif">10%</text>
+          {/* 20% segment */}
+          <rect x="280" y="52" width="76"  height="48" rx="0" fill="#4a7bc4"/>
+          <text x="318" y="82" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="sans-serif">20%</text>
 
-          {/* Labels below */}
-          <text x="150" y="120" textAnchor="middle" fill="#6366f1" fontSize="10" fontFamily="sans-serif">On-the-job Experience</text>
-          <text x="330" y="120" textAnchor="middle" fill="#a855f7" fontSize="10" fontFamily="sans-serif">Social Learning</text>
-          <text x="390" y="120" textAnchor="middle" fill="#c084fc" fontSize="9" fontFamily="sans-serif">Formal</text>
+          {/* 10% segment */}
+          <rect x="356" y="52" width="54"  height="48" rx="0" fill="#2b4171" style={{ borderRadius: "0 8px 8px 0" }}/>
+          <text x="383" y="82" textAnchor="middle" fill="white" fontSize="10" fontWeight="700" fontFamily="sans-serif">10%</text>
 
-          {/* Labels above */}
-          <text x="150" y="50" textAnchor="middle" fill="#475569" fontSize="9" fontFamily="sans-serif">Stretch assignments, new challenges, real projects</text>
-          <text x="330" y="50" textAnchor="middle" fill="#475569" fontSize="9" fontFamily="sans-serif">Coaching, mentoring, collaboration</text>
-          <text x="390" y="50" textAnchor="middle" fill="#475569" fontSize="9" fontFamily="sans-serif">Courses</text>
+          {/* Labels below bar */}
+          <text x="144" y="118" textAnchor="middle" fill="#f26522" fontSize="10" fontWeight="600" fontFamily="sans-serif">On-the-job Experience</text>
+          <text x="318" y="118" textAnchor="middle" fill="#4a7bc4" fontSize="10" fontWeight="600" fontFamily="sans-serif">Social Learning</text>
+          <text x="383" y="118" textAnchor="middle" fill="#8a8a96" fontSize="9"  fontFamily="sans-serif">Formal Training</text>
         </svg>
       </div>
 
