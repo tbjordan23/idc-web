@@ -76,8 +76,8 @@ export default function IDModelsPage() {
           ].map(({ x, letter, name }) => (
             <g key={name}>
               <rect x={x} y="30" width="90" height="106" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
-              <text x={x + 45} y="90" textAnchor="middle" fill="#f26522" fontSize="34" fontWeight="800" fontFamily="sans-serif">{letter}</text>
-              <text x={x + 45} y="118" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">{name}</text>
+              <text x={x + 45} y="86" textAnchor="middle" dominantBaseline="central" fill="#f26522" fontSize="34" fontWeight="800" fontFamily="sans-serif">{letter}</text>
+              <text x={x + 45} y="120" textAnchor="middle" fill="var(--text)" fontSize="10" fontWeight="600" fontFamily="sans-serif">{name}</text>
             </g>
           ))}
 
@@ -418,7 +418,7 @@ export default function IDModelsPage() {
                 <circle cx="30" cy={y} r="14" fill={isOrange ? "#f26522" : "#2b4171"}/>
                 <text x="30" y={y + 5} textAnchor="middle" fill="white" fontSize="11" fontWeight="800" fontFamily="sans-serif">{n}</text>
                 <rect x="54" y={y - 14} width="290" height="28" rx="7" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1"/>
-                <text x="68" y={y + 5} fill="var(--text)" fontSize="10.5" fontFamily="sans-serif">{label}</text>
+                <text x="68" y={y} dominantBaseline="central" fill="var(--text)" fontSize="10.5" fontFamily="sans-serif">{label}</text>
               </g>
             )
           })}
@@ -726,7 +726,7 @@ export default function IDModelsPage() {
           ].map(({ x, label }) => (
             <g key={label}>
               <rect x={x} y="10" width="100" height="68" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
-              <text x={x + 50} y="52" textAnchor="middle" fill="var(--text)" fontSize="11" fontWeight="700" fontFamily="sans-serif">{label}</text>
+              <text x={x + 50} y="44" textAnchor="middle" dominantBaseline="central" fill="var(--text)" fontSize="11" fontWeight="700" fontFamily="sans-serif">{label}</text>
             </g>
           ))}
 
@@ -888,7 +888,7 @@ export default function IDModelsPage() {
       {/* 70-20-10 Illustration */}
       <div className="my-8 flex justify-center">
         <svg
-          viewBox="0 0 430 175"
+          viewBox="0 0 430 185"
           xmlns="http://www.w3.org/2000/svg"
           className="w-full max-w-xl"
           aria-label="70-20-10 Framework: 70% experiential, 20% social, 10% formal learning"
@@ -901,20 +901,20 @@ export default function IDModelsPage() {
 
           {/* 70% segment */}
           <rect x="10"  y="52" width="268" height="48" rx="8" fill="#f26522"/>
-          <text x="144" y="82" textAnchor="middle" fill="white" fontSize="14" fontWeight="800" fontFamily="sans-serif">70% — Experiential</text>
+          <text x="144" y="76" dominantBaseline="central" textAnchor="middle" fill="white" fontSize="12" fontWeight="800" fontFamily="sans-serif">70% — Experiential</text>
 
           {/* 20% segment */}
           <rect x="280" y="52" width="76"  height="48" rx="0" fill="#4a7bc4"/>
-          <text x="318" y="82" textAnchor="middle" fill="white" fontSize="11" fontWeight="700" fontFamily="sans-serif">20%</text>
+          <text x="318" y="76" dominantBaseline="central" textAnchor="middle" fill="white" fontSize="12" fontWeight="800" fontFamily="sans-serif">20%</text>
 
           {/* 10% segment */}
           <rect x="356" y="52" width="54"  height="48" rx="0" fill="#2b4171" style={{ borderRadius: "0 8px 8px 0" }}/>
-          <text x="383" y="82" textAnchor="middle" fill="white" fontSize="10" fontWeight="700" fontFamily="sans-serif">10%</text>
+          <text x="383" y="76" dominantBaseline="central" textAnchor="middle" fill="white" fontSize="12" fontWeight="800" fontFamily="sans-serif">10%</text>
 
           {/* Labels below bar */}
-          <text x="144" y="118" textAnchor="middle" fill="#f26522" fontSize="10" fontWeight="600" fontFamily="sans-serif">On-the-job Experience</text>
-          <text x="318" y="118" textAnchor="middle" fill="#4a7bc4" fontSize="10" fontWeight="600" fontFamily="sans-serif">Social Learning</text>
-          <text x="383" y="118" textAnchor="middle" fill="var(--text-muted)" fontSize="9"  fontFamily="sans-serif">Formal Training</text>
+          <text x="144" y="116" textAnchor="middle" fill="#f26522" fontSize="10" fontWeight="600" fontFamily="sans-serif">On-the-job Experience</text>
+          <text x="318" y="116" textAnchor="middle" fill="#4a7bc4" fontSize="10" fontWeight="600" fontFamily="sans-serif">Social Learning</text>
+          <text x="383" y="132" textAnchor="middle" fill="var(--text-muted)" fontSize="10" fontWeight="600" fontFamily="sans-serif">Formal Training</text>
         </svg>
       </div>
 
