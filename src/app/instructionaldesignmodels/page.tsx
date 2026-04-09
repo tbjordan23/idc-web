@@ -66,13 +66,6 @@ export default function IDModelsPage() {
             </marker>
           </defs>
 
-          {/* Decorative dots */}
-          <circle cx="6"   cy="200" r="4"   fill="#f26522" opacity="0.45"/>
-          <circle cx="584" cy="200" r="3"   fill="#4a7bc4" opacity="0.5"/>
-          <circle cx="295" cy="7"   r="3"   fill="#f26522" opacity="0.35"/>
-          <circle cx="148" cy="210" r="2.5" fill="#4a7bc4" opacity="0.4"/>
-          <circle cx="442" cy="210" r="2.5" fill="#f26522" opacity="0.35"/>
-
           {/* Five phase cards */}
           {[
             { x: 14,  letter: "A", name: "Analysis" },
@@ -82,10 +75,10 @@ export default function IDModelsPage() {
             { x: 446, letter: "E", name: "Evaluation" },
           ].map(({ x, letter, name }) => (
             <g key={name}>
-              <rect x={x} y="30" width="90" height="106" rx="10" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={x} y="30" width="90" height="106" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
               <rect x={x + 1} y="30" width="88" height="5" rx="2" fill="#f26522"/>
               <text x={x + 45} y="90" textAnchor="middle" fill="#f26522" fontSize="34" fontWeight="800" fontFamily="sans-serif">{letter}</text>
-              <text x={x + 45} y="118" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">{name}</text>
+              <text x={x + 45} y="118" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">{name}</text>
             </g>
           ))}
 
@@ -101,7 +94,7 @@ export default function IDModelsPage() {
 
           {/* Main evaluation feedback arc: E → A */}
           <path d="M 491,136 Q 295,198 59,136" stroke="#f26522" strokeWidth="1.8" fill="none" strokeDasharray="7 3" markerEnd="url(#addie-fwd)"/>
-          <text x="295" y="210" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">Evaluation informs continuous improvement — feedback loops back to any phase</text>
+          <text x="295" y="210" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">Evaluation informs continuous improvement — feedback loops back to any phase</text>
         </svg>
       </div>
 
@@ -212,19 +205,14 @@ export default function IDModelsPage() {
           aria-label="Agile Instructional Design sprint cycle showing Plan, Build, Review, Reflect phases"
           role="img"
         >
-          {/* Decorative dots */}
-          <circle cx="14"  cy="14"  r="3.5" fill="#f26522" opacity="0.4"/>
-          <circle cx="386" cy="216" r="4"   fill="#4a7bc4" opacity="0.45"/>
-          <circle cx="386" cy="14"  r="3"   fill="#f26522" opacity="0.35"/>
-
           {/* Subtle orbit track */}
           <circle cx="200" cy="115" r="82" fill="none" stroke="#2b4171" strokeWidth="1" strokeDasharray="3 4"/>
 
           {/* Central sprint card */}
-          <rect x="148" y="83" width="104" height="64" rx="10" fill="#161c26" stroke="#f26522" strokeWidth="1.8"/>
+          <rect x="148" y="83" width="104" height="64" rx="10" fill="var(--surface-2)" stroke="#f26522" strokeWidth="1.8"/>
           <rect x="149" y="83" width="102" height="5"  rx="2"  fill="#f26522"/>
           <text x="200" y="116" textAnchor="middle" fill="#f26522" fontSize="13" fontWeight="800" fontFamily="sans-serif">Sprint</text>
-          <text x="200" y="134" textAnchor="middle" fill="#8a8a96" fontSize="9"  fontFamily="sans-serif">1–4 weeks</text>
+          <text x="200" y="134" textAnchor="middle" fill="var(--text-muted)" fontSize="9"  fontFamily="sans-serif">1–4 weeks</text>
 
           {/* Orbital node cards */}
           {[
@@ -234,9 +222,9 @@ export default function IDModelsPage() {
             { cx: 48,  cy: 115, label: "Reflect" },
           ].map(({ cx, cy, label }) => (
             <g key={label}>
-              <rect x={cx - 32} y={cy - 18} width="64" height="36" rx="8" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={cx - 32} y={cy - 18} width="64" height="36" rx="8" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
               <rect x={cx - 31} y={cy - 18} width="62" height="4"  rx="1.5" fill="#4a7bc4"/>
-              <text x={cx} y={cy + 7} textAnchor="middle" fill="#f0f0f2" fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
+              <text x={cx} y={cy + 7} textAnchor="middle" fill="var(--text)" fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
             </g>
           ))}
 
@@ -315,11 +303,6 @@ export default function IDModelsPage() {
           aria-label="Merrill's First Principles showing four pillars built on a problem-centered foundation"
           role="img"
         >
-          {/* Decorative dots */}
-          <circle cx="8"   cy="10"  r="3"   fill="#f26522" opacity="0.4"/>
-          <circle cx="482" cy="10"  r="3.5" fill="#4a7bc4" opacity="0.4"/>
-          <circle cx="245" cy="222" r="3"   fill="#4a7bc4" opacity="0.35"/>
-
           {/* Foundation bar */}
           <rect x="18" y="168" width="454" height="48" rx="10" fill="#f26522"/>
           <text x="245" y="188" textAnchor="middle" fill="white" fontSize="12" fontWeight="800" fontFamily="sans-serif">Problem-Centered</text>
@@ -333,11 +316,11 @@ export default function IDModelsPage() {
             { x: 358, label: "Integration",   sub1: "Real-world",  sub2: "Transfer"   },
           ].map(({ x, label, sub1, sub2 }) => (
             <g key={label}>
-              <rect x={x} y="28" width="96" height="130" rx="10" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={x} y="28" width="96" height="130" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
               <rect x={x + 1} y="28" width="94" height="5" rx="2" fill="#4a7bc4"/>
-              <text x={x + 48} y="84"  textAnchor="middle" fill="#f0f0f2" fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
-              <text x={x + 48} y="104" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">{sub1}</text>
-              <text x={x + 48} y="116" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">{sub2}</text>
+              <text x={x + 48} y="84"  textAnchor="middle" fill="var(--text)" fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
+              <text x={x + 48} y="104" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">{sub1}</text>
+              <text x={x + 48} y="116" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">{sub2}</text>
               {/* Connector line to foundation */}
               <line x1={x + 48} y1="158" x2={x + 48} y2="168" stroke="#f26522" strokeWidth="1.5" strokeDasharray="3 2"/>
             </g>
@@ -418,10 +401,6 @@ export default function IDModelsPage() {
           aria-label="Gagné's 9 Events of Instruction shown as a numbered vertical sequence"
           role="img"
         >
-          {/* Decorative dots */}
-          <circle cx="350" cy="10"  r="3"   fill="#f26522" opacity="0.4"/>
-          <circle cx="350" cy="390" r="3.5" fill="#4a7bc4" opacity="0.4"/>
-
           {[
             { n: 1, label: "Gain Attention" },
             { n: 2, label: "Inform Learners of Objectives" },
@@ -442,9 +421,9 @@ export default function IDModelsPage() {
                 )}
                 <circle cx="30" cy={y} r="14" fill={isOrange ? "#f26522" : "#2b4171"}/>
                 <text x="30" y={y + 5} textAnchor="middle" fill="white" fontSize="11" fontWeight="800" fontFamily="sans-serif">{n}</text>
-                <rect x="54" y={y - 14} width="290" height="28" rx="7" fill="#161c26" stroke="#2b4171" strokeWidth="1"/>
+                <rect x="54" y={y - 14} width="290" height="28" rx="7" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1"/>
                 <rect x="55" y={y - 14} width="4"   height="28" rx="1" fill={isOrange ? "#f26522" : "#4a7bc4"}/>
-                <text x="68" y={y + 5} fill="#f0f0f2" fontSize="10.5" fontFamily="sans-serif">{label}</text>
+                <text x="68" y={y + 5} fill="var(--text)" fontSize="10.5" fontFamily="sans-serif">{label}</text>
               </g>
             )
           })}
@@ -543,10 +522,6 @@ export default function IDModelsPage() {
           aria-label="Bloom's Taxonomy pyramid from Knowledge at the base to Evaluation at the top"
           role="img"
         >
-          {/* Decorative dots */}
-          <circle cx="8"   cy="150" r="3.5" fill="#f26522" opacity="0.4"/>
-          <circle cx="372" cy="150" r="3"   fill="#4a7bc4" opacity="0.4"/>
-
           {/* Six pyramid levels — navy base to orange apex */}
           {[
             { level: "Evaluation",    y: 12,  w: 80,  fill: "#f26522", stroke: "#f26522" },
@@ -563,7 +538,7 @@ export default function IDModelsPage() {
           ))}
 
           {/* "Higher order thinking" label */}
-          <text x="190" y="292" textAnchor="middle" fill="#8a8a96" fontSize="9" fontFamily="sans-serif">← Lower-order thinking · · · Higher-order thinking →</text>
+          <text x="190" y="292" textAnchor="middle" fill="var(--text-muted)" fontSize="9" fontFamily="sans-serif">← Lower-order thinking · · · Higher-order thinking →</text>
         </svg>
       </div>
 
@@ -649,11 +624,6 @@ export default function IDModelsPage() {
           aria-label="Kirkpatrick's Four Levels as an ascending staircase from Reaction to Results"
           role="img"
         >
-          {/* Decorative dots */}
-          <circle cx="8"   cy="8"   r="3.5" fill="#4a7bc4" opacity="0.4"/>
-          <circle cx="422" cy="8"   r="3"   fill="#f26522" opacity="0.4"/>
-          <circle cx="215" cy="245" r="3"   fill="#f26522" opacity="0.35"/>
-
           {/* Four ascending bars — navy to orange */}
           {[
             { level: "Level 1", label: "Reaction",  x: 10,  y: 165, fill: "#1a2d4e", stroke: "#2b4171" },
@@ -671,7 +641,7 @@ export default function IDModelsPage() {
           {/* Baseline arrow */}
           <line x1="10" y1="228" x2="408" y2="228" stroke="#2b4171" strokeWidth="1.5"/>
           <polygon points="408,224 416,228 408,232" fill="#2b4171"/>
-          <text x="215" y="245" textAnchor="middle" fill="#8a8a96" fontSize="9" fontFamily="sans-serif">Increasing complexity &amp; organizational impact</text>
+          <text x="215" y="245" textAnchor="middle" fill="var(--text-muted)" fontSize="9" fontFamily="sans-serif">Increasing complexity &amp; organizational impact</text>
         </svg>
       </div>
 
@@ -751,10 +721,6 @@ export default function IDModelsPage() {
             </marker>
           </defs>
 
-          {/* Decorative dots */}
-          <circle cx="8"   cy="8"   r="3"   fill="#f26522" opacity="0.4"/>
-          <circle cx="552" cy="8"   r="3.5" fill="#4a7bc4" opacity="0.4"/>
-
           {/* Five phase cards */}
           {[
             { x: 10,  label: "Empathize" },
@@ -764,9 +730,9 @@ export default function IDModelsPage() {
             { x: 442, label: "Test"      },
           ].map(({ x, label }) => (
             <g key={label}>
-              <rect x={x} y="10" width="100" height="68" rx="10" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={x} y="10" width="100" height="68" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
               <rect x={x + 1} y="10" width="98" height="5" rx="2" fill="#f26522"/>
-              <text x={x + 50} y="52" textAnchor="middle" fill="#f0f0f2" fontSize="11" fontWeight="700" fontFamily="sans-serif">{label}</text>
+              <text x={x + 50} y="52" textAnchor="middle" fill="var(--text)" fontSize="11" fontWeight="700" fontFamily="sans-serif">{label}</text>
             </g>
           ))}
 
@@ -778,7 +744,7 @@ export default function IDModelsPage() {
 
           {/* Iterative return arc */}
           <path d="M 497,86 Q 276,120 13,86" stroke="#4a7bc4" strokeWidth="1.5" fill="none" strokeDasharray="5 3" markerEnd="url(#dt-back)"/>
-          <text x="276" y="123" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">Iterative — return to any phase based on testing insights</text>
+          <text x="276" y="123" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">Iterative — return to any phase based on testing insights</text>
         </svg>
       </div>
 
@@ -847,10 +813,6 @@ export default function IDModelsPage() {
           aria-label="ARCS Model: Attention, Relevance, Confidence, Satisfaction"
           role="img"
         >
-          {/* Decorative dots */}
-          <circle cx="8"   cy="70"  r="4"   fill="#f26522" opacity="0.4"/>
-          <circle cx="452" cy="70"  r="3.5" fill="#4a7bc4" opacity="0.4"/>
-
           {[
             { x: 14,  abbr: "A", label: "Attention",    sub1: "Capture &",    sub2: "sustain it",      accent: "#f26522" },
             { x: 128, abbr: "R", label: "Relevance",    sub1: "Connect to",   sub2: "their goals",     accent: "#4a7bc4" },
@@ -858,12 +820,12 @@ export default function IDModelsPage() {
             { x: 356, abbr: "S", label: "Satisfaction", sub1: "Reward",       sub2: "the effort",      accent: "#4a7bc4" },
           ].map(({ x, abbr, label, sub1, sub2, accent }) => (
             <g key={label}>
-              <rect x={x} y="10" width="100" height="118" rx="10" fill="#161c26" stroke="#2b4171" strokeWidth="1.5"/>
+              <rect x={x} y="10" width="100" height="118" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
               <rect x={x + 1} y="10" width="98" height="5" rx="2" fill={accent}/>
               <text x={x + 50} y="57"  textAnchor="middle" fill={accent}   fontSize="32" fontWeight="800" fontFamily="sans-serif">{abbr}</text>
-              <text x={x + 50} y="80"  textAnchor="middle" fill="#f0f0f2"  fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
-              <text x={x + 50} y="96"  textAnchor="middle" fill="#8a8a96"  fontSize="8.5" fontFamily="sans-serif">{sub1}</text>
-              <text x={x + 50} y="108" textAnchor="middle" fill="#8a8a96"  fontSize="8.5" fontFamily="sans-serif">{sub2}</text>
+              <text x={x + 50} y="80"  textAnchor="middle" fill="var(--text)"  fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
+              <text x={x + 50} y="96"  textAnchor="middle" fill="var(--text-muted)"  fontSize="8.5" fontFamily="sans-serif">{sub1}</text>
+              <text x={x + 50} y="108" textAnchor="middle" fill="var(--text-muted)"  fontSize="8.5" fontFamily="sans-serif">{sub2}</text>
             </g>
           ))}
         </svg>
@@ -939,14 +901,10 @@ export default function IDModelsPage() {
           aria-label="70-20-10 Framework: 70% experiential, 20% social, 10% formal learning"
           role="img"
         >
-          {/* Decorative dots */}
-          <circle cx="8"   cy="88"  r="4"   fill="#f26522" opacity="0.4"/>
-          <circle cx="422" cy="88"  r="3.5" fill="#4a7bc4" opacity="0.4"/>
-
           {/* Labels above bar */}
-          <text x="144" y="44" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">Stretch assignments, real projects, learning by doing</text>
-          <text x="328" y="44" textAnchor="middle" fill="#8a8a96" fontSize="8.5" fontFamily="sans-serif">Coaching, mentoring, peers</text>
-          <text x="400" y="44" textAnchor="middle" fill="#8a8a96" fontSize="8"   fontFamily="sans-serif">Courses</text>
+          <text x="144" y="44" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">Stretch assignments, real projects, learning by doing</text>
+          <text x="328" y="44" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">Coaching, mentoring, peers</text>
+          <text x="400" y="44" textAnchor="middle" fill="var(--text-muted)" fontSize="8"   fontFamily="sans-serif">Courses</text>
 
           {/* 70% segment */}
           <rect x="10"  y="52" width="268" height="48" rx="8" fill="#f26522"/>
@@ -963,7 +921,7 @@ export default function IDModelsPage() {
           {/* Labels below bar */}
           <text x="144" y="118" textAnchor="middle" fill="#f26522" fontSize="10" fontWeight="600" fontFamily="sans-serif">On-the-job Experience</text>
           <text x="318" y="118" textAnchor="middle" fill="#4a7bc4" fontSize="10" fontWeight="600" fontFamily="sans-serif">Social Learning</text>
-          <text x="383" y="118" textAnchor="middle" fill="#8a8a96" fontSize="9"  fontFamily="sans-serif">Formal Training</text>
+          <text x="383" y="118" textAnchor="middle" fill="var(--text-muted)" fontSize="9"  fontFamily="sans-serif">Formal Training</text>
         </svg>
       </div>
 
