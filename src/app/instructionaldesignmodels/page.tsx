@@ -76,7 +76,6 @@ export default function IDModelsPage() {
           ].map(({ x, letter, name }) => (
             <g key={name}>
               <rect x={x} y="30" width="90" height="106" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
-              <rect x={x + 1} y="30" width="88" height="5" rx="2" fill="#f26522"/>
               <text x={x + 45} y="90" textAnchor="middle" fill="#f26522" fontSize="34" fontWeight="800" fontFamily="sans-serif">{letter}</text>
               <text x={x + 45} y="118" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">{name}</text>
             </g>
@@ -210,7 +209,6 @@ export default function IDModelsPage() {
 
           {/* Central sprint card */}
           <rect x="148" y="83" width="104" height="64" rx="10" fill="var(--surface-2)" stroke="#f26522" strokeWidth="1.8"/>
-          <rect x="149" y="83" width="102" height="5"  rx="2"  fill="#f26522"/>
           <text x="200" y="116" textAnchor="middle" fill="#f26522" fontSize="13" fontWeight="800" fontFamily="sans-serif">Sprint</text>
           <text x="200" y="134" textAnchor="middle" fill="var(--text-muted)" fontSize="9"  fontFamily="sans-serif">1–4 weeks</text>
 
@@ -223,7 +221,6 @@ export default function IDModelsPage() {
           ].map(({ cx, cy, label }) => (
             <g key={label}>
               <rect x={cx - 32} y={cy - 18} width="64" height="36" rx="8" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
-              <rect x={cx - 31} y={cy - 18} width="62" height="4"  rx="1.5" fill="#4a7bc4"/>
               <text x={cx} y={cy + 7} textAnchor="middle" fill="var(--text)" fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
             </g>
           ))}
@@ -317,7 +314,6 @@ export default function IDModelsPage() {
           ].map(({ x, label, sub1, sub2 }) => (
             <g key={label}>
               <rect x={x} y="28" width="96" height="130" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
-              <rect x={x + 1} y="28" width="94" height="5" rx="2" fill="#4a7bc4"/>
               <text x={x + 48} y="84"  textAnchor="middle" fill="var(--text)" fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
               <text x={x + 48} y="104" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">{sub1}</text>
               <text x={x + 48} y="116" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">{sub2}</text>
@@ -422,7 +418,6 @@ export default function IDModelsPage() {
                 <circle cx="30" cy={y} r="14" fill={isOrange ? "#f26522" : "#2b4171"}/>
                 <text x="30" y={y + 5} textAnchor="middle" fill="white" fontSize="11" fontWeight="800" fontFamily="sans-serif">{n}</text>
                 <rect x="54" y={y - 14} width="290" height="28" rx="7" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1"/>
-                <rect x="55" y={y - 14} width="4"   height="28" rx="1" fill={isOrange ? "#f26522" : "#4a7bc4"}/>
                 <text x="68" y={y + 5} fill="var(--text)" fontSize="10.5" fontFamily="sans-serif">{label}</text>
               </g>
             )
@@ -731,7 +726,6 @@ export default function IDModelsPage() {
           ].map(({ x, label }) => (
             <g key={label}>
               <rect x={x} y="10" width="100" height="68" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
-              <rect x={x + 1} y="10" width="98" height="5" rx="2" fill="#f26522"/>
               <text x={x + 50} y="52" textAnchor="middle" fill="var(--text)" fontSize="11" fontWeight="700" fontFamily="sans-serif">{label}</text>
             </g>
           ))}
@@ -821,7 +815,6 @@ export default function IDModelsPage() {
           ].map(({ x, abbr, label, sub1, sub2, accent }) => (
             <g key={label}>
               <rect x={x} y="10" width="100" height="118" rx="10" fill="var(--surface-2)" stroke="#2b4171" strokeWidth="1.5"/>
-              <rect x={x + 1} y="10" width="98" height="5" rx="2" fill={accent}/>
               <text x={x + 50} y="57"  textAnchor="middle" fill={accent}   fontSize="32" fontWeight="800" fontFamily="sans-serif">{abbr}</text>
               <text x={x + 50} y="80"  textAnchor="middle" fill="var(--text)"  fontSize="10" fontWeight="700" fontFamily="sans-serif">{label}</text>
               <text x={x + 50} y="96"  textAnchor="middle" fill="var(--text-muted)"  fontSize="8.5" fontFamily="sans-serif">{sub1}</text>
