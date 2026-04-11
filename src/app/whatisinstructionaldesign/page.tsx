@@ -299,6 +299,14 @@ export default function WhatIsIDPage() {
             process change, a better tool, or clearer expectations. A skilled ID helps organizations
             tell the difference — and that ability alone makes you invaluable.
           </p>
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            <strong className="font-bold text-copy">AI in this phase:</strong> IDs are using AI
+            tools to accelerate audience research, synthesize interview notes from SME conversations,
+            identify knowledge gaps from existing content, and rapidly generate learner personas.
+            What AI can&rsquo;t replicate is the judgment call — knowing when the data points to
+            a training solution and when it points to a broken process. That critical thinking is still
+            entirely yours.
+          </p>
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
@@ -310,6 +318,13 @@ export default function WhatIsIDPage() {
             training, microlearning, a job aid, a video series, or some combination. This is the
             architectural phase: figuring out what learners need to know, in what order, and how to
             build in practice and feedback so the learning actually sticks.
+          </p>
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            <strong className="font-bold text-copy">AI in this phase:</strong> AI is a powerful
+            thought partner here. IDs use it to draft and refine learning objectives, generate
+            course outlines, brainstorm scenario frameworks, and pressure-test instructional
+            sequences before a single piece of content is built. The ID still makes the architectural
+            decisions — AI just makes it faster to explore the options.
           </p>
         </div>
 
@@ -324,6 +339,14 @@ export default function WhatIsIDPage() {
             with stakeholders to ensure alignment — which often means navigating feedback, revisions,
             and evolving requirements with patience and diplomacy.
           </p>
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            <strong className="font-bold text-copy">AI in this phase:</strong> This is where AI has
+            the most immediate impact. IDs are using generative AI to draft narration scripts, write
+            quiz questions, create scenario variations, generate voiceover audio, produce images and
+            graphics, and turn rough SME notes into polished content — compressing timelines that
+            used to take weeks. Strong IDs know how to prompt well, evaluate the output critically,
+            and edit for instructional accuracy and tone.
+          </p>
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
@@ -335,6 +358,14 @@ export default function WhatIsIDPage() {
             After launch, strong IDs don&rsquo;t just move on: they collect data, measure outcomes,
             gather learner feedback, and use what they learn to improve the program or inform the next one.
             This is what separates a course builder from a learning strategist.
+          </p>
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            <strong className="font-bold text-copy">AI in this phase:</strong> AI is changing how
+            IDs analyze and act on data. From summarizing learner feedback at scale to identifying
+            patterns in assessment results, AI tools help IDs move from raw data to actionable
+            insights faster. Looking ahead, AI-powered adaptive learning systems are enabling
+            personalized content paths — where the learning experience adjusts in real time based
+            on how each learner is performing.
           </p>
         </div>
 
@@ -513,63 +544,6 @@ export default function WhatIsIDPage() {
 
       </div>
 
-      {/* ── ID in the Age of AI ─────────────────────────────────────────── */}
-      <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
-        The Instructional Designer&rsquo;s Role in the Age of AI
-      </h2>
-
-      <p>
-        If you&rsquo;ve been watching the rise of generative AI and wondering what it means for
-        your career in instructional design — you&rsquo;re asking exactly the right question.
-        The honest answer: AI is reshaping the work, but it&rsquo;s not replacing the role.
-        If anything, the most human parts of what IDs do are becoming <em>more</em> valuable.
-      </p>
-
-      <h3 className="mt-8 text-base font-bold text-copy">
-        What AI is changing
-      </h3>
-      <p>
-        Generative AI tools are genuinely useful for instructional designers — and the IDs who
-        learn to use them well are producing more, faster. AI can draft a first pass at learning
-        objectives, generate scenario variations, write quiz questions, suggest course structures,
-        produce narration scripts, and accelerate content development in ways that used to take
-        hours. Tools like ChatGPT, Claude, and purpose-built L&D platforms are making it
-        possible to move from needs analysis to working prototype in a fraction of the time.
-      </p>
-
-      <h3 className="mt-6 text-base font-bold text-copy">
-        What AI can&rsquo;t replace
-      </h3>
-      <p>
-        Here&rsquo;s what AI doesn&rsquo;t know how to do: sit across from a stakeholder who says
-        they need a three-hour compliance course and recognize that what they actually have is a
-        workflow problem. It can&rsquo;t interview subject matter experts and identify the three
-        pieces of knowledge that will genuinely change behavior versus the twenty that feel important
-        but won&rsquo;t. It can&rsquo;t design for a specific learner population — their context,
-        their resistance, their existing knowledge, their working conditions. And it can&rsquo;t
-        evaluate whether a learning experience is genuinely effective or just feels complete.
-        That judgment layer is still entirely human, and it&rsquo;s where instructional design
-        expertise lives.
-      </p>
-
-      <h3 className="mt-6 text-base font-bold text-copy">
-        The skills that matter most right now
-      </h3>
-      <p>
-        The IDs thriving in this environment share a few traits. They&rsquo;re comfortable using
-        AI as a collaborator — prompting effectively, evaluating output critically, and knowing
-        when to use it and when not to. They&rsquo;re leaning into the skills AI makes harder
-        to replicate: performance consulting, stakeholder communication, learning strategy,
-        and the ability to connect a learning solution to a measurable business outcome.
-        And they&rsquo;re staying curious — because this technology is moving fast, and the
-        practitioners who stay ahead of it will have a real advantage.
-      </p>
-
-      <p>
-        The bottom line: AI is a powerful tool in an instructional designer&rsquo;s hands.
-        It&rsquo;s not a replacement for the designer. The field is evolving — and for people
-        who love learning, that&rsquo;s a pretty good place to be.
-      </p>
     </ContentPage>
     </>
   )
