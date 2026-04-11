@@ -65,133 +65,71 @@ export default function WhatIsIDPage() {
         used interchangeably.
       </p>
 
-      {/* ── Instructional Design Definitions ───────────────────────────── */}
+      {/* ── What is Instructional Design? ──────────────────────────────── */}
       <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
           </svg>
         </span>
-        Instructional Design Definitions
+        What is Instructional Design?
       </h2>
 
       <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
-        The field goes by several names — instructional design, instructional technology, learning
-        experience design — and each carries a slightly different emphasis. Below are how leading
-        academic institutions and professional organizations define these terms. Understanding the
-        distinctions helps clarify where the field has come from and where it&rsquo;s headed.
+        The field goes by several names — and each one captures a slightly different lens on the
+        same core work. Whether you call it instructional design, educational technology, or
+        learning experience design, the throughline is the same: making learning intentional,
+        effective, and human-centered.
       </p>
 
-      <h3 className="mt-8 text-lg font-bold text-copy">Instructional Design</h3>
+      <div className="mt-6 space-y-4">
 
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;Instructional design, also known as instructional systems design or instructional
-          systems development (ISD), is the practice of creating learning experiences to support
-          long term learning. It&rsquo;s a systems approach to analyzing, designing, developing,
-          implementing, and evaluating any instructional experience.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.td.org (Association for Talent Development)
-        </cite>
-      </blockquote>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Instructional Design</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Instructional design is the systematic process of analyzing what people need to learn,
+            then designing, developing, and evaluating the experiences that get them there. It
+            draws on learning science, cognitive psychology, and performance improvement to ensure
+            that training isn&rsquo;t just delivered — it actually works. Think of it as the
+            architecture behind every effective course, workshop, or learning program. The ID
+            process is often guided by models like ADDIE or SAM, which provide a framework for
+            moving from a learning problem to a finished, evidence-based solution.
+          </p>
+        </div>
 
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;Instructional design (ID), also known as instructional systems design, is the
-          practice of systematically designing, developing and delivering instructional materials
-          and experiences, both digital and physical, in a consistent and reliable fashion toward
-          an efficient, effective, appealing, engaging and inspiring acquisition of knowledge.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.wikipedia.org
-        </cite>
-      </blockquote>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Educational Technology</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Educational technology — often called EdTech or instructional technology — is the
+            strategic use of tools, platforms, and systems to support learning. But it&rsquo;s
+            not just about the technology itself. It&rsquo;s about selecting the right tool for
+            the right learning goal, integrating it thoughtfully into the learner&rsquo;s
+            experience, and evaluating whether it actually made a difference. EdTech professionals
+            work at the intersection of learning science and technology, managing everything from
+            LMS platforms and eLearning authoring tools to emerging AI-powered learning systems.
+            The technology is always in service of the learning — never the other way around.
+          </p>
+        </div>
 
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;Instructional design is the behind-the-scenes blueprint that shapes how people
-          learn. Whether it&rsquo;s an employee onboarding session or an online course for adult
-          learners, instructional designers create experiences that are clear, engaging, and
-          effective. This field uses a systematic process to analyze learning needs, define goals,
-          and create learning materials that support specific learning outcomes.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — education.purdue.edu (Purdue University College of Education, 2024)
-        </cite>
-      </blockquote>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Learning Experience (LX) Design</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Learning experience design is the newest framing in the field — and the most
+            human-centered. Where traditional instructional design often focused on content
+            delivery and performance outcomes, LX design borrows from the world of UX: it treats
+            the learner like a user, mapping their journey, designing for emotion and engagement,
+            and prototyping and testing before full rollout. An LX designer asks not just
+            &ldquo;did the learner complete the course?&rdquo; but &ldquo;how did it feel to go
+            through it?&rdquo; The shift reflects a broader recognition that how people experience
+            learning shapes whether they show up for it, stay engaged, and apply what they&rsquo;ve
+            learned back on the job.
+          </p>
+        </div>
 
-      {/* ── Educational Technology ──────────────────────────────────────── */}
-      <h3 className="mt-8 text-lg font-bold text-copy">
-        Educational Technology
-      </h3>
-
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;Educational technology is the ethical study and application of theory, research,
-          and practices to advance knowledge, improve learning and performance, and empower learners
-          through strategic design, management, implementation, and evaluation of learning
-          experiences and environments using appropriate processes and resources.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.aect.org (Association for Educational Communications and Technology, 2023 Definition Task Force)
-        </cite>
-      </blockquote>
-
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;Educational technologies refer to the set of digital tools, resources,
-          applications, and methodologies used to facilitate the teaching&ndash;learning process.
-          These technologies include software, online platforms, hardware devices (such as tablets,
-          computers, and interactive whiteboards), and assistive technologies, all aimed at
-          improving access to education, personalizing learning paths, and fostering a more dynamic
-          interaction between students and teachers.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.wikipedia.org
-        </cite>
-      </blockquote>
-
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;Education Technology (EdTech) is the strategic integration of digital tools,
-          software, and hardware into the learning environment to enhance pedagogical outcomes.
-          The integration of digital tools such as interactive software, cloud-based platforms,
-          and adaptive learning systems has shifted traditional educational models towards more
-          personalized, flexible, and engaging learning experiences.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — research.com
-        </cite>
-      </blockquote>
-
-      {/* ── Learning Experience (LX) Design ────────────────────────────── */}
-      <h3 className="mt-8 text-lg font-bold text-copy">
-        Learning Experience (LX) Design
-      </h3>
-
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;Learning experience design is the process of creating learning experiences that
-          enable the learner to achieve the desired learning outcome in a human-centered and
-          goal-oriented way.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.lxd.org (Niels Floor, pioneer of the LXD discipline)
-        </cite>
-      </blockquote>
-
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;At its core, LXD is a human-centered, research-driven approach to learning design
-          that integrates UX principles with learning science. While instructional design
-          traditionally centered on delivering content efficiently, LXD adds a new dimension —
-          designing for emotion, engagement, and human connection.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.devlinpeck.com (Devlin Peck, 2024)
-        </cite>
-      </blockquote>
+      </div>
 
       {/* ── What is an Instructional Designer? ─────────────────────────── */}
       <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
@@ -203,95 +141,66 @@ export default function WhatIsIDPage() {
         What is an Instructional Designer?
       </h2>
 
-      <p>
-        So what does an instructional designer actually do? In short: they make learning work.
-        IDs create and deliver learning solutions across industries — from corporate training and
-        K&ndash;12 education to higher ed and government. If an organization needs people to learn
-        something, change behavior, or perform better, an instructional designer figures out how
-        to make that happen. The role is in high demand globally, and for good reason — effective
-        learning design directly impacts performance, and organizations know it.
+      <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
+        The people who do this work go by several titles depending on the organization and sector
+        they work in. Each role has its own focus, but they all share the same underlying mission:
+        helping people learn and perform better. Here&rsquo;s how the most common titles in the
+        field break down.
       </p>
 
-      <h3 className="mt-8 text-lg font-bold text-copy">Instructional Designer</h3>
+      <div className="mt-6 space-y-4">
 
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;An instructional designer is a learning professional who specializes in
-          instructional design — the process of creating educational materials and training
-          programs that are engaging, accessible, and aligned with desired learning outcomes.
-          Instructional designers work with subject matter experts to identify learning needs,
-          apply instructional design theories and methods, and create learning materials and
-          assessments.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — education.purdue.edu (Purdue University College of Education, 2024)
-        </cite>
-      </blockquote>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Instructional Designer</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            An instructional designer is the core role in the field — the professional who takes
+            a learning problem and turns it into a solution. They conduct needs analyses to
+            understand what&rsquo;s really going wrong, write learning objectives grounded in
+            measurable outcomes, design the structure and flow of learning experiences, develop
+            content and assessments, and evaluate whether the learning worked. IDs work across
+            industries — corporate L&amp;D, healthcare, higher ed, government, nonprofits — and
+            in almost every context, they serve as the bridge between subject matter experts who
+            know the content and learners who need to use it. The title also appears as
+            &ldquo;instructional systems designer,&rdquo; &ldquo;curriculum designer,&rdquo; and
+            &ldquo;learning designer&rdquo; — same core skill set, different organizational branding.
+          </p>
+        </div>
 
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;An instructional designer applies learning theory to design course content,
-          learning activities, and other training solutions to support the acquisition of new
-          knowledge or real-world skills. They take on multiple roles: analyst (identifying
-          performance gaps), architect (designing the learning experience), creator (building the
-          content), and evaluator (measuring effectiveness).&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.td.org (Association for Talent Development)
-        </cite>
-      </blockquote>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Instructional Technologist</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            An instructional technologist sits at the intersection of learning design and
+            technology systems. Where an instructional designer focuses primarily on the learning
+            experience itself, an instructional technologist specializes in the tools and
+            infrastructure that deliver it — learning management systems, authoring platforms,
+            video production, and emerging EdTech. This role is especially common in higher
+            education, where instructional technologists support faculty in redesigning courses
+            for online delivery, evaluate new tools for pedagogical fit, and manage the technical
+            layer of the learning ecosystem. In corporate settings, the role often overlaps
+            significantly with instructional design — many IDs are also de facto instructional
+            technologists.
+          </p>
+        </div>
 
-      <h3 className="mt-8 text-lg font-bold text-copy">Instructional Technologist</h3>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Educational Technologist</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            An educational technologist applies technology specifically within educational
+            contexts — most often K&ndash;12 schools, colleges, and universities. The role
+            focuses on helping educators integrate technology meaningfully into their teaching,
+            not just adopt it. Educational technologists evaluate tools for both technical
+            functionality and pedagogical soundness, train faculty and staff on new platforms,
+            and research the impact of technology on student learning outcomes. What separates a
+            great educational technologist from a tech support role is the emphasis on learning
+            outcomes: the question isn&rsquo;t &ldquo;does the tool work?&rdquo; — it&rsquo;s
+            &ldquo;does using this tool make learning better?&rdquo;
+          </p>
+        </div>
 
-      <p>What does an instructional technologist do?</p>
-      <ul className="list-disc space-y-1.5 pl-5">
-        <li>Evaluate new technologies to discover new and better ways to enhance instruction</li>
-        <li>
-          Assist faculty in discovering methods of improving their instruction with and without
-          technology
-        </li>
-        <li>Conduct training sessions teaching faculty and staff how to use new technologies</li>
-        <li>
-          Conduct research studies evaluating the use of technologies and their impact on student
-          learning outcomes
-        </li>
-        <li>
-          Create training materials to accommodate self-learners and provide resources for customers
-        </li>
-        <li>
-          Manage the implementation of new technologies on-campus for the use of instruction
-        </li>
-      </ul>
-      <p className="text-xs font-bold text-copy-dim">— www.instructtech.wordpress.com</p>
-
-      <h3 className="mt-8 text-lg font-bold text-copy">Educational Technologist</h3>
-
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;An Educational Technologist is a professional who applies technology to the field
-          of education, working to design, develop, and implement technology-based solutions for
-          educational institutions and organizations. Educational technologists analyze, design,
-          develop, implement, and evaluate processes and tools to make learning easier and more
-          effective.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — www.ziprecruiter.com
-        </cite>
-      </blockquote>
-
-      <blockquote className="border-l-2 border-accent pl-5 not-italic">
-        <p>
-          &ldquo;Educational Technologists are responsible for designing and implementing
-          technology-based solutions to support learning and teaching, working closely with
-          teachers, curriculum developers, and instructional designers to create engaging and
-          effective learning environments. They assess and evaluate the effectiveness of these
-          tools and make adjustments as necessary, and provide training and support to educators
-          on the use of technology.&rdquo;
-        </p>
-        <cite className="mt-2 block text-xs font-bold not-italic text-copy-dim">
-          — research.com (2025)
-        </cite>
-      </blockquote>
+      </div>
 
       {/* ── What Does an ID Actually Do? ────────────────────────────────── */}
       <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
