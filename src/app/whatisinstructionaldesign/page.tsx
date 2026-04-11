@@ -129,6 +129,74 @@ export default function WhatIsIDPage() {
           </p>
         </div>
 
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Instructional Systems Design (ISD)</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Instructional systems design is the more formal, process-oriented name for the same
+            discipline — rooted in military and government training programs from the 1950s and
+            60s. The &ldquo;systems&rdquo; framing is deliberate: ISD treats a learning program
+            as a system with interdependent components — analysis, design, development,
+            implementation, and evaluation — all of which need to work together for the outcome
+            to be effective. ADDIE, the most widely recognized instructional design model, emerged
+            directly from ISD thinking. In federal agencies, defense contractors, and large
+            institutions, you&rsquo;ll still see ISD used as the standard term. In corporate L&amp;D,
+            it&rsquo;s largely been replaced by &ldquo;instructional design&rdquo; — but the
+            methodology is the same.
+          </p>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Human Performance Technology (HPT)</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Human performance technology takes a wider view than instructional design alone. Where
+            ID focuses on learning solutions, HPT asks a more fundamental question first: is
+            training even the right answer? HPT practitioners analyze performance gaps
+            systematically — examining motivation, environment, tools, processes, and incentives,
+            not just knowledge and skills. If the root cause is a broken workflow or unclear
+            expectations, no amount of training will fix it. HPT gives instructional designers a
+            framework for thinking beyond course-building to genuine performance improvement — and
+            it&rsquo;s one of the reasons senior IDs are often called &ldquo;performance
+            consultants.&rdquo; The International Society for Performance Improvement (ISPI) is
+            the professional home for this discipline.
+          </p>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Curriculum Design &amp; Development</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Curriculum design is how educators and institutions plan the full scope and sequence
+            of what gets taught — which topics, in what order, across what timeframe. Where
+            instructional design tends to focus on a single course or learning experience,
+            curriculum design zooms out to the program level: how do all the learning experiences
+            fit together, build on each other, and lead to a coherent outcome? In K&ndash;12
+            and higher education, curriculum designers develop standards-aligned programs that
+            span semesters or years. In corporate L&amp;D, curriculum development shows up in
+            leadership development paths, onboarding journeys, and role-based learning tracks —
+            any time the goal is a sustained, sequenced learning experience rather than a one-off
+            course.
+          </p>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Learning &amp; Development (L&amp;D)</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Learning and development is the organizational function — usually housed within HR —
+            that oversees training, professional development, and capability-building for employees.
+            L&amp;D is the department; instructional design is a core discipline within it. An
+            L&amp;D team might include instructional designers, eLearning developers, facilitators,
+            LMS administrators, and a learning strategy lead — all working together to build and
+            deliver learning programs that support business goals. For instructional designers,
+            understanding how L&amp;D operates as a function (budget cycles, stakeholder
+            relationships, learning strategy) is just as important as mastering the craft —
+            because the best-designed course in the world won&rsquo;t matter if it doesn&rsquo;t
+            get organizational buy-in and resources to reach learners.
+          </p>
+        </div>
+
       </div>
 
       {/* ── What is an Instructional Designer? ─────────────────────────── */}
@@ -197,6 +265,92 @@ export default function WhatIsIDPage() {
             great educational technologist from a tech support role is the emphasis on learning
             outcomes: the question isn&rsquo;t &ldquo;does the tool work?&rdquo; — it&rsquo;s
             &ldquo;does using this tool make learning better?&rdquo;
+          </p>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Learning Experience Designer (LXD)</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            The learning experience designer is an emerging role title that signals a more
+            human-centered, UX-influenced approach to the work. Where &ldquo;instructional
+            designer&rdquo; carries associations with structured content and delivery systems,
+            &ldquo;LXD&rdquo; signals a focus on the full learner journey — including emotions,
+            motivation, and experience quality, not just learning outcomes. LXDs often use
+            tools and methods borrowed from UX design: learner personas, journey mapping,
+            wireframing, usability testing, and iterative prototyping. The title is increasingly
+            common in tech companies and progressive L&amp;D teams, and you&rsquo;ll see it used
+            alongside or interchangeably with instructional designer in many job postings. If
+            you&rsquo;re drawn to design thinking and the human side of learning, this framing
+            may resonate with how you already approach the work.
+          </p>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">eLearning Developer</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            An eLearning developer specializes in building digital learning content — typically
+            using authoring tools like Articulate Storyline, Articulate Rise, Adobe Captivate,
+            or Lectora. While instructional designers focus on strategy, structure, and content,
+            eLearning developers focus on execution: turning storyboards and scripts into fully
+            functional, interactive courses. In smaller organizations, the two roles often
+            collapse into one — the ID who designs the course also builds it. In larger teams,
+            they&rsquo;re distinct: designers hand off storyboards and developers bring them to
+            life. Strong eLearning developers combine technical tool proficiency with visual
+            design sensibility and a solid understanding of instructional principles — because
+            a course that looks polished but teaches poorly still fails the learner.
+          </p>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Performance Consultant</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            A performance consultant is often what an experienced instructional designer
+            evolves into — or what a senior ID is already doing without the title. Rather than
+            jumping straight to &ldquo;we need a course,&rdquo; a performance consultant starts
+            by diagnosing the real problem. Is the performance gap caused by a lack of knowledge
+            or skill? Or is it a motivation issue, a process problem, a resource constraint, or
+            a management failure? That diagnosis shapes everything that follows — and sometimes
+            it means recommending something other than training entirely. Performance consultants
+            work closely with business leaders and HR partners, speak the language of outcomes
+            and ROI, and are valued precisely because they push back on reflexive requests for
+            training and help organizations invest in solutions that will actually move the needle.
+          </p>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Curriculum Developer</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            A curriculum developer designs the structure, sequence, and content of learning
+            programs — often at a larger scale than a single course. In K&ndash;12 and higher
+            education, curriculum developers build units and programs that are standards-aligned,
+            grade-appropriate, and sequenced to build knowledge and skills progressively over
+            time. In corporate settings, the title often appears on roles responsible for building
+            out full learning tracks — like a leadership development curriculum or a role-based
+            onboarding program — where the work requires mapping competencies, sequencing
+            experiences, and ensuring coherence across multiple courses and modalities. The
+            skills overlap significantly with instructional design, with an added emphasis on
+            long-arc planning and program-level thinking.
+          </p>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Training Developer</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Training developer is the title you&rsquo;ll most commonly encounter in the military,
+            federal government, defense contracting, and compliance-heavy industries like
+            healthcare, utilities, and manufacturing. The role mirrors instructional design in
+            most respects — analyzing needs, designing learning solutions, developing content —
+            but within frameworks and standards specific to those sectors. Military training
+            developers, for example, often work within the ADDIE-derived ISD process and produce
+            highly structured deliverables like task analysis reports, training plans, and formal
+            course materials. If you&rsquo;re transitioning from military service or working in
+            a government-adjacent role, you&rsquo;ve likely already been doing instructional
+            design work — even if it was never called that.
           </p>
         </div>
 
