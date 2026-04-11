@@ -189,51 +189,52 @@ const rankedPrograms = [
   },
 ]
 
-/** Vertical card — logo + school top, title, description, Learn More */
+/** Square card — logo top, school name, program title, Learn More at bottom */
 function FeaturedCard({ card }: { card: FeaturedCard }) {
   return (
-    <div className="flex h-full flex-col rounded-lg border border-edge bg-surface p-5">
-      {/* Logo + school row */}
-      <div className="mb-3 flex items-center gap-3">
-        <a
-          href={card.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          tabIndex={-1}
-          aria-hidden="true"
-          className="shrink-0"
-        >
-          <div
-            className="flex items-center justify-center overflow-hidden rounded bg-white shadow-sm"
-            style={{ width: 44, height: 44, minWidth: 44, minHeight: 44 }}
-          >
-            {card.logo ? (
-              <Image
-                src={card.logo}
-                alt={card.logoAlt ?? card.school}
-                width={44}
-                height={44}
-                className="h-full w-full object-contain p-1"
-              />
-            ) : (
-              <span className="text-sm font-extrabold text-accent">
-                {card.school.charAt(0)}
-              </span>
-            )}
-          </div>
-        </a>
-        <p className="text-xs font-bold text-copy-dim">{card.school}</p>
-      </div>
-
-      <p className="text-[15px] font-bold leading-snug text-heading">{card.program}</p>
-      <p className="mt-2 flex-1 text-xs font-medium leading-relaxed text-copy-muted">
-        {card.description}
-      </p>
+    <div className="aspect-square flex flex-col rounded-lg border border-edge bg-surface p-5">
+      {/* Logo */}
       <a
         href={card.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
+        tabIndex={-1}
+        aria-hidden="true"
+        className="mb-3 shrink-0 self-start"
+      >
+        <div
+          className="flex items-center justify-center overflow-hidden rounded bg-white shadow-sm"
+          style={{ width: 44, height: 44, minWidth: 44, minHeight: 44 }}
+        >
+          {card.logo ? (
+            <Image
+              src={card.logo}
+              alt={card.logoAlt ?? card.school}
+              width={44}
+              height={44}
+              className="h-full w-full object-contain p-1"
+            />
+          ) : (
+            <span className="text-sm font-extrabold text-accent">
+              {card.school.charAt(0)}
+            </span>
+          )}
+        </div>
+      </a>
+
+      {/* School name — 1px larger than xs */}
+      <p className="text-[13px] font-bold text-copy-dim">{card.school}</p>
+
+      {/* Program title — 3px above school name */}
+      <p className="mt-1 flex-1 text-[16px] font-bold leading-snug text-heading">
+        {card.program}
+      </p>
+
+      <a
+        href={card.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-auto inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
       >
         Learn More
         <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -369,7 +370,7 @@ export default function IDDegreePage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {featuredCertificates.map((card, i) => (
               <ScrollReveal key={card.program} delay={(Math.min((i % 4) + 1, 4)) as 1 | 2 | 3 | 4}>
                 <FeaturedCard card={card} />
