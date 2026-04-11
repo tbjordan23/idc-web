@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
-import Link from "next/link"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Join Community Free",
