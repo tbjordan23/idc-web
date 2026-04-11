@@ -14,27 +14,29 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 })
   }
 
-  try {
-    await resend.emails.send({
-      from: "IDC Contact Form <onboarding@resend.dev>",
-      to: "tbjordan@gmail.com",
-      replyTo: email,
-      subject: `New message from ${firstName} ${lastName}`,
-      text: `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`,
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #f26522;">New Contact Form Submission</h2>
-          <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-          <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
-          <p><strong>Message:</strong></p>
-          <p style="white-space: pre-wrap;">${message}</p>
-        </div>
-      `,
-    })
+  const { data, error } = await resend.emails.send({
+    from: "IDC Contact Form <onboarding@resend.dev>",
+    to: "tbjordan@gmail.com",
+    reply_to: email,
+    subject: `New message from ${firstName} ${lastName}`,
+    text: `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`,
+    html: `
+      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #f26522;">New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
+        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+        <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+        <p><strong>Message:</strong></p>
+        <p style="white-space: pre-wrap;">${message}</p>
+      </div>
+    `,
+  })
 
-    return NextResponse.json({ success: true })
-  } catch {
+  if (error) {
+    console.error("Resend error:", error)
     return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 })
   }
+
+  console.log("Email sent:", data)
+  return NextResponse.json({ success: true })
 }
