@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
@@ -52,11 +53,11 @@ type FeaturedConference = {
 const featuredConferences: FeaturedConference[] = [
   {
     org: "Association for Talent Development (ATD)",
-    name: "ATD International Conference & Exposition",
+    name: "ATD International Conference & EXPO",
     description:
-      "The largest talent development event in the world. ATD ICE brings together 10,000+ L&D professionals from 75+ countries for 200+ sessions spanning instructional design, eLearning, leadership development, coaching, and performance consulting. The expo floor alone — 400+ vendors — is worth the trip.",
-    href: "https://www.td.org/atd-international-conference-and-exposition",
-    when: "Annual · May",
+      "The world's largest talent development event. ATD ICE brings together 10,000+ L&D professionals from 80+ countries for 350+ sessions spanning instructional design, eLearning, AI in learning, leadership development, coaching, and performance consulting. The expo floor alone — 300+ exhibitors — is worth the trip.",
+    href: "https://atdconference.td.org/",
+    when: "Annual · May · Los Angeles",
   },
   {
     org: "eLearning Guild",
@@ -93,24 +94,28 @@ const conferences: ConferenceEntry[] = [
   {
     rank: 1,
     org: "Association for Talent Development",
-    name: "ATD International Conference & Exposition",
-    when: "Annual · May",
-    location: "Varies (major U.S. cities)",
+    name: "ATD International Conference & EXPO",
+    when: "Annual · May 17–20, 2026",
+    location: "Los Angeles Convention Center, Los Angeles, CA",
     description:
-      "ATD ICE is the flagship event of the instructional design and talent development world. No other conference matches its scale — 10,000+ attendees, 200+ sessions, and an expo floor with 400+ vendors. Whether you're deepening your craft, exploring new tools, or building your professional network, ATD ICE delivers. Sessions span every facet of the field: instructional design, facilitation, measurement, leadership development, coaching, and emerging technology. If you're going to one conference per year, this is it.",
-    href: "https://www.td.org/atd-international-conference-and-exposition",
-    tags: ["Annual", "In-Person", "Virtual", "May", "Flagship"],
+      "ATD ICE is the flagship event of the instructional design and talent development world — the world's largest, most comprehensive conference for L&D professionals. No other event comes close in scale: 10,000+ attendees from 80+ countries, 350+ educational sessions, and an expo floor with 300+ exhibitors showcasing the latest learning technology. The 2026 theme is \"Embrace Disruption. Direct the Future\" — with 35+ dedicated AI sessions alongside tracks in instructional design, facilitation, measurement, leadership development, and performance consulting. If you're investing in one conference this year, ATD ICE is the one.",
+    href: "https://atdconference.td.org/",
+    tags: ["Annual", "In-Person", "Virtual", "May", "Flagship", "Los Angeles"],
     highlights: [
-      "Largest L&D conference in the world — 10,000+ attendees from 75+ countries",
-      "200+ sessions across design, facilitation, technology, and strategy",
-      "Massive expo floor with 400+ learning technology vendors",
-      "CE credits and professional development hours available",
-      "Networking events, meetups, and community-driven programming",
+      "World's largest L&D conference — 10,000+ attendees from 80+ countries",
+      "350+ sessions including 35+ dedicated AI and emerging technology sessions",
+      "300+ exhibitors on the EXPO floor — the most comprehensive vendor showcase in the field",
+      "Preconference workshops on tools like Articulate Storyline and eLearning design",
+      "Past keynotes: Seth Godin, Simone Biles, Matthew McConaughey, Venus Williams",
     ],
     icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-      </svg>
+      <Image
+        src="/logos/atd-conference-logo.webp"
+        alt="ATD Logo"
+        width={60}
+        height={38}
+        className="object-contain"
+      />
     ),
   },
   {
