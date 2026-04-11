@@ -62,8 +62,8 @@ const featuredPrograms: {
   {
     school: "Langevin",
     program: "Certified Virtual Instructional Designer/Developer",
-    logo: null,
-    logoAlt: null,
+    logo: "/logos/langevin-logo.png",
+    logoAlt: "Langevin logo",
     description:
       "Langevin's CVIDD certification teaches professionals to design engaging virtual training using a proven 12-step process, backed by more than 35 years of instructional design expertise.",
     href: "https://www.langevin.com/certified-virtual-instructional-designer-developer/",
@@ -88,7 +88,7 @@ const rankedPrograms = [
     logoAlt: "Indiana University logo",
     description:
       "Indiana University's Department of Instructional Systems Technology prepares practitioners and researchers to design, develop, and evaluate learning systems across diverse organizational contexts. Grounded in cognitive science, learning theory, and systems thinking, the IST program emphasizes real-world application and research-informed practice. Graduate offerings span certificate, MS, EdS, and PhD levels, with multiple online pathways available.",
-    href: "https://education.indiana.edu/programs/graduate/instructional-systems-technology/index.html",
+    href: "https://education.indiana.edu/programs/instructional-systems-technology.html",
     offerings: "Certificate, MS, EdS, PhD — online and on-campus",
   },
   {
@@ -99,7 +99,7 @@ const rankedPrograms = [
     logoAlt: "Florida State University logo",
     description:
       "Florida State University's Instructional Systems and Learning Technologies (ISLT) program is nationally recognized for preparing professionals who drive innovation in learning design, emerging technologies, and performance improvement. Graduates pursue careers in corporate training, higher education, government, and nonprofit sectors. The curriculum integrates instructional design theory, applied research, and emerging technology practice.",
-    href: "https://cehhs.fsu.edu/learning-and-instruction/programs",
+    href: "https://annescollege.fsu.edu/instructional-systems-and-learning-technologies",
     offerings: "Certificate, MS, PhD — online and on-campus",
   },
   {
@@ -110,7 +110,7 @@ const rankedPrograms = [
     logoAlt: "University of Georgia logo",
     description:
       "The University of Georgia's Learning, Design, and Technology program develops professionals with a deep understanding of human learning, motivation, and the instructional conditions that support effective performance. Students engage with research-grounded theory while building applied skills in instructional design, educational technology, and performance improvement. Graduate pathways include certificates, MEd, MA, and PhD degrees.",
-    href: "https://coe.uga.edu/directory/educational-psychology-and-instructional-technology/",
+    href: "https://online.uga.edu/degrees-certificates/med-learning-design-technology-instructional-design-development/",
     offerings: "Certificate, MEd, MA, PhD — online and on-campus",
   },
   {
@@ -143,7 +143,7 @@ const rankedPrograms = [
     logoAlt: "Michigan State University logo",
     description:
       "Michigan State University's Educational Psychology and Educational Technology (EPET) program prepares educators, designers, and researchers to develop technology-enhanced learning environments grounded in the science of human development and motivation. Drawing on current theories of learning and cognition, the program bridges research and practice for professionals across K–12, higher education, and corporate settings.",
-    href: "https://education.msu.edu/cepse/educational-psychology-and-educational-technology/",
+    href: "https://education.msu.edu/cepse/ed-tech",
     offerings: "Certificate, MA, PhD — online and on-campus",
   },
 ]
@@ -156,34 +156,22 @@ const certificatePrograms = [
     href: "https://www.langevin.com/certified-virtual-instructional-designer-developer/",
   },
   {
-    name: "ATD Designing Learning Certificate",
+    name: "Instructional Design Certificate",
     provider: "Association for Talent Development (ATD)",
     description: "Foundational certificate covering needs assessment, instructional sequencing, and adult learning principles for performance-focused training design.",
-    href: "https://www.td.org/education/atd-certificate/designing-learning",
+    href: "https://www.td.org/education-courses/instructional-design-certificate",
   },
   {
-    name: "ATD Master Instructional Designer Program",
+    name: "ATD Master Trainer Program",
     provider: "Association for Talent Development (ATD)",
     description: "Advanced program for experienced practitioners covering analysis, design, development, implementation, and evaluation of complex learning programs.",
-    href: "https://www.td.org/education/master-instructional-designer",
+    href: "https://www.td.org/education-courses/atd-master-trainer-program?utm_source=google&utm_medium=cpc&utm_campaign=edu-master-engagement-ongoing-branded-mastertrainer",
   },
   {
     name: "Certified Professional in Talent Development (CPTD)",
     provider: "Association for Talent Development (ATD)",
     description: "ATD's premier credential for talent development professionals with five or more years of experience, validating expertise across ID, learning tech, and organizational effectiveness.",
     href: "https://www.td.org/certification",
-  },
-  {
-    name: "eLearning Instructional Design Certificate",
-    provider: "eLearning Guild / Guild Academy",
-    description: "Focused programs in eLearning design, rapid authoring, visual design, and learner engagement for working instructional designers.",
-    href: "https://www.learningguild.com/",
-  },
-  {
-    name: "Human Performance Improvement (HPI) Certificate",
-    provider: "Association for Talent Development (ATD)",
-    description: "Expands ID practice beyond course design to diagnosing performance gaps, identifying root causes, and selecting the right interventions.",
-    href: "https://www.td.org/education/atd-certificate/human-performance-improvement",
   },
 ]
 
@@ -210,49 +198,61 @@ export default function IDDegreePage() {
       </section>
 
       {/* ─── Featured Programs (compact, subdued) ─────────────────────────────── */}
-      <section className="border-t border-edge py-8">
+      <section className="border-t border-edge py-10">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <div className="mb-4 flex items-center gap-2">
-              <span className="inline-flex items-center rounded-sm border border-edge bg-surface px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest text-copy-dim">
-                Featured Partners
+            <div className="mb-5 flex items-center gap-2">
+              <span className="inline-flex items-center rounded-sm border border-edge bg-surface px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-widest text-copy-dim">
+                Featured Programs
               </span>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {featuredPrograms.map((prog, i) => (
               <ScrollReveal key={prog.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4}>
-                <div className="flex h-full flex-col rounded-lg border border-edge bg-surface p-4">
+                <div className="flex h-full flex-col rounded-lg border border-edge bg-surface p-5">
                   {/* Logo row */}
-                  <div className="mb-3 flex items-center gap-2.5">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded bg-white shadow-sm">
-                      {prog.logo ? (
-                        <Image
-                          src={prog.logo}
-                          alt={prog.logoAlt ?? prog.school}
-                          width={32}
-                          height={32}
-                          className="h-full w-full object-contain p-0.5"
-                        />
-                      ) : (
-                        <span className="text-xs font-extrabold text-accent">
-                          {prog.school.charAt(0)}
-                        </span>
-                      )}
-                    </div>
-                    <p className="text-[11px] font-bold text-copy-dim">{prog.school}</p>
+                  <div className="mb-3 flex items-center gap-3">
+                    <a
+                      href={prog.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="shrink-0"
+                      tabIndex={-1}
+                    >
+                      <div
+                        className="flex items-center justify-center overflow-hidden rounded bg-white shadow-sm"
+                        style={{ width: 44, height: 44, minWidth: 44, minHeight: 44 }}
+                      >
+                        {prog.logo ? (
+                          <Image
+                            src={prog.logo}
+                            alt={prog.logoAlt ?? prog.school}
+                            width={44}
+                            height={44}
+                            className="h-full w-full object-contain p-1"
+                            style={{ display: "block" }}
+                          />
+                        ) : (
+                          <span className="text-sm font-extrabold text-accent">
+                            {prog.school.charAt(0)}
+                          </span>
+                        )}
+                      </div>
+                    </a>
+                    <p className="text-xs font-bold text-copy-dim">{prog.school}</p>
                   </div>
 
-                  <p className="text-xs font-bold leading-snug text-heading">{prog.program}</p>
-                  <p className="mt-2 flex-1 text-xs font-medium leading-relaxed text-copy-dim">
+                  <p className="text-sm font-bold leading-snug text-heading">{prog.program}</p>
+                  <p className="mt-2 flex-1 text-xs font-medium leading-relaxed text-copy-muted">
                     {prog.description}
                   </p>
                   <a
                     href={prog.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
+                    className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
                   >
                     Learn More
                     <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -282,17 +282,29 @@ export default function IDDegreePage() {
             {rankedPrograms.map((prog, i) => (
               <ScrollReveal key={prog.rank} delay={(Math.min((i % 4) + 1, 4)) as 1 | 2 | 3 | 4}>
                 <div className={`flex flex-col gap-6 sm:flex-row sm:items-start ${i > 0 ? "border-t border-edge pt-12" : ""}`}>
-                  {/* Logo + rank */}
-                  <div className="flex shrink-0 flex-col items-center gap-2">
-                    <div className="flex h-20 w-20 items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm">
-                      <Image
-                        src={prog.logo}
-                        alt={prog.logoAlt}
-                        width={80}
-                        height={80}
-                        className="h-full w-full object-contain p-2"
-                      />
-                    </div>
+
+                  {/* Logo + rank — fixed size, linked */}
+                  <div className="flex shrink-0 flex-col items-center gap-2" style={{ flexShrink: 0 }}>
+                    <a
+                      href={prog.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block"
+                    >
+                      <div
+                        className="flex items-center justify-center overflow-hidden rounded-xl bg-white shadow-sm"
+                        style={{ width: 80, height: 80, minWidth: 80, minHeight: 80 }}
+                      >
+                        <Image
+                          src={prog.logo}
+                          alt={prog.logoAlt}
+                          width={80}
+                          height={80}
+                          className="object-contain p-2"
+                          style={{ width: 80, height: 80, display: "block" }}
+                        />
+                      </div>
+                    </a>
                     <span className="text-[10px] font-bold uppercase tracking-widest text-copy-dim">
                       Ranked #{prog.rank}
                     </span>
@@ -315,7 +327,7 @@ export default function IDDegreePage() {
                       href={prog.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="mt-5 inline-flex items-center gap-2 rounded-lg border border-edge bg-surface px-4 py-2 text-sm font-semibold text-copy btn-shadow-neutral hover:border-border-hover hover:text-heading"
+                      className="mt-5 inline-flex items-center gap-2 rounded-lg border border-edge bg-surface px-4 py-2 text-sm font-semibold text-copy transition-colors duration-150 hover:border-[var(--border-hover)] hover:bg-[var(--surface-2)] hover:text-heading"
                     >
                       Learn More
                       <svg className="h-3.5 w-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -346,21 +358,21 @@ export default function IDDegreePage() {
             {certificatePrograms.map((cert, i) => (
               <ScrollReveal key={cert.name} delay={(Math.min((i % 4) + 1, 4)) as 1 | 2 | 3 | 4}>
                 <div className="flex h-full flex-col rounded-card border border-edge bg-[var(--surface-2)] p-5">
-                  <p className="text-[10px] font-bold uppercase tracking-widest text-accent">
+                  <p className="text-xs font-bold uppercase tracking-widest text-accent">
                     {cert.provider}
                   </p>
-                  <h3 className="mt-1 text-sm font-extrabold text-heading">{cert.name}</h3>
-                  <p className="mt-2 flex-1 text-xs font-medium leading-relaxed text-copy-muted">
+                  <h3 className="mt-1.5 text-base font-extrabold text-heading">{cert.name}</h3>
+                  <p className="mt-2 flex-1 text-sm font-medium leading-relaxed text-copy-muted">
                     {cert.description}
                   </p>
                   <a
                     href={cert.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
+                    className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent hover:underline"
                   >
                     Learn more
-                    <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
