@@ -147,23 +147,6 @@ export default function WhatIsIDPage() {
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Human Performance Technology (HPT)</h3>
-          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            Human performance technology takes a wider view than instructional design alone. Where
-            ID focuses on learning solutions, HPT asks a more fundamental question first: is
-            training even the right answer? HPT practitioners analyze performance gaps
-            systematically — examining motivation, environment, tools, processes, and incentives,
-            not just knowledge and skills. If the root cause is a broken workflow or unclear
-            expectations, no amount of training will fix it. HPT gives instructional designers a
-            framework for thinking beyond course-building to genuine performance improvement — and
-            it&rsquo;s one of the reasons senior IDs are often called &ldquo;performance
-            consultants.&rdquo; The International Society for Performance Improvement (ISPI) is
-            the professional home for this discipline.
-          </p>
-        </div>
-
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <h3 className="text-base font-extrabold text-copy">Curriculum Design &amp; Development</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
