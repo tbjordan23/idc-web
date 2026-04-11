@@ -216,7 +216,9 @@ export default function WhatIsIDPage() {
         field break down.
       </p>
 
-      <div className="mt-6 space-y-4">
+      {/* Trending Up */}
+      <p className="mt-6 text-[11px] font-bold uppercase tracking-widest text-emerald-500">Trending Up</p>
+      <div className="mt-3 space-y-4">
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
@@ -243,29 +245,6 @@ export default function WhatIsIDPage() {
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="text-base font-extrabold text-copy">Instructional Technologist</h3>
-            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[11px] font-bold text-rose-500">
-              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
-              Trending Down
-            </span>
-          </div>
-          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            An instructional technologist sits at the intersection of learning design and
-            technology systems. Where an instructional designer focuses primarily on the learning
-            experience itself, an instructional technologist specializes in the tools and
-            infrastructure that deliver it — learning management systems, authoring platforms,
-            video production, and emerging EdTech. This role is especially common in higher
-            education, where instructional technologists support faculty in redesigning courses
-            for online delivery, evaluate new tools for pedagogical fit, and manage the technical
-            layer of the learning ecosystem. In corporate settings, the role often overlaps
-            significantly with instructional design — many IDs are also de facto instructional
-            technologists.
-          </p>
-        </div>
-
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">Learning Experience Designer (LXD)</h3>
             <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
               <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
@@ -285,6 +264,35 @@ export default function WhatIsIDPage() {
             alongside or interchangeably with instructional designer in many job postings. If
             you&rsquo;re drawn to design thinking and the human side of learning, this framing
             may resonate with how you already approach the work.
+          </p>
+        </div>
+
+      </div>
+
+      {/* Trending Down */}
+      <p className="mt-8 text-[11px] font-bold uppercase tracking-widest text-rose-500">Trending Down</p>
+      <div className="mt-3 space-y-4">
+
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">Instructional Technologist</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[11px] font-bold text-rose-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
+              Trending Down
+            </span>
+          </div>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            An instructional technologist sits at the intersection of learning design and
+            technology systems. Where an instructional designer focuses primarily on the learning
+            experience itself, an instructional technologist specializes in the tools and
+            infrastructure that deliver it — learning management systems, authoring platforms,
+            video production, and emerging EdTech. This role is especially common in higher
+            education, where instructional technologists support faculty in redesigning courses
+            for online delivery, evaluate new tools for pedagogical fit, and manage the technical
+            layer of the learning ecosystem. In corporate settings, the role often overlaps
+            significantly with instructional design — many IDs are also de facto instructional
+            technologists.
           </p>
         </div>
 
