@@ -6,24 +6,146 @@ export async function GET(req: NextRequest) {
   const title = searchParams.get("title") ?? "Instructional Design Central"
   const description = searchParams.get("description") ?? ""
 
-  // Truncate description to keep it to roughly one line
   const shortDesc =
-    description.length > 120 ? description.slice(0, 117) + "…" : description
+    description.length > 110 ? description.slice(0, 107) + "…" : description
 
   return new ImageResponse(
     (
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
           width: "100%",
           height: "100%",
-          backgroundColor: "#0c1c35",
+          backgroundColor: "#090f1e",
           fontFamily: "sans-serif",
+          position: "relative",
+          overflow: "hidden",
         }}
       >
-        {/* Top orange accent bar */}
-        <div style={{ width: "100%", height: "10px", backgroundColor: "#f26522", flexShrink: 0 }} />
+        {/* Background gradient wash — top-right warm glow */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            right: 0,
+            width: 700,
+            height: 700,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(242,101,34,0.07) 0%, transparent 65%)",
+          }}
+        />
+        {/* Background gradient wash — bottom-left cool glow */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: -80,
+            left: -80,
+            width: 600,
+            height: 600,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(74,123,196,0.10) 0%, transparent 65%)",
+          }}
+        />
+
+        {/* Decorative rings — top right */}
+        <div
+          style={{
+            position: "absolute",
+            top: -180,
+            right: -180,
+            width: 620,
+            height: 620,
+            borderRadius: "50%",
+            border: "1.5px solid rgba(242,101,34,0.10)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: -100,
+            right: -100,
+            width: 420,
+            height: 420,
+            borderRadius: "50%",
+            border: "1.5px solid rgba(242,101,34,0.15)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: -30,
+            right: -30,
+            width: 240,
+            height: 240,
+            borderRadius: "50%",
+            border: "1px solid rgba(242,101,34,0.10)",
+          }}
+        />
+
+        {/* Decorative rings — bottom left */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: -150,
+            left: -150,
+            width: 520,
+            height: 520,
+            borderRadius: "50%",
+            border: "1px solid rgba(74,123,196,0.10)",
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            bottom: -60,
+            left: -60,
+            width: 300,
+            height: 300,
+            borderRadius: "50%",
+            border: "1px solid rgba(74,123,196,0.08)",
+          }}
+        />
+
+        {/* Top orange bar */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: 6,
+            background: "linear-gradient(to right, #f26522, #f9924a)",
+          }}
+        />
+
+        {/* Dot grid — mid-right decorative area */}
+        <div
+          style={{
+            position: "absolute",
+            right: 72,
+            top: 180,
+            display: "flex",
+            flexDirection: "column",
+            gap: 14,
+            opacity: 0.18,
+          }}
+        >
+          {[0, 1, 2, 3, 4].map((row) => (
+            <div key={row} style={{ display: "flex", gap: 14 }}>
+              {[0, 1, 2, 3, 4].map((col) => (
+                <div
+                  key={col}
+                  style={{
+                    width: 3,
+                    height: 3,
+                    borderRadius: "50%",
+                    backgroundColor: "#f26522",
+                  }}
+                />
+              ))}
+            </div>
+          ))}
+        </div>
 
         {/* Main content */}
         <div
@@ -31,33 +153,34 @@ export async function GET(req: NextRequest) {
             display: "flex",
             flexDirection: "column",
             flex: 1,
-            padding: "52px 72px 48px",
+            padding: "48px 80px 44px",
             justifyContent: "space-between",
           }}
         >
           {/* IDC wordmark */}
-          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
             <div
               style={{
-                width: "46px",
-                height: "46px",
-                backgroundColor: "#f26522",
-                borderRadius: "10px",
+                width: 44,
+                height: 44,
+                background: "linear-gradient(135deg, #f26522, #e0541a)",
+                borderRadius: 10,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                boxShadow: "0 4px 14px rgba(242,101,34,0.35)",
               }}
             >
-              <span style={{ color: "#ffffff", fontWeight: 900, fontSize: "16px", letterSpacing: "0.05em" }}>
+              <span style={{ color: "#fff", fontWeight: 900, fontSize: 15, letterSpacing: "0.04em" }}>
                 IDC
               </span>
             </div>
             <span
               style={{
-                color: "#cbd5e1",
+                color: "#64748b",
                 fontWeight: 600,
-                fontSize: "16px",
-                letterSpacing: "0.12em",
+                fontSize: 14,
+                letterSpacing: "0.14em",
                 textTransform: "uppercase",
               }}
             >
@@ -66,24 +189,21 @@ export async function GET(req: NextRequest) {
           </div>
 
           {/* Title block */}
-          <div style={{ display: "flex", flexDirection: "column", gap: "18px", maxWidth: "920px" }}>
-            {/* Orange accent rule */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 18, maxWidth: 860 }}>
+            {/* Accent rule — double dash */}
+            <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+              <div style={{ width: 36, height: 4, backgroundColor: "#f26522", borderRadius: 2 }} />
+              <div style={{ width: 14, height: 4, backgroundColor: "#f26522", borderRadius: 2, opacity: 0.4 }} />
+              <div style={{ width: 6, height: 4, backgroundColor: "#f26522", borderRadius: 2, opacity: 0.2 }} />
+            </div>
+            {/* Title */}
             <div
               style={{
-                width: "52px",
-                height: "5px",
-                backgroundColor: "#f26522",
-                borderRadius: "3px",
-              }}
-            />
-            {/* Page title */}
-            <div
-              style={{
-                fontSize: title.length > 40 ? "48px" : "58px",
+                fontSize: title.length > 50 ? "46px" : title.length > 35 ? "54px" : "64px",
                 fontWeight: 800,
-                color: "#ffffff",
-                lineHeight: 1.1,
-                letterSpacing: "-0.02em",
+                color: "#f8fafc",
+                lineHeight: 1.08,
+                letterSpacing: "-0.025em",
               }}
             >
               {title}
@@ -92,10 +212,11 @@ export async function GET(req: NextRequest) {
             {shortDesc && (
               <div
                 style={{
-                  fontSize: "22px",
-                  color: "#7e9abf",
-                  lineHeight: 1.4,
+                  fontSize: 21,
+                  color: "#6b88a8",
+                  lineHeight: 1.5,
                   fontWeight: 500,
+                  maxWidth: 780,
                 }}
               >
                 {shortDesc}
@@ -105,31 +226,21 @@ export async function GET(req: NextRequest) {
 
           {/* Footer */}
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-            <span style={{ color: "#3d5a80", fontSize: "15px", letterSpacing: "0.06em", fontWeight: 600 }}>
-              instructionaldesigncentral.com
-            </span>
-            {/* Decorative dots */}
-            <div style={{ display: "flex", gap: "6px" }}>
-              {["#f26522", "#f26522", "#f26522"].map((c, i) => (
-                <div
-                  key={i}
-                  style={{
-                    width: "8px",
-                    height: "8px",
-                    borderRadius: "50%",
-                    backgroundColor: c,
-                    opacity: 1 - i * 0.3,
-                  }}
-                />
-              ))}
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <div style={{ width: 6, height: 6, borderRadius: "50%", backgroundColor: "#f26522", opacity: 0.7 }} />
+              <span style={{ color: "#2d4a6e", fontSize: 14, letterSpacing: "0.07em", fontWeight: 600 }}>
+                instructionaldesigncentral.com
+              </span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
+              <div style={{ width: 28, height: 2, backgroundColor: "#f26522", borderRadius: 1, opacity: 0.6 }} />
+              <div style={{ width: 16, height: 2, backgroundColor: "#f26522", borderRadius: 1, opacity: 0.35 }} />
+              <div style={{ width: 8, height: 2, backgroundColor: "#f26522", borderRadius: 1, opacity: 0.18 }} />
             </div>
           </div>
         </div>
       </div>
     ),
-    {
-      width: 1200,
-      height: 630,
-    },
+    { width: 1200, height: 630 },
   )
 }

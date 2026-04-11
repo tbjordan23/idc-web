@@ -209,7 +209,7 @@ export default function ADDIEModelPage() {
           title="Ready to master ADDIE?"
           image="/course-addie-model.png"
           imageAlt="Mastering the ADDIE Model course"
-          ctaLabel="Explore the ADDIE Model Course"
+          ctaLabel="Explore ADDIE Model Course"
           ctaHref="/addie-model-course"
           description={<>
             Reading about ADDIE is a great start — but applying it to a real project is where it
