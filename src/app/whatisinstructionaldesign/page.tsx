@@ -266,31 +266,6 @@ export default function WhatIsIDPage() {
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="text-base font-extrabold text-copy">L&amp;D Professional</h3>
-            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
-              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-              Trending Up
-            </span>
-          </div>
-          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            The L&amp;D professional is a broad title that has grown significantly as organizations
-            elevate learning from a training function to a strategic business driver. Unlike roles
-            anchored to a specific methodology or tool, an L&amp;D professional operates across
-            the full learning ecosystem — partnering with leadership to identify capability gaps,
-            designing learning strategies that span multiple modalities, managing vendors and
-            programs, and measuring impact against business outcomes. The title shows up at all
-            levels, from L&amp;D coordinator to Chief Learning Officer, and is increasingly the
-            preferred framing in LinkedIn profiles and job postings as the field moves away from
-            &ldquo;training&rdquo; language toward the language of talent development and
-            organizational capability. If you&rsquo;re building a career in this space, thinking
-            of yourself as an L&amp;D professional — not just a course builder — is a mindset
-            shift worth making early.
-          </p>
-        </div>
-
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">Learning Experience Designer (LXD)</h3>
             <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
               <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
