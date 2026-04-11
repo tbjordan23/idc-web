@@ -52,12 +52,12 @@ type FeaturedConference = {
 
 const featuredConferences: FeaturedConference[] = [
   {
-    org: "Association for Talent Development (ATD)",
-    name: "ATD International Conference & EXPO",
+    org: "Langevin Learning Services",
+    name: "Certified Virtual Instructional Designer/Developer",
     description:
-      "The world's largest talent development event. ATD ICE brings together 10,000+ L&D professionals from 80+ countries for 350+ sessions spanning instructional design, eLearning, AI in learning, leadership development, coaching, and performance consulting. The expo floor alone — 300+ exhibitors — is worth the trip.",
-    href: "https://atdconference.td.org/",
-    when: "Annual · May · Los Angeles",
+      "Acquire the key skills to successfully design virtual training that is engaging, interactive, and maximizes performance. Apply Langevin's proven step-by-step design process to tackle the critical constraints of virtual classroom design, select the best methods and tools for your content, and more — backed by 35+ years of instructional design experience and innovation.",
+    href: "https://www.langevin.com/certified-virtual-instructional-designer-developer/",
+    when: "Online · On-Demand",
   },
   {
     org: "eLearning Guild",
@@ -68,12 +68,12 @@ const featuredConferences: FeaturedConference[] = [
     when: "Annual · October · Las Vegas",
   },
   {
-    org: "eLearning Guild",
-    name: "Learning Solutions Conference",
+    org: "Association for Talent Development (ATD)",
+    name: "ATD International Conference & EXPO",
     description:
-      "Learning Solutions is the eLearning Guild's spring conference — practical, applied, and accessible. It's the right size to actually make connections, with sessions focused on real ID work rather than trend-chasing. A great first conference for early-career designers and a reliable annual reset for experienced practitioners.",
-    href: "https://www.learningsolutionscon.com/",
-    when: "Annual · March · Orlando",
+      "The world's largest talent development event. ATD ICE brings together 10,000+ L&D professionals from 80+ countries for 350+ sessions spanning instructional design, eLearning, AI in learning, leadership development, coaching, and performance consulting. The expo floor alone — 300+ exhibitors — is worth the trip.",
+    href: "https://atdconference.td.org/",
+    when: "Annual · May · Los Angeles",
   },
 ]
 
@@ -93,6 +93,33 @@ type ConferenceEntry = {
 const conferences: ConferenceEntry[] = [
   {
     rank: 1,
+    org: "eLearning Guild",
+    name: "DevLearn Conference & Expo",
+    when: "Annual · October",
+    location: "Las Vegas, NV",
+    description:
+      "DevLearn is the go-to conference for eLearning developers and instructional designers who care about the craft of building digital learning. Sessions go deep on tools, techniques, and technologies — Articulate Storyline, Rise, AI-powered development, video production, xAPI, and more. The annual DemoFest is one of the most practical learning experiences in the field: practitioners showcase real projects they built, explaining the challenge, the solution, and what they'd do differently. If you're serious about eLearning development, DevLearn is essential.",
+    href: "https://devlearn.com/",
+    tags: ["Annual", "In-Person", "October", "Las Vegas"],
+    highlights: [
+      "Premier conference for eLearning technology, tools, and development",
+      "DemoFest showcases real-world learner projects from practitioners",
+      "Hands-on workshops with leading authoring tools and platforms",
+      "Deep-dive sessions on AI in learning, xAPI, video, and interactivity",
+      "Strong community of eLearning developers sharing real craft knowledge",
+    ],
+    icon: (
+      <Image
+        src="/logos/devlearn-logo.png"
+        alt="DevLearn Logo"
+        width={64}
+        height={64}
+        className="rounded-lg object-cover"
+      />
+    ),
+  },
+  {
+    rank: 2,
     org: "Association for Talent Development",
     name: "ATD International Conference & EXPO",
     when: "Annual · May 17–20, 2026",
@@ -119,29 +146,6 @@ const conferences: ConferenceEntry[] = [
     ),
   },
   {
-    rank: 2,
-    org: "eLearning Guild",
-    name: "DevLearn Conference & Expo",
-    when: "Annual · October",
-    location: "Las Vegas, NV",
-    description:
-      "DevLearn is the go-to conference for eLearning developers and instructional designers who care about the craft of building digital learning. Sessions go deep on tools, techniques, and technologies — Articulate Storyline, Rise, AI-powered development, video production, xAPI, and more. The annual DemoFest is one of the most practical learning experiences in the field: practitioners showcase real projects they built, explaining the challenge, the solution, and what they'd do differently. If you're serious about eLearning development, DevLearn is essential.",
-    href: "https://devlearn.com/",
-    tags: ["Annual", "In-Person", "October", "Las Vegas"],
-    highlights: [
-      "Premier conference for eLearning technology, tools, and development",
-      "DemoFest showcases real-world learner projects from practitioners",
-      "Hands-on workshops with leading authoring tools and platforms",
-      "Deep-dive sessions on AI in learning, xAPI, video, and interactivity",
-      "Strong community of eLearning developers sharing real craft knowledge",
-    ],
-    icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0H3" />
-      </svg>
-    ),
-  },
-  {
     rank: 3,
     org: "eLearning Guild",
     name: "Learning Solutions Conference",
@@ -159,9 +163,13 @@ const conferences: ConferenceEntry[] = [
       "Strong eLearning Guild community presence with active peer engagement",
     ],
     icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-      </svg>
+      <Image
+        src="/logos/elearning-guild-logo.png"
+        alt="eLearning Guild Logo"
+        width={64}
+        height={64}
+        className="rounded-lg object-cover"
+      />
     ),
   },
   {
@@ -182,55 +190,67 @@ const conferences: ConferenceEntry[] = [
       "One of the longest-running L&D conferences in the industry",
     ],
     icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-      </svg>
+      <Image
+        src="/logos/training-magazine-logo.png"
+        alt="Training Magazine Logo"
+        width={64}
+        height={32}
+        className="object-contain"
+      />
     ),
   },
   {
     rank: 5,
-    org: "International Society for Performance Improvement",
-    name: "ISPI Annual Performance Improvement Conference",
-    when: "Annual · Spring",
-    location: "Varies",
+    org: "Wilmington Group",
+    name: "Learning Technologies Conference & Exhibition",
+    when: "Annual · February",
+    location: "ExCeL London, UK",
     description:
-      "ISPI's annual conference is the most analytically rigorous event in the field — and the most underattended by people who would benefit from it. Where most L&D conferences focus on design and delivery, ISPI centers the conversation on performance: diagnosing the real causes of gaps, evaluating whether interventions actually worked, and thinking beyond training to systemic solutions. For instructional designers who want to evolve into performance consultants or senior L&D strategists, this is the conference that sharpens your thinking most.",
-    href: "https://www.ispi.org/conference",
-    tags: ["Annual", "In-Person", "Performance Consulting", "Niche"],
+      "Learning Technologies is Europe's largest workplace learning and technology event — and a serious destination for instructional designers who want a global perspective on where the field is heading. The conference brings together thousands of L&D professionals alongside an exhibition floor packed with the latest learning platforms, authoring tools, and vendors. Sessions are practical and research-informed, covering digital learning design, AI in L&D, performance support, and the future of workplace learning. If you're based in or traveling to Europe, this is the unmissable annual event.",
+    href: "https://www.learningtechnologies.co.uk/",
+    tags: ["Annual", "In-Person", "February", "London", "Europe"],
     highlights: [
-      "Most analytically rigorous conference in the L&D field",
-      "Deep focus on performance improvement beyond just training solutions",
-      "Attended by senior IDs, performance consultants, and L&D strategists",
-      "Evidence-based, research-to-practice sessions with real case studies",
-      "Small, intimate format — easier to build meaningful connections",
+      "Europe's largest L&D conference and exhibition",
+      "Thousands of attendees from across the UK, Europe, and internationally",
+      "Massive exhibition floor with leading learning platforms and authoring tools",
+      "Sessions covering digital learning design, AI in L&D, and performance support",
+      "Conference + free-to-attend exhibition — flexible options for any budget",
     ],
     icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" />
-      </svg>
+      <Image
+        src="/logos/learning-technologies-logo.png"
+        alt="Learning Technologies Logo"
+        width={64}
+        height={36}
+        className="object-contain"
+      />
     ),
   },
   {
     rank: 6,
-    org: "Online Learning Consortium",
-    name: "OLC Innovate",
-    when: "Annual · April",
-    location: "Varies",
+    org: "Training Industry",
+    name: "Training Industry Conference & Expo (TICE)",
+    when: "Annual · May",
+    location: "Raleigh, NC",
     description:
-      "OLC Innovate is the premier conference for online and blended learning in higher education — and increasingly relevant for instructional designers working in academic contexts or transitioning between corporate and higher ed. Sessions are research-grounded and peer-reviewed, covering instructional design, accessibility, equity-centered design, faculty development, and the pedagogy of online learning. The hybrid format makes attendance accessible from anywhere.",
-    href: "https://onlinelearningconsortium.org/attend-2/olc-innovate/",
-    tags: ["Annual", "In-Person", "Virtual", "Hybrid", "April", "Higher Ed"],
+      "TICE is Training Industry's annual flagship event for corporate learning and development leaders — focused on the business side of L&D, not just the craft. Sessions draw on Training Industry's extensive research into what separates high-performing L&D functions from the rest. For instructional designers who want to understand how training organizations are structured, how decisions get made, and how to build influence with business stakeholders, TICE offers a perspective you won't find at most ID-focused conferences.",
+    href: "https://trainingindustry.com/tice/",
+    tags: ["Annual", "In-Person", "May", "Raleigh", "Corporate L&D"],
     highlights: [
-      "Premier conference for online and blended learning in higher education",
-      "Peer-reviewed, research-backed sessions on pedagogy and learning design",
-      "Strong focus on accessibility, equity, and inclusive design practices",
-      "Hybrid format supports both in-person and fully virtual participation",
-      "Ideal for IDs working in or transitioning to higher education contexts",
+      "Research-driven content from Training Industry's benchmark studies",
+      "Focus on L&D strategy, measurement, and business alignment",
+      "Connects instructional designers with learning leaders and decision-makers",
+      "Covers vendor management, sourcing, and building L&D capability",
+      "Ideal for mid-career and senior IDs growing into L&D leadership roles",
     ],
     icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
-      </svg>
+      <Image
+        src="/logos/training-industry-logo.png"
+        alt="Training Industry Logo"
+        width={64}
+        height={32}
+        className="object-contain"
+      />
     ),
   },
   {
