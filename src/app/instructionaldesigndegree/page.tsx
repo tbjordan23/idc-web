@@ -272,7 +272,10 @@ export default function IDDegreePage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="mb-4 flex items-center gap-2">
-              <span className="inline-flex items-center rounded-sm border border-edge bg-surface px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-widest text-copy-dim">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-accent">
+                <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
                 Featured Degree Programs
               </span>
             </div>
@@ -364,7 +367,10 @@ export default function IDDegreePage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="mb-4 flex items-center gap-2">
-              <span className="inline-flex items-center rounded-sm border border-edge bg-[var(--surface-2)] px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-widest text-copy-dim">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-accent">
+                <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
                 Featured Certificate Programs
               </span>
             </div>
