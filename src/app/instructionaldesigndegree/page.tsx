@@ -109,15 +109,6 @@ const featuredCertificates: FeaturedCard[] = [
       "Advanced program for experienced practitioners covering analysis, design, development, implementation, and evaluation of complex learning programs.",
     href: "https://www.td.org/education-courses/atd-master-trainer-program?utm_source=google&utm_medium=cpc&utm_campaign=edu-master-engagement-ongoing-branded-mastertrainer",
   },
-  {
-    school: "Association for Talent Development (ATD)",
-    program: "Certified Professional in Talent Development (CPTD)",
-    logo: "/logos/atd-logo.webp",
-    logoAlt: "ATD logo",
-    description:
-      "ATD's premier credential for talent development professionals with five or more years of experience, validating expertise across ID, learning tech, and organizational effectiveness.",
-    href: "https://www.td.org/certification",
-  },
 ]
 
 const rankedPrograms = [
@@ -189,57 +180,32 @@ const rankedPrograms = [
   },
 ]
 
-/** Square card — aspect-square applied to ScrollReveal wrapper, h-full fills it */
+/**
+ * Featured card — no logo, square on sm+ (aspect-square on the ScrollReveal wrapper),
+ * natural height on mobile so content never gets buried under empty space.
+ */
 function FeaturedCard({ card }: { card: FeaturedCard }) {
   return (
-    <div className="flex h-full flex-col overflow-hidden rounded-lg border border-edge bg-[var(--surface-2)] p-5">
-      {/* Logo */}
-      <a
-        href={card.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        tabIndex={-1}
-        aria-hidden="true"
-        className="mb-3 shrink-0 self-start"
-      >
-        <div
-          className="flex items-center justify-center overflow-hidden rounded bg-white shadow-sm"
-          style={{ width: 40, height: 40, minWidth: 40, minHeight: 40 }}
-        >
-          {card.logo ? (
-            <Image
-              src={card.logo}
-              alt={card.logoAlt ?? card.school}
-              width={40}
-              height={40}
-              className="h-full w-full object-contain p-1"
-            />
-          ) : (
-            <span className="text-xs font-extrabold text-accent">
-              {card.school.charAt(0)}
-            </span>
-          )}
-        </div>
-      </a>
-
+    <div className="flex h-full flex-col rounded-lg border border-edge bg-[var(--surface-2)] p-5">
       {/* School name */}
       <p className="text-[13px] font-bold text-copy-dim">{card.school}</p>
 
-      {/* Program title — same weight/size as reference cards */}
+      {/* Program title */}
       <p className="mt-1 line-clamp-2 text-sm font-bold leading-snug text-heading">
         {card.program}
       </p>
 
-      {/* Description — restored, truncated at 3 lines */}
+      {/* Description */}
       <p className="mt-2 line-clamp-3 text-xs font-medium leading-relaxed text-copy-muted">
         {card.description}
       </p>
 
+      {/* Learn More — sits right below description on mobile, pinned to bottom on desktop */}
       <a
         href={card.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-auto pt-3 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
+        className="mt-4 sm:mt-auto inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
       >
         Learn More
         <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -288,7 +254,7 @@ export default function IDDegreePage() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {featuredDegrees.map((card, i) => (
-              <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="aspect-square">
+              <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full sm:aspect-square">
                 <FeaturedCard card={card} />
               </ScrollReveal>
             ))}
@@ -381,9 +347,9 @@ export default function IDDegreePage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {featuredCertificates.map((card, i) => (
-              <ScrollReveal key={card.program} delay={(Math.min((i % 4) + 1, 4)) as 1 | 2 | 3 | 4} className="aspect-square">
+              <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full sm:aspect-square">
                 <FeaturedCard card={card} />
               </ScrollReveal>
             ))}
