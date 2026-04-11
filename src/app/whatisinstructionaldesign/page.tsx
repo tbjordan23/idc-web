@@ -65,60 +65,6 @@ export default function WhatIsIDPage() {
         used interchangeably.
       </p>
 
-      {/* ── Hero Illustration ──────────────────────────────────────────── */}
-      <div className="my-8 flex justify-center">
-        <svg
-          viewBox="0 0 560 410"
-          xmlns="http://www.w3.org/2000/svg"
-          className="w-full max-w-lg"
-          aria-label="Instructional designer presenting at a whiteboard"
-          role="img"
-        >
-          {/* ── Stick figure ── */}
-          {/* Head */}
-          <circle cx="108" cy="52" r="44" fill="#b3b3b3" />
-          {/* Body */}
-          <line x1="108" y1="96" x2="108" y2="232" stroke="#b3b3b3" strokeWidth="18" strokeLinecap="round" />
-          {/* Left arm */}
-          <line x1="108" y1="148" x2="48" y2="196" stroke="#b3b3b3" strokeWidth="15" strokeLinecap="round" />
-          {/* Right arm (toward pointer) */}
-          <line x1="108" y1="148" x2="192" y2="210" stroke="#b3b3b3" strokeWidth="15" strokeLinecap="round" />
-          {/* Pointer stick */}
-          <line x1="188" y1="208" x2="268" y2="256" stroke="#b3b3b3" strokeWidth="9" strokeLinecap="round" />
-          {/* Left leg */}
-          <line x1="108" y1="232" x2="62" y2="350" stroke="#b3b3b3" strokeWidth="18" strokeLinecap="round" />
-          {/* Right leg */}
-          <line x1="108" y1="232" x2="154" y2="350" stroke="#b3b3b3" strokeWidth="18" strokeLinecap="round" />
-
-          {/* ── Easel ── */}
-          {/* Top centre pole */}
-          <rect x="366" y="22" width="16" height="40" rx="5" fill="#b3b3b3" />
-          {/* Top horizontal bar */}
-          <rect x="242" y="58" width="270" height="20" rx="5" fill="#b3b3b3" />
-          {/* Board surface */}
-          <rect x="256" y="78" width="242" height="212" rx="8" fill="var(--surface-2)" stroke="#b3b3b3" strokeWidth="3" />
-          {/* Bottom horizontal bar */}
-          <rect x="242" y="287" width="270" height="20" rx="5" fill="#b3b3b3" />
-          {/* Tripod left leg */}
-          <line x1="377" y1="307" x2="314" y2="396" stroke="#b3b3b3" strokeWidth="14" strokeLinecap="round" />
-          {/* Tripod centre leg */}
-          <line x1="377" y1="307" x2="364" y2="400" stroke="#b3b3b3" strokeWidth="14" strokeLinecap="round" />
-          {/* Tripod right leg */}
-          <line x1="377" y1="307" x2="440" y2="396" stroke="#b3b3b3" strokeWidth="14" strokeLinecap="round" />
-
-          {/* ── Board content ── */}
-          {/* Info speech bubble — circle */}
-          <circle cx="356" cy="138" r="30" fill="none" stroke="#555555" strokeWidth="3" />
-          {/* Italic i */}
-          <text x="356" y="150" textAnchor="middle" fill="#555555" fontSize="30" fontStyle="italic" fontFamily="Georgia, serif" fontWeight="600">i</text>
-          {/* Bubble tail */}
-          <path d="M 342,163 L 328,180 L 348,170 Z" fill="#555555" />
-          {/* Orange label */}
-          <text x="377" y="212" textAnchor="middle" fill="#f26522" fontSize="22" fontWeight="800" fontFamily="sans-serif" letterSpacing="0.5">INSTRUCTIONAL</text>
-          <text x="377" y="242" textAnchor="middle" fill="#f26522" fontSize="22" fontWeight="800" fontFamily="sans-serif" letterSpacing="0.5">DESIGN</text>
-        </svg>
-      </div>
-
       {/* ── Instructional Design Definitions ───────────────────────────── */}
       <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
         Instructional Design Definitions
@@ -335,49 +281,66 @@ export default function WhatIsIDPage() {
 
       <p>
         Titles and definitions only go so far. In practice, instructional design is a deeply
-        collaborative, multi-phase process — and what you spend your time on depends heavily on
+        collaborative, multi-phase craft — and what you spend your time on depends heavily on
         where you work and what your organization needs. That said, most IDs move through a
         recognizable cycle of work, regardless of industry.
       </p>
 
-      <h3 className="mt-8 text-base font-bold text-copy">Analyzing the learning need</h3>
-      <p>
-        Before anything gets designed, an ID asks: <em>what problem are we actually solving?</em>{" "}
-        This is needs analysis — the process of identifying performance gaps, understanding the
-        audience, and determining whether a learning solution is even the right answer. A lot of
-        stakeholders come to IDs with &ldquo;we need a training,&rdquo; when the real fix is a
-        process change, a better tool, or clearer expectations. A skilled ID helps organizations
-        tell the difference.
-      </p>
+      <div className="mt-6 space-y-4">
 
-      <h3 className="mt-6 text-base font-bold text-copy">Designing the learning experience</h3>
-      <p>
-        Once the need is clear, IDs define learning objectives, map out course structure, and
-        choose the right delivery format — whether that&rsquo;s eLearning, instructor-led
-        training, microlearning, a job aid, a video series, or some combination. This is
-        the architectural phase: figuring out what learners need to know, in what order, and
-        how to build in practice and feedback so the learning actually sticks.
-      </p>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Analyzing the Learning Need</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Before anything gets designed, an ID asks: <em>what problem are we actually solving?</em>{" "}
+            This is needs analysis — the process of identifying performance gaps, understanding the
+            audience, and determining whether a learning solution is even the right answer. A lot of
+            stakeholders come to IDs with &ldquo;we need a training,&rdquo; when the real fix is a
+            process change, a better tool, or clearer expectations. A skilled ID helps organizations
+            tell the difference — and that ability alone makes you invaluable.
+          </p>
+        </div>
 
-      <h3 className="mt-6 text-base font-bold text-copy">Developing the content</h3>
-      <p>
-        This is where design becomes reality. IDs write scripts, build storyboards, develop
-        eLearning modules in authoring tools like Articulate Storyline or Rise, create
-        facilitator guides and participant workbooks, design assessments, and produce supporting
-        materials. They work closely with subject matter experts (SMEs) to ensure accuracy, and
-        with stakeholders to ensure alignment — which often means navigating feedback, revisions,
-        and evolving requirements with patience and diplomacy.
-      </p>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Designing the Learning Experience</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Once the need is clear, IDs define learning objectives, map out course structure, and
+            choose the right delivery format — whether that&rsquo;s eLearning, instructor-led
+            training, microlearning, a job aid, a video series, or some combination. This is the
+            architectural phase: figuring out what learners need to know, in what order, and how to
+            build in practice and feedback so the learning actually sticks.
+          </p>
+        </div>
 
-      <h3 className="mt-6 text-base font-bold text-copy">Implementing and evaluating</h3>
-      <p>
-        Once content is ready, IDs manage or support its rollout — uploading to an LMS,
-        coordinating with facilitators, running pilots, and troubleshooting delivery issues.
-        After launch, strong IDs don&rsquo;t just move on: they collect data, measure outcomes,
-        gather learner feedback, and use what they learn to improve the program or inform the next one.
-      </p>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Developing the Content</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            This is where design becomes reality. IDs write scripts, build storyboards, develop
+            eLearning modules in authoring tools like Articulate Storyline or Rise, create
+            facilitator guides and participant workbooks, design assessments, and produce supporting
+            materials. They work closely with subject matter experts (SMEs) to ensure accuracy, and
+            with stakeholders to ensure alignment — which often means navigating feedback, revisions,
+            and evolving requirements with patience and diplomacy.
+          </p>
+        </div>
 
-      <h3 className="mt-6 text-base font-bold text-copy">What IDs create</h3>
+        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          <h3 className="text-base font-extrabold text-copy">Implementing and Evaluating</h3>
+          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+            Once content is ready, IDs manage or support its rollout — uploading to an LMS,
+            coordinating with facilitators, running pilots, and troubleshooting delivery issues.
+            After launch, strong IDs don&rsquo;t just move on: they collect data, measure outcomes,
+            gather learner feedback, and use what they learn to improve the program or inform the next one.
+            This is what separates a course builder from a learning strategist.
+          </p>
+        </div>
+
+      </div>
+
+      <h3 className="mt-8 text-base font-bold text-copy">What IDs Create</h3>
       <p>
         The range of deliverables an instructional designer produces is wide. You might find
         yourself working on any of the following, depending on the role and organization:
