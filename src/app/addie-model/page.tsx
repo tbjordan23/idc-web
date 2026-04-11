@@ -213,7 +213,7 @@ export default function ADDIEModelPage() {
             Ready to master ADDIE?
           </h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
-          <div className="mt-3 flex gap-5">
+          <div className="mt-3 flex items-center gap-5">
             <div className="relative hidden sm:block shrink-0 w-28 h-28 rounded-lg overflow-hidden">
               <Image
                 src="/course-addie-model.png"
@@ -223,23 +223,25 @@ export default function ADDIEModelPage() {
                 sizes="112px"
               />
             </div>
-            <p className="text-sm font-medium leading-relaxed text-copy-muted">
-              Reading about ADDIE is a great start — but applying it to a real project is where it
-              clicks. The IDC <strong className="font-bold text-copy">Mastering the ADDIE Model</strong>{" "}
-              course walks you through every phase with practical examples, real-world templates, and
-              hands-on exercises. You&rsquo;ll finish with a certificate and the confidence to use
-              ADDIE on any project that comes your way.
-            </p>
+            <div className="flex flex-col">
+              <p className="text-sm font-medium leading-relaxed text-copy-muted">
+                Reading about ADDIE is a great start — but applying it to a real project is where it
+                clicks. The IDC <strong className="font-bold text-copy">Mastering the ADDIE Model</strong>{" "}
+                course walks you through every phase with practical examples, real-world templates, and
+                hands-on exercises. You&rsquo;ll finish with a certificate and the confidence to use
+                ADDIE on any project that comes your way.
+              </p>
+              <Link
+                href="/addie-model-course"
+                className="mt-4 self-start inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+              >
+                Explore the ADDIE Model Course
+                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
           </div>
-          <Link
-            href="/addie-model-course"
-            className="mt-5 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-          >
-            Explore the ADDIE Model Course
-            <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
         </div>
 
       </ContentPage>
