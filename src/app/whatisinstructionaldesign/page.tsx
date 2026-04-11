@@ -299,14 +299,23 @@ export default function WhatIsIDPage() {
             process change, a better tool, or clearer expectations. A skilled ID helps organizations
             tell the difference — and that ability alone makes you invaluable.
           </p>
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            <strong className="font-bold text-copy">AI in this phase:</strong> IDs are using AI
-            tools to accelerate audience research, synthesize interview notes from SME conversations,
-            identify knowledge gaps from existing content, and rapidly generate learner personas.
-            What AI can&rsquo;t replicate is the judgment call — knowing when the data points to
-            a training solution and when it points to a broken process. That critical thinking is still
-            entirely yours.
-          </p>
+          <div className="mt-4 flex items-start gap-3 rounded-lg border border-[var(--accent-glow)] bg-[var(--accent-glow)] px-4 py-3">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)] text-accent">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-accent">AI in this phase</p>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                IDs are using AI tools to accelerate audience research, synthesize interview notes from SME
+                conversations, identify knowledge gaps from existing content, and rapidly generate learner
+                personas. What AI can&rsquo;t replicate is the judgment call — knowing when the data points
+                to a training solution and when it points to a broken process. That critical thinking is still
+                entirely yours.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
@@ -319,13 +328,22 @@ export default function WhatIsIDPage() {
             architectural phase: figuring out what learners need to know, in what order, and how to
             build in practice and feedback so the learning actually sticks.
           </p>
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            <strong className="font-bold text-copy">AI in this phase:</strong> AI is a powerful
-            thought partner here. IDs use it to draft and refine learning objectives, generate
-            course outlines, brainstorm scenario frameworks, and pressure-test instructional
-            sequences before a single piece of content is built. The ID still makes the architectural
-            decisions — AI just makes it faster to explore the options.
-          </p>
+          <div className="mt-4 flex items-start gap-3 rounded-lg border border-[var(--accent-glow)] bg-[var(--accent-glow)] px-4 py-3">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)] text-accent">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-accent">AI in this phase</p>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                AI is a powerful thought partner here. IDs use it to draft and refine learning objectives,
+                generate course outlines, brainstorm scenario frameworks, and pressure-test instructional
+                sequences before a single piece of content is built. The ID still makes the architectural
+                decisions — AI just makes it faster to explore the options.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
@@ -339,14 +357,23 @@ export default function WhatIsIDPage() {
             with stakeholders to ensure alignment — which often means navigating feedback, revisions,
             and evolving requirements with patience and diplomacy.
           </p>
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            <strong className="font-bold text-copy">AI in this phase:</strong> This is where AI has
-            the most immediate impact. IDs are using generative AI to draft narration scripts, write
-            quiz questions, create scenario variations, generate voiceover audio, produce images and
-            graphics, and turn rough SME notes into polished content — compressing timelines that
-            used to take weeks. Strong IDs know how to prompt well, evaluate the output critically,
-            and edit for instructional accuracy and tone.
-          </p>
+          <div className="mt-4 flex items-start gap-3 rounded-lg border border-[var(--accent-glow)] bg-[var(--accent-glow)] px-4 py-3">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)] text-accent">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-accent">AI in this phase</p>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                This is where AI has the most immediate impact. IDs are using generative AI to draft narration
+                scripts, write quiz questions, create scenario variations, generate voiceover audio, produce
+                images and graphics, and turn rough SME notes into polished content — compressing timelines
+                that used to take weeks. Strong IDs know how to prompt well, evaluate the output critically,
+                and edit for instructional accuracy and tone.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
@@ -359,14 +386,23 @@ export default function WhatIsIDPage() {
             gather learner feedback, and use what they learn to improve the program or inform the next one.
             This is what separates a course builder from a learning strategist.
           </p>
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            <strong className="font-bold text-copy">AI in this phase:</strong> AI is changing how
-            IDs analyze and act on data. From summarizing learner feedback at scale to identifying
-            patterns in assessment results, AI tools help IDs move from raw data to actionable
-            insights faster. Looking ahead, AI-powered adaptive learning systems are enabling
-            personalized content paths — where the learning experience adjusts in real time based
-            on how each learner is performing.
-          </p>
+          <div className="mt-4 flex items-start gap-3 rounded-lg border border-[var(--accent-glow)] bg-[var(--accent-glow)] px-4 py-3">
+            <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)] text-accent">
+              <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+              </svg>
+            </div>
+            <div>
+              <p className="text-xs font-bold uppercase tracking-wider text-accent">AI in this phase</p>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                AI is changing how IDs analyze and act on data. From summarizing learner feedback at scale
+                to identifying patterns in assessment results, AI tools help IDs move from raw data to
+                actionable insights faster. Looking ahead, AI-powered adaptive learning systems are enabling
+                personalized content paths — where the learning experience adjusts in real time based on how
+                each learner is performing.
+              </p>
+            </div>
+          </div>
         </div>
 
       </div>
