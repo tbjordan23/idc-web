@@ -219,7 +219,13 @@ export default function WhatIsIDPage() {
       <div className="mt-6 space-y-4">
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Instructional Designer</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">Instructional Designer</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+              Trending Up
+            </span>
+          </div>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             An instructional designer is the core role in the field — the professional who takes
@@ -236,7 +242,13 @@ export default function WhatIsIDPage() {
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Instructional Technologist</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">Instructional Technologist</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+              Trending Up
+            </span>
+          </div>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             An instructional technologist sits at the intersection of learning design and
@@ -253,7 +265,13 @@ export default function WhatIsIDPage() {
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Educational Technologist</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">Educational Technologist</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+              Trending Up
+            </span>
+          </div>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             An educational technologist applies technology specifically within educational
@@ -269,7 +287,13 @@ export default function WhatIsIDPage() {
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Learning Experience Designer (LXD)</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">Learning Experience Designer (LXD)</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+              Trending Up
+            </span>
+          </div>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             The learning experience designer is an emerging role title that signals a more
@@ -287,7 +311,13 @@ export default function WhatIsIDPage() {
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">eLearning Developer</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">eLearning Developer</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[11px] font-bold text-rose-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
+              Trending Down
+            </span>
+          </div>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             An eLearning developer specializes in building digital learning content — typically
@@ -304,7 +334,13 @@ export default function WhatIsIDPage() {
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Performance Consultant</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">Performance Consultant</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+              Trending Up
+            </span>
+          </div>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             A performance consultant is often what an experienced instructional designer
@@ -321,7 +357,13 @@ export default function WhatIsIDPage() {
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Curriculum Developer</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">Curriculum Developer</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[11px] font-bold text-rose-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
+              Trending Down
+            </span>
+          </div>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             A curriculum developer designs the structure, sequence, and content of learning
@@ -338,7 +380,13 @@ export default function WhatIsIDPage() {
         </div>
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Training Developer</h3>
+          <div className="flex items-start justify-between gap-3">
+            <h3 className="text-base font-extrabold text-copy">Training Developer</h3>
+            <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[11px] font-bold text-rose-500">
+              <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" /></svg>
+              Trending Down
+            </span>
+          </div>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             Training developer is the title you&rsquo;ll most commonly encounter in the military,
