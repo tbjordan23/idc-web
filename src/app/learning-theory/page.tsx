@@ -331,18 +331,20 @@ export default function LearningTheoryPage() {
         </p>
 
         {theories.map((theory) => (
-          <div key={theory.id} className="mt-14">
+          <div key={theory.id} className="mt-14 overflow-hidden rounded-2xl border border-edge shadow-card">
 
-            {/* Theory header */}
-            <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-              <p className="text-xs font-bold uppercase tracking-widest text-accent">
-                Learning Theory
-              </p>
-              <h2 className="mt-1 text-xl font-extrabold tracking-tight text-heading">
+            {/* ── Theory header ─────────────────────────────────────────── */}
+            <div className="bg-surface p-6 sm:p-8">
+              <div className="flex items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-accent">
+                  Learning Theory
+                </span>
+              </div>
+              <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-heading sm:text-3xl">
                 {theory.name}
               </h2>
-              <p className="mt-1 text-sm font-semibold text-copy-muted">{theory.tagline}</p>
-              <div className="mt-4 h-0.5 w-8 rounded bg-accent opacity-60" />
+              <p className="mt-1.5 text-sm font-semibold text-copy-muted">{theory.tagline}</p>
+              <div className="mt-4 h-0.5 w-10 rounded bg-accent opacity-60" />
               {theory.overview.split("\n\n").map((para, i) => (
                 <p key={i} className="mt-4 text-sm font-medium leading-relaxed text-copy-muted">
                   {para}
@@ -350,57 +352,61 @@ export default function LearningTheoryPage() {
               ))}
             </div>
 
-            {/* Key influencers */}
-            <h3 className="mt-8 text-base font-extrabold tracking-tight text-heading">
-              Key Influencers
-            </h3>
-            <div className="mt-4 space-y-3">
-              {theory.influencers.map((person) => (
-                <div
-                  key={person.name}
-                  className="flex items-start gap-4 rounded-card border border-edge bg-surface p-4 shadow-card"
-                >
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
-                    <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                    </svg>
+            {/* ── Key influencers ───────────────────────────────────────── */}
+            <div className="border-t border-edge bg-[var(--surface-2)] px-6 py-5 sm:px-8">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-copy-dim">
+                Key Influencers
+              </p>
+              <div className="mt-4 space-y-3">
+                {theory.influencers.map((person) => (
+                  <div
+                    key={person.name}
+                    className="flex items-start gap-4 rounded-xl border border-edge bg-surface p-4"
+                  >
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+                      <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm font-extrabold text-copy">{person.name}</p>
+                      <p className="mt-0.5 text-xs font-medium leading-relaxed text-copy-muted">
+                        {person.contribution}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-extrabold text-copy">{person.name}</p>
-                    <p className="mt-0.5 text-xs font-medium leading-relaxed text-copy-muted">
-                      {person.contribution}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
-            {/* Practical applications */}
-            <h3 className="mt-8 text-base font-extrabold tracking-tight text-heading">
-              Practical Applications
-            </h3>
-            <p className="mt-2 text-sm font-medium text-copy-muted">
-              How {theory.name.toLowerCase()} shows up in real instructional design work:
-            </p>
-            <div className="mt-4 grid gap-3 sm:grid-cols-2">
-              {theory.applications.map((app) => (
-                <div
-                  key={app.title}
-                  className="rounded-card border border-edge bg-surface p-4 shadow-card"
-                >
-                  <div className="flex items-center gap-2">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)]">
-                      <svg className="h-3 w-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-                      </svg>
-                    </span>
-                    <p className="text-sm font-extrabold text-copy">{app.title}</p>
+            {/* ── Practical applications ────────────────────────────────── */}
+            <div className="border-t border-edge bg-[var(--surface-2)] px-6 py-5 sm:px-8">
+              <p className="text-[11px] font-bold uppercase tracking-widest text-copy-dim">
+                Practical Applications
+              </p>
+              <p className="mt-1 text-xs font-medium text-copy-dim">
+                How {theory.name.toLowerCase()} shows up in real instructional design work
+              </p>
+              <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                {theory.applications.map((app) => (
+                  <div
+                    key={app.title}
+                    className="rounded-xl border border-edge bg-surface p-4"
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)]">
+                        <svg className="h-3 w-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
+                      <p className="text-sm font-extrabold text-copy">{app.title}</p>
+                    </div>
+                    <p className="mt-2 text-xs font-medium leading-relaxed text-copy-muted">
+                      {app.description}
+                    </p>
                   </div>
-                  <p className="mt-2 text-xs font-medium leading-relaxed text-copy-muted">
-                    {app.description}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
 
           </div>
