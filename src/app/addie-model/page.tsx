@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 import CoursePromo from "@/components/ui/CoursePromo"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "ADDIE Model",
@@ -96,6 +97,7 @@ export default function ADDIEModelPage() {
         title="The ADDIE Model"
         subtitle="The most widely used framework in instructional design — a complete guide to all five phases."
       >
+        <ScrollReveal>
         <p>
           If you&rsquo;ve spent any time in instructional design, you&rsquo;ve encountered ADDIE.
           It&rsquo;s the framework that most IDs learn first, the one that shows up in job descriptions,
@@ -104,6 +106,8 @@ export default function ADDIEModelPage() {
           five phases that together form a systematic process for creating learning experiences that
           actually work.
         </p>
+        </ScrollReveal>
+        <ScrollReveal delay={1}>
         <p>
           Originally developed for the U.S. Military in the 1970s by Florida State University, ADDIE
           has stood the test of time because it&rsquo;s genuinely adaptable. It can structure a
@@ -111,8 +115,10 @@ export default function ADDIEModelPage() {
           often shown sequentially, but in practice they&rsquo;re iterative — findings from one phase
           regularly loop back to inform another. That flexibility is exactly why it&rsquo;s lasted.
         </p>
+        </ScrollReveal>
 
         {/* ADDIE Illustration */}
+        <ScrollReveal delay={2}>
         <div className="my-8 flex justify-center">
           <svg
             viewBox="0 0 590 218"
@@ -156,15 +162,19 @@ export default function ADDIEModelPage() {
             <text x="295" y="210" textAnchor="middle" fill="var(--text-muted)" fontSize="8.5" fontFamily="sans-serif">Evaluation informs continuous improvement — feedback loops back to any phase</text>
           </svg>
         </div>
+        </ScrollReveal>
 
         {/* Five phases */}
+        <ScrollReveal>
         <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
           The Five Phases of ADDIE
         </h2>
+        </ScrollReveal>
 
         <div className="mt-6 space-y-5">
-          {phases.map((phase) => (
-            <div key={phase.name} className="rounded-card border border-edge bg-surface p-6 shadow-card">
+          {phases.map((phase, i) => (
+            <ScrollReveal key={phase.name} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+            <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)]">
                   <span className="text-2xl font-extrabold text-accent">{phase.letter}</span>
@@ -181,14 +191,18 @@ export default function ADDIEModelPage() {
                 </p>
               ))}
             </div>
+            </ScrollReveal>
           ))}
         </div>
 
         {/* ADDIE in practice */}
+        <ScrollReveal>
         <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
           ADDIE in Practice
         </h2>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <p>
           One of the biggest misconceptions about ADDIE is that it&rsquo;s rigid. In reality,
           the most experienced designers use it as a flexible scaffold — not a strict sequence.
@@ -196,7 +210,9 @@ export default function ADDIEModelPage() {
           design. They might prototype in development, share it with stakeholders, and loop back
           to redesign a section based on feedback. The phases overlap, inform each other, and repeat.
         </p>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <p>
           ADDIE also works alongside other frameworks. Many teams use Agile sprints within a
           broader ADDIE structure — maintaining the discipline of analysis and evaluation while
@@ -204,7 +220,9 @@ export default function ADDIEModelPage() {
           gives you the foundation to adapt it intelligently, rather than following it blindly or
           abandoning it prematurely.
         </p>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <CoursePromo
           title="Ready to master ADDIE?"
           image="/course-addie-model.png"
@@ -219,6 +237,7 @@ export default function ADDIEModelPage() {
             ADDIE on any project that comes your way.
           </>}
         />
+        </ScrollReveal>
 
       </ContentPage>
     </>

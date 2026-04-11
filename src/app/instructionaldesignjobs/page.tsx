@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Jobs",
@@ -140,6 +141,7 @@ export default function IDJobsPage() {
       title="Instructional Design Jobs"
       subtitle="Whether you're just starting out or thinking about what's next — here's a clear look at the roles, industries, and opportunities in the ID field."
     >
+      <ScrollReveal>
       <p>
         One of the best-kept secrets about instructional design? It opens more doors than most people realize.
         When you can analyze a learning need, design a solution, and build something people actually learn from,
@@ -148,22 +150,27 @@ export default function IDJobsPage() {
         This guide breaks down the job titles you&rsquo;ll encounter, what each role actually does,
         what you can expect to earn, and where the strongest demand is right now.
       </p>
+      </ScrollReveal>
 
       {/* ── Job Titles ─────────────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
         Instructional Design Job Titles
       </h2>
+      </ScrollReveal>
 
+      <ScrollReveal delay={1}>
       <p>
         The ID field doesn&rsquo;t have a single standard title — you&rsquo;ll see the same core
         work described a dozen different ways depending on the organization, the industry, and the
         era. Here are the roles you&rsquo;re most likely to encounter, from entry-level to executive.
       </p>
+      </ScrollReveal>
 
       <div className="mt-6 space-y-5">
-        {jobRoles.map((role) => (
+        {jobRoles.map((role, i) => (
+          <ScrollReveal key={role.title} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
           <div
-            key={role.title}
             className="rounded-card border border-edge bg-surface p-6 shadow-card"
           >
             <div className="flex flex-wrap items-start justify-between gap-3">
@@ -182,6 +189,7 @@ export default function IDJobsPage() {
               {role.description}
             </p>
           </div>
+          </ScrollReveal>
         ))}
       </div>
 
@@ -192,20 +200,24 @@ export default function IDJobsPage() {
       </p>
 
       {/* ── Industries ─────────────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Where Instructional Designers Work
       </h2>
+      </ScrollReveal>
 
+      <ScrollReveal delay={1}>
       <p>
         Instructional design is a horizontal skill — it crosses every sector where people need to
         learn something. Below are the industries with the most active demand for ID professionals,
         along with what makes each one distinct.
       </p>
+      </ScrollReveal>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        {industries.map((industry) => (
+        {industries.map((industry, i) => (
+          <ScrollReveal key={industry.name} delay={((i % 2) + 1) as 1 | 2}>
           <div
-            key={industry.name}
             className="rounded-card border border-edge bg-surface p-5 shadow-card"
           >
             <div className="flex items-center justify-between gap-2">
@@ -226,20 +238,27 @@ export default function IDJobsPage() {
               {industry.notes}
             </p>
           </div>
+          </ScrollReveal>
         ))}
       </div>
 
       {/* ── Market Demand ──────────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Market Demand & Career Outlook
       </h2>
+      </ScrollReveal>
 
+      <ScrollReveal delay={1}>
       <p>
         The short version: instructional design is growing, and it&rsquo;s not slowing down.
         The U.S. Bureau of Labor Statistics projects steady growth in training and development
         roles, driven by a few powerful forces reshaping how organizations think about learning.
       </p>
 
+      </ScrollReveal>
+
+      <ScrollReveal delay={2}>
       <h3 className="mt-8 text-base font-bold text-copy">
         Skills gaps are accelerating demand
       </h3>
@@ -248,7 +267,9 @@ export default function IDJobsPage() {
         who can build learning quickly, iterate on it, and connect it to measurable performance
         outcomes. That&rsquo;s an instructional designer&rsquo;s job description.
       </p>
+      </ScrollReveal>
 
+      <ScrollReveal delay={1}>
       <h3 className="mt-6 text-base font-bold text-copy">
         Remote work normalized the market
       </h3>
@@ -258,7 +279,9 @@ export default function IDJobsPage() {
         in your city. A designer in a mid-sized market can compete for tech company roles in
         San Francisco or New York without relocating.
       </p>
+      </ScrollReveal>
 
+      <ScrollReveal delay={2}>
       <h3 className="mt-6 text-base font-bold text-copy">
         AI is changing the work, not replacing it
       </h3>
@@ -269,7 +292,9 @@ export default function IDJobsPage() {
         ability to evaluate, direct, and critically apply AI-generated content is quickly
         becoming a core ID skill.
       </p>
+      </ScrollReveal>
 
+      <ScrollReveal delay={1}>
       <h3 className="mt-6 text-base font-bold text-copy">
         L&D is moving closer to business strategy
       </h3>
@@ -279,11 +304,14 @@ export default function IDJobsPage() {
         is creating more senior roles, more CLO positions, and more opportunities for IDs
         to move into leadership without leaving the craft entirely.
       </p>
+      </ScrollReveal>
 
       {/* ── Salary Overview ────────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Salary by Experience Level
       </h2>
+      </ScrollReveal>
 
       <p>
         Compensation in instructional design varies widely based on experience, industry,
@@ -331,6 +359,7 @@ export default function IDJobsPage() {
       </p>
 
       {/* ── Tips ───────────────────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Getting Hired: What Actually Moves the Needle
       </h2>
@@ -373,6 +402,7 @@ export default function IDJobsPage() {
           carries real weight.
         </li>
       </ul>
+      </ScrollReveal>
     </ContentPage>
   )
 }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "What is Instructional Design?",
@@ -52,20 +53,23 @@ export default function WhatIsIDPage() {
       title="What is Instructional Design?"
       subtitle="A complete guide to the field, the role, and how to get started."
     >
-      <p>
-        Instructional design is the craft of creating learning experiences that actually work. If
-        you&rsquo;ve ever built a course, designed a training program, or helped someone develop a
-        new skill — you&rsquo;ve done instructional design. At its core, it&rsquo;s a systematic
-        process for designing, developing, and delivering learning products: online courses, video
-        tutorials, training manuals, simulations, and more. Instructional designers are the
-        architects behind those experiences — shaping how knowledge gets structured, delivered, and
-        retained. You might also hear the terms <em>instructional technology</em>,{" "}
-        <em>learning experience (LX) design</em>, <em>curriculum design</em>, and{" "}
-        <em>instructional systems design (ISD)</em> — they overlap significantly and are often
-        used interchangeably.
-      </p>
+      <ScrollReveal>
+        <p>
+          Instructional design is the craft of creating learning experiences that actually work. If
+          you&rsquo;ve ever built a course, designed a training program, or helped someone develop a
+          new skill — you&rsquo;ve done instructional design. At its core, it&rsquo;s a systematic
+          process for designing, developing, and delivering learning products: online courses, video
+          tutorials, training manuals, simulations, and more. Instructional designers are the
+          architects behind those experiences — shaping how knowledge gets structured, delivered, and
+          retained. You might also hear the terms <em>instructional technology</em>,{" "}
+          <em>learning experience (LX) design</em>, <em>curriculum design</em>, and{" "}
+          <em>instructional systems design (ISD)</em> — they overlap significantly and are often
+          used interchangeably.
+        </p>
+      </ScrollReveal>
 
       {/* ── What is Instructional Design? ──────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -74,47 +78,55 @@ export default function WhatIsIDPage() {
         </span>
         What is Instructional Design?
       </h2>
+      </ScrollReveal>
 
-      <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
-        The field goes by several names — and each one captures a slightly different lens on the
-        same core work. Whether you call it instructional design, educational technology, or
-        learning experience design, the throughline is the same: making learning intentional,
-        effective, and human-centered.
-      </p>
+      <ScrollReveal delay={1}>
+        <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
+          The field goes by several names — and each one captures a slightly different lens on the
+          same core work. Whether you call it instructional design, educational technology, or
+          learning experience design, the throughline is the same: making learning intentional,
+          effective, and human-centered.
+        </p>
+      </ScrollReveal>
 
       <div className="mt-6 space-y-4">
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Instructional Design</h3>
-          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            Instructional design is the systematic process of analyzing what people need to learn,
-            then designing, developing, and evaluating the experiences that get them there. It
-            draws on learning science, cognitive psychology, and performance improvement to ensure
-            that training isn&rsquo;t just delivered — it actually works. Think of it as the
-            architecture behind every effective course, workshop, or learning program. The ID
-            process is often guided by models like ADDIE or SAM, which provide a framework for
-            moving from a learning problem to a finished, evidence-based solution.
-          </p>
-        </div>
+        <ScrollReveal delay={1}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+            <h3 className="text-base font-extrabold text-copy">Instructional Design</h3>
+            <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+            <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+              Instructional design is the systematic process of analyzing what people need to learn,
+              then designing, developing, and evaluating the experiences that get them there. It
+              draws on learning science, cognitive psychology, and performance improvement to ensure
+              that training isn&rsquo;t just delivered — it actually works. Think of it as the
+              architecture behind every effective course, workshop, or learning program. The ID
+              process is often guided by models like ADDIE or SAM, which provide a framework for
+              moving from a learning problem to a finished, evidence-based solution.
+            </p>
+          </div>
+        </ScrollReveal>
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Educational Technology</h3>
-          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
-          <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
-            Educational technology — often called EdTech or instructional technology — is the
-            strategic use of tools, platforms, and systems to support learning. But it&rsquo;s
-            not just about the technology itself. It&rsquo;s about selecting the right tool for
-            the right learning goal, integrating it thoughtfully into the learner&rsquo;s
-            experience, and evaluating whether it actually made a difference. EdTech professionals
-            work at the intersection of learning science and technology, managing everything from
-            LMS platforms and eLearning authoring tools to emerging AI-powered learning systems.
-            The technology is always in service of the learning — never the other way around.
-          </p>
-        </div>
+        <ScrollReveal delay={2}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+            <h3 className="text-base font-extrabold text-copy">Educational Technology</h3>
+            <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+            <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
+              Educational technology — often called EdTech or instructional technology — is the
+              strategic use of tools, platforms, and systems to support learning. But it&rsquo;s
+              not just about the technology itself. It&rsquo;s about selecting the right tool for
+              the right learning goal, integrating it thoughtfully into the learner&rsquo;s
+              experience, and evaluating whether it actually made a difference. EdTech professionals
+              work at the intersection of learning science and technology, managing everything from
+              LMS platforms and eLearning authoring tools to emerging AI-powered learning systems.
+              The technology is always in service of the learning — never the other way around.
+            </p>
+          </div>
+        </ScrollReveal>
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Learning Experience (LX) Design</h3>
+        <ScrollReveal delay={3}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+            <h3 className="text-base font-extrabold text-copy">Learning Experience (LX) Design</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             Learning experience design is the newest framing in the field — and the most
@@ -127,10 +139,12 @@ export default function WhatIsIDPage() {
             learning shapes whether they show up for it, stay engaged, and apply what they&rsquo;ve
             learned back on the job.
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Instructional Systems Design (ISD)</h3>
+        <ScrollReveal delay={4}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+            <h3 className="text-base font-extrabold text-copy">Instructional Systems Design (ISD)</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             Instructional systems design is the more formal, process-oriented name for the same
@@ -144,10 +158,12 @@ export default function WhatIsIDPage() {
             it&rsquo;s largely been replaced by &ldquo;instructional design&rdquo; — but the
             methodology is the same.
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Curriculum Design &amp; Development</h3>
+        <ScrollReveal delay={1}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+            <h3 className="text-base font-extrabold text-copy">Curriculum Design &amp; Development</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             Curriculum design is how educators and institutions plan the full scope and sequence
@@ -161,10 +177,12 @@ export default function WhatIsIDPage() {
             any time the goal is a sustained, sequenced learning experience rather than a one-off
             course.
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-          <h3 className="text-base font-extrabold text-copy">Learning &amp; Development (L&amp;D)</h3>
+        <ScrollReveal delay={2}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+            <h3 className="text-base font-extrabold text-copy">Learning &amp; Development (L&amp;D)</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
           <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
             Learning and development is the organizational function — usually housed within HR —
@@ -178,11 +196,13 @@ export default function WhatIsIDPage() {
             because the best-designed course in the world won&rsquo;t matter if it doesn&rsquo;t
             get organizational buy-in and resources to reach learners.
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
       </div>
 
       {/* ── What is an Instructional Designer? ─────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -191,17 +211,21 @@ export default function WhatIsIDPage() {
         </span>
         What is an Instructional Designer?
       </h2>
+      </ScrollReveal>
 
-      <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
-        The people who do this work go by several titles depending on the organization and sector
-        they work in. Each role has its own focus, but they all share the same underlying mission:
-        helping people learn and perform better. Here&rsquo;s how the most common titles in the
-        field break down.
-      </p>
+      <ScrollReveal delay={1}>
+        <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
+          The people who do this work go by several titles depending on the organization and sector
+          they work in. Each role has its own focus, but they all share the same underlying mission:
+          helping people learn and perform better. Here&rsquo;s how the most common titles in the
+          field break down.
+        </p>
+      </ScrollReveal>
 
       <div className="mt-6 space-y-4">
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+        <ScrollReveal delay={2}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">Instructional Designer</h3>
             <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
@@ -222,9 +246,11 @@ export default function WhatIsIDPage() {
             &ldquo;instructional systems designer,&rdquo; &ldquo;curriculum designer,&rdquo; and
             &ldquo;learning designer&rdquo; — same core skill set, different organizational branding.
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+        <ScrollReveal delay={3}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">Learning Experience Designer (LXD)</h3>
             <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-emerald-500/10 px-2.5 py-0.5 text-[11px] font-bold text-emerald-500">
@@ -246,13 +272,15 @@ export default function WhatIsIDPage() {
             you&rsquo;re drawn to design thinking and the human side of learning, this framing
             may resonate with how you already approach the work.
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
       </div>
 
       <div className="mt-4 space-y-4">
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+        <ScrollReveal delay={1}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">Instructional Technologist</h3>
             <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[11px] font-bold text-rose-500">
@@ -273,9 +301,11 @@ export default function WhatIsIDPage() {
             significantly with instructional design — many IDs are also de facto instructional
             technologists.
           </p>
-        </div>
+          </div>
+        </ScrollReveal>
 
-        <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+        <ScrollReveal delay={2}>
+          <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">eLearning Developer</h3>
             <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-rose-500/10 px-2.5 py-0.5 text-[11px] font-bold text-rose-500">
@@ -297,7 +327,9 @@ export default function WhatIsIDPage() {
             a course that looks polished but teaches poorly still fails the learner.
           </p>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={3}>
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">Performance Consultant</h3>
@@ -320,7 +352,9 @@ export default function WhatIsIDPage() {
             training and help organizations invest in solutions that will actually move the needle.
           </p>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={4}>
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">Curriculum Developer</h3>
@@ -343,7 +377,9 @@ export default function WhatIsIDPage() {
             long-arc planning and program-level thinking.
           </p>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
             <h3 className="text-base font-extrabold text-copy">Training Developer</h3>
@@ -366,10 +402,12 @@ export default function WhatIsIDPage() {
             design work — even if it was never called that.
           </p>
         </div>
+        </ScrollReveal>
 
       </div>
 
       {/* ── What Does an ID Actually Do? ────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -378,16 +416,20 @@ export default function WhatIsIDPage() {
         </span>
         What Does an Instructional Designer Actually Do?
       </h2>
+      </ScrollReveal>
 
+      <ScrollReveal delay={1}>
       <p>
         Titles and definitions only go so far. In practice, instructional design is a deeply
         collaborative, multi-phase craft — and what you spend your time on depends heavily on
         where you work and what your organization needs. That said, most IDs move through a
         recognizable cycle of work, regardless of industry.
       </p>
+      </ScrollReveal>
 
       <div className="mt-6 space-y-4">
 
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <h3 className="text-base font-extrabold text-copy">Analyzing the Learning Need</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
@@ -417,7 +459,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <h3 className="text-base font-extrabold text-copy">Designing the Learning Experience</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
@@ -445,7 +489,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={3}>
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <h3 className="text-base font-extrabold text-copy">Developing the Content</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
@@ -475,7 +521,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={4}>
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <h3 className="text-base font-extrabold text-copy">Implementing and Evaluating</h3>
           <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
@@ -504,9 +552,11 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
       </div>
 
+      <ScrollReveal>
       <h2 className="mt-12 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
         <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
           <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -515,14 +565,18 @@ export default function WhatIsIDPage() {
         </span>
         What Does an Instructional Designer Create?
       </h2>
+      </ScrollReveal>
 
+      <ScrollReveal delay={1}>
       <p>
         The range of deliverables an instructional designer produces is wide. Depending on the
         role and organization, you might be building any of the following — often several at once.
       </p>
+      </ScrollReveal>
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
 
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -538,7 +592,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -554,7 +610,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -570,7 +628,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -586,7 +646,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -602,7 +664,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -618,7 +682,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -634,7 +700,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -650,7 +718,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -666,7 +736,9 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <div className="flex items-start gap-4">
             <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
@@ -682,6 +754,7 @@ export default function WhatIsIDPage() {
             </div>
           </div>
         </div>
+        </ScrollReveal>
 
       </div>
 

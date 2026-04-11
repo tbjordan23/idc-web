@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Learning Theory Overview",
@@ -315,6 +316,7 @@ export default function LearningTheoryPage() {
         title="Learning Theory for Instructional Designers"
         subtitle="The major theories behind how people learn — and how to put each one to work in your design practice."
       >
+        <ScrollReveal>
         <p>
           Every instructional design decision you make rests on a theory of how people learn —
           whether you&rsquo;re aware of it or not. When you chunk content into short modules,
@@ -324,14 +326,18 @@ export default function LearningTheoryPage() {
           just make you a better designer — it gives you a principled way to explain your decisions
           to stakeholders and adapt your approach when a strategy isn&rsquo;t working.
         </p>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <p>
           Below are the five learning theories most relevant to modern instructional design practice.
           Each one offers a distinct lens on the learning process, and skilled IDs draw on all of them.
         </p>
+        </ScrollReveal>
 
         {theories.map((theory) => (
-          <div key={theory.id} className="mt-14 overflow-hidden rounded-2xl border border-edge shadow-card">
+          <ScrollReveal key={theory.id}>
+          <div className="mt-14 overflow-hidden rounded-2xl border border-edge shadow-card">
 
             {/* ── Theory header ─────────────────────────────────────────── */}
             <div className="bg-surface p-6 sm:p-8">
@@ -410,8 +416,10 @@ export default function LearningTheoryPage() {
             </div>
 
           </div>
+          </ScrollReveal>
         ))}
 
+        <ScrollReveal delay={1}>
         <div className="mt-14 rounded-card border border-edge bg-surface p-6 shadow-card">
           <h2 className="text-base font-extrabold text-copy">
             No single theory does everything
@@ -431,6 +439,7 @@ export default function LearningTheoryPage() {
             what separates a practitioner from someone who just builds courses.
           </p>
         </div>
+        </ScrollReveal>
 
       </ContentPage>
     </>

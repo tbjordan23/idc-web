@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Models",
@@ -16,6 +17,7 @@ export default function IDModelsPage() {
       title="Instructional Design Models"
       subtitle="The most important ID frameworks and when to use each one."
     >
+      <ScrollReveal>
       <p>
         If you&rsquo;ve ever felt like learning theory lives in a world of its own — full of
         concepts that are interesting in the abstract but hard to apply on a real project — you&rsquo;re
@@ -29,11 +31,14 @@ export default function IDModelsPage() {
         ADDIE model — that practitioners rely on to design learning experiences, courses, and
         instructional content.
       </p>
+      </ScrollReveal>
 
-      {/* ── ADDIE Model ──────────────────────────────────────────────────── */}
+      {/* ── ADDIE Model */}
+      <ScrollReveal>
       <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
         ADDIE Model
       </h2>
+      </ScrollReveal>
 
       <p>
         The ADDIE Model was first developed for the U.S. Military in the 1970s by Florida State
@@ -166,10 +171,12 @@ export default function IDModelsPage() {
         time.
       </p>
 
-      {/* ── Agile Instructional Design ───────────────────────────────────── */}
+      {/* ── Agile Instructional Design */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Agile Instructional Design
       </h2>
+      </ScrollReveal>
 
       <p>
         Agile Instructional Design applies the principles of Agile software development to the
@@ -273,10 +280,12 @@ export default function IDModelsPage() {
       </ul>
 
 
-      {/* ── Merrill's First Principles of Instruction ────────────────────── */}
+      {/* ── Merrill's First Principles of Instruction */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Merrill&rsquo;s First Principles of Instruction
       </h2>
+      </ScrollReveal>
 
       <p>
         Developed by educational psychologist M. David Merrill, the First Principles of Instruction
@@ -368,10 +377,12 @@ export default function IDModelsPage() {
         </li>
       </ul>
 
-      {/* ── Gagné's 9 Events of Instruction ─────────────────────────────── */}
+      {/* ── Gagné's 9 Events of Instruction */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Gagn&eacute;&rsquo;s 9 Events of Instruction
       </h2>
+      </ScrollReveal>
 
       <p>
         Robert Gagné is widely regarded as one of the foremost contributors to the systematic
@@ -483,10 +494,12 @@ export default function IDModelsPage() {
         </li>
       </ol>
 
-      {/* ── Bloom's Taxonomy ─────────────────────────────────────────────── */}
+      {/* ── Bloom's Taxonomy */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Bloom&rsquo;s Taxonomy
       </h2>
+      </ScrollReveal>
 
       <p>
         In 1956, educational psychologist Benjamin Bloom led a committee of educators in developing
@@ -592,10 +605,12 @@ export default function IDModelsPage() {
         </li>
       </ul>
 
-      {/* ── Kirkpatrick's Four Levels of Training Evaluation ─────────────── */}
+      {/* ── Kirkpatrick's Four Levels of Training Evaluation */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Kirkpatrick&rsquo;s Four Levels of Training Evaluation
       </h2>
+      </ScrollReveal>
 
       <p>
         The Kirkpatrick Model is the most widely recognized and applied framework for evaluating
@@ -673,10 +688,12 @@ export default function IDModelsPage() {
         </li>
       </ul>
 
-      {/* ── Design Thinking ──────────────────────────────────────────────── */}
+      {/* ── Design Thinking */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Design Thinking
       </h2>
+      </ScrollReveal>
 
       <p>
         Design Thinking is an iterative, human-centered approach to problem-solving that prioritizes
@@ -779,10 +796,12 @@ export default function IDModelsPage() {
         </li>
       </ul>
 
-      {/* ── ARCS Model ───────────────────────────────────────────────────── */}
+      {/* ── ARCS Model */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         ARCS Model of Motivational Design
       </h2>
+      </ScrollReveal>
 
       <p>
         Developed by educational psychologist John Keller in 1987, the ARCS Model addresses one
@@ -866,10 +885,12 @@ export default function IDModelsPage() {
         </li>
       </ul>
 
-      {/* ── 70-20-10 Framework ────────────────────────────────────────────── */}
+      {/* ── 70-20-10 Framework */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         70-20-10 Framework
       </h2>
+      </ScrollReveal>
 
       <p>
         The 70-20-10 Framework is a widely cited model in corporate learning and development that

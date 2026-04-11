@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
+import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Designer Salary",
@@ -106,6 +107,7 @@ export default function IDSalaryPage() {
       title="Instructional Designer Salary Guide"
       subtitle="Know your worth. Explore what instructional designers earn by experience, role, and industry — so you can advocate for yourself with confidence."
     >
+      <ScrollReveal>
       <p>
         Instructional design salaries span a wide range — and that range reflects the diversity of
         the field itself. An entry-level training specialist at a nonprofit and a senior learning
@@ -114,11 +116,14 @@ export default function IDSalaryPage() {
         field is the first step toward making informed decisions about where to work, which roles to
         pursue, and how to negotiate confidently.
       </p>
+      </ScrollReveal>
 
       {/* ── Salary by Experience ───────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
         Salary by Experience Level
       </h2>
+      </ScrollReveal>
 
       <p>
         Experience is the primary driver of compensation in instructional design. Here&rsquo;s
@@ -154,6 +159,7 @@ export default function IDSalaryPage() {
       </p>
 
       {/* ── Salary by Role ─────────────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Salary by Job Title
       </h2>
@@ -162,11 +168,12 @@ export default function IDSalaryPage() {
         The ID field uses many different titles for overlapping work. Here&rsquo;s how compensation
         stacks up across the most common roles, ordered from entry to executive.
       </p>
+      </ScrollReveal>
 
       <div className="mt-5 space-y-3">
-        {byRole.map((role) => (
+        {byRole.map((role, i) => (
+          <ScrollReveal key={role.title} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
           <div
-            key={role.title}
             className="flex items-center justify-between gap-4 rounded-card border border-edge bg-surface px-5 py-4 shadow-card"
           >
             <div>
@@ -177,6 +184,7 @@ export default function IDSalaryPage() {
               {role.salary}
             </span>
           </div>
+          </ScrollReveal>
         ))}
       </div>
 
@@ -185,9 +193,11 @@ export default function IDSalaryPage() {
       </p>
 
       {/* ── Salary by Industry ─────────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         How Industry Affects Pay
       </h2>
+      </ScrollReveal>
 
       <p>
         Across all experience levels and titles, industry has an outsized effect on what
@@ -216,6 +226,7 @@ export default function IDSalaryPage() {
       </div>
 
       {/* ── What Moves the Number ──────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         What Actually Moves Your Salary
       </h2>
@@ -224,10 +235,12 @@ export default function IDSalaryPage() {
         Ranges tell you the playing field — these are the factors that determine where you land
         within it.
       </p>
+      </ScrollReveal>
 
       <div className="mt-5 grid gap-4 sm:grid-cols-2">
-        {salaryFactors.map((factor) => (
-          <div key={factor.title} className="rounded-card border border-edge bg-surface p-5 shadow-card">
+        {salaryFactors.map((factor, i) => (
+          <ScrollReveal key={factor.title} delay={((i % 2) + 1) as 1 | 2}>
+          <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
             <div className="flex items-start gap-3">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
                 {factor.icon}
@@ -240,21 +253,27 @@ export default function IDSalaryPage() {
               </div>
             </div>
           </div>
+          </ScrollReveal>
         ))}
       </div>
 
       {/* ── Negotiation ───────────────────────────────────────────────────── */}
+      <ScrollReveal>
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
         Negotiating Your Salary as an Instructional Designer
       </h2>
+      </ScrollReveal>
 
+      <ScrollReveal delay={1}>
       <p>
         Most IDs leave money on the table — not because they lack skill, but because they undervalue
         their work or don&rsquo;t know how to frame it. A few things that consistently make a
         difference:
       </p>
 
+      </ScrollReveal>
       <div className="mt-5 space-y-4">
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <h3 className="text-sm font-extrabold text-copy">Speak in outcomes, not outputs</h3>
           <div className="mt-2 h-0.5 w-6 rounded bg-accent opacity-60" />
@@ -265,7 +284,9 @@ export default function IDSalaryPage() {
             concrete — and much harder to discount.
           </p>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <h3 className="text-sm font-extrabold text-copy">Know the market before every conversation</h3>
           <div className="mt-2 h-0.5 w-6 rounded bg-accent opacity-60" />
@@ -276,7 +297,9 @@ export default function IDSalaryPage() {
             the market shows for this role.&rdquo;
           </p>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={1}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <h3 className="text-sm font-extrabold text-copy">Don&rsquo;t anchor to your current salary</h3>
           <div className="mt-2 h-0.5 w-6 rounded bg-accent opacity-60" />
@@ -286,7 +309,9 @@ export default function IDSalaryPage() {
             to corporate. Anchor to the role&rsquo;s market value, not your history.
           </p>
         </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={2}>
         <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
           <h3 className="text-sm font-extrabold text-copy">Total compensation includes more than base</h3>
           <div className="mt-2 h-0.5 w-6 rounded bg-accent opacity-60" />
@@ -297,6 +322,7 @@ export default function IDSalaryPage() {
             and nonprofit roles often find compensation equity with their corporate counterparts.
           </p>
         </div>
+        </ScrollReveal>
       </div>
 
     </ContentPage>
