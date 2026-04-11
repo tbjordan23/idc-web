@@ -9,7 +9,13 @@ import ThemeToggle from "@/components/ui/ThemeToggle"
 const navigation = {
   main: [
     { label: "Home", href: "/" },
-    { label: "About", href: "/aboutinstructionaldesigncentral" },
+    {
+      label: "About",
+      dropdown: [
+        { label: "About Us", href: "/aboutinstructionaldesigncentral" },
+        { label: "Contact Us", href: "/contactinstructionaldesigncentral" },
+      ],
+    },
     {
       label: "Courses",
       dropdown: [
