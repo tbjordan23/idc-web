@@ -229,8 +229,25 @@ const rankedPrograms = [
 function FeaturedCard({ card }: { card: FeaturedCard }) {
   return (
     <div className="flex h-full flex-col rounded-lg border border-edge bg-[var(--surface-2)] p-5">
-      {/* School name */}
-      <p className="text-[13px] font-bold text-copy-dim">{card.school}</p>
+      {/* Logo + school name */}
+      <a href={card.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group">
+        {card.logo && (
+          <div
+            className="flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-sm border border-edge"
+            style={{ width: 28, height: 28, minWidth: 28 }}
+          >
+            <Image
+              src={card.logo}
+              alt={card.logoAlt ?? ""}
+              width={22}
+              height={22}
+              className="object-contain"
+              style={{ display: "block", width: 22, height: 22 }}
+            />
+          </div>
+        )}
+        <p className="text-[13px] font-bold text-copy-dim group-hover:text-copy-muted transition-colors">{card.school}</p>
+      </a>
 
       {/* Program title */}
       <p className="mt-1 line-clamp-2 text-sm font-bold leading-snug text-heading">
