@@ -75,6 +75,13 @@ export default function WhatIsIDPage() {
         Instructional Design Definitions
       </h2>
 
+      <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
+        The field goes by several names — instructional design, instructional technology, learning
+        experience design — and each carries a slightly different emphasis. Below are how leading
+        academic institutions and professional organizations define these terms. Understanding the
+        distinctions helps clarify where the field has come from and where it&rsquo;s headed.
+      </p>
+
       <h3 className="mt-8 text-lg font-bold text-copy">Instructional Design</h3>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
