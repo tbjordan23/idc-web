@@ -121,7 +121,14 @@ const rankedPrograms = [
     description:
       "Indiana University's Department of Instructional Systems Technology prepares practitioners and researchers to design, develop, and evaluate learning systems across diverse organizational contexts. Grounded in cognitive science, learning theory, and systems thinking, the IST program emphasizes real-world application and research-informed practice. Graduate offerings span certificate, MS, EdS, and PhD levels, with multiple online pathways available.",
     href: "https://education.indiana.edu/programs/instructional-systems-technology.html",
-    offerings: "Certificate, MS, EdS, PhD — online and on-campus",
+    offerings: ["Certificate", "MS", "EdS", "PhD", "Online", "On-Campus"],
+    highlights: [
+      "Ranked #1 in instructional design by U.S. News & World Report",
+      "Multiple degree pathways from certificate through PhD",
+      "Strong focus on cognitive science and learning theory",
+      "Flexible online and on-campus study options",
+      "Nationally recognized research faculty and applied practice emphasis",
+    ],
   },
   {
     rank: 2,
@@ -132,7 +139,14 @@ const rankedPrograms = [
     description:
       "Florida State University's Instructional Systems and Learning Technologies (ISLT) program is nationally recognized for preparing professionals who drive innovation in learning design, emerging technologies, and performance improvement. Graduates pursue careers in corporate training, higher education, government, and nonprofit sectors. The curriculum integrates instructional design theory, applied research, and emerging technology practice.",
     href: "https://annescollege.fsu.edu/instructional-systems-and-learning-technologies",
-    offerings: "Certificate, MS, PhD — online and on-campus",
+    offerings: ["Certificate", "MS", "PhD", "Online", "On-Campus"],
+    highlights: [
+      "Top-ranked ISLT program with a national reputation",
+      "Emphasis on emerging technologies and performance improvement",
+      "Graduates serve corporate, government, higher ed, and nonprofit sectors",
+      "Research-intensive curriculum grounded in applied practice",
+      "Online and hybrid options available for working professionals",
+    ],
   },
   {
     rank: 3,
@@ -143,7 +157,14 @@ const rankedPrograms = [
     description:
       "The University of Georgia's Learning, Design, and Technology program develops professionals with a deep understanding of human learning, motivation, and the instructional conditions that support effective performance. Students engage with research-grounded theory while building applied skills in instructional design, educational technology, and performance improvement. Graduate pathways include certificates, MEd, MA, and PhD degrees.",
     href: "https://online.uga.edu/degrees-certificates/med-learning-design-technology-instructional-design-development/",
-    offerings: "Certificate, MEd, MA, PhD — online and on-campus",
+    offerings: ["Certificate", "MEd", "MA", "PhD", "Online", "On-Campus"],
+    highlights: [
+      "Fully online MEd designed for working professionals",
+      "Strong focus on real-world instructional design practice",
+      "Covers needs assessment, design, development, and evaluation",
+      "Graduate certificates available as standalone credentials",
+      "Research-grounded curriculum in human learning and motivation",
+    ],
   },
   {
     rank: 4,
@@ -154,7 +175,14 @@ const rankedPrograms = [
     description:
       "Purdue University's Learning Design and Technology program prepares scholars and practitioners to serve as outstanding educators and leaders in the field. The curriculum integrates instructional pedagogy, learning theory, and educational technology to equip graduates who can design, implement, and evaluate effective learning experiences for diverse audiences in corporate, academic, and non-profit settings.",
     href: "https://education.purdue.edu/graduate-students/graduate-programs/learning-design-and-technology/",
-    offerings: "MS, PhD — online and on-campus",
+    offerings: ["MS", "PhD", "Online", "On-Campus"],
+    highlights: [
+      "Internationally recognized faculty in learning design and technology",
+      "Online MS available for working professionals",
+      "Strong industry and research partnerships",
+      "Curriculum integrates learning theory with applied educational technology",
+      "Doctoral program with a rigorous research and scholarship focus",
+    ],
   },
   {
     rank: 5,
@@ -165,7 +193,14 @@ const rankedPrograms = [
     description:
       "Utah State University's Instructional Technology and Learning Sciences department has been consistently ranked among the top instructional design programs in the nation by U.S. News & World Report. The ITLS program offers rigorous, research-grounded graduate training with flexible study options from certificate and MS through EdS and PhD, available online and on-campus.",
     href: "https://itls.usu.edu/",
-    offerings: "Certificate, MS, MEd, EdS, PhD — online and on-campus",
+    offerings: ["Certificate", "MS", "MEd", "EdS", "PhD", "Online", "On-Campus"],
+    highlights: [
+      "Consistently top-5 ranked by U.S. News & World Report",
+      "Certificate through PhD available at multiple levels",
+      "Fully online options across multiple degree programs",
+      "Strong research output in open education and learning design",
+      "Flexible pathways built for working professionals",
+    ],
   },
   {
     rank: 6,
@@ -176,7 +211,14 @@ const rankedPrograms = [
     description:
       "Michigan State University's Educational Psychology and Educational Technology (EPET) program prepares educators, designers, and researchers to develop technology-enhanced learning environments grounded in the science of human development and motivation. Drawing on current theories of learning and cognition, the program bridges research and practice for professionals across K–12, higher education, and corporate settings.",
     href: "https://education.msu.edu/cepse/ed-tech",
-    offerings: "Certificate, MA, PhD — online and on-campus",
+    offerings: ["Certificate", "MA", "PhD", "Online", "On-Campus"],
+    highlights: [
+      "Grounded in educational psychology and human development research",
+      "Focus on technology-enhanced learning environments",
+      "Serves learners in K–12, higher education, and corporate settings",
+      "MA and PhD pathways with strong research emphasis",
+      "Bridges theory and practice across diverse professional contexts",
+    ],
   },
 ]
 
@@ -195,17 +237,18 @@ function FeaturedCard({ card }: { card: FeaturedCard }) {
         {card.program}
       </p>
 
-      {/* Description */}
-      <p className="mt-2 line-clamp-3 text-xs font-medium leading-relaxed text-copy-muted">
+      {/* Description — flex-1 fills available space; line-clamp-[10] allows many lines
+          but still truncates with ... if content overflows the card height */}
+      <p className="mt-2 flex-1 overflow-hidden line-clamp-[10] text-xs font-medium leading-relaxed text-copy-muted">
         {card.description}
       </p>
 
-      {/* Learn More — sits right below description on mobile, pinned to bottom on desktop */}
+      {/* Learn More — always pinned to bottom */}
       <a
         href={card.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-4 sm:mt-auto inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
+        className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
       >
         Learn More
         <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -309,11 +352,32 @@ export default function IDDegreePage() {
                     <h3 className="mt-1.5 text-xl font-extrabold leading-snug text-heading sm:text-2xl">
                       {prog.program}
                     </h3>
-                    <p className="mt-1 text-xs font-semibold text-copy-dim">{prog.offerings}</p>
+                    <div className="mt-2 flex flex-wrap gap-1.5">
+                      {prog.offerings.map((tag) => (
+                        <span
+                          key={tag}
+                          className="inline-flex items-center rounded-full border border-edge bg-surface px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wider text-copy-dim"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                     <div className="mt-3 h-0.5 w-8 rounded bg-accent opacity-60" />
                     <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
                       {prog.description}
                     </p>
+                    <ul className="mt-4 space-y-2">
+                      {prog.highlights.map((item) => (
+                        <li key={item} className="flex items-start gap-2.5">
+                          <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)]">
+                            <svg className="h-3 w-3 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                            </svg>
+                          </span>
+                          <span className="text-sm font-medium leading-snug text-copy-muted">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
                     <a
                       href={prog.href}
                       target="_blank"
