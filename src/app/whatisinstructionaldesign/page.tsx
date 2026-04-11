@@ -66,9 +66,16 @@ export default function WhatIsIDPage() {
       </p>
 
       {/* ── Instructional Design Definitions ───────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
+      <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
+          <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </span>
         Instructional Design Definitions
       </h2>
+
+      <h3 className="mt-8 text-lg font-bold text-copy">Instructional Design</h3>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
@@ -108,9 +115,9 @@ export default function WhatIsIDPage() {
       </blockquote>
 
       {/* ── Educational Technology ──────────────────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
+      <h3 className="mt-8 text-lg font-bold text-copy">
         Educational Technology
-      </h2>
+      </h3>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
@@ -152,9 +159,9 @@ export default function WhatIsIDPage() {
       </blockquote>
 
       {/* ── Learning Experience (LX) Design ────────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
+      <h3 className="mt-8 text-lg font-bold text-copy">
         Learning Experience (LX) Design
-      </h2>
+      </h3>
 
       <blockquote className="border-l-2 border-accent pl-5 not-italic">
         <p>
@@ -180,7 +187,12 @@ export default function WhatIsIDPage() {
       </blockquote>
 
       {/* ── What is an Instructional Designer? ─────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
+      <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
+          <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM12 14a7 7 0 0 0-7 7h14a7 7 0 0 0-7-7z" />
+          </svg>
+        </span>
         What is an Instructional Designer?
       </h2>
 
@@ -275,7 +287,12 @@ export default function WhatIsIDPage() {
       </blockquote>
 
       {/* ── What Does an ID Actually Do? ────────────────────────────────── */}
-      <h2 className="mt-10 text-xl font-extrabold tracking-tight text-heading">
+      <h2 className="mt-10 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
+          <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0 1 12 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2m4 6h.01M5 20h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z" />
+          </svg>
+        </span>
         What Does an Instructional Designer Actually Do?
       </h2>
 
@@ -407,7 +424,12 @@ export default function WhatIsIDPage() {
 
       </div>
 
-      <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
+      <h2 className="mt-12 flex items-center gap-3 text-xl font-extrabold tracking-tight text-heading">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-accent">
+          <svg className="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+          </svg>
+        </span>
         What Does an Instructional Designer Create?
       </h2>
 
