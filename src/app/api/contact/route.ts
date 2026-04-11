@@ -14,6 +14,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 })
   }
 
+  console.log("API key present:", !!process.env.RESEND_API_KEY, "length:", process.env.RESEND_API_KEY?.length)
+
   const { data, error } = await resend.emails.send({
     from: "IDC Contact Form <onboarding@resend.dev>",
     to: "info@instructionaldesigncentral.com",
