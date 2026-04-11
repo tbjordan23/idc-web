@@ -340,23 +340,178 @@ export default function WhatIsIDPage() {
 
       </div>
 
-      <h3 className="mt-8 text-base font-bold text-copy">What IDs Create</h3>
+      <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
+        What Does an Instructional Designer Create?
+      </h2>
+
       <p>
-        The range of deliverables an instructional designer produces is wide. You might find
-        yourself working on any of the following, depending on the role and organization:
+        The range of deliverables an instructional designer produces is wide. Depending on the
+        role and organization, you might be building any of the following — often several at once.
       </p>
-      <ul className="list-disc space-y-1.5 pl-5">
-        <li>eLearning courses and interactive modules</li>
-        <li>Instructor-led training (ILT) and virtual ILT (vILT) materials</li>
-        <li>Storyboards and design documents</li>
-        <li>Video scripts and narration copy</li>
-        <li>Job aids, quick reference guides, and performance support tools</li>
-        <li>Assessments, quizzes, and scenario-based simulations</li>
-        <li>Facilitator guides and participant workbooks</li>
-        <li>Onboarding programs and learning paths</li>
-        <li>LMS course structures and learning taxonomies</li>
-        <li>Measurement and evaluation plans</li>
-      </ul>
+
+      <div className="mt-6 grid gap-4 sm:grid-cols-2">
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">eLearning Courses</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                Self-paced interactive modules built in tools like Articulate Storyline or Rise — the bread and butter of most ID roles.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">Instructor-Led Training (ILT &amp; vILT)</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                Live classroom and virtual training programs — designed for engagement, not just information transfer.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zm10 0a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">Storyboards &amp; Design Documents</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                The blueprint before anything gets built — aligning stakeholders on structure, content, and interactions before a single slide is developed.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.36a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">Video Scripts &amp; Narration</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                Clear, engaging scripts that make complex ideas easy to follow — whether voiced by a human narrator or AI.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">Job Aids &amp; Performance Support</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                Quick-reference guides, checklists, and decision tools that support performance in the moment — often more effective than a course.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">Assessments &amp; Simulations</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                Quizzes, knowledge checks, branching scenarios, and simulations that measure and reinforce learning — not just test recall.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">Facilitator Guides &amp; Workbooks</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                Detailed guides that give trainers everything they need to deliver a consistent, high-quality learning experience every time.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0L9 7" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">Onboarding Programs &amp; Learning Paths</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                Structured sequences that guide learners from where they are to where they need to be — a high-impact, high-visibility deliverable in most orgs.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">LMS Structures &amp; Learning Taxonomies</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                The architecture behind the content — how courses are organized, tagged, and delivered inside a learning management system.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="rounded-card border border-edge bg-surface p-5 shadow-card">
+          <div className="flex items-start gap-4">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
+              <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+              </svg>
+            </div>
+            <div>
+              <h3 className="text-sm font-extrabold text-copy">Measurement &amp; Evaluation Plans</h3>
+              <p className="mt-1 text-xs font-medium leading-relaxed text-copy-muted">
+                The strategy for knowing whether learning worked — using frameworks like Kirkpatrick to connect training to real business outcomes.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
       {/* ── ID in the Age of AI ─────────────────────────────────────────── */}
       <h2 className="mt-12 text-xl font-extrabold tracking-tight text-heading">
