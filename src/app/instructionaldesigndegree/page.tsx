@@ -189,10 +189,10 @@ const rankedPrograms = [
   },
 ]
 
-/** Square card — logo top, school name, program title, Learn More at bottom */
+/** Square-proportion card — logo top, school name, program title, Learn More at bottom */
 function FeaturedCard({ card }: { card: FeaturedCard }) {
   return (
-    <div className="aspect-square flex flex-col rounded-lg border border-edge bg-surface p-5">
+    <div className="flex h-full min-h-[200px] flex-col rounded-lg border border-edge bg-surface p-5">
       {/* Logo */}
       <a
         href={card.href}
@@ -283,7 +283,7 @@ export default function IDDegreePage() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {featuredDegrees.map((card, i) => (
-              <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4}>
+              <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full">
                 <FeaturedCard card={card} />
               </ScrollReveal>
             ))}
@@ -378,7 +378,7 @@ export default function IDDegreePage() {
 
           <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
             {featuredCertificates.map((card, i) => (
-              <ScrollReveal key={card.program} delay={(Math.min((i % 4) + 1, 4)) as 1 | 2 | 3 | 4}>
+              <ScrollReveal key={card.program} delay={(Math.min((i % 4) + 1, 4)) as 1 | 2 | 3 | 4} className="h-full">
                 <FeaturedCard card={card} />
               </ScrollReveal>
             ))}
