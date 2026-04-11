@@ -17,7 +17,7 @@ export async function POST(req: NextRequest) {
   const { data, error } = await resend.emails.send({
     from: "IDC Contact Form <onboarding@resend.dev>",
     to: "tbjordan@gmail.com",
-    reply_to: email,
+    replyTo: email,
     subject: `New message from ${firstName} ${lastName}`,
     text: `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`,
     html: `
