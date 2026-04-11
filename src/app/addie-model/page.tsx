@@ -1,8 +1,7 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
-import Link from "next/link"
-import Image from "next/image"
+import CoursePromo from "@/components/ui/CoursePromo"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "ADDIE Model",
@@ -206,43 +205,20 @@ export default function ADDIEModelPage() {
           abandoning it prematurely.
         </p>
 
-        {/* Course CTA */}
-        <div className="mt-10 rounded-card border border-edge bg-surface p-6 shadow-card">
-          <p className="text-xs font-bold uppercase tracking-widest text-accent">IDC Course</p>
-          <h3 className="mt-2 text-lg font-extrabold tracking-tight text-heading">
-            Ready to master ADDIE?
-          </h3>
-          <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
-          <div className="mt-3 flex items-center gap-5">
-            <div className="relative hidden sm:block shrink-0 w-28 h-28 rounded-lg overflow-hidden">
-              <Image
-                src="/course-addie-model.png"
-                alt="Mastering the ADDIE Model course"
-                fill
-                className="object-cover"
-                sizes="112px"
-              />
-            </div>
-            <div className="flex flex-col">
-              <p className="text-sm font-medium leading-relaxed text-copy-muted">
-                Reading about ADDIE is a great start — but applying it to a real project is where it
-                clicks. The IDC <strong className="font-bold text-copy">Mastering the ADDIE Model</strong>{" "}
-                course walks you through every phase with practical examples, real-world templates, and
-                hands-on exercises. You&rsquo;ll finish with a certificate and the confidence to use
-                ADDIE on any project that comes your way.
-              </p>
-              <Link
-                href="/addie-model-course"
-                className="mt-4 self-start inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-              >
-                Explore the ADDIE Model Course
-                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
+        <CoursePromo
+          title="Ready to master ADDIE?"
+          image="/course-addie-model.png"
+          imageAlt="Mastering the ADDIE Model course"
+          ctaLabel="Explore the ADDIE Model Course"
+          ctaHref="/addie-model-course"
+          description={<>
+            Reading about ADDIE is a great start — but applying it to a real project is where it
+            clicks. The IDC <strong className="font-bold text-copy">Mastering the ADDIE Model</strong>{" "}
+            course walks you through every phase with practical examples, real-world templates, and
+            hands-on exercises. You&rsquo;ll finish with a certificate and the confidence to use
+            ADDIE on any project that comes your way.
+          </>}
+        />
 
       </ContentPage>
     </>
