@@ -26,7 +26,7 @@ export default function CoursePromo({
       <h3 className="mt-2 text-lg font-extrabold tracking-tight text-heading">{title}</h3>
       <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
       <div className="mt-3 flex items-start gap-5">
-        <div className="relative hidden sm:block shrink-0 w-20 h-20 rounded-lg overflow-hidden">
+        <div className="relative hidden sm:block shrink-0 w-20 h-20 rounded-lg overflow-hidden mt-1">
           <Image
             src={image}
             alt={imageAlt}
