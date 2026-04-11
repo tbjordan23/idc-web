@@ -199,9 +199,7 @@ export default function WhatIsIDPage() {
         field break down.
       </p>
 
-      {/* Trending Up */}
-      <p className="mt-6 text-[11px] font-bold uppercase tracking-widest text-emerald-500">Trending Up</p>
-      <div className="mt-3 space-y-4">
+      <div className="mt-6 space-y-4">
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
@@ -252,9 +250,7 @@ export default function WhatIsIDPage() {
 
       </div>
 
-      {/* Trending Down */}
-      <p className="mt-8 text-[11px] font-bold uppercase tracking-widest text-rose-500">Trending Down</p>
-      <div className="mt-3 space-y-4">
+      <div className="mt-4 space-y-4">
 
         <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
           <div className="flex items-start justify-between gap-3">
