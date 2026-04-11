@@ -189,51 +189,51 @@ const rankedPrograms = [
   },
 ]
 
-/** Wide horizontal card — compact height, logo left, text center, CTA right */
+/** Vertical card — logo + school top, title, description, Learn More */
 function FeaturedCard({ card }: { card: FeaturedCard }) {
   return (
-    <div className="flex items-center gap-4 rounded-lg border border-edge bg-surface px-4 py-3.5">
-      {/* Logo */}
-      <a
-        href={card.href}
-        target="_blank"
-        rel="noopener noreferrer"
-        tabIndex={-1}
-        aria-hidden="true"
-        className="shrink-0"
-      >
-        <div
-          className="flex items-center justify-center overflow-hidden rounded bg-white shadow-sm"
-          style={{ width: 44, height: 44, minWidth: 44, minHeight: 44 }}
+    <div className="flex h-full flex-col rounded-lg border border-edge bg-surface p-5">
+      {/* Logo + school row */}
+      <div className="mb-3 flex items-center gap-3">
+        <a
+          href={card.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          tabIndex={-1}
+          aria-hidden="true"
+          className="shrink-0"
         >
-          {card.logo ? (
-            <Image
-              src={card.logo}
-              alt={card.logoAlt ?? card.school}
-              width={44}
-              height={44}
-              className="h-full w-full object-contain p-1"
-            />
-          ) : (
-            <span className="text-sm font-extrabold text-accent">
-              {card.school.charAt(0)}
-            </span>
-          )}
-        </div>
-      </a>
-
-      {/* Text — grows to fill */}
-      <div className="min-w-0 flex-1">
-        <p className="truncate text-[11px] font-bold text-copy-dim">{card.school}</p>
-        <p className="text-[15px] font-bold leading-snug text-heading">{card.program}</p>
+          <div
+            className="flex items-center justify-center overflow-hidden rounded bg-white shadow-sm"
+            style={{ width: 44, height: 44, minWidth: 44, minHeight: 44 }}
+          >
+            {card.logo ? (
+              <Image
+                src={card.logo}
+                alt={card.logoAlt ?? card.school}
+                width={44}
+                height={44}
+                className="h-full w-full object-contain p-1"
+              />
+            ) : (
+              <span className="text-sm font-extrabold text-accent">
+                {card.school.charAt(0)}
+              </span>
+            )}
+          </div>
+        </a>
+        <p className="text-xs font-bold text-copy-dim">{card.school}</p>
       </div>
 
-      {/* CTA — pinned right */}
+      <p className="text-[15px] font-bold leading-snug text-heading">{card.program}</p>
+      <p className="mt-2 flex-1 text-xs font-medium leading-relaxed text-copy-muted">
+        {card.description}
+      </p>
       <a
         href={card.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="ml-2 shrink-0 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline whitespace-nowrap"
+        className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-accent hover:underline"
       >
         Learn More
         <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -277,7 +277,7 @@ export default function IDDegreePage() {
             </div>
           </ScrollReveal>
 
-          <div className="flex flex-col gap-2.5">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {featuredDegrees.map((card, i) => (
               <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4}>
                 <FeaturedCard card={card} />
@@ -291,7 +291,7 @@ export default function IDDegreePage() {
       <section className="border-t border-edge py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="text-3xl font-extrabold tracking-tight text-heading sm:text-4xl">
+            <h2 className="text-xl font-extrabold tracking-tight text-heading sm:text-2xl">
               Top Instructional Design Degree Programs
             </h2>
             <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
@@ -370,7 +370,7 @@ export default function IDDegreePage() {
             </div>
           </ScrollReveal>
 
-          <div className="flex flex-col gap-2.5">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             {featuredCertificates.map((card, i) => (
               <ScrollReveal key={card.program} delay={(Math.min((i % 4) + 1, 4)) as 1 | 2 | 3 | 4}>
                 <FeaturedCard card={card} />
