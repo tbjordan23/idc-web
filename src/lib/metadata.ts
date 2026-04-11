@@ -9,6 +9,7 @@ interface PageMetadataOptions {
   title: string
   description: string
   path?: string
+  /** Override the auto-generated OG image with a specific URL or path. */
   ogImage?: string
 }
 
@@ -16,9 +17,15 @@ export function generatePageMetadata({
   title,
   description,
   path = "",
-  ogImage = "/og-default.png",
+  ogImage,
 }: PageMetadataOptions): Metadata {
   const url = `${siteUrl}${path}`
+
+  // Default: dynamic branded image generated per page via /api/og
+  const ogImageUrl =
+    ogImage
+      ? ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`
+      : `${siteUrl}/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`
 
   return {
     title,
@@ -34,7 +41,7 @@ export function generatePageMetadata({
       type: "website",
       images: [
         {
-          url: ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
           alt: title,
@@ -45,7 +52,7 @@ export function generatePageMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage.startsWith("http") ? ogImage : `${siteUrl}${ogImage}`],
+      images: [ogImageUrl],
     },
   }
 }

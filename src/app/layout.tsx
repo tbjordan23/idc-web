@@ -23,10 +23,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: siteUrl,
     siteName: "Instructional Design Central",
+    images: [
+      {
+        url: `${siteUrl}/api/og?title=${encodeURIComponent("Instructional Design Central")}&description=${encodeURIComponent("Community, courses, and resources for instructional designers.")}`,
+        width: 1200,
+        height: 630,
+        alt: "Instructional Design Central",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     site: "@id_central",
+    images: [
+      `${siteUrl}/api/og?title=${encodeURIComponent("Instructional Design Central")}&description=${encodeURIComponent("Community, courses, and resources for instructional designers.")}`,
+    ],
   },
 }
 
