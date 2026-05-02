@@ -310,11 +310,9 @@ function FeaturedCard({ card }: { card: FeaturedConference }) {
       </a>
 
       {/* Conference name */}
-      <a href={card.href} target="_blank" rel="noopener noreferrer" className="group">
-        <p className="mt-1 line-clamp-2 text-sm font-bold leading-snug text-heading group-hover:text-accent transition-colors">
-          {card.name}
-        </p>
-      </a>
+      <p className="mt-1 line-clamp-2 text-sm font-bold leading-snug text-heading">
+        {card.name}
+      </p>
 
       {/* Timing badge */}
       <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-[var(--accent-glow)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">
@@ -325,7 +323,7 @@ function FeaturedCard({ card }: { card: FeaturedConference }) {
       </span>
 
       {/* Description */}
-      <p className="mt-3 flex-1 overflow-hidden line-clamp-[10] text-xs font-medium leading-relaxed text-copy-muted">
+      <p className="mt-3 flex-1 text-xs font-medium leading-relaxed text-copy-muted">
         {card.description}
       </p>
 
@@ -387,7 +385,7 @@ export default function ConferencesPage() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {featuredConferences.map((card, i) => (
-              <ScrollReveal key={card.name} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full sm:aspect-square">
+              <ScrollReveal key={card.name} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full">
                 <FeaturedCard card={card} />
               </ScrollReveal>
             ))}
