@@ -65,9 +65,9 @@ const featuredConferences: FeaturedConference[] = [
   },
   {
     org: "SXSW",
-    name: "SXSW EDU",
-    logo: null,
-    logoAlt: null,
+    name: "SXSW EDU Conference",
+    logo: "/logos/sxsw-edu-logo.png",
+    logoAlt: "SXSW EDU logo",
     description:
       "SXSW EDU draws educators, EdTech founders, and learning innovators to Austin for a creative week of emerging ideas — less focused on tooling, more on where learning is headed and what becomes possible next.",
     href: "https://sxswedu.com/",
