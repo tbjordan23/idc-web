@@ -45,6 +45,8 @@ const faqSchema = {
 type FeaturedConference = {
   org: string
   name: string
+  logo: string | null
+  logoAlt: string | null
   description: string
   href: string
   when: string
@@ -54,6 +56,8 @@ const featuredConferences: FeaturedConference[] = [
   {
     org: "Langevin Learning Services",
     name: "Certified Virtual Instructional Designer/Developer",
+    logo: "/logos/langevin-logo.png",
+    logoAlt: "Langevin logo",
     description:
       "Acquire the key skills to successfully design virtual training that is engaging, interactive, and maximizes performance. Apply Langevin's proven step-by-step design process to tackle the critical constraints of virtual classroom design, select the best methods and tools for your content, and more — backed by 35+ years of instructional design experience and innovation.",
     href: "https://langevin.com/certified-virtual-instructional-designer-developer/?utm_source=idc&utm_medium=listing&utm_campaign=text_listings",
@@ -62,6 +66,8 @@ const featuredConferences: FeaturedConference[] = [
   {
     org: "eLearning Guild",
     name: "DevLearn Conference & Expo",
+    logo: "/logos/devlearn-logo.png",
+    logoAlt: "DevLearn logo",
     description:
       "The premier event for learning professionals who want to stay ahead of the technology curve. DevLearn covers eLearning tools, authoring platforms, AI in learning, and emerging tech — all with a strong hands-on ethos. DemoFest, where practitioners showcase real projects, is one of the most engaging sessions in the industry.",
     href: "https://devlearn.com/",
@@ -70,6 +76,8 @@ const featuredConferences: FeaturedConference[] = [
   {
     org: "Association for Talent Development (ATD)",
     name: "ATD International Conference & EXPO",
+    logo: "/logos/atd-conference-logo.webp",
+    logoAlt: "ATD logo",
     description:
       "The world's largest talent development event. ATD ICE brings together 10,000+ L&D professionals from 80+ countries for 350+ sessions spanning instructional design, eLearning, AI in learning, leadership development, coaching, and performance consulting. The expo floor alone — 300+ exhibitors — is worth the trip.",
     href: "https://atdconference.td.org/",
@@ -281,8 +289,23 @@ const conferences: ConferenceEntry[] = [
 function FeaturedCard({ card }: { card: FeaturedConference }) {
   return (
     <div className="flex h-full flex-col rounded-lg border border-edge bg-[var(--surface-2)] p-5">
-      {/* Org name */}
-      <a href={card.href} target="_blank" rel="noopener noreferrer" className="group">
+      {/* Logo + org name */}
+      <a href={card.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 group">
+        {card.logo && (
+          <div
+            className="flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-white shadow-sm border border-edge"
+            style={{ width: 28, height: 28, minWidth: 28 }}
+          >
+            <Image
+              src={card.logo}
+              alt={card.logoAlt ?? ""}
+              width={22}
+              height={22}
+              className="object-contain"
+              style={{ display: "block", width: 22, height: 22 }}
+            />
+          </div>
+        )}
         <p className="text-[13px] font-bold text-copy-dim group-hover:text-copy-muted transition-colors">{card.org}</p>
       </a>
 
