@@ -69,7 +69,7 @@ const featuredConferences: FeaturedConference[] = [
     logo: "/logos/sxsw-edu-logo.png",
     logoAlt: "SXSW EDU logo",
     description:
-      "SXSW EDU draws educators, EdTech founders, and learning innovators to Austin for a creative week exploring where learning is headed...",
+      "SXSW EDU draws educators, EdTech founders, and learning innovators to Austin for a creative week of emerging ideas — less focused on tooling, more on where learning is headed and what becomes possible next...",
     href: "https://sxswedu.com/",
     when: "Annual · March · Austin",
   },
@@ -273,7 +273,7 @@ function FeaturedCard({ card }: { card: FeaturedConference }) {
       </span>
 
       {/* Description */}
-      <p className="mt-3 flex-1 overflow-hidden line-clamp-4 text-xs font-medium leading-relaxed text-copy-muted">
+      <p className="mt-3 flex-1 overflow-hidden line-clamp-5 text-xs font-medium leading-relaxed text-copy-muted">
         {card.description}
       </p>
 
