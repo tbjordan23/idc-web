@@ -59,7 +59,7 @@ const featuredConferences: FeaturedConference[] = [
     logo: "/logos/langevin-logo.png",
     logoAlt: "Langevin logo",
     description:
-      "Acquire the key skills to successfully design virtual training that is engaging, interactive, and maximizes performance. Apply Langevin's proven step-by-step design process to tackle the critical constraints of virtual classroom design, select the best methods and tools for your content, and more — backed by 35+ years of instructional design experience and innovation.",
+      "Learn to design engaging, high-impact virtual training using Langevin's proven 12-step process. Tackle the critical constraints of virtual classroom design and select the best methods for your content — backed by 35+ years of instructional design expertise.",
     href: "https://langevin.com/certified-virtual-instructional-designer-developer/?utm_source=idc&utm_medium=listing&utm_campaign=text_listings",
     when: "Online · On-Demand",
   },
@@ -69,7 +69,7 @@ const featuredConferences: FeaturedConference[] = [
     logo: "/logos/devlearn-logo.png",
     logoAlt: "DevLearn logo",
     description:
-      "The premier event for learning professionals who want to stay ahead of the technology curve. DevLearn covers eLearning tools, authoring platforms, AI in learning, and emerging tech — all with a strong hands-on ethos. DemoFest, where practitioners showcase real projects, is one of the most engaging sessions in the industry.",
+      "The premier event for learning professionals who care about the craft. Sessions cover eLearning tools, authoring platforms, AI in learning, and emerging tech — plus the beloved DemoFest, where practitioners showcase real-world projects they built.",
     href: "https://devlearn.com/",
     when: "Annual · October · Las Vegas",
   },
@@ -79,7 +79,7 @@ const featuredConferences: FeaturedConference[] = [
     logo: "/logos/atd-conference-logo.webp",
     logoAlt: "ATD logo",
     description:
-      "The world's largest talent development event. ATD ICE brings together 10,000+ L&D professionals from 80+ countries for 350+ sessions spanning instructional design, eLearning, AI in learning, leadership development, coaching, and performance consulting. The expo floor alone — 300+ exhibitors — is worth the trip.",
+      "The world's largest talent development event. ATD ICE brings together 10,000+ L&D professionals from 80+ countries for 350+ sessions spanning instructional design, eLearning, AI in learning, and performance consulting — plus an expo floor with 300+ exhibitors.",
     href: "https://atdconference.td.org/",
     when: "Annual · May · Los Angeles",
   },
@@ -323,7 +323,7 @@ function FeaturedCard({ card }: { card: FeaturedConference }) {
       </span>
 
       {/* Description */}
-      <p className="mt-3 flex-1 text-xs font-medium leading-relaxed text-copy-muted">
+      <p className="mt-3 flex-1 overflow-hidden line-clamp-5 text-xs font-medium leading-relaxed text-copy-muted">
         {card.description}
       </p>
 
@@ -385,7 +385,7 @@ export default function ConferencesPage() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {featuredConferences.map((card, i) => (
-              <ScrollReveal key={card.name} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full">
+              <ScrollReveal key={card.name} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full sm:aspect-square">
                 <FeaturedCard card={card} />
               </ScrollReveal>
             ))}
