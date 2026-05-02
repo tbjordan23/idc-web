@@ -59,7 +59,7 @@ const featuredConferences: FeaturedConference[] = [
     logo: "/logos/langevin-logo.png",
     logoAlt: "Langevin logo",
     description:
-      "Learn to design engaging virtual training using Langevin's proven 12-step process — backed by 35+ years of instructional design expertise and innovation.",
+      "Design engaging virtual training using Langevin's proven 12-step process — backed by 35+ years of instructional design expertise.",
     href: "https://langevin.com/certified-virtual-instructional-designer-developer/?utm_source=idc&utm_medium=listing&utm_campaign=text_listings",
     when: "Online · On-Demand",
   },
