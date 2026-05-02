@@ -56,7 +56,7 @@ const featuredConferences: FeaturedConference[] = [
     name: "Certified Virtual Instructional Designer/Developer",
     description:
       "Acquire the key skills to successfully design virtual training that is engaging, interactive, and maximizes performance. Apply Langevin's proven step-by-step design process to tackle the critical constraints of virtual classroom design, select the best methods and tools for your content, and more — backed by 35+ years of instructional design experience and innovation.",
-    href: "https://www.langevin.com/certified-virtual-instructional-designer-developer/",
+    href: "https://langevin.com/certified-virtual-instructional-designer-developer/?utm_source=idc&utm_medium=listing&utm_campaign=text_listings",
     when: "Online · On-Demand",
   },
   {
@@ -282,12 +282,16 @@ function FeaturedCard({ card }: { card: FeaturedConference }) {
   return (
     <div className="flex h-full flex-col rounded-lg border border-edge bg-[var(--surface-2)] p-5">
       {/* Org name */}
-      <p className="text-[13px] font-bold text-copy-dim">{card.org}</p>
+      <a href={card.href} target="_blank" rel="noopener noreferrer" className="group">
+        <p className="text-[13px] font-bold text-copy-dim group-hover:text-copy-muted transition-colors">{card.org}</p>
+      </a>
 
       {/* Conference name */}
-      <p className="mt-1 line-clamp-2 text-sm font-bold leading-snug text-heading">
-        {card.name}
-      </p>
+      <a href={card.href} target="_blank" rel="noopener noreferrer" className="group">
+        <p className="mt-1 line-clamp-2 text-sm font-bold leading-snug text-heading group-hover:text-accent transition-colors">
+          {card.name}
+        </p>
+      </a>
 
       {/* Timing badge */}
       <span className="mt-2 inline-flex w-fit items-center gap-1 rounded-full bg-[var(--accent-glow)] px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-accent">
