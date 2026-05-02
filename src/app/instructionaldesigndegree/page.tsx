@@ -84,12 +84,12 @@ const featuredDegrees: FeaturedCard[] = [
 const featuredCertificates: FeaturedCard[] = [
   {
     school: "Langevin Learning Services",
-    program: "Certified Virtual Instructional Designer/Developer (CVIDD)",
+    program: "Instructional Design Certification",
     logo: "/logos/langevin-logo.png",
     logoAlt: "Langevin logo",
     description:
       "A hands-on certification using Langevin's proven 12-step design process for creating engaging, high-impact virtual training.",
-    href: "https://www.langevin.com/certified-virtual-instructional-designer-developer/",
+    href: "https://langevin.com/certified-instructional-designer-developer/?utm_source=idc&utm_medium=listing&utm_campaign=text_listings",
   },
   {
     school: "Association for Talent Development (ATD)",
