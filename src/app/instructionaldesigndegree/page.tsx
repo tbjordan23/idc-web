@@ -79,6 +79,15 @@ const featuredDegrees: FeaturedCard[] = [
       "USU's ITLS programs are ranked among the top instructional design programs in the nation by U.S. News & World Report, offering certificates through PhD, online and on-campus.",
     href: "https://itls.usu.edu/",
   },
+  {
+    school: "CSUN",
+    program: "Master of Arts in Instructional Design",
+    logo: "/logos/csun-logo.png",
+    logoAlt: "CSUN logo",
+    description:
+      "CSUN's fully online MA in Instructional Design prepares working professionals to design impactful learning experiences across corporate, educational, and nonprofit settings.",
+    href: "https://go.csun.edu/mid?utm_source=idc&utm_medium=april-banner_410x215&utm_campaign=mid05_fall24&utm_content=Shape-online",
+  },
 ]
 
 const featuredCertificates: FeaturedCard[] = [
@@ -312,7 +321,7 @@ export default function IDDegreePage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {featuredDegrees.map((card, i) => (
               <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full sm:aspect-square">
                 <FeaturedCard card={card} />
