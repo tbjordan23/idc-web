@@ -335,7 +335,7 @@ export default function ConferencesPage() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             {featuredConferences.map((card, i) => (
-              <ScrollReveal key={card.name} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full sm:aspect-square">
+              <ScrollReveal key={card.name} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full sm:aspect-[70/71]">
                 <FeaturedCard card={card} />
               </ScrollReveal>
             ))}
