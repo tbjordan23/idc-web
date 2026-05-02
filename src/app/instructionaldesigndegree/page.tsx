@@ -255,11 +255,13 @@ function FeaturedCard({ card }: { card: FeaturedCard }) {
         {card.program}
       </p>
 
-      {/* Description — only rendered when present */}
-      {card.description && (
+      {/* Description — only rendered when present; spacer keeps Learn More pinned to bottom */}
+      {card.description ? (
         <p className="mt-2 flex-1 overflow-hidden line-clamp-[10] text-xs font-medium leading-relaxed text-copy-muted">
           {card.description}
         </p>
+      ) : (
+        <div className="flex-1" />
       )}
 
       {/* Learn More — always pinned to bottom */}
