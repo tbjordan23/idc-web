@@ -64,14 +64,14 @@ const featuredConferences: FeaturedConference[] = [
     when: "Online · On-Demand",
   },
   {
-    org: "eLearning Guild",
-    name: "DevLearn Conference & Expo",
-    logo: "/logos/devlearn-logo.png",
-    logoAlt: "DevLearn logo",
+    org: "SXSW",
+    name: "SXSW EDU",
+    logo: null,
+    logoAlt: null,
     description:
-      "The premier event for learning professionals who care about the craft. Sessions cover eLearning tools, authoring platforms, AI in learning, and emerging tech — plus the beloved DemoFest, where practitioners showcase real-world projects they built.",
-    href: "https://devlearn.com/",
-    when: "Annual · October · Las Vegas",
+      "SXSW EDU draws educators, EdTech founders, and learning innovators to Austin for a creative week of emerging ideas — less focused on tooling, more on where learning is headed and what becomes possible next.",
+    href: "https://sxswedu.com/",
+    when: "Annual · March · Austin",
   },
   {
     org: "Association for Talent Development (ATD)",
@@ -155,33 +155,6 @@ const conferences: ConferenceEntry[] = [
   },
   {
     rank: 3,
-    org: "eLearning Guild",
-    name: "Learning Solutions Conference",
-    when: "Annual · March",
-    location: "Orlando, FL",
-    description:
-      "Learning Solutions is the practical counterpart to DevLearn — focused on applied L&D work that you can take back and use on Monday. Sessions cover instructional design fundamentals, learning strategy, accessibility, UX for learning, and current tools, all with an emphasis on real-world application. The conference is intentionally smaller than ATD ICE, which makes it easier to actually connect with other practitioners. For early-career IDs, it's one of the best first conferences to attend — accessible, welcoming, and substantive.",
-    href: "https://www.learningsolutionscon.com/",
-    tags: ["Annual", "In-Person", "Virtual", "March", "Orlando"],
-    highlights: [
-      "Practical, applied sessions focused on real instructional design work",
-      "Accessible pricing — a great entry point for early-career professionals",
-      "Intentionally smaller scale for genuine peer networking",
-      "Covers eLearning, ILT, microlearning, accessibility, and learning strategy",
-      "Strong eLearning Guild community presence with active peer engagement",
-    ],
-    icon: (
-      <Image
-        src="/logos/elearning-guild-logo.png"
-        alt="eLearning Guild Logo"
-        width={64}
-        height={64}
-        className="rounded-lg object-cover"
-      />
-    ),
-  },
-  {
-    rank: 4,
     org: "Training Magazine",
     name: "Training Magazine Conference & Expo",
     when: "Annual · February",
@@ -208,7 +181,7 @@ const conferences: ConferenceEntry[] = [
     ),
   },
   {
-    rank: 5,
+    rank: 4,
     org: "Wilmington Group",
     name: "Learning Technologies Conference & Exhibition",
     when: "Annual · February",
@@ -235,7 +208,7 @@ const conferences: ConferenceEntry[] = [
     ),
   },
   {
-    rank: 6,
+    rank: 5,
     org: "Training Industry",
     name: "Training Industry Conference & Expo (TICE)",
     when: "Annual · May",
@@ -259,29 +232,6 @@ const conferences: ConferenceEntry[] = [
         height={32}
         className="object-contain"
       />
-    ),
-  },
-  {
-    rank: 7,
-    org: "SXSW",
-    name: "SXSW EDU",
-    when: "Annual · March",
-    location: "Austin, TX",
-    description:
-      "SXSW EDU is unlike any other event in the L&D world. Held during the broader SXSW week in Austin, it draws educators, EdTech founders, designers, policymakers, and learning innovators into a creative, fast-moving environment where the adjacent possible gets explored openly. It's less focused on practical tooling and more on emerging ideas, systemic change, and where learning is headed. For IDs who feel constrained by the same conversations at traditional conferences, SXSW EDU is a productive disruption.",
-    href: "https://sxswedu.com/",
-    tags: ["Annual", "In-Person", "March", "Austin", "Innovation"],
-    highlights: [
-      "Creative, disruptive environment unlike traditional L&D conferences",
-      "Strong EdTech startup and innovation presence",
-      "Crossover with technology, design thinking, and future-of-work conversations",
-      "Ideal for IDs interested in emerging models and systemic learning challenges",
-      "Access to the full SXSW week ecosystem — music, tech, and culture",
-    ],
-    icon: (
-      <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-      </svg>
     ),
   },
 ]
