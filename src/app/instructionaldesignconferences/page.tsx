@@ -415,12 +415,14 @@ export default function ConferencesPage() {
 
                   {/* Icon + rank */}
                   <div className="flex shrink-0 flex-col items-center gap-2">
-                    <div
-                      className="flex items-center justify-center rounded-xl bg-[var(--surface-2)] border border-edge text-accent"
-                      style={{ width: 80, height: 80, minWidth: 80, minHeight: 80 }}
-                    >
-                      {conf.icon}
-                    </div>
+                    <a href={conf.href} target="_blank" rel="noopener noreferrer">
+                      <div
+                        className="flex items-center justify-center rounded-xl bg-[var(--surface-2)] border border-edge text-accent"
+                        style={{ width: 80, height: 80, minWidth: 80, minHeight: 80 }}
+                      >
+                        {conf.icon}
+                      </div>
+                    </a>
                     <span className="text-[10px] font-bold uppercase tracking-widest text-copy-dim">
                       #{conf.rank} Ranked
                     </span>
@@ -471,7 +473,7 @@ export default function ConferencesPage() {
                       rel="noopener noreferrer"
                       className="mt-5 inline-flex items-center gap-2 rounded-lg border border-edge px-4 py-2 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy"
                     >
-                      Visit Conference
+                      Learn More
                       <svg className="h-3.5 w-3.5 opacity-60" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                         <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
