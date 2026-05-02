@@ -47,7 +47,7 @@ type FeaturedCard = {
   program: string
   logo: string | null
   logoAlt: string | null
-  description: string
+  description?: string
   href: string
 }
 
@@ -57,8 +57,6 @@ const featuredDegrees: FeaturedCard[] = [
     program: "MS in Learning Design and Technology",
     logo: "/logos/usd-logo.png",
     logoAlt: "University of San Diego logo",
-    description:
-      "USD's fully online MS-LDT prepares students for careers in the instructional design industry through a project-based curriculum grounded in industry-leading best practices.",
     href: "https://onlinedegrees.sandiego.edu/masters-learning-design-technology/",
   },
   {
@@ -66,8 +64,6 @@ const featuredDegrees: FeaturedCard[] = [
     program: "Certified Virtual Instructional Designer/Developer",
     logo: "/logos/langevin-logo.png",
     logoAlt: "Langevin logo",
-    description:
-      "Langevin's CVIDD certification teaches professionals to design engaging virtual training using a proven 12-step process, backed by more than 35 years of instructional design expertise.",
     href: "https://www.langevin.com/certified-virtual-instructional-designer-developer/",
   },
   {
@@ -75,8 +71,6 @@ const featuredDegrees: FeaturedCard[] = [
     program: "Instructional Technology & Learning Sciences",
     logo: "/logos/utah-state-logo.png",
     logoAlt: "Utah State University logo",
-    description:
-      "USU's ITLS programs are ranked among the top instructional design programs in the nation by U.S. News & World Report, offering certificates through PhD, online and on-campus.",
     href: "https://itls.usu.edu/",
   },
   {
@@ -84,8 +78,6 @@ const featuredDegrees: FeaturedCard[] = [
     program: "Master of Arts in Instructional Design",
     logo: "/logos/csun-logo.png",
     logoAlt: "CSUN logo",
-    description:
-      "CSUN's fully online MA in Instructional Design prepares working professionals to design impactful learning experiences across corporate, educational, and nonprofit settings.",
     href: "https://go.csun.edu/mid?utm_source=idc&utm_medium=april-banner_410x215&utm_campaign=mid05_fall24&utm_content=Shape-online",
   },
 ]
@@ -263,11 +255,12 @@ function FeaturedCard({ card }: { card: FeaturedCard }) {
         {card.program}
       </p>
 
-      {/* Description — flex-1 fills available space; line-clamp-[10] allows many lines
-          but still truncates with ... if content overflows the card height */}
-      <p className="mt-2 flex-1 overflow-hidden line-clamp-[10] text-xs font-medium leading-relaxed text-copy-muted">
-        {card.description}
-      </p>
+      {/* Description — only rendered when present */}
+      {card.description && (
+        <p className="mt-2 flex-1 overflow-hidden line-clamp-[10] text-xs font-medium leading-relaxed text-copy-muted">
+          {card.description}
+        </p>
+      )}
 
       {/* Learn More — always pinned to bottom */}
       <a
@@ -323,7 +316,7 @@ export default function IDDegreePage() {
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {featuredDegrees.map((card, i) => (
-              <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full sm:aspect-square">
+              <ScrollReveal key={card.program} delay={(Math.min(i + 1, 4)) as 1 | 2 | 3 | 4} className="h-full">
                 <FeaturedCard card={card} />
               </ScrollReveal>
             ))}
