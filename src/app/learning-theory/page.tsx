@@ -313,7 +313,7 @@ export default function LearningTheoryPage() {
       />
       <ContentPage
         eyebrow="Foundations"
-        title="Learning Theory for Instructional Designers"
+        title="Learning Theory"
         subtitle="The major theories behind how people learn — and how to put each one to work in your design practice."
       >
         <ScrollReveal>

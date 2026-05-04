@@ -206,7 +206,7 @@ export default function AdultLearningTheoryPage() {
       />
       <ContentPage
         eyebrow="Foundations"
-        title="Adult Learning Theory & Andragogy"
+        title="What is Adult Learning Theory?"
         subtitle="How adults actually learn — and how to design experiences that meet them where they are. A complete guide to Knowles' framework, modern theorists, and practical application."
       >
         <ScrollReveal>
