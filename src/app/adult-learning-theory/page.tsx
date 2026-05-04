@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import Image from "next/image"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Adult Learning Theory",
@@ -480,6 +481,56 @@ export default function AdultLearningTheoryPage() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* ── CSUN Degree Promo ─────────────────────────────────────────── */}
+        <ScrollReveal delay={1}>
+          <div className="mt-12 rounded-card border border-edge bg-surface p-6 shadow-card">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">
+              Featured Degree Program
+            </p>
+            <h3 className="mt-2 text-lg font-extrabold tracking-tight text-heading">
+              CSUN Master of Arts in Instructional Design
+            </h3>
+            <div className="mt-2 h-0.5 w-8 rounded bg-accent opacity-60" />
+            <div className="mt-4 flex items-start gap-5">
+              <div className="relative hidden sm:block h-16 w-16 shrink-0 overflow-hidden rounded-lg mt-1">
+                <Image
+                  src="/logos/csun-logo.png"
+                  alt="CSUN logo"
+                  fill
+                  className="object-contain"
+                  sizes="64px"
+                />
+              </div>
+              <div className="flex flex-col">
+                <p className="text-sm font-medium leading-relaxed text-copy-muted">
+                  You understand how adults learn — now build the skills to design for them at
+                  the highest level. CSUN&rsquo;s fully online MA in Instructional Design equips
+                  you with the theory, practice, and tools to create learning experiences that
+                  actually drive change. A respected credential from a California State University,
+                  designed for working professionals.
+                </p>
+                <a
+                  href="https://go.csun.edu/mid?utm_source=idc&utm_medium=april-banner_410x215&utm_campaign=mid05_fall24&utm_content=Shape-online"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 self-start inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+                >
+                  Explore the CSUN Program
+                  <svg
+                    className="h-4 w-4 text-white/80"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </ScrollReveal>
 
         {/* ── Andragogy in the AI era ───────────────────────────────────── */}
         <ScrollReveal>
