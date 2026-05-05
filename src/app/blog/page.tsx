@@ -73,7 +73,7 @@ const allPosts: BlogPost[] = [
     views: 1269,
   },
   {
-    title: "Top 5 Trends in Learning Design for 2023",
+    title: "Top 5 Trends of Learning Design for 2023",
     description:
       "A look at the trends that shaped how instructional designers approached their work in 2023 — from generative AI to skills-based learning.",
     href: "/post/top-5-trends-of-learning-design-for-2023",
@@ -93,7 +93,7 @@ const allPosts: BlogPost[] = [
     views: 940,
   },
   {
-    title: "Elevate Your Instructional Design Game with Chat GPT",
+    title: "Elevate your Instructional Design Game with Chat GPT",
     description:
       "ChatGPT can speed up research, storyboarding, and content drafting at every phase of the ADDIE process. Here's how to put it to work.",
     href: "/post/elevate-your-instructional-design-game-with-chat-gpt",
@@ -173,7 +173,7 @@ const allPosts: BlogPost[] = [
     views: 557,
   },
   {
-    title: "Needs Analysis: 5 Important Areas",
+    title: "Need Analysis: 5 Important Areas",
     description:
       "A needs analysis is only as good as the questions you ask. Here are the five most important areas to focus on before you start designing.",
     href: "/post/need-analysis-tips",
@@ -193,7 +193,7 @@ const allPosts: BlogPost[] = [
     views: 427,
   },
   {
-    title: "5 Common Myths about eLearning",
+    title: "5 Common myths about eLearning",
     description:
       "eLearning gets a bad reputation — and some of it is deserved. But many criticisms come from myths. Here's the truth behind five of the most persistent ones.",
     href: "/post/5-common-myths-about-elearning",
@@ -223,7 +223,7 @@ const allPosts: BlogPost[] = [
     views: 3168,
   },
   {
-    title: "E-Learning Benefits",
+    title: "eLearn Or Get Left Behind",
     description:
       "From cost savings to flexibility, eLearning offers advantages that traditional training simply can't match. Here's a clear breakdown of the real benefits.",
     href: "/post/elearningbenefits",
@@ -273,7 +273,7 @@ const allPosts: BlogPost[] = [
     views: 2212,
   },
   {
-    title: "Tool Review: Synapse Learning Experience System",
+    title: "Review: Synapse Learning Experience Tool",
     description:
       "Synapse is a cloud-based Learning Experience Design System that lets your team design and prototype learning content. Here's our full review.",
     href: "/post/instructionaldesigntoolreview",
