@@ -21,7 +21,7 @@ const allPosts: BlogPost[] = [
     tag: "AI",
     date: "Mar 30, 2026",
     readTime: "6 min",
-    views: 2847,
+    views: 107,
   },
   {
     title: "Top 5 Learning Experience Design Trends for 2026",
@@ -31,7 +31,7 @@ const allPosts: BlogPost[] = [
     tag: "LX Design",
     date: "Dec 24, 2025",
     readTime: "2 min",
-    views: 5102,
+    views: 529,
   },
   {
     title: "The Future of Learning: Why Personalization Changes Everything",
@@ -41,7 +41,7 @@ const allPosts: BlogPost[] = [
     tag: "Learning Design",
     date: "Nov 12, 2025",
     readTime: "2 min",
-    views: 3921,
+    views: 82,
   },
   {
     title: "The GenAI Revolution: Transforming Higher Education",
@@ -51,7 +51,7 @@ const allPosts: BlogPost[] = [
     tag: "GenAI",
     date: "Jul 27, 2024",
     readTime: "3 min",
-    views: 8403,
+    views: 853,
   },
   {
     title: "Making the Leap: From Teaching to Instructional Design",
