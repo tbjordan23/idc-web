@@ -28,7 +28,6 @@ export default function ShareButtons({ title }: { title: string }) {
 
   return (
     <div className="flex flex-wrap items-center gap-3">
-      <span className="text-sm font-semibold text-copy-muted">Share:</span>
 
       {/* Facebook */}
       <button
@@ -80,26 +79,17 @@ export default function ShareButtons({ title }: { title: string }) {
       {/* Copy link */}
       <button
         onClick={() => copyTo(setCopied)}
-        className={`flex items-center gap-1.5 rounded-full px-4 py-2 text-sm font-semibold transition-all duration-200 ${
-          copied
-            ? "bg-green-500/20 text-green-400"
-            : "bg-surface-2 text-copy-muted hover:text-copy"
-        }`}
+        aria-label="Copy link"
+        className={`${btn} ${copied ? "bg-green-500/20 text-green-400" : "hover:bg-surface-2 hover:text-copy"}`}
       >
         {copied ? (
-          <>
-            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-            Copied!
-          </>
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+          </svg>
         ) : (
-          <>
-            <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-            </svg>
-            Copy link
-          </>
+          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+          </svg>
         )}
       </button>
 
