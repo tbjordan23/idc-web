@@ -15,11 +15,113 @@ export interface BlogPost {
 
 const BATCH_SIZE = 9
 
+// Tags shown as primary tabs; everything else lives in "More"
+const PRIMARY_TAGS = [
+  "AI",
+  "LX Design",
+  "eLearning",
+  "Learning Theory",
+  "Instructional Design",
+  "Career",
+  "Learning Design",
+]
+
 function formatViews(n: number): string {
   if (n >= 1000) return `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k`
   return n.toString()
 }
 
+// ── Filter bar ────────────────────────────────────────────────────────────────
+function FilterBar({
+  tags,
+  active,
+  onChange,
+}: {
+  tags: string[]
+  active: string | null
+  onChange: (tag: string | null) => void
+}) {
+  const [moreOpen, setMoreOpen] = useState(false)
+  const moreRef = useRef<HTMLDivElement>(null)
+
+  const primary = PRIMARY_TAGS.filter(t => tags.includes(t))
+  const secondary = tags.filter(t => !PRIMARY_TAGS.includes(t)).sort()
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
+        setMoreOpen(false)
+      }
+    }
+    document.addEventListener("mousedown", handleClick)
+    return () => document.removeEventListener("mousedown", handleClick)
+  }, [])
+
+  const pill = (label: string, value: string | null) => {
+    const isActive = active === value
+    return (
+      <button
+        key={label}
+        onClick={() => { onChange(value); setMoreOpen(false) }}
+        className={`shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold transition-all duration-150 ${
+          isActive
+            ? "bg-accent text-white shadow-sm"
+            : "bg-surface-2 text-copy-muted hover:bg-edge hover:text-copy"
+        }`}
+      >
+        {label}
+      </button>
+    )
+  }
+
+  return (
+    <div className="mb-8 flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
+      {pill("All Posts", null)}
+      {primary.map(t => pill(t, t))}
+
+      {secondary.length > 0 && (
+        <div ref={moreRef} className="relative shrink-0">
+          <button
+            onClick={() => setMoreOpen(o => !o)}
+            className={`flex items-center gap-1 rounded-full px-4 py-1.5 text-sm font-semibold transition-all duration-150 ${
+              secondary.includes(active ?? "")
+                ? "bg-accent text-white"
+                : "bg-surface-2 text-copy-muted hover:bg-edge hover:text-copy"
+            }`}
+          >
+            {secondary.includes(active ?? "") ? active : "More"}
+            <svg
+              className={`h-3.5 w-3.5 transition-transform duration-150 ${moreOpen ? "rotate-180" : ""}`}
+              fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {moreOpen && (
+            <div className="absolute left-0 top-full z-20 mt-2 w-52 rounded-card border border-edge bg-surface py-1 shadow-card">
+              {secondary.map(t => (
+                <button
+                  key={t}
+                  onClick={() => { onChange(t); setMoreOpen(false) }}
+                  className={`w-full px-4 py-2 text-left text-sm font-medium transition-colors ${
+                    active === t
+                      ? "bg-[var(--accent-glow)] text-accent"
+                      : "text-copy-muted hover:bg-surface-2 hover:text-copy"
+                  }`}
+                >
+                  {t}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  )
+}
+
+// ── Blog card ─────────────────────────────────────────────────────────────────
 function BlogCard({ post, stagger }: { post: BlogPost; stagger: number }) {
   const ref = useRef<HTMLDivElement>(null)
 
@@ -69,7 +171,7 @@ function BlogCard({ post, stagger }: { post: BlogPost; stagger: number }) {
             {post.description}
           </p>
 
-          {/* Footer: date, read time, views, CTA */}
+          {/* Footer */}
           <div className="mt-4 flex flex-wrap items-center gap-3 border-t border-edge pt-4 text-xs text-copy-dim">
             <time className="flex items-center gap-1">
               <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -99,20 +201,31 @@ function BlogCard({ post, stagger }: { post: BlogPost; stagger: number }) {
   )
 }
 
+// ── Main feed ─────────────────────────────────────────────────────────────────
 export default function BlogFeed({ posts }: { posts: BlogPost[] }) {
+  const [activeTag, setActiveTag] = useState<string | null>(null)
   const [visibleCount, setVisibleCount] = useState(BATCH_SIZE)
   const [loading, setLoading] = useState(false)
   const sentinelRef = useRef<HTMLDivElement>(null)
-  const hasMore = visibleCount < posts.length
+
+  const uniqueTags = Array.from(new Set(posts.map(p => p.tag)))
+
+  const handleTagChange = (tag: string | null) => {
+    setActiveTag(tag)
+    setVisibleCount(BATCH_SIZE)
+  }
+
+  const filtered = activeTag ? posts.filter(p => p.tag === activeTag) : posts
+  const hasMore = visibleCount < filtered.length
 
   const loadMore = useCallback(() => {
     if (loading || !hasMore) return
     setLoading(true)
     setTimeout(() => {
-      setVisibleCount(c => Math.min(c + BATCH_SIZE, posts.length))
+      setVisibleCount(c => Math.min(c + BATCH_SIZE, filtered.length))
       setLoading(false)
     }, 350)
-  }, [loading, hasMore, posts.length])
+  }, [loading, hasMore, filtered.length])
 
   useEffect(() => {
     const el = sentinelRef.current
@@ -125,15 +238,21 @@ export default function BlogFeed({ posts }: { posts: BlogPost[] }) {
     return () => observer.disconnect()
   }, [loadMore])
 
-  const visible = posts.slice(0, visibleCount)
+  const visible = filtered.slice(0, visibleCount)
 
   return (
     <div>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {visible.map((post, i) => (
-          <BlogCard key={post.href} post={post} stagger={i % BATCH_SIZE} />
-        ))}
-      </div>
+      <FilterBar tags={uniqueTags} active={activeTag} onChange={handleTagChange} />
+
+      {visible.length === 0 ? (
+        <p className="py-16 text-center text-sm text-copy-dim">No articles found in this category.</p>
+      ) : (
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {visible.map((post, i) => (
+            <BlogCard key={post.href} post={post} stagger={i % BATCH_SIZE} />
+          ))}
+        </div>
+      )}
 
       <div ref={sentinelRef} className="mt-12 flex min-h-8 items-center justify-center">
         {loading && (
@@ -142,7 +261,7 @@ export default function BlogFeed({ posts }: { posts: BlogPost[] }) {
             Loading more articles...
           </div>
         )}
-        {!loading && !hasMore && (
+        {!loading && !hasMore && visible.length > 0 && (
           <p className="text-sm text-copy-dim">You&apos;ve reached the end — thanks for reading!</p>
         )}
       </div>
