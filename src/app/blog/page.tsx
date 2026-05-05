@@ -12,7 +12,6 @@ export const metadata: Metadata = generatePageMetadata({
 })
 
 const allPosts: BlogPost[] = [
-  // ── Recent articles (real metadata) ───────────────────────────────────────
   {
     title: "Working Smarter with SMEs: How AI Is Transforming the Content Gathering Process",
     description:
@@ -61,7 +60,7 @@ const allPosts: BlogPost[] = [
     tag: "Career",
     date: "May 20, 2024",
     readTime: "3 min",
-    views: 12658,
+    views: 971,
   },
   {
     title: "Uncovering the Future: 5 Game-Changing Trends in Learning Design for 2024",
@@ -71,7 +70,7 @@ const allPosts: BlogPost[] = [
     tag: "Learning Design",
     date: "Apr 11, 2024",
     readTime: "2 min",
-    views: 7291,
+    views: 1269,
   },
   {
     title: "Top 5 Trends in Learning Design for 2023",
@@ -80,180 +79,28 @@ const allPosts: BlogPost[] = [
     href: "/post/top-5-trends-of-learning-design-for-2023",
     tag: "Learning Design",
     date: "Jan 2023",
-    readTime: "3 min",
-    views: 14200,
+    readTime: "4 min",
+    views: 2144,
   },
-
-  // ── Archive articles (placeholder metadata, real URLs) ─────────────────────
   {
     title: "Instructional Design: The Art and Science of Creating Effective Learning Experiences",
     description:
       "What does it actually mean to design for learning? This article breaks down the principles behind effective instructional design and why they matter.",
     href: "/post/instructional-design-the-art-and-science-of-creating-effective-learning-experiences",
     tag: "Instructional Design",
-    date: "2023",
-    readTime: "5 min",
-    views: 9200,
+    date: "Feb 2023",
+    readTime: "2 min",
+    views: 940,
   },
   {
-    title: "Elevate Your Instructional Design Game with ChatGPT",
+    title: "Elevate Your Instructional Design Game with Chat GPT",
     description:
       "ChatGPT can speed up research, storyboarding, and content drafting at every phase of the ADDIE process. Here's how to put it to work.",
     href: "/post/elevate-your-instructional-design-game-with-chat-gpt",
     tag: "AI",
-    date: "2023",
-    readTime: "4 min",
-    views: 11450,
-  },
-  {
-    title: "Content Curation for Instructional Designers",
-    description:
-      "You don't have to create everything from scratch. Here's how to find, evaluate, and use curated content to build stronger, faster learning experiences.",
-    href: "/post/content-curation-instructional-designers",
-    tag: "ID Skills",
-    date: "2022",
-    readTime: "4 min",
-    views: 6830,
-  },
-  {
-    title: "Top Five Learning Management Systems for Academic Institutions",
-    description:
-      "Choosing an LMS for higher education involves very different criteria than corporate learning. Here's how the top academic platforms stack up.",
-    href: "/post/top-five-learning-management-systems-academic",
-    tag: "eLearning Tools",
-    date: "2023",
-    readTime: "6 min",
-    views: 8920,
-  },
-  {
-    title: "Needs Analysis Tips for Instructional Designers",
-    description:
-      "A needs analysis is only as good as the questions you ask. Here are practical tips for uncovering the real performance gaps before you start designing.",
-    href: "/post/need-analysis-tips",
-    tag: "Needs Analysis",
-    date: "2022",
-    readTime: "4 min",
-    views: 7640,
-  },
-  {
-    title: "Working with SMEs: A Practical Guide for Instructional Designers",
-    description:
-      "Subject matter experts are essential — and sometimes exasperating. Here's how to build productive SME relationships that keep your projects on track.",
-    href: "/post/working-with-smes",
-    tag: "ID Skills",
-    date: "2022",
-    readTime: "5 min",
-    views: 9850,
-  },
-  {
-    title: "The Instructional Design Career",
-    description:
-      "What does an instructional design career actually look like? From entry-level roles to senior positions, here's a realistic picture of the path ahead.",
-    href: "/post/the-instructional-design-career",
-    tag: "Career",
-    date: "2021",
-    readTime: "5 min",
-    views: 18700,
-  },
-  {
-    title: "Why Instructional Designers Need to Change",
-    description:
-      "The skills that made IDs successful a decade ago aren't enough anymore. Here's an honest look at what the field demands now — and how to adapt.",
-    href: "/post/why-instructional-designers-need-to-change",
-    tag: "Instructional Design",
-    date: "2022",
-    readTime: "4 min",
-    views: 8120,
-  },
-  {
-    title: "The Adaptive Advantage: How eLearning Will Change Higher Education",
-    description:
-      "Adaptive learning technology is reshaping what's possible in higher education. Here's what instructional designers need to know about designing for adaptive systems.",
-    href: "/post/the-adaptive-advantage-how-e-learning-will-change-higher-education",
-    tag: "eLearning",
-    date: "2023",
-    readTime: "4 min",
-    views: 6900,
-  },
-  {
-    title: "The Benefits of eLearning",
-    description:
-      "From cost savings to flexibility, eLearning offers advantages that traditional training simply can't match. Here's a clear breakdown of the real benefits.",
-    href: "/post/elearningbenefits",
-    tag: "eLearning",
-    date: "2016",
-    readTime: "3 min",
-    views: 19400,
-  },
-  {
-    title: "Top L&D Experts Reveal Winning Strategies for Training Remote Workers",
-    description:
-      "Remote work changed everything about how we train people. We asked leading L&D professionals what's actually working — here's what they said.",
-    href: "/post/top-l-d-experts-reveal-winning-strategies-for-training-remote-workers",
-    tag: "Remote Learning",
-    date: "2021",
-    readTime: "5 min",
-    views: 12300,
-  },
-  {
-    title: "The Role of the Instructional Designer",
-    description:
-      "What does an instructional designer actually do day to day? A breakdown of the core responsibilities, common project types, and how the role varies by context.",
-    href: "/post/the-role-of-instructional-designer",
-    tag: "Career",
-    date: "2020",
-    readTime: "4 min",
-    views: 21500,
-  },
-  {
-    title: "Instructional Design: The Foundation for Problem Solving",
-    description:
-      "At its core, instructional design is a problem-solving discipline. Here's how to apply that framing to every project — from simple training to complex performance interventions.",
-    href: "/post/instructional-design-the-foundation-for-problem-solving",
-    tag: "Instructional Design",
-    date: "2021",
-    readTime: "4 min",
-    views: 8900,
-  },
-  {
-    title: "What Is Microlearning?",
-    description:
-      "Microlearning is one of the most discussed trends in L&D — but what does it actually mean, and when should you use it? Here's a clear, practical explanation.",
-    href: "/post/what-is-microlearning",
-    tag: "Learning Design",
-    date: "2020",
-    readTime: "3 min",
-    views: 16700,
-  },
-  {
-    title: "How to Reduce the Cost of Your Training with eLearning",
-    description:
-      "eLearning can dramatically reduce training costs — but only if you design it right. Here's how to maximize value without cutting corners on quality.",
-    href: "/post/how-to-reduce-the-cost-of-your-training-with-elearning",
-    tag: "eLearning",
-    date: "2019",
-    readTime: "4 min",
-    views: 13200,
-  },
-  {
-    title: "Instructional Design Tool Review",
-    description:
-      "A hands-on review of the most commonly used tools in the field — from rapid authoring platforms to prototyping and collaboration tools.",
-    href: "/post/instructionaldesigntoolreview",
-    tag: "eLearning Tools",
-    date: "2020",
-    readTime: "6 min",
-    views: 10400,
-  },
-  {
-    title: "Instructional Design Acronyms: A Complete Reference Guide",
-    description:
-      "ADDIE, SAM, SME, LMS, SCORM, xAPI — the world of instructional design is full of acronyms. Here's your go-to reference for all of them.",
-    href: "/post/acronyms",
-    tag: "Instructional Design",
-    date: "2019",
-    readTime: "4 min",
-    views: 17800,
+    date: "May 2023",
+    readTime: "2 min",
+    views: 3270,
   },
   {
     title: "Exploring Instructional Design Career Opportunities",
@@ -261,41 +108,199 @@ const allPosts: BlogPost[] = [
       "The instructional design career path isn't one-size-fits-all. From corporate L&D to freelance consulting, here's a look at where the opportunities actually are.",
     href: "/post/exploring-instructional-design-career-opportunities",
     tag: "Career",
-    date: "2021",
-    readTime: "5 min",
-    views: 14600,
+    date: "Mar 2023",
+    readTime: "2 min",
+    views: 573,
   },
   {
-    title: "A Case Study in Design Thinking",
+    title: "The Instructional Design Career",
+    description:
+      "What does an instructional design career actually look like? From entry-level roles to senior positions, here's a realistic picture of the path ahead.",
+    href: "/post/the-instructional-design-career",
+    tag: "Career",
+    date: "Dec 28, 2021",
+    readTime: "2 min",
+    views: 3949,
+  },
+  {
+    title: "The Role of the Instructional Designer",
+    description:
+      "What does an instructional designer actually do day to day? A breakdown of the core responsibilities, common project types, and how the role varies by context.",
+    href: "/post/the-role-of-instructional-designer",
+    tag: "Career",
+    date: "Aug 15, 2022",
+    readTime: "3 min",
+    views: 5467,
+  },
+  {
+    title: "How to Effectively Work with SMEs",
+    description:
+      "Subject matter experts are essential — and sometimes exasperating. Here's how to build productive SME relationships that keep your projects on track.",
+    href: "/post/working-with-smes",
+    tag: "ID Skills",
+    date: "Jan 19, 2021",
+    readTime: "4 min",
+    views: 9208,
+  },
+  {
+    title: "A Case Study: Design Thinking",
     description:
       "Design thinking and instructional design have more in common than you might expect. This case study explores how design thinking principles can transform an ID project.",
     href: "/post/a-case-study-design-thinking",
     tag: "ID Models",
-    date: "2020",
-    readTime: "5 min",
-    views: 7200,
+    date: "Aug 19, 2021",
+    readTime: "4 min",
+    views: 2251,
   },
   {
-    title: "5 Common Myths About eLearning",
+    title: "15 Reasons to be Grateful as an Instructional Designer",
     description:
-      "eLearning gets a bad reputation — and some of it is deserved. But many of the criticisms come from myths. Here's the truth behind five of the most persistent ones.",
+      "It's easy to focus on the frustrations of ID work. Here are 15 reminders of why this field is genuinely worth showing up for — every day.",
+    href: "/post/2016/11/23/top-15-reasons-to-be-grateful-as-an-instructional-designer",
+    tag: "Instructional Design",
+    date: "Nov 28, 2019",
+    readTime: "1 min",
+    views: 1174,
+  },
+  {
+    title: "Top L&D Experts Reveal Winning Strategies for Training Remote Workers",
+    description:
+      "Remote work changed everything about how we train people. We asked leading L&D professionals what's actually working — here's what they said.",
+    href: "/post/top-l-d-experts-reveal-winning-strategies-for-training-remote-workers",
+    tag: "Remote Learning",
+    date: "May 28, 2021",
+    readTime: "2 min",
+    views: 557,
+  },
+  {
+    title: "Needs Analysis: 5 Important Areas",
+    description:
+      "A needs analysis is only as good as the questions you ask. Here are the five most important areas to focus on before you start designing.",
+    href: "/post/need-analysis-tips",
+    tag: "Needs Analysis",
+    date: "Aug 13, 2018",
+    readTime: "4 min",
+    views: 2011,
+  },
+  {
+    title: "How to Reduce the Cost of Your Training with eLearning",
+    description:
+      "eLearning can dramatically reduce training costs — but only if you design it right. Here's how to maximize value without cutting corners on quality.",
+    href: "/post/how-to-reduce-the-cost-of-your-training-with-elearning",
+    tag: "eLearning",
+    date: "Aug 24, 2019",
+    readTime: "4 min",
+    views: 427,
+  },
+  {
+    title: "5 Common Myths about eLearning",
+    description:
+      "eLearning gets a bad reputation — and some of it is deserved. But many criticisms come from myths. Here's the truth behind five of the most persistent ones.",
     href: "/post/5-common-myths-about-elearning",
     tag: "eLearning",
-    date: "2019",
+    date: "Jul 4, 2019",
     readTime: "4 min",
-    views: 11300,
+    views: 607,
   },
-
-  // ── Legacy date-based URLs ─────────────────────────────────────────────────
   {
-    title: "What Is Instructional Design?",
+    title: "The Adaptive Advantage: How E-Learning Will Change Higher Education",
     description:
-      "A foundational introduction to the field — what instructional design is, where it came from, and why it matters more than ever in a world of information overload.",
-    href: "/post/2016/04/27/what-is-instructional-design",
+      "Adaptive learning technology is reshaping what's possible in higher education. Here's what instructional designers need to know about designing for adaptive systems.",
+    href: "/post/the-adaptive-advantage-how-e-learning-will-change-higher-education",
+    tag: "eLearning",
+    date: "Jul 20, 2019",
+    readTime: "4 min",
+    views: 335,
+  },
+  {
+    title: "Overview: Top Instructional Design Acronyms",
+    description:
+      "ADDIE, SAM, SME, LMS, SCORM, xAPI — the world of instructional design is full of acronyms. Here's your go-to reference for all of them.",
+    href: "/post/acronyms",
     tag: "Instructional Design",
-    date: "Apr 27, 2016",
-    readTime: "5 min",
-    views: 28400,
+    date: "Jun 26, 2018",
+    readTime: "3 min",
+    views: 3168,
+  },
+  {
+    title: "E-Learning Benefits",
+    description:
+      "From cost savings to flexibility, eLearning offers advantages that traditional training simply can't match. Here's a clear breakdown of the real benefits.",
+    href: "/post/elearningbenefits",
+    tag: "eLearning",
+    date: "2016",
+    readTime: "3 min",
+    views: 308,
+  },
+  {
+    title: "3 Reasons Why Instructional Designers Need to Change",
+    description:
+      "The skills that made IDs successful a decade ago aren't enough anymore. Here's an honest look at what the field demands now — and how to adapt.",
+    href: "/post/why-instructional-designers-need-to-change",
+    tag: "Instructional Design",
+    date: "Nov 22, 2017",
+    readTime: "3 min",
+    views: 2238,
+  },
+  {
+    title: "Instructional Design: The Foundation for Problem Solving",
+    description:
+      "At its core, instructional design is a problem-solving discipline. Here's how to apply that framing to every project — from simple training to complex performance interventions.",
+    href: "/post/instructional-design-the-foundation-for-problem-solving",
+    tag: "Instructional Design",
+    date: "Apr 14, 2016",
+    readTime: "3 min",
+    views: 4522,
+  },
+  {
+    title: "Top Five Learning Management Systems (Academic)",
+    description:
+      "Choosing an LMS for higher education involves very different criteria than corporate learning. Here's how the top academic platforms stack up.",
+    href: "/post/top-five-learning-management-systems-academic",
+    tag: "eLearning Tools",
+    date: "Nov 22, 2017",
+    readTime: "3 min",
+    views: 1517,
+  },
+  {
+    title: "Content Curation: A Necessary Skill for Future Instructional Designers",
+    description:
+      "You don't have to create everything from scratch. Here's how to find, evaluate, and use curated content to build stronger, faster learning experiences.",
+    href: "/post/content-curation-instructional-designers",
+    tag: "ID Skills",
+    date: "May 20, 2017",
+    readTime: "3 min",
+    views: 2212,
+  },
+  {
+    title: "Tool Review: Synapse Learning Experience System",
+    description:
+      "Synapse is a cloud-based Learning Experience Design System that lets your team design and prototype learning content. Here's our full review.",
+    href: "/post/instructionaldesigntoolreview",
+    tag: "eLearning Tools",
+    date: "May 13, 2017",
+    readTime: "2 min",
+    views: 1075,
+  },
+  {
+    title: "What is Microlearning? Definition and Tips",
+    description:
+      "Microlearning is one of the most discussed trends in L&D — but what does it actually mean, and when should you use it? Here's a clear, practical explanation.",
+    href: "/post/what-is-microlearning",
+    tag: "Learning Design",
+    date: "Aug 4, 2017",
+    readTime: "2 min",
+    views: 8710,
+  },
+  {
+    title: "Instructional Design: A Paradigm Shift",
+    description:
+      "The basis for instructional design and technology lies in theory; well-designed and effective instruction is the tangible embodiment of its principles.",
+    href: "/post/2016/11/09/instructional-design-from-theory-to-tangible-application",
+    tag: "Learning Theory",
+    date: "Nov 9, 2016",
+    readTime: "1 min",
+    views: 2814,
   },
   {
     title: "The Rise of LX Design",
@@ -303,49 +308,39 @@ const allPosts: BlogPost[] = [
       "Learning experience design is more than a rebrand of instructional design. Here's what's actually different — and what it means for how we approach our work.",
     href: "/post/2017/01/14/the-rise-of-lx-design",
     tag: "LX Design",
-    date: "Jan 14, 2017",
-    readTime: "4 min",
-    views: 15300,
+    date: "Jan 4, 2017",
+    readTime: "1 min",
+    views: 1220,
   },
   {
-    title: "Top Five Learning Management Systems for the Corporate Sector",
+    title: "Top Five Learning Management Systems (Corporate Sector)",
     description:
       "Corporate learning has unique requirements. Here's how the top enterprise LMS platforms compare on features, pricing, and real-world usability.",
     href: "/post/2016/04/14/top-five-learning-management-systems-corporate-sector",
     tag: "eLearning Tools",
     date: "Apr 14, 2016",
-    readTime: "6 min",
-    views: 22100,
+    readTime: "2 min",
+    views: 647,
   },
   {
-    title: "Top 15 Reasons to Be Grateful as an Instructional Designer",
+    title: "What is Instructional Design?",
     description:
-      "It's easy to focus on the frustrations of ID work. Here are 15 reminders of why this field is genuinely worth showing up for — every day.",
-    href: "/post/2016/11/23/top-15-reasons-to-be-grateful-as-an-instructional-designer",
+      "A foundational introduction to the field — what instructional design is, where it came from, and why it matters more than ever in a world of information overload.",
+    href: "/post/2016/04/27/what-is-instructional-design",
     tag: "Instructional Design",
-    date: "Nov 23, 2016",
-    readTime: "3 min",
-    views: 11800,
+    date: "Apr 27, 2016",
+    readTime: "2 min",
+    views: 808,
   },
   {
-    title: "Welcome to Instructional Design Central",
+    title: "New Instructional Design Central Site!",
     description:
-      "The first post — a look at what IDC is, why we built it, and what we hope it becomes for the instructional design community.",
+      "Instructional Design Central is pleased to announce the launch of our new website — a significantly enhanced user experience for the ID community.",
     href: "/post/2015/12/31/welcome-to-instructional-design-central",
     tag: "Community",
     date: "Dec 31, 2015",
-    readTime: "2 min",
-    views: 9100,
-  },
-  {
-    title: "Instructional Design: From Theory to Tangible Application",
-    description:
-      "The gap between learning theory and real-world ID practice can feel enormous. This article bridges that gap with concrete examples of how theory shapes effective design.",
-    href: "/post/2016/11/09/instructional-design-from-theory-to-tangible-application",
-    tag: "Learning Theory",
-    date: "Nov 9, 2016",
-    readTime: "5 min",
-    views: 12900,
+    readTime: "1 min",
+    views: 419,
   },
 ]
 
