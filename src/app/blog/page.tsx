@@ -258,7 +258,7 @@ const allPosts: BlogPost[] = [
     description:
       "Choosing an LMS for higher education involves very different criteria than corporate learning. Here's how the top academic platforms stack up.",
     href: "/post/top-five-learning-management-systems-academic",
-    tag: "eLearning Tools",
+    tag: "Tools",
     date: "Nov 22, 2017",
     readTime: "3 min",
     views: 1517,
@@ -278,7 +278,7 @@ const allPosts: BlogPost[] = [
     description:
       "Synapse is a cloud-based Learning Experience Design System that lets your team design and prototype learning content. Here's our full review.",
     href: "/post/instructionaldesigntoolreview",
-    tag: "eLearning Tools",
+    tag: "Tools",
     date: "May 13, 2017",
     readTime: "2 min",
     views: 1075,
@@ -318,7 +318,7 @@ const allPosts: BlogPost[] = [
     description:
       "Corporate learning has unique requirements. Here's how the top enterprise LMS platforms compare on features, pricing, and real-world usability.",
     href: "/post/2016/04/14/top-five-learning-management-systems-corporate-sector",
-    tag: "eLearning Tools",
+    tag: "Tools",
     date: "Apr 14, 2016",
     readTime: "2 min",
     views: 647,
