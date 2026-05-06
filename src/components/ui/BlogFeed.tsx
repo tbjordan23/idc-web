@@ -8,6 +8,7 @@ export interface BlogPost {
   description: string
   href: string
   tag: string
+  tags?: string[]   // extra filter tags; tag is always used for display
   date: string
   readTime: string
   views: number
@@ -15,24 +16,33 @@ export interface BlogPost {
 
 const BATCH_SIZE = 9
 
-const PRIMARY_TABS = ["LMS", "LX Design", "Microlearning", "eLearning", "Learning Theory", "Instructional Design"]
-
-const MORE_TABS = [
-  "Instructional Design Tools",
-  "Online Learning",
-  "Artificial Intelligence",
+const ALL_TABS = [
+  "Instructional Design",
+  "Career",
+  "eLearning",
+  "LX Design",
   "AI",
-  "Learning Management",
+  "ID Skills",
+  "Learning Theory",
+  "ID Models",
+  "LMS",
+  "Tools",
   "Needs Analysis",
+  "Remote Learning",
   "Training",
-  "Video Conference",
   "SME",
-  "Chat GPT",
-  "Learning Design",
   "Teacher Transition",
-  "GenAI",
   "Higher Education",
+  "Community",
 ]
+
+// Maps a filter label to all post tags it should match
+const TAG_GROUPS: Record<string, string[]> = {
+  "AI": ["AI", "Artificial Intelligence", "Chat GPT", "GenAI"],
+  "LX Design": ["LX Design", "Learning Design"],
+  "LMS": ["LMS", "Learning Management"],
+  "Tools": ["Tools", "eLearning Tools", "Instructional Design Tools"],
+}
 
 function formatViews(n: number): string {
   if (n >= 1000) return `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k`
@@ -47,26 +57,13 @@ function FilterBar({
   active: string | null
   onChange: (tag: string | null) => void
 }) {
-  const [moreOpen, setMoreOpen] = useState(false)
-  const moreRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (moreRef.current && !moreRef.current.contains(e.target as Node)) {
-        setMoreOpen(false)
-      }
-    }
-    document.addEventListener("mousedown", handleClick)
-    return () => document.removeEventListener("mousedown", handleClick)
-  }, [])
-
   const pill = (label: string, value: string | null) => {
     const isActive = active === value
     return (
       <button
         key={label}
-        onClick={() => { onChange(value); setMoreOpen(false) }}
-        className={`shrink-0 rounded-full px-4 py-1.5 text-sm font-semibold transition-all duration-150 ${
+        onClick={() => onChange(value)}
+        className={`rounded-full px-2.5 py-1 text-xs font-semibold transition-all duration-150 ${
           isActive
             ? "bg-accent text-white shadow-sm"
             : "bg-surface-2 text-copy-muted hover:bg-edge hover:text-copy"
@@ -77,49 +74,10 @@ function FilterBar({
     )
   }
 
-  const moreIsActive = MORE_TABS.includes(active ?? "")
-
   return (
-    <div className="mb-8 flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
+    <div className="mb-8 flex flex-wrap gap-2">
       {pill("All Posts", null)}
-      {PRIMARY_TABS.map(t => pill(t, t))}
-
-      <div ref={moreRef} className="relative shrink-0">
-        <button
-          onClick={() => setMoreOpen(o => !o)}
-          className={`flex items-center gap-1 rounded-full px-4 py-1.5 text-sm font-semibold transition-all duration-150 ${
-            moreIsActive
-              ? "bg-accent text-white"
-              : "bg-surface-2 text-copy-muted hover:bg-edge hover:text-copy"
-          }`}
-        >
-          {moreIsActive ? active : "More"}
-          <svg
-            className={`h-3.5 w-3.5 transition-transform duration-150 ${moreOpen ? "rotate-180" : ""}`}
-            fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-          </svg>
-        </button>
-
-        {moreOpen && (
-          <div className="absolute left-0 top-full z-20 mt-2 w-56 rounded-card border border-edge bg-surface py-1 shadow-card">
-            {MORE_TABS.map(t => (
-              <button
-                key={t}
-                onClick={() => { onChange(t); setMoreOpen(false) }}
-                className={`w-full px-4 py-2 text-left text-sm font-medium transition-colors ${
-                  active === t
-                    ? "bg-[var(--accent-glow)] text-accent"
-                    : "text-copy-muted hover:bg-surface-2 hover:text-copy"
-                }`}
-              >
-                {t}
-              </button>
-            ))}
-          </div>
-        )}
-      </div>
+      {ALL_TABS.map(t => pill(t, t))}
     </div>
   )
 }
@@ -216,7 +174,13 @@ export default function BlogFeed({ posts }: { posts: BlogPost[] }) {
     setVisibleCount(BATCH_SIZE)
   }
 
-  const filtered = activeTag ? posts.filter(p => p.tag === activeTag) : posts
+  const filtered = activeTag
+    ? posts.filter(p => {
+        const postTags = p.tags ? [p.tag, ...p.tags] : [p.tag]
+        const matchTags = TAG_GROUPS[activeTag] ?? [activeTag]
+        return postTags.some(pt => matchTags.includes(pt))
+      })
+    : posts
   const hasMore = visibleCount < filtered.length
 
   const loadMore = useCallback(() => {

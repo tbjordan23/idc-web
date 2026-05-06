@@ -18,6 +18,7 @@ const allPosts: BlogPost[] = [
       "Subject matter experts are busy. AI tools are changing how instructional designers gather content, validate accuracy, and reduce back-and-forth — here's how to use them effectively.",
     href: "/post/working-smarter-with-smes-how-ai-is-transforming-the-content-gathering-process",
     tag: "AI",
+    tags: ["SME"],
     date: "Mar 30, 2026",
     readTime: "6 min",
     views: 107,
@@ -47,7 +48,7 @@ const allPosts: BlogPost[] = [
     description:
       "Generative AI isn't just changing corporate learning — it's reshaping how universities design curriculum, support students, and think about assessment.",
     href: "/post/the-genai-revolution-transforming-higher-education",
-    tag: "GenAI",
+    tag: "AI",
     date: "Jul 27, 2024",
     readTime: "3 min",
     views: 853,
