@@ -94,7 +94,7 @@ export default function ADDIEModelPage() {
       />
       <ContentPage
         eyebrow="Instructional Design Framework"
-        title="The ADDIE Model"
+        title="What is the ADDIE Model?"
         subtitle="The most widely used framework in instructional design — a complete guide to all five phases."
       >
         <ScrollReveal>

@@ -4,7 +4,7 @@ import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Top Rated LMS",
+  title: "Best Learning Management Systems (LMS)",
   description:
     "View top rated Learning Management Systems (LMS). IDC ranks the best Learning Management Systems (LMS) in the industry.",
   path: "/top-rated-lms",
@@ -48,7 +48,7 @@ export default function TopLMSPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <Hero title="Top Rated LMS" />
+      <Hero title="Best Learning Management Systems (LMS)" />
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="text-copy-muted">Placeholder — LMS reviews will appear here.</p>

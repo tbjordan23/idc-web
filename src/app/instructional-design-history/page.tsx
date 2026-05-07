@@ -12,7 +12,7 @@ export const metadata: Metadata = generatePageMetadata({
 export default function IDHistoryPage() {
   return (
     <ContentPage
-      title="Instructional Design Timeline"
+      title="Instructional Design History"
       subtitle="From World War II military training to AI-powered learning — how the field evolved."
     >
       <p>Placeholder — migrate content from Wix.</p>
