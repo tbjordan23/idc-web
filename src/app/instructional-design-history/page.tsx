@@ -476,22 +476,3 @@ export default function IDHistoryPage() {
     </div>
   )
 }
-ight now. Earn your certificate and get started today.
-              </p>
-              <Link
-                href="/instructional-design-course"
-                className="btn-shadow mt-4 inline-flex self-start items-center gap-2 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover"
-              >
-                Start the Course
-                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </ScrollReveal>
-
-    </div>
-  )
-}
