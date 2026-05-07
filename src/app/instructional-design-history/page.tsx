@@ -18,6 +18,7 @@ interface TimelineEvent {
 }
 
 interface Era {
+  id: string
   name: string
   period: string
   accent: string
@@ -29,6 +30,7 @@ interface Era {
 
 const eras: Era[] = [
   {
+    id: "era-1940s",
     name: "The Wartime Foundation",
     period: "1940s",
     accent: "bg-amber-500",
@@ -58,6 +60,7 @@ const eras: Era[] = [
     ],
   },
   {
+    id: "era-1950s",
     name: "The Science of Learning",
     period: "1950s–1960s",
     accent: "bg-blue-500",
@@ -100,6 +103,7 @@ const eras: Era[] = [
     ],
   },
   {
+    id: "era-1970s",
     name: "Systematic Design & Early Technology",
     period: "1970s–1980s",
     accent: "bg-emerald-500",
@@ -141,6 +145,7 @@ const eras: Era[] = [
     ],
   },
   {
+    id: "era-1990s",
     name: "The Digital Revolution",
     period: "1990s",
     accent: "bg-violet-500",
@@ -177,6 +182,7 @@ const eras: Era[] = [
     ],
   },
   {
+    id: "era-2000s",
     name: "The eLearning Era",
     period: "2000s",
     accent: "bg-cyan-500",
@@ -212,6 +218,7 @@ const eras: Era[] = [
     ],
   },
   {
+    id: "era-2010s",
     name: "Mobile, Social & Experience Design",
     period: "2010–2019",
     accent: "bg-rose-500",
@@ -253,6 +260,7 @@ const eras: Era[] = [
     ],
   },
   {
+    id: "era-2020s",
     name: "The AI Era",
     period: "2020–Present",
     accent: "bg-accent",
@@ -312,32 +320,19 @@ export default function IDHistoryPage() {
           grew from a military training experiment into one of the most consequential professional
           disciplines of the modern workplace.
         </p>
-        <div className="mt-6 flex flex-wrap gap-3 text-sm text-copy-dim">
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            1944 – Present
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            8 Eras
-          </span>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-surface-2 px-3 py-1">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            30+ Key Milestones
-          </span>
-        </div>
       </ScrollReveal>
 
       {/* ── Era nav pills ───────────────────────────────────────────────────── */}
       <ScrollReveal delay={1}>
         <div className="mt-10 flex flex-wrap gap-2">
           {eras.map(era => (
-            <span
+            <a
               key={era.period}
-              className={`rounded-full border px-3 py-1 text-xs font-semibold ${era.borderAccent} ${era.textAccent} ${era.bgAccent}`}
+              href={`#${era.id}`}
+              className={`rounded-full border px-3 py-1 text-xs font-semibold transition-opacity hover:opacity-80 ${era.borderAccent} ${era.textAccent} ${era.bgAccent}`}
             >
               {era.period}
-            </span>
+            </a>
           ))}
         </div>
       </ScrollReveal>
@@ -346,7 +341,7 @@ export default function IDHistoryPage() {
       <div className="mt-16 space-y-20">
         {eras.map((era, eraIndex) => (
           <ScrollReveal key={era.period} delay={(eraIndex % 3) as 0 | 1 | 2}>
-            <div>
+            <div id={era.id} className="scroll-mt-24">
               {/* Era header */}
               <div className={`mb-8 rounded-card border p-5 ${era.borderAccent} ${era.bgAccent}`}>
                 <p className={`text-xs font-bold uppercase tracking-widest ${era.textAccent}`}>
@@ -463,6 +458,25 @@ export default function IDHistoryPage() {
                 Foundations Course covers everything from the core models and learning theories
                 that shaped the field — to the practical workflows and AI tools that are reshaping it
                 right now. Earn your certificate and get started today.
+              </p>
+              <Link
+                href="/instructional-design-course"
+                className="btn-shadow mt-4 inline-flex self-start items-center gap-2 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-white hover:bg-accent-hover"
+              >
+                Start the Course
+                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </ScrollReveal>
+
+    </div>
+  )
+}
+ight now. Earn your certificate and get started today.
               </p>
               <Link
                 href="/instructional-design-course"
