@@ -13,6 +13,9 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+    google: "MMCpU3wa2a2-icHoRCzQZQQmNl4Gljhm5KpbHv0XmyU",
+  },
   title: {
     default: "Instructional Design Central | Community and Resources",
     template: "%s | Instructional Design Central (IDC)",
