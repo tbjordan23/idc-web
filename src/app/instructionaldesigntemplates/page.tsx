@@ -140,6 +140,38 @@ export default function TemplatesPage() {
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal delay={1}>
+            <div className="mt-12 flex flex-col items-center gap-4 rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent">Ready to Get Started?</p>
+              <h3
+                className="font-extrabold tracking-tight text-heading"
+                style={{ fontSize: "clamp(20px,2.5vw,28px)", letterSpacing: "-0.04rem" }}
+              >
+                Dazzle like a pro — starting today.
+              </h3>
+              <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
+                Everything your instructional design practice needs to look sharp, move fast, and deliver work you&rsquo;re proud of. One kit, unlimited use.
+              </p>
+              <div className="flex items-baseline gap-3">
+                <span className="text-3xl font-extrabold tracking-tight text-heading">$36</span>
+                <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$60</span>
+                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 40%</span>
+              </div>
+              <Link
+                href={BUY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+              >
+                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+                Buy Now
+              </Link>
+              <p className="text-xs text-copy-muted opacity-70">One-time payment &middot; Instant download &middot; Unlimited licensing &middot; Not for resale</p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
