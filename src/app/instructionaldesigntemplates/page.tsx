@@ -88,12 +88,12 @@ const testimonials = [
 ]
 
 const kitIncludes = [
-  { label: "13 Templates" },
-  { label: "Word (.docx)" },
-  { label: "PowerPoint (.pptx)" },
-  { label: "PDF (.pdf)" },
+  { label: "13 Robust Templates" },
+  { label: "Word, PPT, PDF Format" },
   { label: "Instant Download" },
   { label: "Unlimited Licensing" },
+  { label: "Industry Standard Design" },
+  { label: "Professionally Polished" },
 ]
 
 const BUY_URL = "https://idcentral.thinkific.com/enroll/3772688?price_id=4729577"
