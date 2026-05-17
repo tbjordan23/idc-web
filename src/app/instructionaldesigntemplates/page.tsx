@@ -50,84 +50,6 @@ const faqSchema = {
   ],
 }
 
-const kitFeatures = [
-  {
-    title: "13 Premium Templates",
-    description:
-      "The full IDC collection in one kit — every template you need to take a project from needs analysis all the way through evaluation. No gaps, no piecemeal downloads.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="3" y="2" width="18" height="20" rx="2" stroke="#f26522" strokeWidth="1.5" opacity="0.7" />
-        <rect x="6" y="6" width="12" height="2" rx="1" fill="#f26522" opacity="0.6" />
-        <rect x="6" y="10" width="7" height="1.5" rx="0.75" fill="currentColor" opacity="0.25" />
-        <rect x="6" y="13" width="10" height="1.5" rx="0.75" fill="currentColor" opacity="0.2" />
-        <rect x="6" y="16" width="5" height="1.5" rx="0.75" fill="currentColor" opacity="0.2" />
-        <rect x="13" y="10" width="5" height="6" rx="1" fill="#f26522" opacity="0.15" stroke="#f26522" strokeWidth="1" />
-      </svg>
-    ),
-  },
-  {
-    title: "Editable Formats",
-    description:
-      "Customize everything in Microsoft Word (.docx), PowerPoint (.pptx), or Adobe Acrobat (.pdf) — whichever fits your workflow. Your branding, your structure, your way.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.8" />
-        <path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" fill="#4a7bc4" fillOpacity="0.1" />
-      </svg>
-    ),
-  },
-  {
-    title: "Instant Download",
-    description:
-      "No waiting, no shipping, no follow-up email. Purchase today and you&rsquo;ll have all 13 templates in your hands within seconds — ready to use on your next project.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="4" y="2" width="13" height="16" rx="2" stroke="#f26522" strokeWidth="1.5" opacity="0.7" />
-        <path d="M17 6l3 0v14a2 2 0 01-2 2H6" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-        <path d="M10 7v7m0 0l-2.5-2.5M10 14l2.5-2.5" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.85" />
-        <rect x="7" y="17.5" width="6" height="1.5" rx="0.75" fill="#f26522" opacity="0.5" />
-      </svg>
-    ),
-  },
-  {
-    title: "Unlimited Licensing",
-    description:
-      "Use these with your whole team and your clients. Your purchase comes with unlimited licensing so you can share freely — the only restriction is resale.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <circle cx="9" cy="7" r="4" stroke="#4a7bc4" strokeWidth="1.5" opacity="0.8" fill="#4a7bc4" fillOpacity="0.08" />
-        <path d="M3 21v-2a4 4 0 014-4h4a4 4 0 014 4v2" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" opacity="0.7" />
-        <path d="M16 3.13a4 4 0 010 7.75" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" opacity="0.45" />
-        <path d="M21 21v-2a4 4 0 00-3-3.87" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-      </svg>
-    ),
-  },
-  {
-    title: "Industry-Standard Design",
-    description:
-      "Built on real instructional design methodology — not generic document templates. Each one follows established ID frameworks so your work is grounded from the start.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <circle cx="12" cy="10" r="4.5" stroke="#f26522" strokeWidth="1.5" opacity="0.8" fill="#f26522" fillOpacity="0.08" />
-        <path d="M9.5 14.5l1.5 5.5 1-2.5 1 2.5 1.5-5.5" stroke="#f26522" strokeWidth="1.25" strokeLinejoin="round" strokeLinecap="round" opacity="0.7" />
-        <path d="M10.5 9.5l1.2 1.2 2.5-2.5" stroke="#f26522" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" opacity="0.95" />
-      </svg>
-    ),
-  },
-  {
-    title: "Professional Polish",
-    description:
-      "These aren&rsquo;t rough outlines — they&rsquo;re elegant, fully formatted documents you can hand to a stakeholder or client with confidence. First impressions matter.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <path d="M12 2l2.5 5 5.5.8-4 3.9.95 5.5L12 14.5 7.05 17.2 8 11.7 4 7.8l5.5-.8L12 2z" fill="#4a7bc4" fillOpacity="0.18" stroke="#4a7bc4" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M10.5 8.5l1 1 2.5-2.5" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
-      </svg>
-    ),
-  },
-]
-
 const templates = [
   { name: "ADDIE Template", description: "A structured, phase-by-phase template for applying the ADDIE framework to any training or course project." },
   { name: "The Learning Circle Kit™", description: "IDC's proprietary framework for building collaborative, community-based learning experiences." },
@@ -186,47 +108,34 @@ export default function TemplatesPage() {
       <Hero
         title="Instructional Design Template Kit"
         subtitle="Everything you need to design, document, and deliver exceptional learning experiences — in one professional kit."
-        cta={{ label: "Buy Now", href: BUY_URL, target: "_blank" }}
       />
 
-      {/* Intro paragraph */}
-      <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
-        <ScrollReveal>
-          <p className="text-base font-medium leading-relaxed text-copy-muted">
-            If you&rsquo;ve ever started a project staring at a blank document — this kit is for you. IDC&rsquo;s Instructional Design Template Kit gives you 13 meticulously designed templates that cover every phase of the design process, from the first conversation with a stakeholder to the final evaluation report. They&rsquo;re built to be used in real work, not just referenced and forgotten. Fully customizable in Word, PowerPoint, or PDF, they&rsquo;re the kind of tools that make you look polished immediately — and help you think more clearly about your design at the same time.
-          </p>
-        </ScrollReveal>
-      </section>
-
-      {/* Kit Features */}
+      {/* What You Get With This Kit */}
       <section className="border-t border-edge bg-surface py-16">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-widest text-accent">What&rsquo;s Inside</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Everything Included</p>
             <h2
               className="mt-2 font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
-              Kit Features
+              What You Get With This Kit
             </h2>
+            <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
+              One purchase covers it all. Here&rsquo;s exactly what&rsquo;s waiting for you.
+            </p>
           </ScrollReveal>
-          <div className="mt-10 grid gap-5 sm:grid-cols-2">
-            {kitFeatures.map((feature, i) => (
-              <ScrollReveal key={feature.title} delay={(i % 2 + 1) as 1 | 2} className="h-full">
-                <div className="flex h-full gap-5 rounded-card border border-edge bg-surface-2 p-6 shadow-card transition-all duration-200 hover:border-edge-hover">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-glow)] text-accent">
-                    {feature.icon}
+
+          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+            {kitIncludes.map((item, i) => (
+              <ScrollReveal key={item.label} delay={(i % 3 + 1) as 1 | 2 | 3}>
+                <div className="flex items-center gap-3 rounded-card border border-edge bg-surface p-4 shadow-card">
+                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-glow)]">
+                    <svg className="h-4 w-4 text-accent" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
                   </div>
-                  <div className="min-w-0">
-                    <h3 className="text-xs font-extrabold uppercase tracking-widest text-heading">
-                      {feature.title}
-                    </h3>
-                    <div className="mt-1.5 h-0.5 w-6 rounded bg-accent" />
-                    <p
-                      className="mt-3 text-sm font-medium leading-relaxed text-copy-muted"
-                      dangerouslySetInnerHTML={{ __html: feature.description }}
-                    />
-                  </div>
+                  <span className="text-sm font-bold text-heading">{item.label}</span>
                 </div>
               </ScrollReveal>
             ))}
@@ -234,7 +143,7 @@ export default function TemplatesPage() {
         </div>
       </section>
 
-      {/* Template List */}
+      {/* All 13 Templates */}
       <section className="border-t border-edge py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
@@ -307,8 +216,8 @@ export default function TemplatesPage() {
         </div>
       </section>
 
-      {/* Mid-page Buy CTA */}
-      <section className="border-t border-edge py-16">
+      {/* Final Buy CTA */}
+      <section id="buy" className="border-t border-edge py-16">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="flex flex-col items-center gap-4 rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
@@ -317,73 +226,8 @@ export default function TemplatesPage() {
                 className="font-extrabold tracking-tight text-heading"
                 style={{ fontSize: "clamp(20px,2.5vw,28px)", letterSpacing: "-0.04rem" }}
               >
-                The complete kit, ready to use today.
-              </h2>
-              <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
-                Thirteen professional templates, every format you need, unlimited sharing with your team and clients. One purchase. Instant access.
-              </p>
-              <div className="flex items-baseline gap-3">
-                <span className="text-3xl font-extrabold tracking-tight text-heading">$36</span>
-                <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$60</span>
-                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 40%</span>
-              </div>
-              <Link
-                href={BUY_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-              >
-                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
-                Buy Now
-              </Link>
-              <p className="text-xs text-copy-muted opacity-70">One-time payment &middot; Instant download &middot; Unlimited licensing</p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
-      {/* Kit Details + Bottom CTA */}
-      <section id="buy" className="border-t border-edge bg-surface py-16">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-widest text-accent">Everything Included</p>
-            <h2
-              className="mt-2 font-extrabold tracking-tight text-heading"
-              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
-            >
-              What You Get With This Kit
-            </h2>
-            <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
-              One purchase covers it all. Here&rsquo;s exactly what&rsquo;s waiting for you.
-            </p>
-          </ScrollReveal>
-
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-            {kitIncludes.map((item, i) => (
-              <ScrollReveal key={item.label} delay={(i % 3 + 1) as 1 | 2 | 3}>
-                <div className="flex items-center gap-3 rounded-card border border-edge bg-surface p-4 shadow-card">
-                  <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-glow)]">
-                    <svg className="h-4 w-4 text-accent" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <span className="text-sm font-bold text-heading">{item.label}</span>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-
-          <ScrollReveal delay={1}>
-            <div className="mt-12 flex flex-col items-center gap-4 rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
-              <p className="text-xs font-bold uppercase tracking-widest text-accent">Ready to Start?</p>
-              <h3
-                className="font-extrabold tracking-tight text-heading"
-                style={{ fontSize: "clamp(20px,2.5vw,28px)", letterSpacing: "-0.04rem" }}
-              >
                 Dazzle like a pro — starting today.
-              </h3>
+              </h2>
               <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
                 Everything your instructional design practice needs to look sharp, move fast, and deliver work you&rsquo;re proud of. One kit, unlimited use.
               </p>
