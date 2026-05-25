@@ -41,8 +41,12 @@ export async function POST(req: NextRequest) {
 
   if (!res.ok) {
     const body = await res.text()
-    console.error("Brevo error:", res.status, body)
-    return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 })
+    console.error(`Brevo error ${res.status}:`, body)
+    const devDetail = process.env.NODE_ENV === "development" ? ` (Brevo ${res.status}: ${body})` : ""
+    return NextResponse.json(
+      { error: `Failed to send message. Please try again.${devDetail}` },
+      { status: 500 }
+    )
   }
 
   return NextResponse.json({ success: true })
