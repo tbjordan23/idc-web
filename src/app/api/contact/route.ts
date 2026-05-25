@@ -1,5 +1,15 @@
 import { NextRequest, NextResponse } from "next/server"
 
+export async function GET() {
+  const raw = process.env.BREVO_API_KEY
+  return NextResponse.json({
+    defined: raw !== undefined,
+    length: raw?.length ?? 0,
+    trimmedLength: raw?.trim().length ?? 0,
+    prefix: raw ? raw.slice(0, 6) : null,
+  })
+}
+
 export async function POST(req: NextRequest) {
   const { firstName, lastName, email, message } = await req.json()
 
