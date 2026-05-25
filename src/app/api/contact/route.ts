@@ -12,12 +12,17 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 })
   }
 
+  if (!process.env.BREVO_API_KEY) {
+    console.error("BREVO_API_KEY is not set")
+    return NextResponse.json({ error: "Email service is not configured." }, { status: 500 })
+  }
+
   const name = `${firstName} ${lastName}`
 
   const res = await fetch("https://api.brevo.com/v3/smtp/email", {
     method: "POST",
     headers: {
-      "api-key": process.env.BREVO_API_KEY ?? "",
+      "api-key": process.env.BREVO_API_KEY,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
