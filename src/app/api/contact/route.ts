@@ -1,18 +1,5 @@
 import { NextRequest, NextResponse } from "next/server"
 
-export async function GET() {
-  const raw = process.env.BREVO_API_KEY
-  return NextResponse.json({
-    BREVO_API_KEY: {
-      defined: raw !== undefined,
-      length: raw?.length ?? 0,
-      prefix: raw ? raw.slice(0, 6) : null,
-    },
-    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL ?? null,
-    NODE_ENV: process.env.NODE_ENV ?? null,
-    customKeyCount: Object.keys(process.env).filter(k => !k.startsWith("npm_") && !k.startsWith("RAILWAY_") && !k.startsWith("PATH") && !k.startsWith("HOME")).join(", "),
-  })
-}
 
 export async function POST(req: NextRequest) {
   const { firstName, lastName, email, message } = await req.json()
@@ -31,8 +18,6 @@ export async function POST(req: NextRequest) {
     console.error("BREVO_API_KEY is not set or is empty")
     return NextResponse.json({ error: "Email service is not configured." }, { status: 500 })
   }
-
-  console.log(`Brevo key: len=${brevoKey.length} prefix=${brevoKey.slice(0, 4)}`)
 
   const name = `${firstName} ${lastName}`
 
@@ -64,11 +49,7 @@ export async function POST(req: NextRequest) {
   if (!res.ok) {
     const body = await res.text()
     console.error(`Brevo error ${res.status}:`, body)
-    const devDetail = process.env.NODE_ENV === "development" ? ` (Brevo ${res.status}: ${body})` : ""
-    return NextResponse.json(
-      { error: `Failed to send message. Please try again.${devDetail}` },
-      { status: 500 }
-    )
+    return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 })
   }
 
   return NextResponse.json({ success: true })
