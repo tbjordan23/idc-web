@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server"
-import { Resend } from "resend"
 
 export async function POST(req: NextRequest) {
-  const resend = new Resend(process.env.RESEND_API_KEY)
   const { firstName, lastName, email, message } = await req.json()
 
   if (!firstName || !lastName || !email || !message) {
@@ -14,29 +12,38 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 })
   }
 
-  const { data, error } = await resend.emails.send({
-    from: "IDC Contact Form <onboarding@resend.dev>",
-    to: "tbjordan@gmail.com", // TODO: change to info@instructionaldesigncentral.com after DNS migration
-    replyTo: email,
-    subject: `New message from ${firstName} ${lastName}`,
-    text: `Name: ${firstName} ${lastName}\nEmail: ${email}\n\nMessage:\n${message}`,
-    html: `
-      <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
-        <h2 style="color: #f26522;">New Contact Form Submission</h2>
-        <p><strong>Name:</strong> ${firstName} ${lastName}</p>
-        <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-        <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
-        <p><strong>Message:</strong></p>
-        <p style="white-space: pre-wrap;">${message}</p>
-      </div>
-    `,
+  const name = `${firstName} ${lastName}`
+
+  const res = await fetch("https://api.brevo.com/v3/smtp/email", {
+    method: "POST",
+    headers: {
+      "api-key": process.env.BREVO_API_KEY ?? "",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      sender: { name: "IDC Contact Form", email: "info@instructionaldesigncentral.com" },
+      to: [{ email: "info@instructionaldesigncentral.com", name: "Instructional Design Central" }],
+      replyTo: { email, name },
+      subject: `New IDC Contact Form Submission from ${name}`,
+      textContent: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+      htmlContent: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h2 style="color: #f26522;">New Contact Form Submission</h2>
+          <p><strong>Name:</strong> ${name}</p>
+          <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
+          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+          <p><strong>Message:</strong></p>
+          <p style="white-space: pre-wrap;">${message}</p>
+        </div>
+      `,
+    }),
   })
 
-  if (error) {
-    console.error("Resend error:", error)
+  if (!res.ok) {
+    const body = await res.text()
+    console.error("Brevo error:", res.status, body)
     return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 })
   }
 
-  console.log("Email sent:", data)
   return NextResponse.json({ success: true })
 }
