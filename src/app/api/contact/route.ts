@@ -41,6 +41,8 @@ export async function POST(req: NextRequest) {
           <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
           <p><strong>Message:</strong></p>
           <p style="white-space: pre-wrap;">${message}</p>
+          <hr style="border: none; border-top: 1px solid #eee; margin: 20px 0;" />
+          <a href="mailto:${email}?subject=Re: Your message to Instructional Design Central" style="display: inline-block; background: #f26522; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold;">Reply to ${name}</a>
         </div>
       `,
     }),
