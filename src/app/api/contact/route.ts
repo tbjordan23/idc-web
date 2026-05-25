@@ -12,20 +12,20 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 })
   }
 
-  if (!process.env.BREVO_API_KEY) {
-    console.error("BREVO_API_KEY is not set")
+  const brevoKey = process.env.BREVO_API_KEY?.trim()
+  if (!brevoKey) {
+    console.error("BREVO_API_KEY is not set or is empty")
     return NextResponse.json({ error: "Email service is not configured." }, { status: 500 })
   }
 
-  const keyDebug = `len=${process.env.BREVO_API_KEY.length} prefix=${process.env.BREVO_API_KEY.slice(0, 4)}`
-  console.log("Brevo key debug:", keyDebug)
+  console.log(`Brevo key debug: len=${brevoKey.length} prefix=${brevoKey.slice(0, 4)}`)
 
   const name = `${firstName} ${lastName}`
 
   const res = await fetch("https://api.brevo.com/v3/smtp/email", {
     method: "POST",
     headers: {
-      "api-key": process.env.BREVO_API_KEY,
+      "api-key": brevoKey,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
