@@ -17,6 +17,9 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Email service is not configured." }, { status: 500 })
   }
 
+  const keyDebug = `len=${process.env.BREVO_API_KEY.length} prefix=${process.env.BREVO_API_KEY.slice(0, 4)}`
+  console.log("Brevo key debug:", keyDebug)
+
   const name = `${firstName} ${lastName}`
 
   const res = await fetch("https://api.brevo.com/v3/smtp/email", {
