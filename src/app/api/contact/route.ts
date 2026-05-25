@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      sender: { name: "IDC Contact Form", email: "info@instructionaldesigncentral.com" },
+      sender: { name: "IDC Contact Form", email: "travis@instructionaldesigncentral.com" },
       to: [{ email: "info@instructionaldesigncentral.com", name: "Instructional Design Central" }],
       replyTo: { email, name },
       subject: `New IDC Contact Form Submission from ${name}`,
