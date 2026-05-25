@@ -18,7 +18,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Email service is not configured." }, { status: 500 })
   }
 
-  console.log(`Brevo key debug: len=${brevoKey.length} prefix=${brevoKey.slice(0, 4)}`)
+  console.log(`Brevo key: len=${brevoKey.length} prefix=${brevoKey.slice(0, 4)}`)
 
   const name = `${firstName} ${lastName}`
 
