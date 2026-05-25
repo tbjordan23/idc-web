@@ -3,10 +3,14 @@ import { NextRequest, NextResponse } from "next/server"
 export async function GET() {
   const raw = process.env.BREVO_API_KEY
   return NextResponse.json({
-    defined: raw !== undefined,
-    length: raw?.length ?? 0,
-    trimmedLength: raw?.trim().length ?? 0,
-    prefix: raw ? raw.slice(0, 6) : null,
+    BREVO_API_KEY: {
+      defined: raw !== undefined,
+      length: raw?.length ?? 0,
+      prefix: raw ? raw.slice(0, 6) : null,
+    },
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL ?? null,
+    NODE_ENV: process.env.NODE_ENV ?? null,
+    customKeyCount: Object.keys(process.env).filter(k => !k.startsWith("npm_") && !k.startsWith("RAILWAY_") && !k.startsWith("PATH") && !k.startsWith("HOME")).join(", "),
   })
 }
 
