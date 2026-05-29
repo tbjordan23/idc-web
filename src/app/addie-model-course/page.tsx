@@ -170,6 +170,12 @@ const testimonials = [
     quote:
       "Instructional designers who understand ADDIE aren't just building content—they're building strategy, outcomes, and impact.",
   },
+  {
+    name: "Mahsa",
+    role: "IDC Enrolled Student",
+    quote:
+      "The course was clearly designed, and the information was accessible. I liked the fact that Agile principles were connected to the concept of the ADDIE framework in the L&D world.",
+  },
 ]
 
 const chapters = [
