@@ -182,6 +182,11 @@ const testimonials = [
     quote:
       "I thoroughly enjoyed this training course because it provided a great balance of theoretical knowledge and practical application. The content was well-structured and easy to follow, and the interactive exercises and real-world case studies helped solidify my understanding of key concepts. I walked away with new skills and a clear plan for how to apply them in my work.",
   },
+  {
+    name: "Ilana",
+    role: "IDC Enrolled Student",
+    quote: "The content is very rich and easy to understand.",
+  },
 ]
 
 const chapters = [
