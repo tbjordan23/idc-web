@@ -3,6 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
+import CourseScreenshotCarousel, { type CourseScreenshot } from "@/components/ui/CourseScreenshotCarousel"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Foundations Course and Certification",
@@ -33,6 +34,64 @@ const faqSchema = {
     },
   ],
 }
+
+const foundationsScreenshots: CourseScreenshot[] = [
+  {
+    src: "/course-screenshots/foundations/what-is-id-lesson.png",
+    alt: "Course interface showing the What is Instructional Design lesson with sidebar navigation",
+    caption: "Clean, distraction-free lesson layout with full course navigation in the sidebar",
+  },
+  {
+    src: "/course-screenshots/foundations/learning-theory-lesson.png",
+    alt: "Learning Theory lesson showing an embedded video with the course title card",
+    caption: "Every lesson opens with a video — Travis Jordan walks you through the concept before you dive in",
+  },
+  {
+    src: "/course-screenshots/foundations/learning-theories-venn.png",
+    alt: "Common Learning Theories Venn diagram showing Behaviorism, Cognitivism, and Constructivism",
+    caption: "Rich visual content throughout — key concepts illustrated, not just described",
+  },
+  {
+    src: "/course-screenshots/foundations/id-history-timeline.png",
+    alt: "Interactive timeline of instructional design history from 1944 to 2020 and beyond",
+    caption: "Interactive timelines and infographics make complex history easy to navigate",
+  },
+  {
+    src: "/course-screenshots/foundations/adult-learning-discussion.png",
+    alt: "Adult Learning lesson with the discussion panel open showing instructor and student replies",
+    caption: "Instructor-led discussions on every lesson — ask questions, share insights, connect with other learners",
+  },
+  {
+    src: "/course-screenshots/foundations/knowledge-check.png",
+    alt: "Knowledge Check quiz showing a multi-select question with checkboxes",
+    caption: "Lesson quizzes give you immediate feedback so you know exactly where you stand",
+  },
+  {
+    src: "/course-screenshots/foundations/behaviorism-cards.png",
+    alt: "Four cards showing real-world applications of behaviorism in instructional design",
+    caption: "Concepts are always connected to real-world applications — not just theory",
+  },
+  {
+    src: "/course-screenshots/foundations/addie-model-lesson.png",
+    alt: "ADDIE model diagram with a tabbed interactive activity below",
+    caption: "Interactive activities put you in the designer's seat — click through tabs, explore each phase",
+  },
+  {
+    src: "/course-screenshots/foundations/activity-slide.png",
+    alt: "Course activity slide showing a visual scenario",
+    caption: "Visual activities and scenarios throughout keep the experience engaging",
+  },
+  {
+    src: "/course-screenshots/foundations/course-exam.png",
+    alt: "Course Exam showing a multiple choice question with correct answer highlighted in green",
+    caption: "The final 35-question exam tests your full understanding — pass it to earn your certificate",
+  },
+  {
+    src: "/course-screenshots/foundations/certificate.png",
+    alt: "Certificate of Completion for Instructional Design Foundations",
+    caption: "Earn a professional certificate you can share on LinkedIn or include in your portfolio",
+  },
+]
 
 const courseFeatures = [
   {
@@ -264,6 +323,27 @@ export default function IDFoundationsCourse() {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Course Preview Carousel */}
+      <section className="border-t border-edge py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Course Preview</p>
+            <h2
+              className="mt-2 font-extrabold tracking-tight text-heading"
+              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+            >
+              Take a Look Inside
+            </h2>
+            <p className="mt-3 text-base font-medium leading-relaxed text-copy-muted">
+              Real screenshots from the actual course. No mock-ups — this is exactly what you&rsquo;ll experience when you enroll.
+            </p>
+          </ScrollReveal>
+          <div className="mt-8">
+            <CourseScreenshotCarousel screenshots={foundationsScreenshots} />
           </div>
         </div>
       </section>
