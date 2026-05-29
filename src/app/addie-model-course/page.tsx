@@ -176,6 +176,12 @@ const testimonials = [
     quote:
       "The course was clearly designed, and the information was accessible. I liked the fact that Agile principles were connected to the concept of the ADDIE framework in the L&D world.",
   },
+  {
+    name: "Victoria",
+    role: "IDC Enrolled Student",
+    quote:
+      "I thoroughly enjoyed this training course because it provided a great balance of theoretical knowledge and practical application. The content was well-structured and easy to follow, and the interactive exercises and real-world case studies helped solidify my understanding of key concepts. I walked away with new skills and a clear plan for how to apply them in my work.",
+  },
 ]
 
 const chapters = [
