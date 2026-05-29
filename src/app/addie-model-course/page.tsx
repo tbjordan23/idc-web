@@ -145,33 +145,6 @@ const courseFeatures = [
   },
 ]
 
-const industryQuotes = [
-  {
-    name: "Patty Shank",
-    role: "Learning Designer and Author of Practice and Feedback for Deeper Learning",
-    quote:
-      "ADDIE isn't outdated—it's timeless. When applied correctly, it supports innovation while keeping learning grounded in real goals and measurable results.",
-  },
-  {
-    name: "Connie Malamed",
-    role: "Learning Experience Designer and author of Visual Design Solutions",
-    quote:
-      "ADDIE remains the gold standard in instructional design—its structured yet flexible framework allows designers to create learning that truly meets learner and business needs.",
-  },
-  {
-    name: "Michael Allen",
-    role: "CEO of Allen Interactions and pioneer in eLearning",
-    quote:
-      "Even in an agile world, the principles behind ADDIE provide a critical foundation for thoughtful, learner-centered design.",
-  },
-  {
-    name: "Julie Dirksen",
-    role: "Learning Strategist and author of Design for How People Learn",
-    quote:
-      "Instructional designers who understand ADDIE aren't just building content—they're building strategy, outcomes, and impact.",
-  },
-]
-
 const testimonials = [
   {
     name: "Mahsa",
@@ -191,9 +164,10 @@ const testimonials = [
     quote: "The content is very rich and easy to understand.",
   },
   {
-    name: "Jonelle",
+    name: "Kim",
     role: "IDC Enrolled Student",
-    quote: "I found that a lot of useful information was covered in the course.",
+    quote:
+      "I really liked the short focused blocks of learning, the quiz to reinforce the learning at the end of each lesson, and the ChatID practice!",
   },
 ]
 
@@ -323,51 +297,6 @@ export default function ADDIECourse() {
                     <p className="mt-3 text-sm font-medium leading-relaxed text-copy-muted">
                       {feature.description}
                     </p>
-                  </div>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Why ADDIE is Important */}
-      <section className="border-t border-edge bg-surface-2 py-20">
-        <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-widest text-accent">Industry Perspective</p>
-            <h2
-              className="mt-2 font-extrabold tracking-tight text-heading"
-              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
-            >
-              Why ADDIE Still Matters
-            </h2>
-            <p className="mt-3 text-base font-medium leading-relaxed text-copy-muted">
-              Some of the most respected voices in instructional design on why ADDIE remains foundational — decades after it was introduced.
-            </p>
-          </ScrollReveal>
-          <div className="mt-14 space-y-14">
-            {industryQuotes.map((q, i) => (
-              <ScrollReveal key={q.name} delay={(i % 2 + 1) as 1 | 2}>
-                <div className={`flex gap-6 ${i % 2 === 1 ? "flex-row-reverse text-right" : ""}`}>
-                  <div className="mt-1 shrink-0">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent-glow)]">
-                      <svg className="h-5 w-5 text-accent opacity-70" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div>
-                    <p className="text-lg font-semibold italic leading-relaxed text-copy">
-                      &ldquo;{q.quote}&rdquo;
-                    </p>
-                    <div className={`mt-4 flex items-center gap-3 ${i % 2 === 1 ? "justify-end" : ""}`}>
-                      <div className="h-px w-8 rounded bg-accent opacity-50" />
-                      <div>
-                        <p className="text-sm font-extrabold text-heading">{q.name}</p>
-                        <p className="text-xs font-medium text-copy-dim">{q.role}</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </ScrollReveal>
