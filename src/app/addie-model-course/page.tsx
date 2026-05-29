@@ -48,13 +48,8 @@ const courseFeatures = [
     description:
       "Four chapters, 11 focused lessons walking you through every phase of ADDIE — with concrete examples, tools, and activities built in at every step.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <circle cx="4" cy="6" r="2" fill="#f26522" opacity="0.9" />
-        <rect x="9" y="5" width="11" height="2" rx="1" fill="#f26522" opacity="0.5" />
-        <circle cx="4" cy="12" r="2" fill="#4a7bc4" opacity="0.9" />
-        <rect x="9" y="11" width="9" height="2" rx="1" fill="#4a7bc4" opacity="0.45" />
-        <circle cx="4" cy="18" r="2" stroke="#f26522" strokeWidth="1.5" fill="none" opacity="0.5" />
-        <rect x="9" y="17" width="10" height="2" rx="1" fill="currentColor" opacity="0.15" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
       </svg>
     ),
   },
@@ -63,11 +58,8 @@ const courseFeatures = [
     description:
       "Travis Jordan walks you through each ADDIE phase in real video lessons — showing you how the framework applies to actual design decisions, not just theory.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="1" y="4" width="16" height="12" rx="2" stroke="#4a7bc4" strokeWidth="1.5" opacity="0.8" />
-        <path d="M17 9l6-4v10l-6-4V9z" fill="#4a7bc4" fillOpacity="0.5" stroke="#4a7bc4" strokeWidth="1" strokeLinejoin="round" />
-        <circle cx="9" cy="10" r="3" fill="#4a7bc4" opacity="0.2" />
-        <path d="M7.8 8.5l4 1.5-4 1.5V8.5z" fill="#4a7bc4" opacity="0.9" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15 10l4.553-2.069A1 1 0 0121 8.87v6.26a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
       </svg>
     ),
   },
@@ -76,13 +68,8 @@ const courseFeatures = [
     description:
       "Walk away with ADDIE-ready templates you can use immediately — needs analysis forms, design documents, evaluation plans, and more.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="3" y="2" width="18" height="20" rx="2" stroke="#f26522" strokeWidth="1.5" opacity="0.7" />
-        <rect x="6" y="6" width="12" height="2" rx="1" fill="#f26522" opacity="0.6" />
-        <rect x="6" y="10" width="7" height="1.5" rx="0.75" fill="currentColor" opacity="0.25" />
-        <rect x="6" y="13" width="10" height="1.5" rx="0.75" fill="currentColor" opacity="0.2" />
-        <rect x="6" y="16" width="5" height="1.5" rx="0.75" fill="currentColor" opacity="0.2" />
-        <rect x="13" y="10" width="5" height="6" rx="1" fill="#f26522" opacity="0.15" stroke="#f26522" strokeWidth="1" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
       </svg>
     ),
   },
@@ -91,15 +78,8 @@ const courseFeatures = [
     description:
       "Check your understanding phase by phase. Each quiz reinforces what you've just learned and gives you immediate feedback to keep you on track.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="2" y="3" width="20" height="18" rx="2" stroke="#f26522" strokeWidth="1.5" opacity="0.7" />
-        <circle cx="6" cy="8" r="1.5" fill="#f26522" opacity="0.9" />
-        <path d="M4.5 8l1 1 2-2" stroke="white" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
-        <rect x="10" y="7" width="9" height="2" rx="1" fill="currentColor" opacity="0.2" />
-        <circle cx="6" cy="13" r="1.5" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.3" />
-        <rect x="10" y="12" width="9" height="2" rx="1" fill="currentColor" opacity="0.15" />
-        <circle cx="6" cy="18" r="1.5" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.3" />
-        <rect x="10" y="17" width="6" height="2" rx="1" fill="currentColor" opacity="0.15" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
       </svg>
     ),
   },
@@ -108,11 +88,8 @@ const courseFeatures = [
     description:
       "Printable chapter handouts capture key points from each ADDIE phase — a go-to reference you can keep at your desk and use on real projects.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="4" y="2" width="13" height="16" rx="2" stroke="#4a7bc4" strokeWidth="1.5" opacity="0.7" />
-        <path d="M17 6l3 0v14a2 2 0 01-2 2H6" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" opacity="0.4" />
-        <path d="M10 7v7m0 0l-2.5-2.5M10 14l2.5-2.5" stroke="#4a7bc4" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.85" />
-        <rect x="7" y="17.5" width="6" height="1.5" rx="0.75" fill="#4a7bc4" opacity="0.5" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
       </svg>
     ),
   },
@@ -121,17 +98,8 @@ const courseFeatures = [
     description:
       "Apply ADDIE as you go — interactive activities put you in the designer's seat so you're practicing the process, not just reading about it.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <circle cx="12" cy="12" r="9" stroke="#f26522" strokeWidth="1.5" opacity="0.2" />
-        <circle cx="12" cy="12" r="3" fill="#f26522" opacity="0.6" />
-        <circle cx="5" cy="6" r="1.5" fill="#4a7bc4" opacity="0.5" />
-        <circle cx="19" cy="6" r="1.5" fill="#f26522" opacity="0.5" />
-        <circle cx="19" cy="18" r="1.5" fill="#4a7bc4" opacity="0.5" />
-        <circle cx="5" cy="18" r="1.5" fill="#f26522" opacity="0.4" />
-        <line x1="7" y1="7" x2="10.5" y2="10.5" stroke="#f26522" strokeWidth="1" opacity="0.35" />
-        <line x1="17" y1="7" x2="13.5" y2="10.5" stroke="#4a7bc4" strokeWidth="1" opacity="0.35" />
-        <line x1="17" y1="17" x2="13.5" y2="13.5" stroke="#4a7bc4" strokeWidth="1" opacity="0.35" />
-        <line x1="7" y1="17" x2="10.5" y2="13.5" stroke="#f26522" strokeWidth="1" opacity="0.35" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
   },
@@ -140,13 +108,8 @@ const courseFeatures = [
     description:
       "Take the course wherever you are. Fully responsive so you can work through the ADDIE phases on any device, on your own schedule.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <rect x="5" y="1" width="14" height="22" rx="3" stroke="#4a7bc4" strokeWidth="1.5" opacity="0.8" />
-        <circle cx="12" cy="19.5" r="1" fill="#4a7bc4" opacity="0.6" />
-        <rect x="9" y="3.5" width="6" height="1" rx="0.5" fill="#4a7bc4" opacity="0.4" />
-        <rect x="8" y="7" width="8" height="1.5" rx="0.75" fill="currentColor" opacity="0.2" />
-        <rect x="8" y="10" width="6" height="1.5" rx="0.75" fill="currentColor" opacity="0.15" />
-        <rect x="8" y="13" width="7" height="1.5" rx="0.75" fill="currentColor" opacity="0.15" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
       </svg>
     ),
   },
@@ -155,10 +118,8 @@ const courseFeatures = [
     description:
       "Each challenge puts you inside a realistic design scenario — so when you finish the course, you've already practiced ADDIE in context.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <path d="M12 2l2.5 5 5.5.8-4 3.9.95 5.5L12 14.5 7.05 17.2 8 11.7 4 7.8l5.5-.8L12 2z" fill="#f26522" fillOpacity="0.18" stroke="#f26522" strokeWidth="1.5" strokeLinejoin="round" />
-        <path d="M9 21h6m-3-3v3" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" opacity="0.6" />
-        <path d="M10.5 8.5l1 1 2.5-2.5" stroke="#f26522" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" opacity="0.9" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
       </svg>
     ),
   },
@@ -167,10 +128,8 @@ const courseFeatures = [
     description:
       "Work through real design decisions alongside other learners. Instructor-led prompts for each lesson mean your questions and insights belong in the conversation.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="#4a7bc4" strokeWidth="1.5" strokeLinejoin="round" fill="#4a7bc4" fillOpacity="0.07" />
-        <rect x="7" y="8" width="10" height="1.5" rx="0.75" fill="#4a7bc4" opacity="0.45" />
-        <rect x="7" y="11.5" width="7" height="1.5" rx="0.75" fill="#4a7bc4" opacity="0.3" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
       </svg>
     ),
   },
@@ -179,10 +138,8 @@ const courseFeatures = [
     description:
       "Complete the final exam and earn a certificate that shows you know ADDIE inside and out — ready to share on LinkedIn or with employers.",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6">
-        <circle cx="12" cy="10" r="4.5" stroke="#f26522" strokeWidth="1.5" opacity="0.8" fill="#f26522" fillOpacity="0.08" />
-        <path d="M9.5 14.5l1.5 5.5 1-2.5 1 2.5 1.5-5.5" stroke="#f26522" strokeWidth="1.25" strokeLinejoin="round" strokeLinecap="round" opacity="0.7" />
-        <path d="M10.5 9.5l1.2 1.2 2.5-2.5" stroke="#f26522" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" opacity="0.95" />
+      <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
       </svg>
     ),
   },
