@@ -54,5 +54,19 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Failed to send message. Please try again." }, { status: 500 })
   }
 
+  // Save to Brevo contacts (list 9 = Contact Us). Blocklisted because they did not opt in to marketing.
+  await fetch("https://api.brevo.com/v3/contacts", {
+    method: "POST",
+    headers: { "api-key": brevoKey, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      email,
+      attributes: { FIRSTNAME: firstName, LASTNAME: lastName },
+      listIds: [9],
+      emailBlacklisted: true,
+      smsBlacklisted: true,
+      updateEnabled: true,
+    }),
+  }).catch((err) => console.error("Brevo contact save error:", err))
+
   return NextResponse.json({ success: true })
 }
