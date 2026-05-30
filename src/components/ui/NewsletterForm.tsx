@@ -67,7 +67,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
             {status === "loading" ? "Subscribing…" : "Subscribe"}
           </button>
         </form>
-        <p className="text-center text-xs text-copy-muted lg:text-left">
+        <p className="text-center text-sm text-copy-muted lg:text-left">
           Subscribe free — for industry insights and a <strong className="text-copy-muted/80">35% off coupon</strong> on courses and templates.
         </p>
         {status === "error" && (
