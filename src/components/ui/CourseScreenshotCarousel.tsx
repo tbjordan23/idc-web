@@ -72,7 +72,7 @@ export default function CourseScreenshotCarousel({ screenshots }: Props) {
                 src={shot.src}
                 alt={shot.alt}
                 fill
-                className="object-contain"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 900px"
                 priority={i === 0}
               />

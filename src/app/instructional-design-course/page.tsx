@@ -42,6 +42,11 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "Clean, distraction-free lesson layout with full course navigation in the sidebar",
   },
   {
+    src: "/course-screenshots/foundations/overview-addie-video.png",
+    alt: "Video lesson overview inside the Foundations course",
+    caption: "Video lessons walk you through each concept clearly — see exactly how it applies before diving in",
+  },
+  {
     src: "/course-screenshots/foundations/learning-theory-lesson.png",
     alt: "Learning Theory lesson showing an embedded video with the course title card",
     caption: "Every lesson opens with a video — Travis Jordan walks you through the concept before you dive in",
@@ -57,8 +62,8 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "Interactive timelines and infographics make complex history easy to navigate",
   },
   {
-    src: "/course-screenshots/foundations/adult-learning-discussion.png",
-    alt: "Adult Learning lesson with the discussion panel open showing instructor and student replies",
+    src: "/course-screenshots/foundations/discussions.png",
+    alt: "Course discussion panel showing instructor and student conversation",
     caption: "Instructor-led discussions on every lesson — ask questions, share insights, connect with other learners",
   },
   {
@@ -82,9 +87,9 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "Visual activities and scenarios throughout keep the experience engaging",
   },
   {
-    src: "/course-screenshots/foundations/course-exam.png",
-    alt: "Course Exam showing a multiple choice question with correct answer highlighted in green",
-    caption: "The final 35-question exam tests your full understanding — pass it to earn your certificate",
+    src: "/course-screenshots/foundations/template-downloads.png",
+    alt: "Template downloads available inside the course",
+    caption: "Professional ID templates included — download and start using them in your real work immediately",
   },
   {
     src: "/course-screenshots/foundations/certificate.png",
