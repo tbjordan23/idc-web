@@ -73,8 +73,13 @@ const foundationsScreenshots: CourseScreenshot[] = [
   },
   {
     src: "/course-screenshots/foundations/behaviorism-cards.png",
-    alt: "Four cards showing real-world applications of behaviorism in instructional design",
-    caption: "A comprehensive final exam ties it all together — pass it and earn your certificate",
+    alt: "Online community discussion forum with learners engaging on course topics",
+    caption: "A built-in community keeps you connected — post questions, share ideas, and learn alongside other ID professionals",
+  },
+  {
+    src: "/course-screenshots/foundations/course-management.png",
+    alt: "Learner dashboard showing enrolled courses, progress tracking, and certificate downloads",
+    caption: "Your personal dashboard puts everything in one place — track progress across all your courses and download your certificate when you're done",
   },
   {
     src: "/course-screenshots/foundations/activity-slide.png",
