@@ -7,9 +7,11 @@ interface CardProps {
   tag?: string
   date?: string
   variant?: "course" | "resource" | "blog"
+  cta?: string
+  external?: boolean
 }
 
-export default function Card({ title, description, href, tag, date, variant = "blog" }: CardProps) {
+export default function Card({ title, description, href, tag, date, variant = "blog", cta, external }: CardProps) {
   const tagColors = {
     course: "bg-[var(--accent-glow)] text-accent",
     resource: "bg-[rgba(74,123,196,0.15)] text-accent-2",
@@ -61,7 +63,7 @@ export default function Card({ title, description, href, tag, date, variant = "b
           </span>
         ) : (
           <span className="mt-5 text-sm font-semibold text-accent">
-            Read more →
+            {cta ?? "Read more"} →
           </span>
         )
       )}
@@ -69,6 +71,9 @@ export default function Card({ title, description, href, tag, date, variant = "b
   )
 
   if (href) {
+    if (external) {
+      return <a href={href} target="_blank" rel="noopener noreferrer" className="h-full">{content}</a>
+    }
     return <Link href={href} className="h-full">{content}</Link>
   }
   return content

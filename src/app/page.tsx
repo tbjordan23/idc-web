@@ -38,20 +38,24 @@ const featuredResources = [
       "Skip the blank page. Professionally designed templates you can download and use in your projects right now.",
     href: "/instructionaldesigntemplates",
     tag: "Templates",
+    cta: "Download now",
   },
   {
-    title: "Needs Analysis Tool",
+    title: "Instructional Design Blog",
     description:
-      "Know exactly where to start. This tool walks you through a complete needs analysis so your designs solve the right problem.",
-    href: "/needs-analysis-app",
-    tag: "Tool",
+      "Stay sharp and inspired. Practical articles on ID models, tools, career growth, and the topics that matter most to working instructional designers.",
+    href: "/blog",
+    tag: "Blog",
+    cta: "Read more",
   },
   {
     title: "ChatID: Instructional Design GPT",
     description:
       "An AI assistant that actually understands instructional design — built to help you think, write, and design better.",
-    href: "/chatid-instructional-design-ai",
+    href: "https://chatgpt.com/g/g-0RwjMVNPf-chatid",
     tag: "AI Tool",
+    cta: "Start a conversation",
+    external: true,
   },
 ]
 
