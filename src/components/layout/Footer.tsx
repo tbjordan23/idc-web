@@ -89,10 +89,10 @@ export default function Footer() {
           <div className="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
             <div>
               <p className="text-xs font-bold uppercase tracking-widest text-accent">
-                Stay Sharp
+                IDC Newsletter
               </p>
               <h2 className="mt-1 text-lg font-bold text-heading">
-                Get the latest IDC insights
+                Get the industry insights and offers
               </h2>
               <p className="mt-1 text-sm font-medium text-copy-muted">
                 Plus a <strong className="text-copy">35% off coupon</strong> on any course or template.

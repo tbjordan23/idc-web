@@ -1,4 +1,5 @@
 import Link from "next/link"
+import NewsletterForm from "@/components/ui/NewsletterForm"
 
 /* ─── SVG Illustration ──────────────────────────────────────────────────── */
 function CourseIllustration() {
@@ -180,7 +181,7 @@ export default function HomeHero() {
               A home for instructional designers — courses, community, and resources
               to help you do your best work.
             </p>
-            <div className="hero-animate hero-animate-delay-3 mt-10 flex flex-wrap justify-center gap-3 lg:justify-start">
+            <div className="hero-animate hero-animate-delay-3 mt-10 flex justify-center lg:justify-start">
               <Link
                 href="/instructional-design-courses"
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
@@ -191,15 +192,9 @@ export default function HomeHero() {
                 </svg>
                 Explore Courses
               </Link>
-              <Link
-                href="/instructionaldesigncommunity"
-                className="inline-flex items-center gap-2 rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy"
-              >
-                <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                Join the Community
-              </Link>
+            </div>
+            <div className="hero-animate hero-animate-delay-3 flex justify-center lg:justify-start">
+              <NewsletterForm variant="hero" />
             </div>
           </div>
 

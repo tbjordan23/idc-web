@@ -4,7 +4,7 @@ import { useState } from "react"
 
 type Status = "idle" | "loading" | "success" | "error"
 
-export default function NewsletterForm({ variant = "footer" }: { variant?: "footer" | "callout" }) {
+export default function NewsletterForm({ variant = "footer" }: { variant?: "footer" | "callout" | "hero" }) {
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<Status>("idle")
   const [errorMsg, setErrorMsg] = useState("")
@@ -32,6 +32,46 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
       setErrorMsg("Something went wrong. Please try again.")
       setStatus("error")
     }
+  }
+
+  if (variant === "hero") {
+    if (status === "success") {
+      return (
+        <p className="mt-4 text-sm font-medium text-accent">
+          You&apos;re in! Check your inbox for your 35% off coupon.
+        </p>
+      )
+    }
+    return (
+      <div className="mt-4 flex flex-col gap-1.5">
+        <p className="text-xs font-medium text-copy-muted">
+          Subscribe free — get <strong className="text-copy">35% off</strong> all courses &amp; templates instantly.
+        </p>
+        <form className="flex gap-2" onSubmit={handleSubmit}>
+          <label htmlFor="hero-email" className="sr-only">Email address</label>
+          <input
+            id="hero-email"
+            type="email"
+            required
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Your email address"
+            disabled={status === "loading"}
+            className="flex-1 rounded-lg border border-edge bg-surface px-4 py-2.5 text-sm text-copy placeholder:text-copy-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 disabled:opacity-60"
+          />
+          <button
+            type="submit"
+            disabled={status === "loading"}
+            className="inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover whitespace-nowrap disabled:opacity-60"
+          >
+            {status === "loading" ? "Subscribing…" : "Subscribe"}
+          </button>
+        </form>
+        {status === "error" && (
+          <p className="text-xs text-red-500">{errorMsg}</p>
+        )}
+      </div>
+    )
   }
 
   if (variant === "callout") {

@@ -56,7 +56,7 @@ export default function Card({ title, description, href, tag, date, variant = "b
       </p>
       {href && (
         <span className="mt-5 text-sm font-semibold text-accent">
-          Read more →
+          {variant === "course" ? "Enroll now →" : "Read more →"}
         </span>
       )}
     </div>
