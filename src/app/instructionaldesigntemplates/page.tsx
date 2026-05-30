@@ -3,6 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
+import Image from "next/image"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Templates",
@@ -209,6 +210,39 @@ export default function TemplatesPage() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Template Visual Preview */}
+      <section className="border-t border-edge bg-surface py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Template Preview</p>
+            <h2
+              className="mt-2 font-extrabold tracking-tight text-heading"
+              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+            >
+              See What You&rsquo;re Getting
+            </h2>
+            <p className="mt-3 text-base font-medium leading-relaxed text-copy-muted">
+              Every template is professionally designed, ready to use, and built around how instructional designers actually work. This is exactly what lands in your inbox the moment you purchase.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={1}>
+            <div className="mt-8 overflow-hidden rounded-card border border-edge shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)]">
+              <Image
+                src="/templates/template-demo.png"
+                alt="Preview of all 13 instructional design templates included in the kit — including the ADDIE Template, Needs Analysis, Storyboard, Learning Design Canvas, and more"
+                width={1200}
+                height={1600}
+                className="w-full"
+                sizes="(max-width: 768px) 100vw, 896px"
+              />
+            </div>
+            <p className="mt-3 text-center text-sm font-medium text-copy-muted">
+              All 13 templates — delivered instantly in Word, PowerPoint, and PDF formats
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
