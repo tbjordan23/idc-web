@@ -103,9 +103,9 @@ const faqSchema = {
 
 const courseFeatures = [
   {
-    title: "11 Lessons",
+    title: "6 Lessons",
     description:
-      "Four chapters, 11 focused lessons walking you through every phase of ADDIE — with concrete examples, tools, and activities built in at every step.",
+      "Six packed lessons, with 20 learning objectives walking you through every phase of ADDIE — with concrete examples, tools, and activities built in at every step.",
     icon: (
       <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
         <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
@@ -509,7 +509,7 @@ export default function ADDIECourse() {
                             </span>
                             <span className="text-sm font-medium leading-relaxed text-copy-muted">
                               <span className="font-bold text-copy-muted">
-                                Lesson {chapter.lessonStart + li}:
+                                Objective {chapter.lessonStart + li}:
                               </span>{" "}
                               {lesson}
                             </span>
