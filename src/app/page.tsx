@@ -3,7 +3,7 @@ import HomeHero from "@/components/ui/HomeHero"
 import Card from "@/components/ui/Card"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
-import NewsletterForm from "@/components/ui/NewsletterForm"
+
 
 export const metadata: Metadata = {
   title: "Community and Resources | Instructional Design Central",
@@ -86,25 +86,6 @@ export default function HomePage() {
             </ScrollReveal>
           ))}
         </div>
-      </section>
-
-      {/* Newsletter subscribe section */}
-      <section className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
-        <ScrollReveal>
-          <div className="rounded-card border border-edge bg-surface-2 px-10 py-10 text-center shadow-card">
-            <p className="text-xs font-bold uppercase tracking-widest text-accent">Free Newsletter</p>
-            <h2
-              className="mx-auto mt-3 max-w-xl font-extrabold tracking-tight text-heading"
-              style={{ fontSize: "clamp(20px,2.5vw,30px)", letterSpacing: "-0.05rem" }}
-            >
-              Resources &amp; Tips — Plus 35% Off Any Course or Template
-            </h2>
-            <p className="mx-auto mt-3 max-w-lg text-base font-medium text-copy-muted">
-              Join thousands of instructional designers who get free tools, practical tips, and career resources every week. Subscribe and we&rsquo;ll send your <strong className="text-heading">35% off coupon</strong> instantly.
-            </p>
-            <NewsletterForm variant="callout" />
-          </div>
-        </ScrollReveal>
       </section>
 
       {/* Resources section */}
