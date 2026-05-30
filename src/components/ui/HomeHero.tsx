@@ -181,17 +181,7 @@ export default function HomeHero() {
               A home for instructional designers — courses, community, and resources
               to help you do your best work.
             </p>
-            <div className="hero-animate hero-animate-delay-3 mt-10 flex flex-wrap items-start gap-3 justify-center lg:justify-start">
-              <Link
-                href="/instructional-design-courses"
-                className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-              >
-                <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                </svg>
-                Explore Courses
-              </Link>
+            <div className="hero-animate hero-animate-delay-3 mt-10 flex justify-center lg:justify-start">
               <NewsletterForm variant="hero" />
             </div>
           </div>
