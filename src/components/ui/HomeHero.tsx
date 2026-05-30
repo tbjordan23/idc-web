@@ -181,7 +181,7 @@ export default function HomeHero() {
               A home for instructional designers — courses, community, and resources
               to help you do your best work.
             </p>
-            <div className="hero-animate hero-animate-delay-3 mt-10 flex justify-center lg:justify-start">
+            <div className="hero-animate hero-animate-delay-3 mt-10 flex flex-wrap items-start gap-3 justify-center lg:justify-start">
               <Link
                 href="/instructional-design-courses"
                 className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
@@ -192,8 +192,6 @@ export default function HomeHero() {
                 </svg>
                 Explore Courses
               </Link>
-            </div>
-            <div className="hero-animate hero-animate-delay-3 flex justify-center lg:justify-start">
               <NewsletterForm variant="hero" />
             </div>
           </div>
