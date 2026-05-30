@@ -67,7 +67,7 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "Interactive timelines and infographics make complex history easy to navigate",
   },
   {
-    src: "/course-screenshots/foundations/discussions.png",
+    src: "/course-screenshots/foundations/discussions-2.png",
     alt: "Course discussion panel showing instructor and student conversation",
     caption: "Instructor-led discussions on every lesson — ask questions, share insights, connect with other learners",
   },
