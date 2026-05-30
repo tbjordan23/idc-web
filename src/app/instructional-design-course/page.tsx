@@ -74,7 +74,7 @@ const foundationsScreenshots: CourseScreenshot[] = [
   {
     src: "/course-screenshots/foundations/behaviorism-cards.png",
     alt: "Four cards showing real-world applications of behaviorism in instructional design",
-    caption: "Concepts are always connected to real-world applications — not just theory",
+    caption: "A comprehensive final exam ties it all together — pass it and earn your certificate",
   },
   {
     src: "/course-screenshots/foundations/activity-slide.png",
