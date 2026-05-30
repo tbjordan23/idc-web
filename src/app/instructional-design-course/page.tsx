@@ -77,11 +77,6 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "Concepts are always connected to real-world applications — not just theory",
   },
   {
-    src: "/course-screenshots/foundations/addie-model-lesson.png",
-    alt: "ADDIE model diagram with a tabbed interactive activity below",
-    caption: "Interactive activities put you in the designer's seat — click through tabs, explore each phase",
-  },
-  {
     src: "/course-screenshots/foundations/activity-slide.png",
     alt: "Course activity slide showing a visual scenario",
     caption: "Visual activities and scenarios throughout keep the experience engaging",
