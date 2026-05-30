@@ -44,12 +44,12 @@ const foundationsScreenshots: CourseScreenshot[] = [
   {
     src: "/course-screenshots/foundations/learning-theory-lesson.png",
     alt: "Learning Theory lesson showing an embedded video with the course title card",
-    caption: "Every lesson opens with a video — Travis Jordan walks you through the concept before you dive in",
+    caption: "Clean, instructive illustrations with built-in learner interaction",
   },
   {
     src: "/course-screenshots/foundations/learning-theories-venn.png",
     alt: "Common Learning Theories Venn diagram showing Behaviorism, Cognitivism, and Constructivism",
-    caption: "Rich visual content throughout — key concepts illustrated, not just described",
+    caption: "Downloadable lessons with rich visual content and illustrations",
   },
   {
     src: "/course-screenshots/foundations/knowledge-check.png",
