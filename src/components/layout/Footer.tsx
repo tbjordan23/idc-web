@@ -95,7 +95,7 @@ export default function Footer() {
                 Get industry insights and exclusive offers
               </h2>
               <p className="mt-1 text-sm font-medium text-copy-muted">
-                Plus a <strong className="text-copy">35% off coupon</strong> on any course or template.
+                Including a <strong className="text-copy-muted/80">35% off coupon</strong> on any course or template.
               </p>
             </div>
             <NewsletterForm />
