@@ -43,7 +43,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
       )
     }
     return (
-      <div className="flex flex-col gap-1">
+      <div className="hidden sm:flex sm:flex-col sm:gap-1">
         <form className="flex gap-2" onSubmit={handleSubmit}>
           <label htmlFor="hero-email" className="sr-only">Email address</label>
           <input
@@ -54,7 +54,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Your email address"
             disabled={status === "loading"}
-            className="w-48 rounded-lg border border-edge bg-surface px-4 py-2.5 text-sm text-copy placeholder:text-copy-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 disabled:opacity-60"
+            className="w-60 rounded-lg border border-edge bg-surface px-4 py-2.5 text-sm text-copy placeholder:text-copy-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 disabled:opacity-60"
           />
           <button
             type="submit"
@@ -68,7 +68,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
           </button>
         </form>
         <p className="text-xs text-copy-muted">
-          Subscribe free — including a <strong className="text-copy-muted/80">35% off coupon</strong> on any course or template.
+          Subscribe free — for industry insights and a <strong className="text-copy-muted/80">35% off coupon</strong> on courses and templates.
         </p>
         {status === "error" && (
           <p className="text-xs text-red-500">{errorMsg}</p>
