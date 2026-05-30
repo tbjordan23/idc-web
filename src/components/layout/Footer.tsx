@@ -92,7 +92,7 @@ export default function Footer() {
                 IDC Newsletter
               </p>
               <h2 className="mt-1 text-lg font-bold text-heading">
-                Get the industry insights and offers
+                Get industry insights and exclusive offers
               </h2>
               <p className="mt-1 text-sm font-medium text-copy-muted">
                 Plus a <strong className="text-copy">35% off coupon</strong> on any course or template.
