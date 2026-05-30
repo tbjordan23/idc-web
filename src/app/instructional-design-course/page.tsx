@@ -42,11 +42,6 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "Clean, distraction-free lesson layout with full course navigation in the sidebar",
   },
   {
-    src: "/course-screenshots/foundations/overview-addie-video.png",
-    alt: "Video lesson overview inside the Foundations course",
-    caption: "Video lessons walk you through each concept clearly — see exactly how it applies before diving in",
-  },
-  {
     src: "/course-screenshots/foundations/learning-theory-lesson.png",
     alt: "Learning Theory lesson showing an embedded video with the course title card",
     caption: "Every lesson opens with a video — Travis Jordan walks you through the concept before you dive in",
@@ -57,6 +52,16 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "Rich visual content throughout — key concepts illustrated, not just described",
   },
   {
+    src: "/course-screenshots/foundations/knowledge-check.png",
+    alt: "Knowledge Check quiz showing a multi-select question with checkboxes",
+    caption: "Lesson quizzes give you immediate feedback so you know exactly where you stand",
+  },
+  {
+    src: "/course-screenshots/foundations/overview-addie-video.png",
+    alt: "Video lesson overview inside the Foundations course",
+    caption: "Video lessons walk you through each concept clearly — see exactly how it applies before diving in",
+  },
+  {
     src: "/course-screenshots/foundations/id-history-timeline.png",
     alt: "Interactive timeline of instructional design history from 1944 to 2020 and beyond",
     caption: "Interactive timelines and infographics make complex history easy to navigate",
@@ -65,11 +70,6 @@ const foundationsScreenshots: CourseScreenshot[] = [
     src: "/course-screenshots/foundations/discussions.png",
     alt: "Course discussion panel showing instructor and student conversation",
     caption: "Instructor-led discussions on every lesson — ask questions, share insights, connect with other learners",
-  },
-  {
-    src: "/course-screenshots/foundations/knowledge-check.png",
-    alt: "Knowledge Check quiz showing a multi-select question with checkboxes",
-    caption: "Lesson quizzes give you immediate feedback so you know exactly where you stand",
   },
   {
     src: "/course-screenshots/foundations/behaviorism-cards.png",
