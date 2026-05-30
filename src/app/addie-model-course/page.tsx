@@ -44,11 +44,6 @@ const addieScreenshots: CourseScreenshot[] = [
     caption: "ChatID — IDC's built-in AI agent — is included to help you generate real design artifacts as you work through each phase",
   },
   {
-    src: "/course-screenshots/addie/application-activities.png",
-    alt: "Implementation Phase lesson showing an interactive Promotional Campaigns application activity",
-    caption: "Interactive application activities put you in the designer's seat — practice real ADDIE decisions as you go",
-  },
-  {
     src: "/course-screenshots/addie/engaging-interactions.png",
     alt: "Analysis Phase showing an interactive learner persona activity with a Marketing Project Manager profile",
     caption: "Engaging interactions and learner persona activities help you practice analysis-phase thinking with realistic scenarios",
