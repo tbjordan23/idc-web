@@ -3,6 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
+import CourseScreenshotCarousel, { type CourseScreenshot } from "@/components/ui/CourseScreenshotCarousel"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "ADDIE Model Course",
@@ -10,6 +11,69 @@ export const metadata: Metadata = generatePageMetadata({
     "Master the ADDIE instructional design model with this practical, expert-led course. Learn to design, develop, and evaluate effective learning experiences using industry-proven methods. Enroll today to boost your instructional design skills.",
   path: "/addie-model-course",
 })
+
+const addieScreenshots: CourseScreenshot[] = [
+  {
+    src: "/course-screenshots/addie/modern-layout-navigaton.png",
+    alt: "Analysis Phase lesson showing clean layout with sidebar navigation and instructional content",
+    caption: "Clean, modern lesson layout with phase-by-phase navigation — every lesson, quiz, and download is always one click away",
+  },
+  {
+    src: "/course-screenshots/addie/videos-each-lesson.png",
+    alt: "Evaluation Phase lesson with a video introduction embedded in the course interface",
+    caption: "Every lesson opens with a video from Travis — grounding each ADDIE phase in real-world context before you dive in",
+  },
+  {
+    src: "/course-screenshots/addie/clean-instructive-visuals.png",
+    alt: "Development Phase lesson showing The Core Toolset with Media, Authoring, and Delivery Tools",
+    caption: "Rich visual content makes complex concepts clear — diagrams and illustrations bring each ADDIE phase to life",
+  },
+  {
+    src: "/course-screenshots/addie/Quiz.png",
+    alt: "Practice Quiz for the Analysis Phase with multi-select questions",
+    caption: "Practice quizzes after every lesson give you immediate feedback so you know what's sticking before moving on",
+  },
+  {
+    src: "/course-screenshots/addie/agile-application.png",
+    alt: "Design Phase lesson showing Agile Application with Rapid Prototyping, User Stories, and Design Sprints sections",
+    caption: "Agile application woven throughout — learn how ADDIE adapts to fast-moving, iterative design environments",
+  },
+  {
+    src: "/course-screenshots/addie/AI-ChatID.png",
+    alt: "ChatID AI agent interface with prompts for creating instructional design artifacts",
+    caption: "ChatID — IDC's built-in AI agent — is included to help you generate real design artifacts as you work through each phase",
+  },
+  {
+    src: "/course-screenshots/addie/application-activities.png",
+    alt: "Implementation Phase lesson showing an interactive Promotional Campaigns application activity",
+    caption: "Interactive application activities put you in the designer's seat — practice real ADDIE decisions as you go",
+  },
+  {
+    src: "/course-screenshots/addie/engaging-interactions.png",
+    alt: "Analysis Phase showing an interactive learner persona activity with a Marketing Project Manager profile",
+    caption: "Engaging interactions and learner persona activities help you practice analysis-phase thinking with realistic scenarios",
+  },
+  {
+    src: "/course-screenshots/addie/tools-resources.png",
+    alt: "Tools and Resources lesson showing visual diagramming tools with a flowchart diagram",
+    caption: "Curated tools and resources for each ADDIE phase — so you know exactly what to reach for in your real design work",
+  },
+  {
+    src: "/course-screenshots/addie/community-forum-2.png",
+    alt: "IDC online community Feed page with 490+ members and recent discussion posts",
+    caption: "A built-in community keeps you connected — post questions, share insights, and learn alongside other ID professionals",
+  },
+  {
+    src: "/course-screenshots/addie/course-management-2.png",
+    alt: "Learner dashboard showing all enrolled IDC courses with progress indicators",
+    caption: "Your personal dashboard puts everything in one place — track progress across all your courses and download your certificate when you're done",
+  },
+  {
+    src: "/course-screenshots/addie/certificate.png",
+    alt: "Certificate of Completion for Mastering the ADDIE Model",
+    caption: "Earn a professional certificate you can share on LinkedIn or include in your portfolio",
+  },
+]
 
 const faqSchema = {
   "@context": "https://schema.org",
@@ -301,6 +365,27 @@ export default function ADDIECourse() {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Course Preview Carousel */}
+      <section className="border-t border-edge py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Course Preview</p>
+            <h2
+              className="mt-2 font-extrabold tracking-tight text-heading"
+              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+            >
+              Take a Look Inside
+            </h2>
+            <p className="mt-3 text-base font-medium leading-relaxed text-copy-muted">
+              Real screenshots from the actual course. No mock-ups — this is exactly what you&rsquo;ll experience when you enroll.
+            </p>
+          </ScrollReveal>
+          <div className="mt-8">
+            <CourseScreenshotCarousel screenshots={addieScreenshots} />
           </div>
         </div>
       </section>
