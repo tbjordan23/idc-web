@@ -68,7 +68,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
           </button>
         </form>
         <p className="text-center text-sm text-copy-muted lg:text-left">
-          Subscribe free — for industry insights and a <strong className="text-copy-muted/80">35% off coupon</strong> on courses and templates.
+          Subscribe free — for <span className="hidden sm:inline">industry </span>insights and a <strong className="text-copy-muted/80">35% off coupon</strong> on courses and templates.
         </p>
         {status === "error" && (
           <p className="text-xs text-red-500">{errorMsg}</p>
