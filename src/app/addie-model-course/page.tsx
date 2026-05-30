@@ -21,7 +21,7 @@ const addieScreenshots: CourseScreenshot[] = [
   {
     src: "/course-screenshots/addie/videos-each-lesson.png",
     alt: "Evaluation Phase lesson with a video introduction embedded in the course interface",
-    caption: "Every lesson opens with a video from Travis — grounding each ADDIE phase in real-world context before you dive in",
+    caption: "Every lesson opens with an overview video — grounding each ADDIE phase in real-world context before you dive in",
   },
   {
     src: "/course-screenshots/addie/clean-instructive-visuals.png",
