@@ -72,7 +72,7 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "Instructor-led discussions on every lesson — ask questions, share insights, connect with other learners",
   },
   {
-    src: "/course-screenshots/foundations/community-forum.png",
+    src: "/course-screenshots/foundations/community-forum-2.png",
     alt: "Online community discussion forum with learners engaging on course topics",
     caption: "A built-in community keeps you connected — post questions, share ideas, and learn alongside other ID professionals",
   },
