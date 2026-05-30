@@ -59,7 +59,7 @@ export default function CourseScreenshotCarousel({ screenshots }: Props) {
         </div>
 
         {/* Image stage */}
-        <div className="relative aspect-[3/2] overflow-hidden bg-[#f5f5f5]">
+        <div className="relative overflow-hidden bg-[#f5f5f5]" style={{ aspectRatio: "1792/1122" }}>
           {screenshots.map((shot, i) => (
             <div
               key={shot.src}
@@ -72,7 +72,7 @@ export default function CourseScreenshotCarousel({ screenshots }: Props) {
                 src={shot.src}
                 alt={shot.alt}
                 fill
-                className="object-cover object-top"
+                className="object-cover"
                 sizes="(max-width: 768px) 100vw, 900px"
                 priority={i === 0}
               />
