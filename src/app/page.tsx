@@ -102,7 +102,7 @@ export default function HomePage() {
             <p className="mx-auto mt-3 max-w-lg text-base font-medium text-copy-muted">
               Join thousands of instructional designers who get free tools, practical tips, and career resources every week. Subscribe and we&rsquo;ll send your <strong className="text-heading">35% off coupon</strong> instantly.
             </p>
-            <NewsletterForm />
+            <NewsletterForm variant="callout" />
           </div>
         </ScrollReveal>
       </section>
