@@ -43,7 +43,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
       )
     }
     return (
-      <div className="flex flex-col gap-1.5">
+      <div className="flex flex-col items-center gap-1.5 lg:items-start">
         <form className="flex gap-2" onSubmit={handleSubmit}>
           <label htmlFor="hero-email" className="sr-only">Email address</label>
           <input
@@ -67,7 +67,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
             {status === "loading" ? "Subscribing…" : "Subscribe"}
           </button>
         </form>
-        <p className="text-xs text-copy-muted">
+        <p className="text-center text-xs text-copy-muted lg:text-left">
           Subscribe free — for industry insights and a <strong className="text-copy-muted/80">35% off coupon</strong> on courses and templates.
         </p>
         {status === "error" && (
