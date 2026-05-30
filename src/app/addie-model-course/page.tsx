@@ -14,7 +14,7 @@ export const metadata: Metadata = generatePageMetadata({
 
 const addieScreenshots: CourseScreenshot[] = [
   {
-    src: "/course-screenshots/addie/modern-layout-navigaton.png",
+    src: "/course-screenshots/addie/modern-layout-navigaton-2.png",
     alt: "Analysis Phase lesson showing clean layout with sidebar navigation and instructional content",
     caption: "Clean, modern lesson layout with phase-by-phase navigation — every lesson, quiz, and download is always one click away",
   },
