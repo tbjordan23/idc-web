@@ -77,7 +77,7 @@ const foundationsScreenshots: CourseScreenshot[] = [
     caption: "A built-in community keeps you connected — post questions, share ideas, and learn alongside other ID professionals",
   },
   {
-    src: "/course-screenshots/foundations/course-management.png",
+    src: "/course-screenshots/foundations/course-management-2.png",
     alt: "Learner dashboard showing enrolled courses, progress tracking, and certificate downloads",
     caption: "Your personal dashboard puts everything in one place — track progress across all your courses and download your certificate when you're done",
   },
