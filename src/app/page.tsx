@@ -3,6 +3,7 @@ import HomeHero from "@/components/ui/HomeHero"
 import Card from "@/components/ui/Card"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
+import NewsletterForm from "@/components/ui/NewsletterForm"
 
 export const metadata: Metadata = {
   title: "Community and Resources | Instructional Design Central",
@@ -61,14 +62,22 @@ export default function HomePage() {
 
       {/* Courses section */}
       <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <ScrollReveal>
-          <p className="text-xs font-bold uppercase tracking-widest text-accent">Courses</p>
-          <h2
-            className="mt-2 font-extrabold tracking-tight text-heading"
-            style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+        <ScrollReveal className="flex items-end justify-between">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Courses</p>
+            <h2
+              className="mt-2 font-extrabold tracking-tight text-heading"
+              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+            >
+              Instructional Design Online Courses
+            </h2>
+          </div>
+          <Link
+            href="/instructional-design-courses"
+            className="hidden text-sm font-semibold text-accent hover:text-accent-hover sm:block"
           >
-            Instructional Design Online Courses
-          </h2>
+            All courses →
+          </Link>
         </ScrollReveal>
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
           {featuredCourses.map((course, i) => (
@@ -77,17 +86,24 @@ export default function HomePage() {
             </ScrollReveal>
           ))}
         </div>
-        <ScrollReveal className="mt-8 text-center">
-          <Link
-            href="/instructional-design-courses"
-            className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-          >
-            <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-            </svg>
-            Explore All Courses
-          </Link>
+      </section>
+
+      {/* Newsletter subscribe section */}
+      <section className="mx-auto max-w-7xl px-4 pb-4 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <div className="rounded-card border border-edge bg-surface-2 px-10 py-10 text-center shadow-card">
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Free Newsletter</p>
+            <h2
+              className="mx-auto mt-3 max-w-xl font-extrabold tracking-tight text-heading"
+              style={{ fontSize: "clamp(20px,2.5vw,30px)", letterSpacing: "-0.05rem" }}
+            >
+              Resources &amp; Tips — Plus 35% Off Any Course or Template
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg text-base font-medium text-copy-muted">
+              Join thousands of instructional designers who get free tools, practical tips, and career resources every week. Subscribe and we&rsquo;ll send your <strong className="text-heading">35% off coupon</strong> instantly.
+            </p>
+            <NewsletterForm />
+          </div>
         </ScrollReveal>
       </section>
 
