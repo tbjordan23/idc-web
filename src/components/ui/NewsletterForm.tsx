@@ -43,7 +43,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
       )
     }
     return (
-      <div className="hidden sm:flex sm:flex-col sm:gap-1">
+      <div className="flex flex-col gap-1">
         <form className="flex gap-2" onSubmit={handleSubmit}>
           <label htmlFor="hero-email" className="sr-only">Email address</label>
           <input
