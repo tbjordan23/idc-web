@@ -30,6 +30,9 @@ export async function GET(req: NextRequest) {
 
   const apiKey = process.env.BREVO_API_KEY
   const listId = process.env.BREVO_LIST_ID ? Number(process.env.BREVO_LIST_ID) : null
+  const welcomeTemplateId = process.env.BREVO_WELCOME_TEMPLATE_ID
+    ? Number(process.env.BREVO_WELCOME_TEMPLATE_ID)
+    : null
 
   if (apiKey && listId) {
     const contactRes = await fetch("https://api.brevo.com/v3/contacts", {
@@ -38,10 +41,27 @@ export async function GET(req: NextRequest) {
       body: JSON.stringify({ email, listIds: [listId], updateEnabled: true }),
     })
 
-    if (!contactRes.ok && contactRes.status !== 204) {
-      const data = await contactRes.json().catch(() => ({}))
-      if (data?.code !== "duplicate_parameter") {
-        console.error("Brevo add contact error:", data)
+    const isDuplicate = await (async () => {
+      if (!contactRes.ok && contactRes.status !== 204) {
+        const data = await contactRes.json().catch(() => ({}))
+        if (data?.code !== "duplicate_parameter") {
+          console.error("Brevo add contact error:", data)
+        }
+        return data?.code === "duplicate_parameter"
+      }
+      return false
+    })()
+
+    // Send welcome email only for new confirmations, not duplicate clicks
+    if (!isDuplicate && welcomeTemplateId) {
+      const welcomeRes = await fetch("https://api.brevo.com/v3/smtp/email", {
+        method: "POST",
+        headers: { "api-key": apiKey, "Content-Type": "application/json" },
+        body: JSON.stringify({ to: [{ email }], templateId: welcomeTemplateId }),
+      })
+      if (!welcomeRes.ok) {
+        const data = await welcomeRes.json().catch(() => ({}))
+        console.error("Brevo welcome email error:", data)
       }
     }
   }
