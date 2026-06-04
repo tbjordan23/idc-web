@@ -1,23 +1,30 @@
 import { NextRequest, NextResponse } from "next/server"
+import crypto from "crypto"
 
-// Double opt-in flow using Brevo's native DOI endpoint.
+// Custom double opt-in flow (Brevo's native DOI endpoint requires templates created
+// through their internal DOI wizard, which can't be done via the regular template editor).
 //
 // How it works:
-//   1. User submits email → this route calls POST /contacts/doubleOptinConfirmation
-//   2. Brevo sends a confirmation email using BREVO_DOI_TEMPLATE_ID
-//   3. User clicks the {{ doubleoptin }} link in that email
-//   4. Brevo adds them to the list and redirects to /subscribe/confirmed
+//   1. User submits email → this route generates a signed token and sends a
+//      confirmation email via a regular Brevo transactional template.
+//   2. The template must contain a link whose URL is: {{ params.CONFIRMATION_URL }}
+//      Brevo will substitute the actual URL at send time.
+//   3. User clicks the link → /api/subscribe/confirm validates the token and
+//      adds them to the list, then redirects to /subscribe/confirmed.
 //
-// The welcome email (35% coupon) should fire from a Brevo automation that
-// triggers on the "Contact added to list" event for BREVO_LIST_ID, NOT here.
-// This ensures the coupon only reaches confirmed, deliverable addresses.
-//
-// Brevo template requirements:
-//   - Create a new template in Brevo → Email Marketing → Templates
-//   - The template body MUST contain {{ doubleoptin }} somewhere — this is the
-//     confirmation hyperlink Brevo auto-populates. Wrap it in an anchor tag, e.g.:
-//       <a href="{{ doubleoptin }}">Yes, confirm my subscription</a>
-//   - Save the template, note its numeric ID, set it as BREVO_DOI_TEMPLATE_ID
+// Brevo template setup (one-time):
+//   - Edit your Confirm-Email template (#5)
+//   - Select the "Confirm my subscription" link text
+//   - Change the link URL to: {{ params.CONFIRMATION_URL }}
+//   - Save & activate
+
+function generateConfirmToken(email: string): string {
+  const secret = process.env.NEXTAUTH_SECRET!
+  const expires = Date.now() + 48 * 60 * 60 * 1000 // 48 hours
+  const data = JSON.stringify({ email, expires })
+  const sig = crypto.createHmac("sha256", secret).update(data).digest("hex")
+  return Buffer.from(JSON.stringify({ data, sig })).toString("base64url")
+}
 
 export async function POST(req: NextRequest) {
   const { email } = await req.json()
@@ -27,37 +34,32 @@ export async function POST(req: NextRequest) {
   }
 
   const apiKey = process.env.BREVO_API_KEY
-  const listId = process.env.BREVO_LIST_ID ? Number(process.env.BREVO_LIST_ID) : null
-  const doiTemplateId = process.env.BREVO_DOI_TEMPLATE_ID
+  const templateId = process.env.BREVO_DOI_TEMPLATE_ID
     ? Number(process.env.BREVO_DOI_TEMPLATE_ID)
     : null
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.instructionaldesigncentral.com"
 
-  if (!apiKey) {
-    console.error("BREVO_API_KEY is not set")
+  if (!apiKey || !templateId) {
+    console.error("Missing BREVO_API_KEY or BREVO_DOI_TEMPLATE_ID")
     return NextResponse.json({ error: "Server configuration error." }, { status: 500 })
   }
 
-  if (!doiTemplateId || !listId) {
-    console.error("BREVO_DOI_TEMPLATE_ID or BREVO_LIST_ID is not set")
-    return NextResponse.json({ error: "Server configuration error." }, { status: 500 })
-  }
+  const token = generateConfirmToken(email)
+  const confirmationUrl = `${siteUrl}/api/subscribe/confirm?token=${token}`
 
-  const res = await fetch("https://api.brevo.com/v3/contacts/doubleOptinConfirmation", {
+  const emailRes = await fetch("https://api.brevo.com/v3/smtp/email", {
     method: "POST",
     headers: { "api-key": apiKey, "Content-Type": "application/json" },
     body: JSON.stringify({
-      email,
-      includeListIds: [listId],
-      templateId: doiTemplateId,
-      redirectionUrl: `${siteUrl}/subscribe/confirmed`,
+      to: [{ email }],
+      templateId,
+      params: { CONFIRMATION_URL: confirmationUrl },
     }),
   })
 
-  // 204 = success (no body). Any other non-ok status is an error.
-  if (!res.ok && res.status !== 204) {
-    const data = await res.json().catch(() => ({}))
-    console.error("Brevo DOI API error:", data)
+  if (!emailRes.ok) {
+    const data = await emailRes.json().catch(() => ({}))
+    console.error("Brevo send email error:", data)
     return NextResponse.json({ error: "Could not subscribe. Please try again." }, { status: 502 })
   }
 
