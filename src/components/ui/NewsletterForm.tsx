@@ -38,7 +38,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
     if (status === "success") {
       return (
         <p className="py-2.5 text-sm font-medium text-accent">
-          You&apos;re in! Check your inbox for your 35% off coupon.
+          Almost there! Check your inbox and click the confirmation link to complete your signup.
         </p>
       )
     }
@@ -81,7 +81,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
     if (status === "success") {
       return (
         <p className="mt-6 inline-block rounded-lg bg-accent/10 px-5 py-3 text-sm font-semibold text-accent">
-          You&rsquo;re in! Check your inbox for your 35% off coupon.
+          Almost there! Check your inbox and click the confirmation link to complete your signup.
         </p>
       )
     }
@@ -121,7 +121,7 @@ export default function NewsletterForm({ variant = "footer" }: { variant?: "foot
   if (status === "success") {
     return (
       <p className="text-sm font-medium text-accent">
-        You&apos;re in! Check your inbox for your 35% off coupon.
+        Almost there! Check your inbox and click the confirmation link to complete your signup.
       </p>
     )
   }
