@@ -51,7 +51,7 @@ const features = [
 
 const highlights = [
   {
-    stat: "10,000+",
+    stat: "45,000+",
     label: "Community Members",
     icon: (
       <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.75}>
@@ -97,7 +97,7 @@ const faqSchema = {
       name: "What is the Instructional Design Central Community?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Instructional Design Central (IDC) Community is a free professional network connecting instructional design professionals from around the world. Members can network, share resources, ask questions, access free events, and collaborate with peers. The community serves over 10,000 members globally.",
+        text: "The Instructional Design Central (IDC) Community is a free professional network connecting instructional design professionals from around the world. Members can network, share resources, ask questions, access free events, and collaborate with peers. The community serves over 45,000 members globally.",
       },
     },
     {
@@ -137,7 +137,7 @@ export default function CommunityPage() {
       <section className="mx-auto max-w-4xl px-4 py-16 sm:px-6 lg:px-8">
         <ScrollReveal>
           <p className="text-base font-medium leading-relaxed text-copy-muted">
-            Whether you&rsquo;re just discovering instructional design or you&rsquo;ve been doing this work for years, you&rsquo;ll feel at home here. The IDC Community is where designers come to ask hard questions, share what&rsquo;s working, and connect with others who genuinely understand the work. More than 10,000 members worldwide — and the kind of conversations you can&rsquo;t have anywhere else.
+            Whether you&rsquo;re just discovering instructional design or you&rsquo;ve been doing this work for years, you&rsquo;ll feel at home here. The IDC Community is where designers come to ask hard questions, share what&rsquo;s working, and connect with others who genuinely understand the work. More than 45,000 members worldwide — and the kind of conversations you can&rsquo;t have anywhere else.
           </p>
         </ScrollReveal>
       </section>
@@ -201,7 +201,7 @@ export default function CommunityPage() {
               className="mt-2 font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
-              Meet Us Where You Already Are
+              Follow Us
             </h2>
             <p className="mt-4 max-w-2xl text-base font-medium leading-relaxed text-copy-muted">
               Community doesn&rsquo;t just happen in one place. Follow IDC on the platforms you use every day for a steady stream of industry insights, practical tips, and exclusive offers — wherever you spend your time.
