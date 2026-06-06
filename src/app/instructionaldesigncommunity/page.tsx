@@ -222,17 +222,30 @@ export default function CommunityPage() {
                 <p className="mt-3 flex-1 text-sm font-medium leading-relaxed text-copy-muted">
                   Industry insights, career advice, ID trends, and community highlights — shared with a professional audience that takes the work seriously.
                 </p>
-                <a
-                  href="https://www.linkedin.com/company/instructional-design-central"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
-                >
-                  Follow on LinkedIn
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                <div className="mt-5 flex flex-col gap-2">
+                  <a
+                    href="https://www.linkedin.com/company/instructional-design-central"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
+                  >
+                    Follow on LinkedIn
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/groups/2672881/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:underline"
+                  >
+                    Join LinkedIn Group
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                </div>
               </div>
             </ScrollReveal>
 
