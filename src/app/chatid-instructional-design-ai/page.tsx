@@ -140,15 +140,15 @@ export default function ChatIDPage() {
         </ScrollReveal>
 
         <ScrollReveal delay={2}>
-          <div className="mt-10 overflow-hidden rounded-card border border-edge shadow-card">
+          <Link href={CHATID_URL} target="_blank" rel="noopener noreferrer" className="mt-10 block overflow-hidden rounded-card border border-edge shadow-card transition-opacity hover:opacity-90">
             <Image
               src="/chat-id-2.png"
-              alt="ChatID GPT interface showing instructional design prompts and a needs analysis response"
+              alt="ChatID GPT interface — click to open ChatID in ChatGPT"
               width={2384}
               height={1920}
               className="w-full"
             />
-          </div>
+          </Link>
         </ScrollReveal>
       </section>
 
