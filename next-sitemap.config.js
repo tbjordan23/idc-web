@@ -8,6 +8,6 @@ module.exports = {
       { userAgent: "*", disallow: ["/api/", "/auth/"] },
     ],
   },
-  // Exclude API routes and auth pages
-  exclude: ["/api/*", "/auth/*"],
+  // Exclude API routes, auth pages, and Next.js-generated asset routes
+  exclude: ["/api/*", "/auth/*", "/icon.png", "/apple-icon.png"],
 }
