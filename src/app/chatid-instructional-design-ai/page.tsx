@@ -8,7 +8,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "ChatID: Instructional Design AI",
   description:
-    "ChatID is the top-rated instructional design GPT in the ChatGPT marketplace. Generate needs analyses, learning objectives, design documents, and project plans in minutes.",
+    "ChatID is the top-rated instructional design GPT in the ChatGPT marketplace — and it's free. Generate needs analyses, learning objectives, design documents, and project plans in minutes.",
   path: "/chatid-instructional-design-ai",
 })
 
@@ -104,7 +104,7 @@ export default function ChatIDPage() {
       <Hero
         eyebrow="Top Instructional Design GPT"
         title="ChatID: Your AI Copilot for Instructional Design"
-        subtitle="Generate needs analyses, learning objectives, design documents, and more — in minutes, not days. Built for instructional designers by IDC."
+        subtitle="Generate needs analyses, learning objectives, design documents, and more — in minutes, not days. Free to use. Built for instructional designers by IDC."
         cta={{ label: "Try ChatID Free", href: CHATID_URL, target: "_blank" }}
       />
 
@@ -121,10 +121,10 @@ export default function ChatIDPage() {
         <ScrollReveal delay={1}>
           <div className="mt-6 space-y-4 text-base font-medium leading-relaxed text-copy-muted">
             <p>
-              ChatID is the #1 instructional design GPT in the ChatGPT marketplace — and it was built
-              specifically for people like you. Whether you&rsquo;re a seasoned ID professional looking
-              to move faster, or someone newer to the field who needs a knowledgeable thought partner,
-              ChatID meets you where you are.
+              ChatID is the #1 instructional design GPT in the ChatGPT marketplace — and it&rsquo;s
+              completely free. Built specifically for people like you, whether you&rsquo;re a seasoned
+              ID professional looking to move faster or someone newer to the field who needs a
+              knowledgeable thought partner, ChatID meets you where you are.
             </p>
             <p>
               Ask it to run a needs analysis. Have it write your learning objectives. Hand it your
@@ -162,9 +162,9 @@ export default function ChatIDPage() {
               {" "}with an on-demand AI copilot.
             </p>
             <p className="mx-auto mt-4 max-w-2xl text-center text-base font-medium leading-relaxed text-copy-muted">
-              Stop starting from scratch. ChatID gives you a head start on every deliverable — so you
-              can spend your time on the thinking that actually requires you, not the formatting that
-              doesn&rsquo;t.
+              Stop starting from scratch. ChatID is free, and it gives you a head start on every
+              deliverable — so you can spend your time on the thinking that actually requires you,
+              not the formatting that doesn&rsquo;t.
             </p>
             <div className="mt-8 flex justify-center">
               <Link
