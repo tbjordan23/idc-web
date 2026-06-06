@@ -7,7 +7,7 @@ import Image from "next/image"
 export const metadata: Metadata = generatePageMetadata({
   title: "What is Instructional Design?",
   description:
-    "View definitions for instructional design, educational technology, educational psychology, instructional technology, curriculum design, & instructional systems",
+    "Definitions and overviews of instructional design, educational technology, instructional technology, curriculum design, and related fields.",
   path: "/whatisinstructionaldesign",
 })
 

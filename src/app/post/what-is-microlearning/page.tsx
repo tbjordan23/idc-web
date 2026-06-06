@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "What Is Microlearning? Definition and Tips",
-  description: "Microlearning is more than just short content. Learn what it really is, when it works, when it doesn't, and how to design microlearning that actually drives performance.",
+  description: "Microlearning is more than short content. Learn what it really is, when it works, and how to design it for real performance impact.",
   path: "/post/what-is-microlearning",
 })
 

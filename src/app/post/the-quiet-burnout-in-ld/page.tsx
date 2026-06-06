@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "The Quiet Burnout in L&D: Why So Many Instructional Designers Are Exhausted",
-  description: "Burnout in L&D rarely looks like a breakdown. It looks like staying late to fix a stakeholder&rsquo;s last-minute scope change, again. Here&rsquo;s what&rsquo;s really driving it — and what actually helps.",
+  description: "Burnout in L&D rarely looks like a breakdown. It looks like absorbing last-minute scope changes. Here's what's really driving it — and what helps.",
   path: "/post/the-quiet-burnout-in-ld",
 })
 

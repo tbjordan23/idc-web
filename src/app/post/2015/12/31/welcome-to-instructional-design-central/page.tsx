@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "Welcome to Instructional Design Central",
   description:
-    "Instructional Design Central is a home for ID professionals and career changers — built to support, inform, and connect the people who make learning better.",
+    "A home for ID professionals and career changers — built to support, inform, and connect the people who make learning better.",
   path: "/post/2015/12/31/welcome-to-instructional-design-central",
 })
 

@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "History of Instructional Design",
   description:
-    "Explore the complete history of instructional design — from World War II military training in 1944 to today's AI-powered learning. An interactive timeline of the field's key milestones.",
+    "The history of instructional design from WWII military training to today's AI-powered learning — an interactive timeline of key milestones.",
   path: "/instructional-design-history",
 })
 

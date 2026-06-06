@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Content Curation: A Necessary Skill for Future Instructional Designers",
-  description: "Content curation is one of the most underrated skills in instructional design. Learn what it really means, how to evaluate sources, and the tools that make it work.",
+  description: "Content curation is one of the most underrated skills in ID. Learn what it means, how to evaluate sources, and the tools that make it work.",
   path: "/post/content-curation-instructional-designers",
 })
 

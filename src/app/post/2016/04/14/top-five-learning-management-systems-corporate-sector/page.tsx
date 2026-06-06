@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Top Five Learning Management Systems for the Corporate Sector",
-  description: "Choosing a corporate LMS is a big decision. Here's a clear-eyed look at five leading platforms — Cornerstone, SAP SuccessFactors, Docebo, TalentLMS, and Absorb — to help you find the right fit.",
+  description: "Choosing a corporate LMS is a big decision. A clear-eyed look at five leading platforms — Cornerstone, SAP SuccessFactors, Docebo, TalentLMS, and Absorb.",
   path: "/post/2016/04/14/top-five-learning-management-systems-corporate-sector",
 })
 

@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "How to Reduce the Cost of Your Training with eLearning",
-  description: "eLearning isn&rsquo;t just more convenient than in-person training — it&rsquo;s significantly more affordable. Here&rsquo;s how organizations are cutting training costs without cutting quality.",
+  description: "eLearning isn't just more convenient — it's significantly more affordable. Here's how organizations are cutting training costs without cutting quality.",
   path: "/post/how-to-reduce-the-cost-of-your-training-with-elearning",
 })
 

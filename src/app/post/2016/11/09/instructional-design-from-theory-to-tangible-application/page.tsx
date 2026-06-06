@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design: A Paradigm Shift",
-  description: "Instructional design has evolved from a theory-driven academic discipline into a practical, outcome-focused applied field. Here's what that shift means for how you work.",
+  description: "Instructional design evolved from a theory-driven discipline into a practical, outcome-focused field. Here's what that shift means for how you work.",
   path: "/post/2016/11/09/instructional-design-from-theory-to-tangible-application",
 })
 

@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "3 Reasons Why Instructional Designers Need to Change",
   description:
-    "The field of instructional design is evolving fast. Learner expectations have shifted, technology literacy is table stakes, and business impact has replaced content coverage. Here's what that means for you.",
+    "Learner expectations have shifted, technology literacy is table stakes, and business impact has replaced content coverage. Here's what that means for you.",
   path: "/post/why-instructional-designers-need-to-change",
 })
 

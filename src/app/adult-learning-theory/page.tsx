@@ -7,7 +7,7 @@ import Image from "next/image"
 export const metadata: Metadata = generatePageMetadata({
   title: "Adult Learning Theory",
   description:
-    "A complete guide to adult learning theory and andragogy — Malcolm Knowles' 5 Assumptions of Adult Learners, 4 Principles of Andragogy, modern adult learning theorists, and practical application for today's instructional designer.",
+    "A complete guide to adult learning theory and andragogy — Knowles' Assumptions, Principles, and practical applications for instructional designers.",
   path: "/adult-learning-theory",
 })
 

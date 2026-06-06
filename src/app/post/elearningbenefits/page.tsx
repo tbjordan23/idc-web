@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "eLearn or Get Left Behind",
   description:
-    "eLearning isn't just a trend — it's become the default. Here are the real, durable benefits of eLearning that every instructional designer and organization should understand.",
+    "eLearning isn't just a trend — it's the default. Here are the real, durable benefits every instructional designer and organization should understand.",
   path: "/post/elearningbenefits",
 })
 

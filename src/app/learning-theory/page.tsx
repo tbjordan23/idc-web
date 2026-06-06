@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Learning Theory Overview",
   description:
-    "Explore the major learning theories in instructional design — Behaviorism, Cognitivism, Constructivism, Social Learning Theory, and Experiential Learning — with key influencers and practical applications for each.",
+    "Explore the major learning theories in instructional design — Behaviorism, Cognitivism, Constructivism, Social Learning, and Experiential Learning.",
   path: "/learning-theory",
 })
 

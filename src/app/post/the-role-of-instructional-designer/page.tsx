@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "The Role of the Instructional Designer",
   description:
-    "Instructional designers wear many hats — analyst, architect, collaborator, evaluator. Here's a real look at what the role involves day to day and how it shifts depending on where you work.",
+    "Instructional designers wear many hats. Here's a real look at what the role involves day to day — and how it shifts depending on where you work.",
   path: "/post/the-role-of-instructional-designer",
 })
 

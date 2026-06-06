@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "What Is Instructional Design?",
   description:
-    "A foundational introduction to the field — what instructional design is, where it came from, and why it matters more than ever in a world full of information but short on genuine learning.",
+    "What is instructional design? A foundational introduction to the field — what it is, where it came from, and why it matters more than ever.",
   path: "/post/2016/04/27/what-is-instructional-design",
 })
 

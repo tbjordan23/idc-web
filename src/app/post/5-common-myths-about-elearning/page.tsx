@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "5 Common Myths About eLearning",
   description:
-    "eLearning gets a bad reputation — and some of it is earned. But many of the criticisms come from myths that have more to do with poor execution than with the medium itself.",
+    "eLearning gets a bad reputation — and some of it is earned. But many criticisms are myths that have more to do with poor execution than the medium itself.",
   path: "/post/5-common-myths-about-elearning",
 })
 

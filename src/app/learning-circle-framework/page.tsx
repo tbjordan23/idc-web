@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "The Learning Circle Framework™",
   description:
-    "The Learning Circle Framework is designed to naturally guide all levels of instructional design related professionals through a basic learning design process.",
+    "The Learning Circle Framework guides instructional design professionals through a structured learning design process — naturally and intuitively.",
   path: "/learning-circle-framework",
 })
 

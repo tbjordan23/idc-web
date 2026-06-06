@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "The Adaptive Advantage: How eLearning Is Changing Higher Education",
   description:
-    "The one-size-fits-all college experience is fading. Here's how adaptive eLearning is reshaping higher education — and what it means for the instructional designers building it.",
+    "The one-size-fits-all college experience is fading. How adaptive eLearning is reshaping higher education — and what it means for instructional designers.",
   path: "/post/the-adaptive-advantage-how-e-learning-will-change-higher-education",
 })
 

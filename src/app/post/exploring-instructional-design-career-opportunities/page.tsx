@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "Exploring Instructional Design Career Opportunities",
   description:
-    "Instructional design opens doors across corporate L&D, higher education, freelancing, and the public sector. Here's a look at the major paths and what each one actually looks like.",
+    "Instructional design opens doors across corporate L&D, higher ed, freelancing, and the public sector — and what each path actually looks like.",
   path: "/post/exploring-instructional-design-career-opportunities",
 })
 

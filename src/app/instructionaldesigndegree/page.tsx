@@ -7,7 +7,7 @@ import Image from "next/image"
 export const metadata: Metadata = generatePageMetadata({
   title: "Top Instructional Design Degrees & Programs",
   description:
-    "Explore top-rated instructional design degree programs and certificate options. Compare MS, MEd, EdD, and PhD programs at leading universities — many available fully online.",
+    "Explore top-rated instructional design degree and certificate programs. Compare MS, MEd, EdD, and PhD options at leading universities — many fully online.",
   path: "/instructionaldesigndegree",
 })
 

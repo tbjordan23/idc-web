@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "The Rise of LX Design",
-  description: "LX Design isn't just a rebrand of instructional design — it's a different orientation toward the learner. Here's what it means and why it matters for your practice.",
+  description: "LX Design isn't just a rebrand of instructional design — it's a different orientation toward the learner. Here's what it means for your practice.",
   path: "/post/2017/01/14/the-rise-of-lx-design",
 })
 

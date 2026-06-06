@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Resources",
   description:
-    "Free and premium resources for instructional designers — templates, tools, job board, courses, needs analysis app, and more from Instructional Design Central.",
+    "Free resources for instructional designers — templates, tools, job board, courses, needs analysis app, and more from IDC.",
   path: "/instructionaldesignresources",
 })
 

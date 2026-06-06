@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "A Case Study: Design Thinking",
-  description: "See how design thinking&rsquo;s 5 stages — Empathize, Define, Ideate, Prototype, Test — transform an instructional design project from stakeholder-approved to learner-loved.",
+  description: "Design thinking's 5 stages — Empathize, Define, Ideate, Prototype, Test — applied to instructional design to build what learners actually need.",
   path: "/post/a-case-study-design-thinking",
 })
 

@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "Top Five Learning Management Systems for Academic Use",
   description:
-    "Canvas, Blackboard, Moodle, Brightspace, Schoology — here's what you need to know about the leading academic LMS platforms in 2025 and how to choose the right one.",
+    "Canvas, Blackboard, Moodle, Brightspace, Schoology — what you need to know about the leading academic LMS platforms and how to choose the right one.",
   path: "/post/top-five-learning-management-systems-academic",
 })
 

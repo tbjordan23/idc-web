@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "Overview: Top Instructional Design Acronyms",
   description:
-    "ADDIE, SCORM, xAPI, SME, LMS — the field is full of shorthand. Here's a clear, plain-English breakdown of the acronyms every instructional designer should know.",
+    "ADDIE, SCORM, xAPI, SME, LMS — the field is full of shorthand. A plain-English breakdown of the acronyms every instructional designer should know.",
   path: "/post/acronyms",
 })
 

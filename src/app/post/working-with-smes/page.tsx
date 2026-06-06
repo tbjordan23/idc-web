@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "How to Effectively Work with SMEs",
   description:
-    "Subject matter experts have what you need — and limited time to share it. Here's how to build relationships that actually work, from the first conversation to the final review.",
+    "Subject matter experts have what you need — and limited time to share it. Here's how to build SME relationships that actually work.",
   path: "/post/working-with-smes",
 })
 

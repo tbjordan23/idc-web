@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Need Analysis: 5 Important Areas",
-  description: "Before you build a single slide, there are five areas every instructional designer needs to investigate. Here&rsquo;s how to ask the right questions and build the right training.",
+  description: "Five areas every instructional designer must investigate before building anything. Here's how to ask the right questions and build the right training.",
   path: "/post/need-analysis-tips",
 })
 

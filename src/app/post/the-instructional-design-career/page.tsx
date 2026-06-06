@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "The Instructional Design Career",
   description:
-    "From entry-level course developer to Chief Learning Officer — here's what an instructional design career actually looks like, including job titles, salary ranges, and the day-to-day reality of the work.",
+    "What does an instructional design career look like? Job titles, salary ranges, and day-to-day reality from entry level to Chief Learning Officer.",
   path: "/post/the-instructional-design-career",
 })
 

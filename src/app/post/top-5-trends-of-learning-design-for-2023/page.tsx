@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Top 5 Trends of Learning Design for 2023",
-  description: "The five trends that defined learning design in 2023 — from the GenAI wave to the rise of learner agency — and why they still matter for how you design today.",
+  description: "The five trends that defined learning design in 2023 — from the GenAI wave to learner agency — and why they still matter for how you design today.",
   path: "/post/top-5-trends-of-learning-design-for-2023",
 })
 

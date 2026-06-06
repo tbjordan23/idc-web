@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design: The Foundation for Problem Solving",
   description:
-    "Instructional design is fundamentally a problem-solving discipline. Here's how diagnosing real problems, designing solutions, iterating, and measuring outcomes connects ID to every field.",
+    "Instructional design is a problem-solving discipline. How diagnosing real problems, designing solutions, and measuring outcomes connects ID to every field.",
   path: "/post/instructional-design-the-foundation-for-problem-solving",
 })
 

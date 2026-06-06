@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Review: Synapse Learning Experience Tool",
-  description: "An honest look at Synapse, a cloud-based learning experience design tool built for instructional designers. What it does well, who it's for, and where it falls short.",
+  description: "An honest look at Synapse, a cloud-based LX design tool for instructional designers — what it does well, who it's for, and where it falls short.",
   path: "/post/instructionaldesigntoolreview",
 })
 
