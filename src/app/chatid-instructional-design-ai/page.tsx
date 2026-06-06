@@ -83,18 +83,18 @@ const frameworks = [
 const steps = [
   {
     number: "01",
-    title: "Open ChatID",
-    description: "Go to the ChatGPT marketplace and open ChatID — the top-rated instructional design GPT, built by IDC.",
+    title: "Create a Free ChatGPT Account",
+    description: "ChatID lives inside ChatGPT — you'll need a free ChatGPT account to access it. Both ChatGPT and ChatID are completely free. Sign up at chatgpt.com if you don't have one yet.",
   },
   {
     number: "02",
-    title: "Ask or Select a Prompt",
-    description: "Type your request or pick from ChatID's built-in prompts. Needs analysis, learning objectives, design doc — just tell it what you need.",
+    title: "Open ChatID",
+    description: "Once you're logged in, click the link on this page to open ChatID directly — the top-rated instructional design GPT, built by IDC.",
   },
   {
     number: "03",
-    title: "Get Your Artifact",
-    description: "ChatID generates a polished, industry-standard artifact in seconds. Copy it, customize it, and put it to work.",
+    title: "Ask and Get Your Artifact",
+    description: "Type your request or pick from ChatID's built-in prompts. Needs analysis, learning objectives, design doc — ChatID generates a polished, industry-standard artifact in seconds.",
   },
 ]
 
@@ -104,7 +104,7 @@ export default function ChatIDPage() {
       <Hero
         eyebrow="Top Instructional Design GPT"
         title="ChatID: Your AI Copilot for Instructional Design"
-        subtitle="Generate needs analyses, learning objectives, design documents, and more — in minutes, not days. Free to use. Built for instructional designers by IDC."
+        subtitle="Generate needs analyses, learning objectives, design documents, and more — in minutes, not days. Completely free. Built for instructional designers by IDC."
         cta={{ label: "Try ChatID Free", href: CHATID_URL, target: "_blank" }}
       />
 
@@ -274,6 +274,18 @@ export default function ChatIDPage() {
             </ScrollReveal>
           ))}
         </div>
+
+        <ScrollReveal delay={1}>
+          <div className="mt-8 flex items-center gap-3 rounded-card border border-edge bg-surface-2 px-5 py-4">
+            <svg className="h-5 w-5 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <p className="text-sm font-medium text-copy-muted">
+              <strong className="font-bold text-copy">You&rsquo;ll need a ChatGPT account to get started — and it&rsquo;s completely free.</strong>{" "}
+              Don&rsquo;t have one? <Link href="https://chatgpt.com" target="_blank" rel="noopener noreferrer" className="font-semibold text-accent hover:underline">Sign up at chatgpt.com</Link> — no credit card required.
+            </p>
+          </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Final CTA ───────────────────────────────────────────────────────── */}
@@ -286,9 +298,10 @@ export default function ChatIDPage() {
             </h2>
             <div className="mx-auto mt-2 h-0.5 w-10 rounded bg-accent" />
             <p className="mx-auto mt-5 max-w-xl text-base font-medium leading-relaxed text-copy-muted">
-              ChatID is free to use with a ChatGPT account. Open it in the marketplace, describe
-              what you&rsquo;re working on, and get a professional-quality artifact back in under
-              a minute. No setup. No learning curve. Just results.
+              ChatID is completely free — and so is the ChatGPT account you need to use it.
+              No paid subscription, no credit card, no catch. Open it, describe what you&rsquo;re
+              working on, and get a professional-quality artifact back in under a minute.
+              No setup. No learning curve. Just results.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
               <Link
