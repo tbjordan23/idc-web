@@ -11,7 +11,6 @@ export interface BlogPost {
   tags?: string[]   // extra filter tags; tag is always used for display
   date: string
   readTime: string
-  views: number
 }
 
 const BATCH_SIZE = 9
@@ -39,11 +38,6 @@ const TAG_GROUPS: Record<string, string[]> = {
   "LX Design": ["LX Design", "Learning Design"],
   "LMS": ["LMS", "Learning Management"],
   "Tools": ["Tools", "eLearning Tools", "Instructional Design Tools"],
-}
-
-function formatViews(n: number): string {
-  if (n >= 1000) return `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k`
-  return n.toString()
 }
 
 // ── Filter bar ────────────────────────────────────────────────────────────────
@@ -144,13 +138,6 @@ function BlogCard({ post, stagger }: { post: BlogPost; stagger: number }) {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               {post.readTime} read
-            </span>
-            <span className="flex items-center gap-1">
-              <svg className="h-3.5 w-3.5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                <path strokeLinecap="round" strokeLinejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-              </svg>
-              {formatViews(post.views)} views
             </span>
             <span className="ml-auto font-semibold text-accent">Read →</span>
           </div>

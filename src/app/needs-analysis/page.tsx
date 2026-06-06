@@ -514,17 +514,6 @@ export default function NeedsAnalysisPage() {
           </p>
         </ScrollReveal>
 
-        {/* ── ADDIE Course Promo #2 ────────────────────────────────────────── */}
-        <ScrollReveal delay={1}>
-          <PromoCallout
-            eyebrow="IDC Course"
-            title="Ready to Apply What You've Learned?"
-            description="The IDC Mastering the ADDIE Model course takes you from theory to practice across all five phases. You'll work through real-world examples, apply proven frameworks, and finish with a certificate that demonstrates your expertise. If you're serious about doing instructional design well, this is your next step."
-            ctaLabel="Start the ADDIE Course"
-            ctaHref="/addie-model-course"
-            icon={addieIcon}
-          />
-        </ScrollReveal>
 
       </ContentPage>
     </>

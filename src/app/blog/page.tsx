@@ -21,7 +21,6 @@ const allPosts: BlogPost[] = [
     tags: ["SME"],
     date: "Mar 30, 2026",
     readTime: "6 min",
-    views: 107,
   },
   {
     title: "Top 5 Learning Experience Design Trends for 2026",
@@ -31,7 +30,6 @@ const allPosts: BlogPost[] = [
     tag: "LX Design",
     date: "Dec 24, 2025",
     readTime: "2 min",
-    views: 529,
   },
   {
     title: "The Future of Learning: Why Personalization Changes Everything",
@@ -41,7 +39,6 @@ const allPosts: BlogPost[] = [
     tag: "LX Design",
     date: "Nov 12, 2025",
     readTime: "2 min",
-    views: 82,
   },
   {
     title: "The GenAI Revolution: Transforming Higher Education",
@@ -52,7 +49,6 @@ const allPosts: BlogPost[] = [
     tags: ["Higher Education"],
     date: "Jul 27, 2024",
     readTime: "3 min",
-    views: 853,
   },
   {
     title: "Making the Leap: From Teaching to Instructional Design",
@@ -63,7 +59,6 @@ const allPosts: BlogPost[] = [
     tags: ["Teacher Transition"],
     date: "May 20, 2024",
     readTime: "3 min",
-    views: 971,
   },
   {
     title: "Uncovering the Future: 5 Game-Changing Trends in Learning Design for 2024",
@@ -73,7 +68,6 @@ const allPosts: BlogPost[] = [
     tag: "LX Design",
     date: "Apr 11, 2024",
     readTime: "2 min",
-    views: 1269,
   },
   {
     title: "Top 5 Trends of Learning Design for 2023",
@@ -83,7 +77,6 @@ const allPosts: BlogPost[] = [
     tag: "LX Design",
     date: "Jan 2023",
     readTime: "4 min",
-    views: 2144,
   },
   {
     title: "Instructional Design: The Art and Science of Creating Effective Learning Experiences",
@@ -93,7 +86,6 @@ const allPosts: BlogPost[] = [
     tag: "Instructional Design",
     date: "Feb 2023",
     readTime: "2 min",
-    views: 940,
   },
   {
     title: "Elevate your Instructional Design Game with Chat GPT",
@@ -103,7 +95,6 @@ const allPosts: BlogPost[] = [
     tag: "AI",
     date: "May 2023",
     readTime: "2 min",
-    views: 3270,
   },
   {
     title: "Exploring Instructional Design Career Opportunities",
@@ -114,7 +105,6 @@ const allPosts: BlogPost[] = [
     tags: ["Instructional Design"],
     date: "Mar 2023",
     readTime: "2 min",
-    views: 573,
   },
   {
     title: "The Instructional Design Career",
@@ -125,7 +115,6 @@ const allPosts: BlogPost[] = [
     tags: ["Instructional Design"],
     date: "Dec 28, 2021",
     readTime: "2 min",
-    views: 3949,
   },
   {
     title: "The Role of the Instructional Designer",
@@ -136,7 +125,6 @@ const allPosts: BlogPost[] = [
     tags: ["Instructional Design"],
     date: "Aug 15, 2022",
     readTime: "3 min",
-    views: 5467,
   },
   {
     title: "How to Effectively Work with SMEs",
@@ -146,7 +134,6 @@ const allPosts: BlogPost[] = [
     tag: "Instructional Design",
     date: "Jan 19, 2021",
     readTime: "4 min",
-    views: 9208,
   },
   {
     title: "A Case Study: Design Thinking",
@@ -156,7 +143,6 @@ const allPosts: BlogPost[] = [
     tag: "ID Models",
     date: "Aug 19, 2021",
     readTime: "4 min",
-    views: 2251,
   },
   {
     title: "15 Reasons to be Grateful as an Instructional Designer",
@@ -166,7 +152,6 @@ const allPosts: BlogPost[] = [
     tag: "Instructional Design",
     date: "Nov 28, 2019",
     readTime: "1 min",
-    views: 1174,
   },
   {
     title: "Top L&D Experts Reveal Winning Strategies for Training Remote Workers",
@@ -176,7 +161,6 @@ const allPosts: BlogPost[] = [
     tag: "L&D",
     date: "May 28, 2021",
     readTime: "2 min",
-    views: 557,
   },
   {
     title: "Need Analysis: 5 Important Areas",
@@ -186,7 +170,6 @@ const allPosts: BlogPost[] = [
     tag: "Needs Analysis",
     date: "Aug 13, 2018",
     readTime: "4 min",
-    views: 2011,
   },
   {
     title: "How to Reduce the Cost of Your Training with eLearning",
@@ -196,7 +179,6 @@ const allPosts: BlogPost[] = [
     tag: "eLearning",
     date: "Aug 24, 2019",
     readTime: "4 min",
-    views: 427,
   },
   {
     title: "5 Common myths about eLearning",
@@ -206,7 +188,6 @@ const allPosts: BlogPost[] = [
     tag: "eLearning",
     date: "Jul 4, 2019",
     readTime: "4 min",
-    views: 607,
   },
   {
     title: "The Adaptive Advantage: How E-Learning Will Change Higher Education",
@@ -216,7 +197,6 @@ const allPosts: BlogPost[] = [
     tag: "eLearning",
     date: "Jul 20, 2019",
     readTime: "4 min",
-    views: 335,
   },
   {
     title: "Overview: Top Instructional Design Acronyms",
@@ -226,7 +206,6 @@ const allPosts: BlogPost[] = [
     tag: "Instructional Design",
     date: "Jun 26, 2018",
     readTime: "3 min",
-    views: 3168,
   },
   {
     title: "eLearn Or Get Left Behind",
@@ -236,7 +215,6 @@ const allPosts: BlogPost[] = [
     tag: "eLearning",
     date: "2016",
     readTime: "3 min",
-    views: 308,
   },
   {
     title: "3 Reasons Why Instructional Designers Need to Change",
@@ -246,7 +224,6 @@ const allPosts: BlogPost[] = [
     tag: "Instructional Design",
     date: "Nov 22, 2017",
     readTime: "3 min",
-    views: 2238,
   },
   {
     title: "Instructional Design: The Foundation for Problem Solving",
@@ -256,7 +233,6 @@ const allPosts: BlogPost[] = [
     tag: "Instructional Design",
     date: "Apr 14, 2016",
     readTime: "3 min",
-    views: 4522,
   },
   {
     title: "Top Five Learning Management Systems (Academic)",
@@ -266,7 +242,6 @@ const allPosts: BlogPost[] = [
     tag: "Tools",
     date: "Nov 22, 2017",
     readTime: "3 min",
-    views: 1517,
   },
   {
     title: "Content Curation: A Necessary Skill for Future Instructional Designers",
@@ -276,7 +251,6 @@ const allPosts: BlogPost[] = [
     tag: "Instructional Design",
     date: "May 20, 2017",
     readTime: "3 min",
-    views: 2212,
   },
   {
     title: "Review: Synapse Learning Experience Tool",
@@ -286,7 +260,6 @@ const allPosts: BlogPost[] = [
     tag: "Tools",
     date: "May 13, 2017",
     readTime: "2 min",
-    views: 1075,
   },
   {
     title: "What is Microlearning? Definition and Tips",
@@ -296,7 +269,6 @@ const allPosts: BlogPost[] = [
     tag: "LX Design",
     date: "Aug 4, 2017",
     readTime: "2 min",
-    views: 8710,
   },
   {
     title: "Instructional Design: A Paradigm Shift",
@@ -307,7 +279,6 @@ const allPosts: BlogPost[] = [
     tags: ["Instructional Design"],
     date: "Nov 9, 2016",
     readTime: "1 min",
-    views: 2814,
   },
   {
     title: "The Rise of LX Design",
@@ -317,7 +288,6 @@ const allPosts: BlogPost[] = [
     tag: "LX Design",
     date: "Jan 4, 2017",
     readTime: "1 min",
-    views: 1220,
   },
   {
     title: "Top Five Learning Management Systems (Corporate Sector)",
@@ -327,7 +297,6 @@ const allPosts: BlogPost[] = [
     tag: "Tools",
     date: "Apr 14, 2016",
     readTime: "2 min",
-    views: 647,
   },
   {
     title: "What is Instructional Design?",
@@ -337,7 +306,6 @@ const allPosts: BlogPost[] = [
     tag: "Instructional Design",
     date: "Apr 27, 2016",
     readTime: "2 min",
-    views: 808,
   },
   {
     title: "New Instructional Design Central Site!",
@@ -347,7 +315,6 @@ const allPosts: BlogPost[] = [
     tag: "Community",
     date: "Dec 31, 2015",
     readTime: "1 min",
-    views: 419,
   },
 ]
 
