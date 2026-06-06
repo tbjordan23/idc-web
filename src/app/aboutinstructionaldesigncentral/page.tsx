@@ -16,7 +16,7 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        title="Instructional Design Central"
+        title="About Instructional Design Central"
         subtitle="We built IDC because great instructional designers deserve a home — with the resources, community, and support to do their best work."
       />
 

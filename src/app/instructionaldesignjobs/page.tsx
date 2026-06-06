@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Jobs Remote",
   description:
-    "Explore instructional design job titles, salary ranges, top industries, and career paths. A complete guide to what you can do with a background in instructional design or learning experience design.",
+    "Explore instructional design job titles, salary ranges, and career paths. A complete guide to what you can do with a background in instructional design.",
   path: "/instructionaldesignjobs",
 })
 

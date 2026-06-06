@@ -8,7 +8,7 @@ import CourseScreenshotCarousel, { type CourseScreenshot } from "@/components/ui
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Foundations Course and Certification",
   description:
-    "Learn the basics of instructional design with Instructional Design Foundations, a beginner-friendly online course covering core principles, models, and best practices. Perfect for aspiring instructional designers, transitioning teachers, and curriculum designers looking to build a strong foundation and start creating effective learning experiences.",
+    "Learn instructional design with this beginner-friendly course. Covers core principles, models, and best practices — ideal for career changers and new IDs.",
   path: "/instructional-design-course",
 })
 

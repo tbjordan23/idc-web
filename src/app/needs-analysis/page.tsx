@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Needs Analysis in Instructional Design",
   description:
-    "What is a needs analysis? A complete guide to the most critical phase of the ADDIE model — identifying performance gaps, understanding learners, and designing solutions that actually work.",
+    "What is a needs analysis? A complete guide to identifying performance gaps, understanding learners, and designing solutions that actually work.",
   path: "/needs-analysis",
 })
 

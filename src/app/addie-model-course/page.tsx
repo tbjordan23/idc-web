@@ -8,7 +8,7 @@ import CourseScreenshotCarousel, { type CourseScreenshot } from "@/components/ui
 export const metadata: Metadata = generatePageMetadata({
   title: "ADDIE Model Course",
   description:
-    "Master the ADDIE instructional design model with this practical, expert-led course. Learn to design, develop, and evaluate effective learning experiences using industry-proven methods. Enroll today to boost your instructional design skills.",
+    "Master the ADDIE model with this practical, expert-led course. Learn to design, develop, and evaluate effective learning experiences. Earn a certificate.",
   path: "/addie-model-course",
 })
 

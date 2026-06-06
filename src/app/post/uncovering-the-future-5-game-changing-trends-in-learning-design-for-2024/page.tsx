@@ -5,8 +5,8 @@ import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Uncovering the Future: 5 Game-Changing Trends in Learning Design for 2024",
-  description: "Five trends that defined learning design in 2024 — from AI-assisted course development to immersive simulations — and what they mean for instructional designers building for what&rsquo;s next.",
+  title: "5 Game-Changing Learning Design Trends for 2024",
+  description: "Five trends that defined learning design in 2024 — AI-assisted development, immersive simulations, and more. What they mean for instructional designers.",
   path: "/post/uncovering-the-future-5-game-changing-trends-in-learning-design-for-2024",
 })
 

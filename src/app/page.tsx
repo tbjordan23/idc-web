@@ -8,7 +8,7 @@ import Link from "next/link"
 export const metadata: Metadata = {
   title: "Community and Resources | Instructional Design Central",
   description:
-    "Instructional Design Central (IDC) helps instructional design related professionals stay sharp and create amazing learning experiences by providing access to online learning, community connections, and professional resources.",
+    "IDC helps instructional designers stay sharp and create better learning experiences — with online courses, community, and professional resources.",
   alternates: {
     canonical: "https://www.instructionaldesigncentral.com",
   },

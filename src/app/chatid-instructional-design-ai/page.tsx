@@ -8,7 +8,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "ChatID: Instructional Design AI",
   description:
-    "ChatID is the top-rated instructional design GPT in the ChatGPT marketplace — and it's free. Generate needs analyses, learning objectives, design documents, and project plans in minutes.",
+    "ChatID is the top-rated instructional design GPT in ChatGPT — and it's free. Generate needs analyses, learning objectives, and project plans in minutes.",
   path: "/chatid-instructional-design-ai",
 })
 

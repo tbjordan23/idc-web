@@ -6,7 +6,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Designer Salary",
   description:
-    "What is the average salary of an instructional designer? Explore salary ranges by role, experience level, industry, and location — so you can advocate for yourself with confidence.",
+    "What is the average instructional designer salary? Explore ranges by role, experience level, industry, and location — so you can advocate with confidence.",
   path: "/instructionaldesignersalary",
 })
 

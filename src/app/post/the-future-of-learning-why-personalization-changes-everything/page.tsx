@@ -5,8 +5,8 @@ import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "The Future of Learning: Why Personalization Changes Everything",
-  description: "One-size-fits-all learning is losing ground fast — here&rsquo;s why personalization has become the new baseline expectation in L&amp;D, and what that means for instructional designers.",
+  title: "The Future of Learning: Why Personalization Matters",
+  description: "One-size-fits-all learning is losing ground. Here&rsquo;s why personalization has become the new baseline in L&amp;D — and what it means for instructional designers.",
   path: "/post/the-future-of-learning-why-personalization-changes-everything",
 })
 

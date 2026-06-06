@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "ADDIE Model",
   description:
-    "What is the ADDIE Model? A complete guide to the five phases of the ADDIE instructional design framework — Analysis, Design, Development, Implementation, and Evaluation.",
+    "What is the ADDIE Model? A complete guide to the five phases — Analysis, Design, Development, Implementation, and Evaluation — of instructional design.",
   path: "/addie-model",
 })
 

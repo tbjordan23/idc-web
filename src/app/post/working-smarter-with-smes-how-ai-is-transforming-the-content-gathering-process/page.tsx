@@ -5,9 +5,9 @@ import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "Working Smarter with SMEs: How AI Is Transforming the Content Gathering Process",
+  title: "Working with SMEs: How AI Is Changing Content Gathering",
   description:
-    "AI doesn't replace your subject matter expert — it multiplies every hour you spend with them. Here's how to bring AI into your SME workflow from pre-interview prep to post-interview synthesis.",
+    "AI doesn't replace your SME — it multiplies every hour you spend with them. How to bring AI into your workflow from prep to post-interview synthesis.",
   path: "/post/working-smarter-with-smes-how-ai-is-transforming-the-content-gathering-process",
 })
 
