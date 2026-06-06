@@ -52,7 +52,7 @@ const featuredResources = [
     title: "ChatID: Instructional Design GPT",
     description:
       "An AI assistant that actually understands instructional design — built to help you think, write, and design better.",
-    href: "https://chatgpt.com/g/g-0RwjMVNPf-chatid",
+    href: "/chatid-instructional-design-ai",
     tag: "AI Tool",
     cta: "Start a conversation",
     external: true,
