@@ -6,7 +6,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "The GenAI Revolution: Transforming Higher Education",
-  description: "Generative AI is reshaping how universities teach, assess, and support students — here&rsquo;s what instructional designers and educators need to understand about the shift underway.",
+  description: "Generative AI is reshaping how universities teach, assess, and support students. Here's what instructional designers and educators need to know.",
   path: "/post/the-genai-revolution-transforming-higher-education",
 })
 

@@ -7,7 +7,7 @@ import ScrollReveal from "@/components/ui/ScrollReveal"
 export const metadata: Metadata = generatePageMetadata({
   title: "Top Instructional Design Conferences",
   description:
-    "Explore the top instructional design and L&D conferences — from ATD ICE to DevLearn. Find the events worth attending to grow your skills, network, and stay current in the field.",
+    "Explore the top instructional design and L&D conferences — from ATD ICE to DevLearn — to grow your skills, network, and stay current.",
   path: "/instructionaldesignconferences",
 })
 

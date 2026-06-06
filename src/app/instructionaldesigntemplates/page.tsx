@@ -8,7 +8,7 @@ import Image from "next/image"
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Templates",
   description:
-    "Access FREE instructional design & training plan templates. These templates include an ADDIE template, storyboard template & training needs assessment template.",
+    "Download free instructional design templates — ADDIE template, storyboard template, training needs assessment, and more. Ready to use immediately.",
   path: "/instructionaldesigntemplates",
 })
 

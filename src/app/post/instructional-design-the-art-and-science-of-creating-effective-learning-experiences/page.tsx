@@ -7,7 +7,7 @@ import CoursesBanner from "@/components/ui/CoursesBanner"
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design: The Art and Science of Creating Effective Learning Experiences",
   description:
-    "Instructional design lives at the intersection of creativity and evidence. Here's what it means to practice both sides well — and why you need them working together.",
+    "Instructional design lives at the intersection of creativity and evidence. Here's what it means to practice both sides well — and why both matter.",
   path: "/post/instructional-design-the-art-and-science-of-creating-effective-learning-experiences",
 })
 
