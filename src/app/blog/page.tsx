@@ -13,6 +13,16 @@ export const metadata: Metadata = generatePageMetadata({
 
 const allPosts: BlogPost[] = [
   {
+    title: "The Quiet Burnout in L&D: Why So Many Instructional Designers Are Exhausted (and What Helps)",
+    description:
+      "Burnout in L&D rarely looks like a breakdown. It looks like absorbing last-minute scope changes, managing stakeholders who override your expertise, and quietly wondering if you still like this work. Here's what's really driving it — and what actually helps.",
+    href: "/post/the-quiet-burnout-in-ld",
+    tag: "Wellbeing",
+    tags: ["Career"],
+    date: "Jun 6, 2026",
+    readTime: "6 min",
+  },
+  {
     title: "Working Smarter with SMEs: How AI Is Transforming the Content Gathering Process",
     description:
       "Subject matter experts are busy. AI tools are changing how instructional designers gather content, validate accuracy, and reduce back-and-forth — here's how to use them effectively.",
