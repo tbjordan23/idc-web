@@ -118,40 +118,38 @@ export default function ChatIDPage() {
           <div className="mt-2 h-0.5 w-10 rounded bg-accent" />
         </ScrollReveal>
 
-        <div className="mt-8 grid gap-10 sm:grid-cols-2 sm:items-center">
-          <ScrollReveal delay={1}>
-            <div className="space-y-4 text-base font-medium leading-relaxed text-copy-muted">
-              <p>
-                ChatID is the #1 instructional design GPT in the ChatGPT marketplace — and it was built
-                specifically for people like you. Whether you&rsquo;re a seasoned ID professional looking
-                to move faster, or someone newer to the field who needs a knowledgeable thought partner,
-                ChatID meets you where you are.
-              </p>
-              <p>
-                Ask it to run a needs analysis. Have it write your learning objectives. Hand it your
-                project brief and watch it build out a full design document. ChatID doesn&rsquo;t just
-                spit out generic text — it thinks in the language of instructional design, grounded in the
-                frameworks and models that actually shape effective learning.
-              </p>
-              <p>
-                The result: work that used to take hours gets done in minutes, with the quality and
-                structure your clients and stakeholders expect.
-              </p>
-            </div>
-          </ScrollReveal>
+        <ScrollReveal delay={1}>
+          <div className="mt-6 space-y-4 text-base font-medium leading-relaxed text-copy-muted">
+            <p>
+              ChatID is the #1 instructional design GPT in the ChatGPT marketplace — and it was built
+              specifically for people like you. Whether you&rsquo;re a seasoned ID professional looking
+              to move faster, or someone newer to the field who needs a knowledgeable thought partner,
+              ChatID meets you where you are.
+            </p>
+            <p>
+              Ask it to run a needs analysis. Have it write your learning objectives. Hand it your
+              project brief and watch it build out a full design document. ChatID doesn&rsquo;t just
+              spit out generic text — it thinks in the language of instructional design, grounded in the
+              frameworks and models that actually shape effective learning.
+            </p>
+            <p>
+              The result: work that used to take hours gets done in minutes, with the quality and
+              structure your clients and stakeholders expect.
+            </p>
+          </div>
+        </ScrollReveal>
 
-          <ScrollReveal delay={2}>
-            <div className="overflow-hidden rounded-card border border-edge shadow-card">
-              <Image
-                src="/chat-id.jpeg"
-                alt="ChatID GPT interface showing instructional design prompts and a needs analysis response"
-                width={600}
-                height={800}
-                className="w-full object-cover"
-              />
-            </div>
-          </ScrollReveal>
-        </div>
+        <ScrollReveal delay={2}>
+          <div className="mt-10 overflow-hidden rounded-card border border-edge shadow-card">
+            <Image
+              src="/chat-id-2.png"
+              alt="ChatID GPT interface showing instructional design prompts and a needs analysis response"
+              width={2384}
+              height={1920}
+              className="w-full"
+            />
+          </div>
+        </ScrollReveal>
       </section>
 
       {/* ── Stat callout ────────────────────────────────────────────────────── */}
