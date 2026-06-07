@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "Top 5 Learning Experience Design Trends for 2026",
   description: "Five trends reshaping learning experience design in 2026 — from AI as a creative partner to human-centered design that finally centers everyone.",
   path: "/post/top-5-learning-experience-design-trends-for-2026",
+  ogImage: "/blog/2026-trends.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;The best learning experience designers in 2026 aren&rsquo;t just building courses — they&rsquo;re architecting experiences that are smarter, more personal, and built for every learner in the room.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/blog/2026-trends.png"
+            alt="Top 5 Learning Experience Design Trends for 2026"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

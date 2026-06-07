@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "AI doesn't replace your SME — it multiplies every hour you spend with them. How to bring AI into your workflow from prep to post-interview synthesis.",
   path: "/post/working-smarter-with-smes-how-ai-is-transforming-the-content-gathering-process",
+  ogImage: "/blog/SME-AI.png",
 })
 
 
@@ -59,6 +61,20 @@ export default function BlogPost() {
             to post-interview synthesis.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/blog/SME-AI.png"
+            alt="Working Smarter with SMEs: How AI Is Transforming the Content Gathering Process"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}
