@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "The Quiet Burnout in L&D: Why So Many Instructional Designers Are Exhausted",
   description: "Burnout in L&D rarely looks like a breakdown. It looks like absorbing last-minute scope changes. Here's what's really driving it — and what helps.",
   path: "/post/the-quiet-burnout-in-ld",
+  ogImage: "/blog/burnout.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;L&amp;D burnout doesn&rsquo;t usually look like a breakdown. It looks like staying late to redo a module because a stakeholder changed their mind on scope — again. It looks like smiling through a feedback session where someone who hasn&rsquo;t read the learning objectives rewrites your script. It looks like quietly wondering if you even like this work anymore.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/blog/burnout.png"
+            alt="The Quiet Burnout in L&D: Why So Many Instructional Designers Are Exhausted"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}
