@@ -344,6 +344,38 @@ export default function LearningDesignCanvas() {
         </div>
       </section>
 
+      {/* Template Kit Upsell */}
+      <section className="border-t border-edge py-16">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <div className="flex flex-col items-center gap-4 rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
+              <p className="text-xs font-bold uppercase tracking-widest text-accent">Want More Like This?</p>
+              <h2
+                className="font-extrabold tracking-tight text-heading"
+                style={{ fontSize: "clamp(20px,2.5vw,28px)", letterSpacing: "-0.04rem" }}
+              >
+                The Canvas Is Just the Beginning
+              </h2>
+              <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
+                The Learning Design Canvas is one of 13 templates inside the Instructional Design
+                Template Kit — everything you need to plan, document, and deliver learning
+                experiences from kickoff to evaluation. One kit, instant download, unlimited use.
+              </p>
+              <Link
+                href="/instructionaldesigntemplates"
+                className="mt-2 inline-flex items-center gap-2 rounded-lg bg-accent px-8 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+              >
+                Explore the Template Kit
+                <svg className="h-4 w-4 text-white/80 animate-nudge-right" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <p className="text-xs text-copy-muted opacity-70">13 templates &middot; Word, PowerPoint &amp; PDF &middot; One-time purchase</p>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* How to Use It */}
       <section className="border-t border-edge bg-surface py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
@@ -423,39 +455,6 @@ export default function LearningDesignCanvas() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="border-t border-edge py-16">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <div className="flex flex-col items-center gap-4 rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
-              <p className="text-xs font-bold uppercase tracking-widest text-accent">Ready When You Are</p>
-              <h2
-                className="font-extrabold tracking-tight text-heading"
-                style={{ fontSize: "clamp(20px,2.5vw,28px)", letterSpacing: "-0.04rem" }}
-              >
-                Grab the Canvas and Get Planning
-              </h2>
-              <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
-                Download it, fill it in, and bring it to your next kickoff. Looking for more tools
-                to round out your toolkit? The full Instructional Design Template Kit includes
-                the Learning Design Canvas alongside twelve other templates built for every phase
-                of a project.
-              </p>
-              <div className="mt-2">{downloadButtons}</div>
-              <Link
-                href="/instructionaldesigntemplates"
-                className="mt-1 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover"
-              >
-                Explore the full Template Kit
-                <svg className="h-4 w-4 animate-nudge-right" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <p className="text-xs text-copy-muted opacity-70">One-time download &middot; Unlimited use &middot; Always free</p>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
     </>
   )
 }
