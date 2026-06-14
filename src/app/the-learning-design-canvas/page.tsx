@@ -167,18 +167,18 @@ const steps = [
   },
   {
     step: "2",
-    heading: "Fill it out with your team",
-    text: "Work through the canvas together at kickoff, or bring a draft to your first stakeholder review. Because it all fits on one page, everyone can see the whole plan at once and weigh in before any real work begins.",
+    heading: "Build it together, not behind closed doors",
+    text: "Bring the canvas into your kickoff and fill it out with your team, your client, or your key stakeholders in the room. Because it all fits on one page, everyone can follow along in real time — and you surface misalignment while it&rsquo;s still cheap to fix, not three weeks into development.",
   },
   {
     step: "3",
-    heading: "Use it as your shared reference",
-    text: "Print it, pin it up, or drop it into your shared project space. As development gets underway, the canvas keeps your team pointed at the same target — and gives new collaborators a fast way to get oriented.",
+    heading: "Use it to get sign-off",
+    text: "Once it&rsquo;s filled out, share the canvas with stakeholders and ask for explicit agreement before you move into design and development. A one-page plan is easy to review in a single meeting — and easy for clients, SMEs, and leadership to say &ldquo;yes, this is what we&rsquo;re building&rdquo; with confidence.",
   },
   {
     step: "4",
-    heading: "Revisit it when things shift",
-    text: "Projects change. When scope, timelines, or priorities move, pull the canvas back out, update what&rsquo;s changed, and realign with your team and stakeholders before moving forward.",
+    heading: "Keep it visible as your shared reference",
+    text: "Pin it up, keep it open in your shared workspace, and bring it back to the table whenever scope, timelines, or priorities shift. It becomes the touchstone that keeps your team and stakeholders working from the same understanding from kickoff to launch.",
   },
 ]
 
@@ -380,16 +380,18 @@ export default function LearningDesignCanvas() {
       <section className="border-t border-edge bg-surface py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-widest text-accent">Putting It to Work</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Built for Alignment</p>
             <h2
               className="mt-2 font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
-              How to Use the Canvas
+              How to Use the Canvas to Get Everyone on the Same Page
             </h2>
             <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
-              There&rsquo;s no single right way to use it — but here&rsquo;s the rhythm that tends
-              to work well for instructional designers bringing it into a real project.
+              The real value of the canvas isn&rsquo;t just planning — it&rsquo;s alignment.
+              Because everything fits on one page, your team, your stakeholders, and your
+              clients can review the whole plan together, catch misunderstandings early, and move
+              forward with shared confidence. Here&rsquo;s how to make that happen.
             </p>
           </ScrollReveal>
 
