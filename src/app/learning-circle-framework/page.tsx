@@ -18,34 +18,34 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What is the Learning Circle Framework?",
+      name: "What is the Learning Circle Framework™?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The Learning Circle Framework™ is a free, visual model from Instructional Design Central for designing learning experiences. It organizes the design process into three phases — Target, Create, and Launch — connected by a continuous Test & Iterate loop, and is built on modern learning design and agile product development principles.",
+        text: "The Learning Circle Framework™ is a free, visual guide from Instructional Design Central for designing, building, and rolling out learning experiences. It organizes the process into three phases — Target, Create, and Launch — connected by a continuous Test & Iterate loop, so you always know what stage you’re in and what comes next.",
       },
     },
     {
       "@type": "Question",
-      name: "Is the Learning Circle Framework free to download?",
+      name: "How does the Learning Circle Framework™ help me know where to start?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The one-page Learning Circle Framework handout is completely free to download as a PDF. An editable PowerPoint version of the template is also available, so you can adapt it for your own projects and presentations.",
+        text: "Knowing where to begin — or what to do once you’ve started — is one of the hardest parts of instructional design. The Learning Circle Framework™ solves this by giving every project a clear sequence: Target tells you what to figure out first, Create tells you what to build next, and Launch tells you how to roll it out, with Test & Iterate keeping you moving at every stage.",
       },
     },
     {
       "@type": "Question",
-      name: "How is the Learning Circle Framework different from the ADDIE model?",
+      name: "Will the Learning Circle Framework™ help me build courses faster?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "ADDIE (Analysis, Design, Development, Implementation, Evaluation) is a linear, step-by-step process you typically move through once per project. The Learning Circle Framework is built around continuous iteration — Target, Create, and Launch form a loop, with Test & Iterate happening throughout, so your design keeps improving even after launch. Many instructional designers use the two together: ADDIE for overall project structure, and the Learning Circle for a faster, more agile design rhythm within it.",
+        text: "Yes. Because it’s built on agile, iterative principles, the framework encourages you to build in small pieces, test with real learners early, and refine before you’ve invested time in a full build. That means fewer major revisions late in the project — and more effective courses delivered in less time.",
       },
     },
     {
       "@type": "Question",
-      name: "Can I use the Learning Circle Framework for any type of training?",
+      name: "How can I use the Learning Circle Framework™ with my team and stakeholders?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The framework is intentionally simple and flexible, so it works whether you're designing a single eLearning module, a multi-day workshop, or an entire blended learning program. The three phases — and the Test & Iterate loop — scale to fit projects of any size.",
+        text: "Bring the framework into your kickoff meeting to walk your team, SMEs, and stakeholders through exactly how you’ll approach the project, then revisit it at each phase to show progress. Sharing a clear, structured process builds confidence with stakeholders and makes it easier to get the feedback and sign-off you need to keep moving.",
       },
     },
   ],
@@ -69,14 +69,24 @@ const icons = {
       <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
     </svg>
   ),
-  loop: (
-    <svg className="h-4 w-4 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
-    </svg>
-  ),
   check: (
     <svg className="mt-0.5 h-4 w-4 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+    </svg>
+  ),
+  compass: (
+    <svg className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.159.69.159 1.006 0z" />
+    </svg>
+  ),
+  bolt: (
+    <svg className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
+    </svg>
+  ),
+  users: (
+    <svg className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.681-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.94-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
     </svg>
   ),
 }
@@ -136,26 +146,21 @@ const phases = [
   },
 ]
 
-const steps = [
+const valueProps = [
   {
-    step: "1",
-    heading: "Map your project onto the circle",
-    text: "Take whatever you&rsquo;re working on right now and place it somewhere on the Target → Create → Launch cycle. This alone often reveals whether you&rsquo;re skipping a phase — or about to.",
+    title: "Always Know What Comes Next",
+    icon: icons.compass,
+    text: "One of the hardest parts of instructional design is knowing where to start — and what to do once you&rsquo;re there. The Learning Circle Framework™ gives you a clear sequence to follow at every stage, grounded in sound agile principles, so you&rsquo;re never staring at a blank page wondering what comes next.",
   },
   {
-    step: "2",
-    heading: "Use it to frame your kickoff",
-    text: "Walk your team and stakeholders through the three phases at the start of a project. It gives everyone a shared mental model for what&rsquo;s coming next, why each phase matters, and where you are right now.",
+    title: "Build Better Courses, Faster",
+    icon: icons.bolt,
+    text: "Because Test &amp; Iterate is built into every phase, you don&rsquo;t wait until the end to find out what&rsquo;s working. You build in small pieces, test with real learners early, and refine as you go — which means more effective learning experiences, developed in less time, with fewer surprises late in the project.",
   },
   {
-    step: "3",
-    heading: "Build in Test & Iterate checkpoints",
-    text: "Don&rsquo;t wait until launch to get feedback. After each phase, pause, share what you&rsquo;ve built with learners and stakeholders, and adjust before moving forward — that&rsquo;s the loop that makes this framework work.",
-  },
-  {
-    step: "4",
-    heading: "Bring it back for the next project",
-    text: "Once your team is fluent in the Target → Create → Launch rhythm, every new project gets faster to plan and easier to explain — to your team, your clients, and anyone new joining the project.",
+    title: "Build Confidence With Stakeholders",
+    icon: icons.users,
+    text: "Sharing the Learning Circle Framework™ with your team, SMEs, and stakeholders shows them exactly how your process works and what&rsquo;s coming next. That visibility builds trust — and makes it easier to get the feedback, buy-in, and sign-off you need to keep moving.",
   },
 ]
 
@@ -167,29 +172,18 @@ const downloadButtons = (
       className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
     >
       {downloadIcon}
-      Download the Handout (PDF)
+      Download PDF
     </a>
     <a
-      href="/Learning-Circle-Framework/The-Learning-Circle-Template-Kit.pptx"
+      href="/Learning-Circle-Framework/The-Learning-Circle-Handout.pptx"
       download
       className="inline-flex items-center gap-2 rounded-lg border border-edge px-6 py-3 text-sm font-semibold text-copy-muted btn-shadow-neutral hover:border-edge-hover hover:text-copy"
     >
       {downloadIcon}
-      Download the Editable Template (PPTX)
+      Download Editable (PPTX)
     </a>
   </div>
 )
-
-function TestIterate({ label = "Test &amp; Iterate" }: { label?: string }) {
-  return (
-    <div className="flex items-center justify-center gap-2 py-2">
-      <span className="flex items-center gap-2 rounded-full border border-edge bg-surface px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-copy-muted">
-        {icons.loop}
-        <span dangerouslySetInnerHTML={{ __html: label }} />
-      </span>
-    </div>
-  )
-}
 
 export default function LearningCircleFramework() {
   return (
@@ -274,10 +268,10 @@ export default function LearningCircleFramework() {
           </ScrollReveal>
 
           <ScrollReveal delay={1}>
-            <div className="mt-8 overflow-hidden rounded-card border border-edge bg-white shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)]">
+            <div className="mt-8 overflow-hidden rounded-card border border-edge bg-white p-6 shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)] sm:p-10 lg:p-14">
               <Image
                 src="/Learning-Circle-Framework/The-Learning-Circle-Image.png"
-                alt="The Learning Circle Framework — a continuous three-phase cycle of Target, Create, and Launch connected by Test and Iterate, with the key checklist items for each phase"
+                alt="The Learning Circle Framework™ — a continuous three-phase cycle of Target, Create, and Launch connected by Test and Iterate, with the key checklist items for each phase"
                 width={1200}
                 height={803}
                 className="w-full"
@@ -313,36 +307,33 @@ export default function LearningCircleFramework() {
             </p>
           </ScrollReveal>
 
-          <div className="mt-8">
+          <div className="mt-8 space-y-6">
             {phases.map((phase, i) => (
-              <div key={phase.title}>
-                <ScrollReveal delay={((i % 3) + 1) as 1 | 2 | 3}>
-                  <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
-                    <div className="flex items-center gap-4">
-                      <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-glow)]">
-                        {phase.icon}
-                      </div>
-                      <div>
-                        <p className="text-xs font-bold uppercase tracking-widest text-accent">{phase.phase}</p>
-                        <h3 className="text-lg font-extrabold tracking-tight text-copy">{phase.title}</h3>
-                      </div>
+              <ScrollReveal key={phase.title} delay={((i % 3) + 1) as 1 | 2 | 3}>
+                <div className="rounded-card border border-edge bg-surface p-6 shadow-card">
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-glow)]">
+                      {phase.icon}
                     </div>
-                    <p
-                      className="mt-4 text-sm font-medium leading-relaxed text-copy-muted"
-                      dangerouslySetInnerHTML={{ __html: phase.description }}
-                    />
-                    <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-                      {phase.items.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-sm font-medium text-copy-muted">
-                          {icons.check}
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-widest text-accent">{phase.phase}</p>
+                      <h3 className="text-lg font-extrabold tracking-tight text-copy">{phase.title}</h3>
+                    </div>
                   </div>
-                </ScrollReveal>
-                <TestIterate label={i === phases.length - 1 ? "Test &amp; Iterate &mdash; back to Target" : "Test &amp; Iterate"} />
-              </div>
+                  <p
+                    className="mt-4 text-sm font-medium leading-relaxed text-copy-muted"
+                    dangerouslySetInnerHTML={{ __html: phase.description }}
+                  />
+                  <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+                    {phase.items.map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-sm font-medium text-copy-muted">
+                        {icons.check}
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -361,9 +352,10 @@ export default function LearningCircleFramework() {
                 The Framework Is Just the Beginning
               </h2>
               <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
-                The Learning Circle Kit is one of 13 templates inside the Instructional Design
-                Template Kit — everything you need to plan, document, and deliver learning
-                experiences from kickoff to evaluation. One kit, instant download, unlimited use.
+                The Learning Circle Framework™ is one of 13 templates inside the Instructional
+                Design Template Kit — and this artifact also includes pre-built slides for
+                presenting the framework and your plan to your team, SMEs, and stakeholders. One
+                kit, instant download, unlimited use.
               </p>
               <Link
                 href="/instructionaldesigntemplates"
@@ -380,42 +372,41 @@ export default function LearningCircleFramework() {
         </div>
       </section>
 
-      {/* How to Use It */}
+      {/* Why It Works */}
       <section className="border-t border-edge bg-surface py-16">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-widest text-accent">Built for Alignment</p>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Why It Works</p>
             <h2
               className="mt-2 font-extrabold tracking-tight text-heading"
               style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
             >
-              How to Use the Framework With Your Team
+              A Guide for Every Stage of Your Project
             </h2>
             <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
-              The Learning Circle Framework works best as a shared reference — something your
-              whole team and your stakeholders can point to throughout a project. Here&rsquo;s
-              how to put it into practice.
+              The Learning Circle Framework™ isn&rsquo;t just something to look at &mdash;
+              it&rsquo;s something to use. Here&rsquo;s what it does for you and your team.
             </p>
           </ScrollReveal>
 
-          <ScrollReveal delay={1}>
-            <div className="mt-6 space-y-4">
-              {steps.map(({ step, heading, text }) => (
-                <div key={step} className="flex gap-4">
-                  <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--accent-glow)] text-sm font-extrabold text-accent">
-                    {step}
+          <div className="mt-8 space-y-6">
+            {valueProps.map((item, i) => (
+              <ScrollReveal key={item.title} delay={((i % 3) + 1) as 1 | 2 | 3}>
+                <div className="flex gap-4 rounded-card border border-edge bg-white p-6 shadow-card">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-glow)]">
+                    {item.icon}
                   </div>
                   <div className="pt-0.5">
-                    <h3 className="text-sm font-bold text-copy">{heading}</h3>
+                    <h3 className="text-base font-extrabold tracking-tight text-copy">{item.title}</h3>
                     <p
-                      className="mt-1 text-sm font-medium leading-relaxed text-copy-muted"
-                      dangerouslySetInnerHTML={{ __html: text }}
+                      className="mt-2 text-sm font-medium leading-relaxed text-copy-muted"
+                      dangerouslySetInnerHTML={{ __html: item.text }}
                     />
                   </div>
                 </div>
-              ))}
-            </div>
-          </ScrollReveal>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
