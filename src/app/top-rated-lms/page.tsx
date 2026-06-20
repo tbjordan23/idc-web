@@ -136,7 +136,7 @@ const lmsList: LMSEntry[] = [
     rank: 5,
     vendor: "Absorb LMS",
     name: "Absorb LMS",
-    image: "/LMS/Talent-LMS2.avif",
+    image: "/LMS/absorb.png",
     imageAlt: "Absorb LMS logo",
     description:
       "Absorb LMS is a polished, enterprise-ready learning management system known for its clean learner experience, powerful admin tools, and strong performance at scale. Designed for corporate L&D teams that need more than a basic platform, Absorb combines an intuitive interface with advanced features — including AI-powered course recommendations, deep reporting, eCommerce support, and robust integrations with HRIS and CRM systems. The platform is particularly well regarded for its learner engagement tools and its ability to support large, geographically distributed workforces without sacrificing ease of use. For mid-market to enterprise organizations that want a capable, well-supported LMS without the complexity of legacy enterprise platforms, Absorb is a consistently strong choice.",
