@@ -202,7 +202,7 @@ export default function NeedsAnalysisApp() {
             {steps.map((s, i) => (
               <ScrollReveal key={s.step} delay={((i % 3) + 1) as 1 | 2 | 3}>
                 <div className="flex h-full flex-col items-center rounded-card border border-edge bg-canvas p-6 text-center shadow-card">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-idc-navy text-sm font-extrabold text-white">
+                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-sm font-extrabold text-white">
                     {s.step}
                   </div>
                   <div className="mt-4 flex h-12 w-12 items-center justify-center rounded-lg bg-[var(--accent-glow)]">
@@ -241,7 +241,7 @@ export default function NeedsAnalysisApp() {
           </ScrollReveal>
 
           <ScrollReveal delay={1}>
-            <div className="mt-8 rounded-card border border-edge bg-surface p-[7px] shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)]">
+            <div className="mt-8 rounded-card border border-edge bg-white p-[7px] shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)]">
               <Image
                 src="/needs-app/IDC-Needs-Analysis-App.avif"
                 alt="IDC Needs Analysis App shown on mobile devices — guided needs analysis creation and shareable PDF reports"
