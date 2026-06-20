@@ -64,7 +64,7 @@ const lmsList: LMSEntry[] = [
     imageAlt: "Adobe Learning Manager logo",
     description:
       "Adobe Learning Manager (formerly Adobe Captivate Prime) is an enterprise-grade, cloud-based LMS built for organizations that need AI-powered personalization at scale. Deeply integrated with the Adobe Experience Cloud ecosystem, it lets you connect learning programs to real business workflows — from onboarding to continuous upskilling. The platform's AI engine surfaces recommended content, auto-assigns learning paths based on roles and skill gaps, and tracks progress across every format you deliver. If your team already works in Adobe tools, the native integration alone is a significant advantage. It's scalable, SCORM and xAPI compliant, and built for L&D teams that need robust analytics alongside their delivery.",
-    href: "https://www.adobe.com/products/learning-manager.html",
+    href: "https://business.adobe.com/products/learning-manager/adobe-learning-manager.html",
     tags: ["Enterprise", "Cloud-Based", "AI-Powered", "SCORM / xAPI", "Adobe Suite"],
     highlights: [
       "AI-driven personalized learning paths that adapt based on individual learner behavior and skill gaps",
@@ -121,7 +121,7 @@ const lmsList: LMSEntry[] = [
     imageAlt: "Litmos logo",
     description:
       "Litmos (formerly SAP Litmos) is a user-friendly, cloud-based LMS built for organizations that need a reliable, mobile-ready training platform without a steep implementation curve. Originally developed as SAP Litmos and now operating independently, it's well-regarded for its clean interface, fast setup, and solid compliance training capabilities. Litmos includes a built-in content library with hundreds of pre-built courses — which gives teams without large content development budgets a head start. It handles video, quizzes, ILT sessions, and eCommerce, and its integrations with Salesforce and other business tools make it a natural fit for sales enablement and customer training programs. A reliable, practical choice for mid-sized organizations with straightforward training needs.",
-    href: "https://www.litmos.com/",
+    href: "https://www.litmos.com/learning-management-system",
     tags: ["Cloud-Based", "Mobile-Ready", "SCORM / xAPI", "Mid-Market", "Content Library"],
     highlights: [
       "Intuitive admin interface that most L&D teams can configure and launch without dedicated IT support",
@@ -134,21 +134,21 @@ const lmsList: LMSEntry[] = [
   },
   {
     rank: 5,
-    vendor: "Epignosis",
-    name: "TalentLMS",
+    vendor: "Absorb LMS",
+    name: "Absorb LMS",
     image: "/LMS/Talent-LMS2.avif",
-    imageAlt: "TalentLMS logo",
+    imageAlt: "Absorb LMS logo",
     description:
-      "TalentLMS is one of the most cost-effective full-featured LMS platforms available — and a go-to choice for small to medium-sized organizations that want to launch training quickly without a large investment. Built by Epignosis, it combines an accessible interface with a surprisingly robust feature set: SCORM and xAPI compliance, gamification, branch portals for separate training environments, and a clean mobile experience. Most teams can have a working LMS up and running within a day of signing up. The pricing model scales with your learner count, making it genuinely affordable at small scale while remaining viable as you grow. If budget is a constraint but you still need a reliable, capable training platform, TalentLMS is consistently the smartest starting point.",
-    href: "https://www.talentlms.com/",
-    tags: ["Cloud-Based", "Small Business", "SCORM / xAPI", "Gamification", "Mobile-Ready"],
+      "Absorb LMS is a polished, enterprise-ready learning management system known for its clean learner experience, powerful admin tools, and strong performance at scale. Designed for corporate L&D teams that need more than a basic platform, Absorb combines an intuitive interface with advanced features — including AI-powered course recommendations, deep reporting, eCommerce support, and robust integrations with HRIS and CRM systems. The platform is particularly well regarded for its learner engagement tools and its ability to support large, geographically distributed workforces without sacrificing ease of use. For mid-market to enterprise organizations that want a capable, well-supported LMS without the complexity of legacy enterprise platforms, Absorb is a consistently strong choice.",
+    href: "https://www.absorblms.com/products",
+    tags: ["Enterprise", "Cloud-Based", "AI-Powered", "SCORM / xAPI", "Mid-Market"],
     highlights: [
-      "One of the most affordable full-featured LMS platforms — with a free tier for small teams getting started",
-      "Fast implementation — most organizations can launch a working training environment within a single day",
-      "Gamification engine with points, badges, and levels to motivate learners and increase course completion",
-      "Branch portals allow separate training environments for different departments, clients, or franchises",
-      "SCORM, xAPI, and cmi5 compliant — fully compatible with content from Articulate, Lectora, Captivate, and more",
-      "Scales from five learners to thousands without requiring a platform migration or major contract renegotiation",
+      "AI-powered course recommendations that surface the right content for each learner automatically",
+      "Highly rated learner experience — clean, intuitive interface that drives adoption and reduces drop-off",
+      "Advanced reporting and analytics with customizable dashboards for L&D and executive stakeholders",
+      "Built-in eCommerce for selling external training, with support for subscriptions and course bundles",
+      "Deep integrations with major HRIS, CRM, and productivity platforms including Salesforce and BambooHR",
+      "Dedicated implementation support and responsive customer success — consistently top-rated for service quality",
     ],
   },
 ]
