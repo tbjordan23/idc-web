@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import WhitepaperBanner from "@/components/ui/WhitepaperBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Learning Theory Overview",
@@ -442,6 +443,9 @@ export default function LearningTheoryPage() {
         </div>
         </ScrollReveal>
 
+      <ScrollReveal>
+        <WhitepaperBanner />
+      </ScrollReveal>
       </ContentPage>
     </>
   )

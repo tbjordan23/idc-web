@@ -3,6 +3,7 @@ import Link from "next/link"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import WhitepaperBanner from "@/components/ui/WhitepaperBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Models",
@@ -1021,6 +1022,10 @@ export default function IDModelsPage() {
       </p>
 
       {/* ── Additional models will be added here ─────────────────────────── */}
+
+      <ScrollReveal>
+        <WhitepaperBanner />
+      </ScrollReveal>
     </ContentPage>
   )
 }

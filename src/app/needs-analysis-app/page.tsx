@@ -4,6 +4,7 @@ import Image from "next/image"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import WhitepaperBanner from "@/components/ui/WhitepaperBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Free Needs Analysis App — IDC Needs Analysis App",
@@ -368,6 +369,15 @@ export default function NeedsAnalysisApp() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Whitepaper banner */}
+      <section className="border-t border-edge py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <WhitepaperBanner />
+          </ScrollReveal>
         </div>
       </section>
     </>

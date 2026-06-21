@@ -3,6 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import Link from "next/link"
 import ContentPage from "@/components/ui/ContentPage"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import WhitepaperBanner from "@/components/ui/WhitepaperBanner"
 import Image from "next/image"
 
 export const metadata: Metadata = generatePageMetadata({
@@ -861,6 +862,9 @@ export default function WhatIsIDPage() {
 
       </div>
 
+      <ScrollReveal>
+        <WhitepaperBanner />
+      </ScrollReveal>
     </ContentPage>
     </>
   )

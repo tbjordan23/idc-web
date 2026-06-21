@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import WhitepaperBanner from "@/components/ui/WhitepaperBanner"
 import Image from "next/image"
 
 export const metadata: Metadata = generatePageMetadata({
@@ -622,6 +623,9 @@ export default function AdultLearningTheoryPage() {
               great instructional designer.
             </p>
           </div>
+        </ScrollReveal>
+        <ScrollReveal>
+          <WhitepaperBanner />
         </ScrollReveal>
       </ContentPage>
     </>

@@ -1,0 +1,95 @@
+"use client"
+
+import { useRef, useState } from "react"
+
+type Status = "idle" | "loading" | "success" | "error"
+
+export default function WhitepaperSignupForm({ pdfPath }: { pdfPath: string }) {
+  const [email, setEmail] = useState("")
+  const [status, setStatus] = useState<Status>("idle")
+  const [errorMsg, setErrorMsg] = useState("")
+  const downloadRef = useRef<HTMLAnchorElement>(null)
+
+  async function handleSubmit(e: React.FormEvent) {
+    e.preventDefault()
+    setStatus("loading")
+    setErrorMsg("")
+
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      })
+      const data = await res.json()
+      if (data.success) {
+        setStatus("success")
+        downloadRef.current?.click()
+      } else {
+        setErrorMsg(data.error ?? "Something went wrong.")
+        setStatus("error")
+      }
+    } catch {
+      setErrorMsg("Something went wrong. Please try again.")
+      setStatus("error")
+    }
+  }
+
+  return (
+    <div className="rounded-card border border-edge bg-surface p-6 shadow-card sm:p-8">
+      {/* Hidden link used to trigger the PDF download once the subscribe call succeeds. */}
+      <a ref={downloadRef} href={pdfPath} download className="hidden" aria-hidden="true">
+        download
+      </a>
+
+      {status === "success" ? (
+        <div className="flex flex-col items-center gap-2 text-center">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-glow">
+            <svg className="h-6 w-6 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+          <p className="text-lg font-extrabold tracking-tight text-heading">
+            Your download has started
+          </p>
+          <p className="max-w-sm text-sm font-medium leading-relaxed text-copy-muted">
+            If it didn&rsquo;t open automatically,{" "}
+            <a href={pdfPath} download className="font-semibold text-accent hover:text-accent-hover">
+              click here to download it directly
+            </a>
+            . We&rsquo;re also sending a confirmation email your way — check your inbox to
+            complete your newsletter signup and lock in your 35% off coupon.
+          </p>
+        </div>
+      ) : (
+        <>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row">
+            <label htmlFor="whitepaper-email" className="sr-only">
+              Email address
+            </label>
+            <input
+              id="whitepaper-email"
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@example.com"
+              disabled={status === "loading"}
+              className="flex-1 rounded-lg border border-edge bg-surface-2 px-4 py-3 text-sm text-copy placeholder-copy-dim transition-colors focus:border-accent focus:outline-none disabled:opacity-60"
+            />
+            <button
+              type="submit"
+              disabled={status === "loading"}
+              className="inline-flex items-center justify-center gap-1.5 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover disabled:opacity-60"
+            >
+              {status === "loading" ? "Subscribing…" : "Subscribe & Download"}
+            </button>
+          </form>
+          {status === "error" && (
+            <p className="mt-2 text-xs text-red-500">{errorMsg}</p>
+          )}
+        </>
+      )}
+    </div>
+  )
+}

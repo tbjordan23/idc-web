@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import ContentPage from "@/components/ui/ContentPage"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import WhitepaperBanner from "@/components/ui/WhitepaperBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design Jobs Remote",
@@ -403,6 +404,9 @@ export default function IDJobsPage() {
           carries real weight.
         </li>
       </ul>
+      </ScrollReveal>
+      <ScrollReveal>
+        <WhitepaperBanner />
       </ScrollReveal>
     </ContentPage>
   )

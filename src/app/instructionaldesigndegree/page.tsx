@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import WhitepaperBanner from "@/components/ui/WhitepaperBanner"
 import Image from "next/image"
 
 export const metadata: Metadata = generatePageMetadata({
@@ -440,6 +441,15 @@ export default function IDDegreePage() {
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ─── Whitepaper banner ─────────────────────────────────────────────────── */}
+      <section className="border-t border-edge py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <WhitepaperBanner />
+          </ScrollReveal>
         </div>
       </section>
     </>

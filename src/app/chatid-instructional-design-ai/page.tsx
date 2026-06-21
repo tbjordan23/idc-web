@@ -4,6 +4,7 @@ import Link from "next/link"
 import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import WhitepaperBanner from "@/components/ui/WhitepaperBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "ChatID: Instructional Design AI",
@@ -317,6 +318,15 @@ export default function ChatIDPage() {
                 Open ChatID in ChatGPT
               </Link>
             </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* ── Whitepaper banner ───────────────────────────────────────────────── */}
+      <section className="border-t border-edge py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <WhitepaperBanner />
           </ScrollReveal>
         </div>
       </section>
