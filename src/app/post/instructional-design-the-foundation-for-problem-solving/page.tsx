@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Instructional design is a problem-solving discipline. How diagnosing real problems, designing solutions, and measuring outcomes connects ID to every field.",
   path: "/post/instructional-design-the-foundation-for-problem-solving",
+  ogImage: "/images/man-thinking-laptop-night-1.png",
 })
 
 
@@ -57,6 +59,20 @@ export default function BlogPost() {
             &ldquo;Instructional design, at its core, is problem solving. The skills you build doing this work — diagnosing root causes, designing solutions, testing and iterating, measuring impact — transfer to every meaningful challenge you&rsquo;ll face, in any field.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/man-thinking-laptop-night-1.png"
+            alt="Instructional Design: The Foundation for Problem Solving"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

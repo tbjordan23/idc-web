@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "5 Game-Changing Learning Design Trends for 2024",
   description: "Five trends that defined learning design in 2024 — AI-assisted development, immersive simulations, and more. What they mean for instructional designers.",
   path: "/post/uncovering-the-future-5-game-changing-trends-in-learning-design-for-2024",
+  ogImage: "/images/young-woman-laptop-content-1.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;2024 wasn&rsquo;t just another year of incremental change in learning design — it was the year several long-building trends finally moved from &lsquo;emerging&rsquo; to &lsquo;expected.&rsquo;&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-woman-laptop-content-1.png"
+            alt="Uncovering the Future: 5 Game-Changing Trends in Learning Design for 2024"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

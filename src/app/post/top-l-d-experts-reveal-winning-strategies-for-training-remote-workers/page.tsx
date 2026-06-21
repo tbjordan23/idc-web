@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "Top L&D Experts Reveal Winning Strategies for Training Remote Workers",
   description: "Remote and hybrid work is the new normal. Here are the strategies L&D professionals are using to design training that actually works for distributed teams.",
   path: "/post/top-l-d-experts-reveal-winning-strategies-for-training-remote-workers",
+  ogImage: "/images/diverse-women-working-1.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;Remote work isn&rsquo;t a temporary workaround anymore — it&rsquo;s the environment your learners live in. Your training needs to be designed for that reality, not built for a conference room and then converted.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/diverse-women-working-1.png"
+            alt="Top L&D Experts Reveal Winning Strategies for Training Remote Workers"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

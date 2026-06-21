@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Canvas, Blackboard, Moodle, Brightspace, Schoology — what you need to know about the leading academic LMS platforms and how to choose the right one.",
   path: "/post/top-five-learning-management-systems-academic",
+  ogImage: "/images/diverse-team-working-2.png",
 })
 
 
@@ -57,6 +59,20 @@ export default function BlogPost() {
             &ldquo;The best LMS for your institution isn&rsquo;t the one with the most features — it&rsquo;s the one that fits your pedagogy, your learners, and the way your faculty actually teach.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/diverse-team-working-2.png"
+            alt="Top Five Learning Management Systems for Academic Use"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

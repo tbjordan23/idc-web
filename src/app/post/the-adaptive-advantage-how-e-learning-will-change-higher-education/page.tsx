@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "The one-size-fits-all college experience is fading. How adaptive eLearning is reshaping higher education — and what it means for instructional designers.",
   path: "/post/the-adaptive-advantage-how-e-learning-will-change-higher-education",
+  ogImage: "/images/young-professionals-casual-1.png",
 })
 
 
@@ -57,6 +59,20 @@ export default function BlogPost() {
             &ldquo;The lecture hall isn&rsquo;t disappearing — but it&rsquo;s no longer the only way in. Adaptive eLearning is giving higher education something it&rsquo;s needed for decades: the ability to meet each student where they actually are.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-professionals-casual-1.png"
+            alt="The Adaptive Advantage: How eLearning Is Changing Higher Education"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

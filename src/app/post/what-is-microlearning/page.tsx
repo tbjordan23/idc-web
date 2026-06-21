@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "What Is Microlearning? Definition and Tips",
   description: "Microlearning is more than short content. Learn what it really is, when it works, and how to design it for real performance impact.",
   path: "/post/what-is-microlearning",
+  ogImage: "/images/young-woman-laptop-2.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;Microlearning isn&rsquo;t about making your eLearning shorter — it&rsquo;s about designing for a single, focused outcome and getting out of the learner&rsquo;s way.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-woman-laptop-2.png"
+            alt="What Is Microlearning? Definition and Tips"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

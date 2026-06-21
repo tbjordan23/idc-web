@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Learner expectations have shifted, technology literacy is table stakes, and business impact has replaced content coverage. Here's what that means for you.",
   path: "/post/why-instructional-designers-need-to-change",
+  ogImage: "/images/man-thinking-laptop-night-1.png",
 })
 
 
@@ -57,6 +59,20 @@ export default function BlogPost() {
             &ldquo;The instructional designer who thrives in 2025 isn&rsquo;t the one who knows the most about learning theory — it&rsquo;s the one who understands how learners have changed, what technology makes possible, and how to connect both to real business outcomes.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/man-thinking-laptop-night-1.png"
+            alt="3 Reasons Why Instructional Designers Need to Change"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

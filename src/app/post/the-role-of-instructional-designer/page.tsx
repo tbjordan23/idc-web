@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Instructional designers wear many hats. Here's a real look at what the role involves day to day — and how it shifts depending on where you work.",
   path: "/post/the-role-of-instructional-designer",
+  ogImage: "/images/woman-office-computer-1.png",
 })
 
 
@@ -60,6 +62,20 @@ export default function BlogPost() {
             The variety is part of what makes the role so interesting.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/woman-office-computer-1.png"
+            alt="The Role of the Instructional Designer"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "Need Analysis: 5 Important Areas",
   description: "Five areas every instructional designer must investigate before building anything. Here's how to ask the right questions and build the right training.",
   path: "/post/need-analysis-tips",
+  ogImage: "/images/woman-thinking-laptop-night-2.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;Training need analysis is the most important part of your job as a learning solution provider. The more relevant your questions are, the more effective your training will be.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/woman-thinking-laptop-night-2.png"
+            alt="Need Analysis: 5 Important Areas"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

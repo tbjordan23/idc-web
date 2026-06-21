@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "Making the Leap: From Teaching to Instructional Design",
   description: "If you&rsquo;re a teacher wondering whether instructional design is the right next move, this is the honest, practical guide you&rsquo;ve been looking for.",
   path: "/post/making-the-leap-from-teaching-to-instructional-design",
+  ogImage: "/images/diverse-women-working-2.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;If you&rsquo;ve spent years in a classroom, you already have more of what instructional design requires than you probably realize. The leap is real — but it&rsquo;s shorter than it looks.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/diverse-women-working-2.png"
+            alt="Making the Leap: From Teaching to Instructional Design"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

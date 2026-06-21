@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "The GenAI Revolution: Transforming Higher Education",
   description: "Generative AI is reshaping how universities teach, assess, and support students. Here's what instructional designers and educators need to know.",
   path: "/post/the-genai-revolution-transforming-higher-education",
+  ogImage: "/images/young-man-laptop-ai-1.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;Generative AI isn&rsquo;t replacing professors or students — it&rsquo;s changing what both of them do, and higher education is figuring out in real time what that means for learning, integrity, and access.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-man-laptop-ai-1.png"
+            alt="The GenAI Revolution: Transforming Higher Education"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

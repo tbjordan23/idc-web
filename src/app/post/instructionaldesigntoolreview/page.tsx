@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "Review: Synapse Learning Experience Tool",
   description: "An honest look at Synapse, a cloud-based LX design tool for instructional designers — what it does well, who it's for, and where it falls short.",
   path: "/post/instructionaldesigntoolreview",
+  ogImage: "/images/young-man-laptop-content-1.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;The ID tool landscape keeps evolving — but some principles for evaluating a new tool never change: does it fit your process, support your team, and actually help learners?&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-man-laptop-content-1.png"
+            alt="Review: Synapse Learning Experience Tool"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "The Future of Learning: Why Personalization Matters",
   description: "One-size-fits-all learning is losing ground. Here's why personalization is now the baseline in L&D — and what it means for instructional designers.",
   path: "/post/the-future-of-learning-why-personalization-changes-everything",
+  ogImage: "/images/young-woman-laptop-1.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;Personalized learning isn&rsquo;t a feature anymore — it&rsquo;s the expectation. Understanding why it matters (and how to actually deliver it) is quickly becoming a core skill for every instructional designer.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-woman-laptop-1.png"
+            alt="The Future of Learning: Why Personalization Changes Everything"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}
