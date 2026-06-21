@@ -9,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Articles, insights, and practical tips for instructional designers. Covering ID models, eLearning tools, AI, learning theory, and more.",
   path: "/blog",
+  ogImage: "/images/woman-desk-create-daily-1.png",
 })
 
 const allPosts: BlogPost[] = [

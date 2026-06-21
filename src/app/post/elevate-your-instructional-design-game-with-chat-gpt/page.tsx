@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "ChatGPT won't replace instructional designers — but it can make every phase of your ADDIE process faster and sharper. Here's where it actually helps.",
   path: "/post/elevate-your-instructional-design-game-with-chat-gpt",
+  ogImage: "/images/young-man-laptop-ai-1.png",
 })
 
 
@@ -59,6 +61,20 @@ export default function BlogPost() {
             where it actually helps.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-man-laptop-ai-1.png"
+            alt="Elevate Your Instructional Design Game with ChatGPT"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

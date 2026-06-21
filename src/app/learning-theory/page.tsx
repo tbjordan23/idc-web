@@ -8,6 +8,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Explore the major learning theories in instructional design — Behaviorism, Cognitivism, Constructivism, Social Learning, and Experiential Learning.",
   path: "/learning-theory",
+  ogImage: "/images/woman-thinking-laptop-night-1.png",
 })
 
 const faqSchema = {

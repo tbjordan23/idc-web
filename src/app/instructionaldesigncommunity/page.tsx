@@ -8,6 +8,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "The Instructional Design Central (IDC) community connects hundreds of instructional design related professionals around the globe.",
   path: "/instructionaldesigncommunity",
+  ogImage: "/images/team-collaborating-1.png",
 })
 
 const features = [

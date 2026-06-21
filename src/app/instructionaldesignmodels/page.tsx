@@ -9,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "A guide to industry-standard instructional design models, learning theories, methods, and principles — including the ADDIE model and more.",
   path: "/instructionaldesignmodels",
+  ogImage: "/images/diverse-team-working-2.png",
 })
 
 export default function IDModelsPage() {

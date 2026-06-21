@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "How to Reduce the Cost of Your Training with eLearning",
   description: "eLearning isn't just more convenient — it's significantly more affordable. Here's how organizations are cutting training costs without cutting quality.",
   path: "/post/how-to-reduce-the-cost-of-your-training-with-elearning",
+  ogImage: "/images/woman-office-computer-2.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;When Dow Chemical moved training online, their cost per learner dropped from $87 to $11. That&rsquo;s not a rounding error — that&rsquo;s a strategic advantage.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/woman-office-computer-2.png"
+            alt="How to Reduce the Cost of Your Training with eLearning"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

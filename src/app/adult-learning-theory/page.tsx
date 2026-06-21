@@ -9,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "A complete guide to adult learning theory and andragogy — Knowles' Assumptions, Principles, and practical applications for instructional designers.",
   path: "/adult-learning-theory",
+  ogImage: "/images/young-professionals-casual-1.png",
 })
 
 const faqSchema = {

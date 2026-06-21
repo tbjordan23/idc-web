@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "15 Reasons to Be Grateful as an Instructional Designer",
   description: "From the love of learning to the thrill of solving complex problems — here are 15 reasons the instructional design field is genuinely worth celebrating.",
   path: "/post/2016/11/23/top-15-reasons-to-be-grateful-as-an-instructional-designer",
+  ogImage: "/images/diverse-women-working-1.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;This field asks you to be a analyst, a designer, a storyteller, and a problem-solver — sometimes all in the same afternoon. That&rsquo;s not a burden. That&rsquo;s a gift.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/diverse-women-working-1.png"
+            alt="15 Reasons to Be Grateful as an Instructional Designer"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

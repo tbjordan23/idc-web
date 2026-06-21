@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "IDC's top-ranked eLearning authoring tools — reviewed and curated for instructional designers who want to build great courses without the guesswork.",
   path: "/top-rated-elearning-tools",
+  ogImage: "/images/young-professionals-casual-1.png",
 })
 
 const faqSchema = {

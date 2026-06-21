@@ -8,6 +8,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "What is the average instructional designer salary? Explore ranges by role, experience level, industry, and location — so you can advocate with confidence.",
   path: "/instructionaldesignersalary",
+  ogImage: "/images/diverse-women-working-1.png",
 })
 
 // ── Salary data — keep in sync with /instructionaldesignjobs ──────────────

@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "IDC's top-rated Learning Management Systems for corporate training, L&D teams, and organizations of all sizes. Compare the best LMS platforms available today.",
   path: "/top-rated-lms",
+  ogImage: "/images/diverse-team-working-1.png",
 })
 
 const faqSchema = {

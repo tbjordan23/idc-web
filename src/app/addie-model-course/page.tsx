@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Master the ADDIE model with this practical, expert-led course. Learn to design, develop, and evaluate effective learning experiences. Earn a certificate.",
   path: "/addie-model-course",
+  ogImage: "/course-addie-model.png",
 })
 
 const addieScreenshots: CourseScreenshot[] = [

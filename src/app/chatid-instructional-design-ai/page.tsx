@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "ChatID is the top-rated instructional design GPT in ChatGPT — and it's free. Generate needs analyses, learning objectives, and project plans in minutes.",
   path: "/chatid-instructional-design-ai",
+  ogImage: "/images/young-man-laptop-ai-1.png",
 })
 
 const CHATID_URL = "https://chatgpt.com/g/g-0RwjMVNPf-chatid"

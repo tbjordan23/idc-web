@@ -9,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "What is a needs analysis? A complete guide to identifying performance gaps, understanding learners, and designing solutions that actually work.",
   path: "/needs-analysis",
+  ogImage: "/images/woman-thinking-laptop-night-2.png",
 })
 
 const faqSchema = {

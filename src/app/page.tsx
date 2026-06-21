@@ -3,16 +3,15 @@ import HomeHero from "@/components/ui/HomeHero"
 import Card from "@/components/ui/Card"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
+import { generatePageMetadata } from "@/lib/metadata"
 
-
-export const metadata: Metadata = {
+export const metadata: Metadata = generatePageMetadata({
   title: "Community and Resources | Instructional Design Central",
   description:
     "IDC helps instructional designers stay sharp and create better learning experiences — with online courses, community, and professional resources.",
-  alternates: {
-    canonical: "https://www.instructionaldesigncentral.com",
-  },
-}
+  path: "",
+  ogImage: "/images/team-collaborating-1.png",
+})
 
 const featuredCourses = [
   {

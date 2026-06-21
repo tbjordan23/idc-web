@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "A home for ID professionals and career changers — built to support, inform, and connect the people who make learning better.",
   path: "/post/2015/12/31/welcome-to-instructional-design-central",
+  ogImage: "/images/team-collaborating-1.png",
 })
 
 
@@ -57,6 +59,20 @@ export default function BlogPost() {
             &ldquo;Instructional Design Central was built for the people who make learning better — and if you&rsquo;re here, that&rsquo;s you.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/team-collaborating-1.png"
+            alt="Welcome to Instructional Design Central"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

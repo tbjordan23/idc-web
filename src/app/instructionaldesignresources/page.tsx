@@ -8,6 +8,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Free resources for instructional designers — templates, tools, job board, courses, needs analysis app, and more from IDC.",
   path: "/instructionaldesignresources",
+  ogImage: "/images/woman-desk-create-daily-1.png",
 })
 
 const resources = [

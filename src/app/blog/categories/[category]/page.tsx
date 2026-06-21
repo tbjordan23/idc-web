@@ -12,6 +12,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: `${label} — Blog`,
     description: `Browse all IDC blog posts in the ${label} category.`,
     path: `/blog/categories/${params.category}`,
+    ogImage: "/images/woman-desk-create-daily-1.png",
   })
 }
 

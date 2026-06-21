@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Instructional Design Central's (IDC) mission is to provide instructional design professionals access to brilliant resources, content, and networking.",
   path: "/aboutinstructionaldesigncentral",
+  ogImage: "/images/woman-desk-create-daily-1.png",
 })
 
 export default function AboutPage() {

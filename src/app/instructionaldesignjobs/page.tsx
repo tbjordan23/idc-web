@@ -8,6 +8,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Explore instructional design job titles, salary ranges, and career paths. A complete guide to what you can do with a background in instructional design.",
   path: "/instructionaldesignjobs",
+  ogImage: "/images/young-woman-laptop-interview-1.png",
 })
 
 const jobRoles = [

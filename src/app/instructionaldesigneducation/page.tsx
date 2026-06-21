@@ -8,6 +8,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Explore instructional design definitions, foundational models, learning theory, history, and the core concepts every instructional designer needs to know.",
   path: "/instructionaldesigneducation",
+  ogImage: "/images/young-woman-laptop-2.png",
 })
 
 const topics = [

@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Learn instructional design with this beginner-friendly course. Covers core principles, models, and best practices — ideal for career changers and new IDs.",
   path: "/instructional-design-course",
+  ogImage: "/course-id-foundations.png",
 })
 
 const faqSchema = {

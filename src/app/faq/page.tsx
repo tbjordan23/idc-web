@@ -9,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Answers to the most frequently asked questions about instructional design, learning theory, the ADDIE model, LMS platforms, ID degrees, and more.",
   path: "/faq",
+  ogImage: "/images/woman-office-computer-2.png",
 })
 
 const faqs = [

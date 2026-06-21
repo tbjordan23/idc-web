@@ -9,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "What is the ADDIE Model? A complete guide to the five phases — Analysis, Design, Development, Implementation, and Evaluation — of instructional design.",
   path: "/addie-model",
+  ogImage: "/course-addie-model.png",
 })
 
 const faqSchema = {

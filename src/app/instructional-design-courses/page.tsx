@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Explore top-rated online instructional design courses at IDC. Beginner to advanced — interactive, certificate-based, with practical templates and AI tools.",
   path: "/instructional-design-courses",
+  ogImage: "/images/diverse-team-working-1.png",
 })
 
 const courses = [

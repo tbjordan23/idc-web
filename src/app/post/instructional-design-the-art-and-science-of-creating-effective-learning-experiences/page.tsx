@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Instructional design lives at the intersection of creativity and evidence. Here's what it means to practice both sides well — and why both matter.",
   path: "/post/instructional-design-the-art-and-science-of-creating-effective-learning-experiences",
+  ogImage: "/images/young-woman-laptop-content-1.png",
 })
 
 
@@ -59,6 +61,20 @@ export default function BlogPost() {
             The best designers know how to be both at once.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-woman-laptop-content-1.png"
+            alt="Instructional Design: The Art and Science of Creating Effective Learning Experiences"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

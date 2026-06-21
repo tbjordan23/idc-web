@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Download IDC's free Needs Analysis App for iPhone and iPad. Create, publish, and share a beautiful learning needs analysis in minutes — no spreadsheets required.",
   path: "/needs-analysis-app",
+  ogImage: "/needs-app/IDC-Needs-Analysis-App-og.png",
 })
 
 const APP_STORE_URL = "https://apps.apple.com/us/app/instructional-design/id1442176277"

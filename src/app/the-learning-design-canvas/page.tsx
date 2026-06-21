@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Download The Learning Design Canvas™ — a free one-page planning tool that brings your whole learning plan into focus and creates instant alignment with your team and stakeholders.",
   path: "/the-learning-design-canvas",
+  ogImage: "/images/young-man-laptop-content-1.png",
 })
 
 const faqSchema = {

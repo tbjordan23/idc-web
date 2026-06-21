@@ -8,6 +8,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "The history of instructional design from WWII military training to today's AI-powered learning — an interactive timeline of key milestones.",
   path: "/instructional-design-history",
+  ogImage: "/images/man-thinking-laptop-night-1.png",
 })
 
 interface TimelineEvent {

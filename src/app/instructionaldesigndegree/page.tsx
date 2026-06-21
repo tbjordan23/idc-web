@@ -9,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Explore top-rated instructional design degree and certificate programs. Compare MS, MEd, EdD, and PhD options at leading universities — many fully online.",
   path: "/instructionaldesigndegree",
+  ogImage: "/images/young-woman-laptop-1.png",
 })
 
 const faqSchema = {

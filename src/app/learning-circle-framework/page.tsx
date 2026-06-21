@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Download The Learning Circle Framework™ — a free, modern model for designing learning experiences in three phases: Target, Create, and Launch — built on agile and instructional design principles.",
   path: "/learning-circle-framework",
+  ogImage: "/images/diverse-women-working-2.png",
 })
 
 const faqSchema = {

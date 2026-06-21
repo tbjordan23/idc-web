@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Download free instructional design templates — ADDIE template, storyboard template, training needs assessment, and more. Ready to use immediately.",
   path: "/instructionaldesigntemplates",
+  ogImage: "/images/young-woman-laptop-content-1.png",
 })
 
 const faqSchema = {

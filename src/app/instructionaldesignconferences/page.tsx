@@ -9,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Explore the top instructional design and L&D conferences — from ATD ICE to DevLearn — to grow your skills, network, and stay current.",
   path: "/instructionaldesignconferences",
+  ogImage: "/images/young-professionals-casual-2.png",
 })
 
 const faqSchema = {

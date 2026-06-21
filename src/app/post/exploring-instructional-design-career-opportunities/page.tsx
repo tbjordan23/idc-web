@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -9,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Instructional design opens doors across corporate L&D, higher ed, freelancing, and the public sector — and what each path actually looks like.",
   path: "/post/exploring-instructional-design-career-opportunities",
+  ogImage: "/images/young-woman-laptop-interview-1.png",
 })
 
 
@@ -59,6 +61,20 @@ export default function BlogPost() {
             and that&rsquo;s the point. You get to choose the version that fits your life.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-woman-laptop-interview-1.png"
+            alt="Exploring Instructional Design Career Opportunities"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

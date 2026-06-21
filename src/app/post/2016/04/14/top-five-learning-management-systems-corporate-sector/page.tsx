@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "Top Five Learning Management Systems for the Corporate Sector",
   description: "Choosing a corporate LMS is a big decision. A clear-eyed look at five leading platforms — Cornerstone, SAP SuccessFactors, Docebo, TalentLMS, and Absorb.",
   path: "/post/2016/04/14/top-five-learning-management-systems-corporate-sector",
+  ogImage: "/images/diverse-team-working-1.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;The right corporate LMS isn&rsquo;t the one with the most features — it&rsquo;s the one that fits your organization&rsquo;s size, culture, and learning strategy.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/diverse-team-working-1.png"
+            alt="Top Five Learning Management Systems for the Corporate Sector"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

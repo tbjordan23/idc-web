@@ -10,6 +10,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Definitions and overviews of instructional design, educational technology, instructional technology, curriculum design, and related fields.",
   path: "/whatisinstructionaldesign",
+  ogImage: "/images/woman-thinking-laptop-night-1.png",
 })
 
 const faqSchema = {

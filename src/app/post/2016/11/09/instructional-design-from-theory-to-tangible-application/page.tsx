@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { generatePageMetadata } from "@/lib/metadata"
+import Image from "next/image"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import ShareButtons from "@/components/ui/ShareButtons"
 import CoursesBanner from "@/components/ui/CoursesBanner"
@@ -8,6 +9,7 @@ export const metadata: Metadata = generatePageMetadata({
   title: "Instructional Design: A Paradigm Shift",
   description: "Instructional design evolved from a theory-driven discipline into a practical, outcome-focused field. Here's what that shift means for how you work.",
   path: "/post/2016/11/09/instructional-design-from-theory-to-tangible-application",
+  ogImage: "/images/young-professionals-casual-1.png",
 })
 
 
@@ -56,6 +58,20 @@ export default function BlogPost() {
             &ldquo;Instructional design has grown up. It&rsquo;s no longer just a theoretical framework — it&rsquo;s an applied discipline focused on real performance outcomes for real people.&rdquo;
           </p>
         </blockquote>
+      </ScrollReveal>
+
+      {/* ── Featured Image ──────────────────────────────────────────────────── */}
+      <ScrollReveal delay={1}>
+        <div className="relative mt-10 aspect-video overflow-hidden rounded-card">
+          <Image
+            src="/images/young-professionals-casual-1.png"
+            alt="Instructional Design: A Paradigm Shift"
+            fill
+            className="object-cover"
+            sizes="(min-width: 768px) 768px, 100vw"
+            priority
+          />
+        </div>
       </ScrollReveal>
 
       {/* ── Article Body ────────────────────────────────────────────────────── */}

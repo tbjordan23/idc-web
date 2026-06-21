@@ -8,6 +8,7 @@ export const metadata: Metadata = generatePageMetadata({
   description:
     "Get in touch with Instructional Design Central. Have a question, partnership idea, or just want to connect? We'd love to hear from you.",
   path: "/contactinstructionaldesigncentral",
+  ogImage: "/images/woman-office-computer-1.png",
 })
 
 export default function ContactPage() {
