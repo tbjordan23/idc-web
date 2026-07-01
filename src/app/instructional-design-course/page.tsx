@@ -407,7 +407,7 @@ export default function IDFoundationsCourse() {
         <div className="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="flex flex-col items-center gap-4 rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
-              <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">4th of July Sale &middot; Ends July 4</span>
+              <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Summer Promo &middot; Ends July 8th</span>
               <p className="text-xs font-bold uppercase tracking-widest text-accent">Ready to Start?</p>
               <h2
                 className="font-extrabold tracking-tight text-heading"
@@ -418,7 +418,7 @@ export default function IDFoundationsCourse() {
               <p className="max-w-md text-sm font-medium leading-relaxed text-copy-muted">
                 Join 2,500+ instructional designers who&rsquo;ve already taken this course and walked away with the skills, confidence, and certificate to show for it.
               </p>
-              <div className="flex items-baseline gap-3">
+              <div className="flex items-center gap-3">
                 <span className="text-3xl font-extrabold tracking-tight text-heading">$50</span>
                 <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$100</span>
                 <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 50%</span>
@@ -526,7 +526,7 @@ export default function IDFoundationsCourse() {
 
           <ScrollReveal delay={1}>
             <div className="mt-12 flex flex-col items-center gap-4 rounded-card border border-edge bg-surface-2 p-10 text-center shadow-card">
-              <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">4th of July Sale &middot; Ends July 4</span>
+              <span className="rounded-full bg-accent px-3 py-1 text-xs font-bold uppercase tracking-wider text-white">Summer Promo &middot; Ends July 8th</span>
               <p className="text-xs font-bold uppercase tracking-widest text-accent">Ready to Start?</p>
               <h3
                 className="font-extrabold tracking-tight text-heading"
@@ -538,7 +538,7 @@ export default function IDFoundationsCourse() {
                 Join 2,500+ instructional designers who&rsquo;ve already taken this course and walked away with the skills, confidence, and certificate to show for it.
               </p>
               {/* Pricing */}
-              <div className="flex items-baseline gap-3">
+              <div className="flex items-center gap-3">
                 <span className="text-3xl font-extrabold tracking-tight text-heading">$50</span>
                 <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$100</span>
                 <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 50%</span>
