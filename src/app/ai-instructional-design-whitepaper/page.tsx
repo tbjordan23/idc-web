@@ -47,7 +47,14 @@ const whatsInside = [
   },
 ]
 
-const audiences = ["Instructional Designers", "L&D Professionals", "Team Leads"]
+const audiences = [
+  "Instructional Designers",
+  "L&D Professionals",
+  "Team Leads",
+  "Learning Experience Designers",
+  "Learning Leaders",
+  "Curriculum Developers",
+]
 
 export default function AIInstructionalDesignWhitepaperPage() {
   return (

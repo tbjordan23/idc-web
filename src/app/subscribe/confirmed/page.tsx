@@ -41,7 +41,7 @@ export default function SubscribeConfirmedPage({
               </svg>
             </span>
           </div>
-          <h1 className="mb-3 text-3xl font-bold text-copy">
+          <h1 className="mb-3 text-3xl font-bold text-idc-navy">
             {isExpired ? "Link expired" : "Invalid link"}
           </h1>
           <p className="mb-10 text-base text-copy-muted">
@@ -64,7 +64,7 @@ export default function SubscribeConfirmedPage({
     <main className="flex min-h-[60vh] flex-col items-center justify-center px-4 py-24 text-center">
       <div className="mx-auto max-w-md">
         <div className="mb-6 flex justify-center">
-          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent/10">
+          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-accent-glow">
             <svg
               className="h-8 w-8 text-accent"
               fill="none"
@@ -77,27 +77,30 @@ export default function SubscribeConfirmedPage({
             </svg>
           </span>
         </div>
-        <h1 className="mb-3 text-3xl font-bold text-copy">You&apos;re confirmed!</h1>
+        <h1 className="mb-3 text-3xl font-bold text-idc-navy">You&apos;re confirmed!</h1>
         <p className="mb-2 text-base text-copy-muted">
           Welcome to the IDC community. Your subscription is active and your 35% off coupon is on
-          its way to your inbox.
+          its way to your inbox.{" "}
+          {download && (
+            <strong className="font-bold text-copy-muted">
+              Your download is ready — click below to get your copy.
+            </strong>
+          )}
         </p>
         <p className={download ? "mb-6 text-sm text-copy-muted" : "mb-10 text-sm text-copy-muted"}>
           (Check your spam folder if you don&apos;t see it within a few minutes.)
         </p>
         {download ? (
-          <>
-            <p className="mb-4 text-sm font-medium text-copy-muted">
-              Your download is ready — click below to get your copy.
-            </p>
-            <a
-              href={download.pdfPath}
-              download
-              className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-            >
-              Download {download.label}
-            </a>
-          </>
+          <a
+            href={download.pdfPath}
+            download
+            className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+          >
+            <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+            Download {download.label}
+          </a>
         ) : (
           <Link
             href="/"
