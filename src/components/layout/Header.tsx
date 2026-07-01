@@ -32,6 +32,7 @@ const navigation = {
         { label: "ChatID: ID GPT", href: "/chatid-instructional-design-ai" },
         { label: "Learning Circle Framework", href: "/learning-circle-framework" },
         { label: "Learning Design Canvas", href: "/the-learning-design-canvas" },
+        { label: "AI and ID Whitepaper", href: "/ai-instructional-design-whitepaper" },
       ],
     },
     { label: "Community", href: "/instructionaldesigncommunity" },

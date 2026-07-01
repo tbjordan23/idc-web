@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 const WHITEPAPER_DOWNLOADS: Record<string, { label: string; pdfPath: string }> = {
   whitepaper: {
-    label: "AI-Augmented Instructional Design",
+    label: "AI White Paper",
     pdfPath: "/whitepapers/ai-augmented-instructional-design.pdf",
   },
 }
@@ -82,30 +82,30 @@ export default function SubscribeConfirmedPage({
           Welcome to the IDC community. Your subscription is active and your 35% off coupon is on
           its way to your inbox.
         </p>
-        <p className="mb-10 text-sm text-copy-muted">
+        <p className={download ? "mb-6 text-sm text-copy-muted" : "mb-10 text-sm text-copy-muted"}>
           (Check your spam folder if you don&apos;t see it within a few minutes.)
         </p>
-        {download && (
-          <a
-            href={download.pdfPath}
-            download
-            className="mb-4 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-          >
-            Download {download.label}
-          </a>
-        )}
-        <div>
+        {download ? (
+          <>
+            <p className="mb-4 text-sm font-medium text-copy-muted">
+              Your download is ready — click below to get your copy.
+            </p>
+            <a
+              href={download.pdfPath}
+              download
+              className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+            >
+              Download {download.label}
+            </a>
+          </>
+        ) : (
           <Link
             href="/"
-            className={
-              download
-                ? "inline-flex items-center gap-2 text-sm font-semibold text-copy-muted hover:text-copy"
-                : "inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-            }
+            className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
           >
             Back to Instructional Design Central
           </Link>
-        </div>
+        )}
       </div>
     </main>
   )
