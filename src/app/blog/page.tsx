@@ -14,6 +14,16 @@ export const metadata: Metadata = generatePageMetadata({
 
 const allPosts: BlogPost[] = [
   {
+    title: "Is Instructional Design a Dying Field — or Just Changing?",
+    description:
+      "The anxiety about AI replacing instructional designers is real — and it deserves a real answer. Not a pep talk. Here's what's actually changing, and what it means for your career.",
+    href: "/post/is-instructional-design-a-dying-field",
+    tag: "AI",
+    tags: ["Career"],
+    date: "Jul 1, 2026",
+    readTime: "7 min",
+  },
+  {
     title: "The Quiet Burnout in L&D: Why So Many Instructional Designers Are Exhausted (and What Helps)",
     description:
       "Burnout in L&D rarely looks like a breakdown. It looks like absorbing last-minute scope changes, managing stakeholders who override your expertise, and quietly wondering if you still like this work. Here's what's really driving it — and what actually helps.",
