@@ -1,14 +1,13 @@
 "use client"
 
-import { useRef, useState } from "react"
+import { useState } from "react"
 
 type Status = "idle" | "loading" | "success" | "error"
 
-export default function WhitepaperSignupForm({ pdfPath }: { pdfPath: string }) {
+export default function WhitepaperSignupForm() {
   const [email, setEmail] = useState("")
   const [status, setStatus] = useState<Status>("idle")
   const [errorMsg, setErrorMsg] = useState("")
-  const downloadRef = useRef<HTMLAnchorElement>(null)
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -19,12 +18,11 @@ export default function WhitepaperSignupForm({ pdfPath }: { pdfPath: string }) {
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, source: "whitepaper" }),
       })
       const data = await res.json()
       if (data.success) {
         setStatus("success")
-        downloadRef.current?.click()
       } else {
         setErrorMsg(data.error ?? "Something went wrong.")
         setStatus("error")
@@ -37,11 +35,6 @@ export default function WhitepaperSignupForm({ pdfPath }: { pdfPath: string }) {
 
   return (
     <div className="rounded-card border border-edge bg-surface p-6 shadow-card sm:p-8">
-      {/* Hidden link used to trigger the PDF download once the subscribe call succeeds. */}
-      <a ref={downloadRef} href={pdfPath} download className="hidden" aria-hidden="true">
-        download
-      </a>
-
       {status === "success" ? (
         <div className="flex flex-col items-center gap-2 text-center">
           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-accent-glow">
@@ -50,15 +43,11 @@ export default function WhitepaperSignupForm({ pdfPath }: { pdfPath: string }) {
             </svg>
           </div>
           <p className="text-lg font-extrabold tracking-tight text-heading">
-            Your download has started
+            Check your inbox
           </p>
           <p className="max-w-sm text-sm font-medium leading-relaxed text-copy-muted">
-            If it didn&rsquo;t open automatically,{" "}
-            <a href={pdfPath} download className="font-semibold text-accent hover:text-accent-hover">
-              click here to download it directly
-            </a>
-            . We&rsquo;re also sending a confirmation email your way — check your inbox to
-            complete your newsletter signup and lock in your 35% off coupon.
+            We just sent a confirmation link to <strong>{email}</strong>. Click it to confirm
+            your subscription — your download link and 35% off coupon will be right there.
           </p>
         </div>
       ) : (

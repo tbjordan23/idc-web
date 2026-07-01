@@ -7,13 +7,21 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 }
 
+const WHITEPAPER_DOWNLOADS: Record<string, { label: string; pdfPath: string }> = {
+  whitepaper: {
+    label: "AI-Augmented Instructional Design",
+    pdfPath: "/whitepapers/ai-augmented-instructional-design.pdf",
+  },
+}
+
 export default function SubscribeConfirmedPage({
   searchParams,
 }: {
-  searchParams: { error?: string }
+  searchParams: { error?: string; source?: string }
 }) {
   const isError = !!searchParams.error
   const isExpired = searchParams.error === "expired"
+  const download = searchParams.source ? WHITEPAPER_DOWNLOADS[searchParams.source] : undefined
 
   if (isError) {
     return (
@@ -77,12 +85,27 @@ export default function SubscribeConfirmedPage({
         <p className="mb-10 text-sm text-copy-muted">
           (Check your spam folder if you don&apos;t see it within a few minutes.)
         </p>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
-        >
-          Back to Instructional Design Central
-        </Link>
+        {download && (
+          <a
+            href={download.pdfPath}
+            download
+            className="mb-4 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+          >
+            Download {download.label}
+          </a>
+        )}
+        <div>
+          <Link
+            href="/"
+            className={
+              download
+                ? "inline-flex items-center gap-2 text-sm font-semibold text-copy-muted hover:text-copy"
+                : "inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-3 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+            }
+          >
+            Back to Instructional Design Central
+          </Link>
+        </div>
       </div>
     </main>
   )

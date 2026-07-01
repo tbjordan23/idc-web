@@ -17,26 +17,37 @@ import crypto from "crypto"
 //   - Select the "Confirm my subscription" link text
 //   - Change the link URL to: {{ params.CONFIRMATION_URL }}
 //   - Save & activate
+//
+// Whitepaper signups (source: "whitepaper") use a separate confirmation template so the
+// copy can mention the download instead of just the newsletter. Duplicate the Confirm-Email
+// template, update the wording, apply the same {{ params.CONFIRMATION_URL }} link, and set
+// its ID as BREVO_DOI_TEMPLATE_ID_WHITEPAPER. Falls back to BREVO_DOI_TEMPLATE_ID if unset.
 
-function generateConfirmToken(email: string): string {
+function generateConfirmToken(email: string, source?: string): string {
   const secret = process.env.NEXTAUTH_SECRET!
   const expires = Date.now() + 48 * 60 * 60 * 1000 // 48 hours
-  const data = JSON.stringify({ email, expires })
+  const data = JSON.stringify({ email, expires, source })
   const sig = crypto.createHmac("sha256", secret).update(data).digest("hex")
   return Buffer.from(JSON.stringify({ data, sig })).toString("base64url")
 }
 
 export async function POST(req: NextRequest) {
-  const { email } = await req.json()
+  const { email, source } = await req.json()
 
   if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return NextResponse.json({ error: "Valid email required." }, { status: 400 })
   }
 
   const apiKey = process.env.BREVO_API_KEY
-  const templateId = process.env.BREVO_DOI_TEMPLATE_ID
-    ? Number(process.env.BREVO_DOI_TEMPLATE_ID)
+  const whitepaperTemplateId = process.env.BREVO_DOI_TEMPLATE_ID_WHITEPAPER
+    ? Number(process.env.BREVO_DOI_TEMPLATE_ID_WHITEPAPER)
     : null
+  const templateId =
+    source === "whitepaper" && whitepaperTemplateId
+      ? whitepaperTemplateId
+      : process.env.BREVO_DOI_TEMPLATE_ID
+        ? Number(process.env.BREVO_DOI_TEMPLATE_ID)
+        : null
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.instructionaldesigncentral.com"
 
   if (!apiKey || !templateId) {
@@ -44,7 +55,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Server configuration error." }, { status: 500 })
   }
 
-  const token = generateConfirmToken(email)
+  const token = generateConfirmToken(email, source)
   const confirmationUrl = `${siteUrl}/api/subscribe/confirm?token=${token}`
 
   const emailRes = await fetch("https://api.brevo.com/v3/smtp/email", {

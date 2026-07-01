@@ -10,8 +10,6 @@ export const metadata: Metadata = generatePageMetadata({
   path: "/ai-instructional-design-whitepaper",
 })
 
-const PDF_PATH = "/whitepapers/ai-augmented-instructional-design.pdf"
-
 const whatsInside = [
   "How to use AI to capture and summarize SME interviews and speed up your needs analysis",
   "How to draft key design artifacts faster — design documents, learning objectives, evaluation plans, storyboards, and branching scenarios",
@@ -111,11 +109,11 @@ export default function AIInstructionalDesignWhitepaperPage() {
               Get your free copy
             </h2>
             <p className="mx-auto mt-3 max-w-md text-sm font-medium leading-relaxed text-copy-muted">
-              Enter your email to download the white paper and join the IDC newsletter — plus
+              Enter your email to get the download link and join the IDC newsletter — plus
               get a 35% off coupon on any course or template.
             </p>
             <div className="mx-auto mt-6 max-w-md">
-              <WhitepaperSignupForm pdfPath={PDF_PATH} />
+              <WhitepaperSignupForm />
             </div>
           </div>
         </ScrollReveal>

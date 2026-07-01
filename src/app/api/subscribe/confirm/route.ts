@@ -1,15 +1,15 @@
 import { NextRequest, NextResponse } from "next/server"
 import crypto from "crypto"
 
-function verifyConfirmToken(token: string): string | null {
+function verifyConfirmToken(token: string): { email: string; source?: string } | null {
   try {
     const secret = process.env.NEXTAUTH_SECRET!
     const { data, sig } = JSON.parse(Buffer.from(token, "base64url").toString())
     const expectedSig = crypto.createHmac("sha256", secret).update(data).digest("hex")
     if (sig !== expectedSig) return null
-    const { email, expires } = JSON.parse(data)
+    const { email, expires, source } = JSON.parse(data)
     if (Date.now() > expires) return null
-    return email
+    return { email, source }
   } catch {
     return null
   }
@@ -23,10 +23,11 @@ export async function GET(req: NextRequest) {
     return NextResponse.redirect(`${siteUrl}/subscribe/confirmed?error=invalid`)
   }
 
-  const email = verifyConfirmToken(token)
-  if (!email) {
+  const verified = verifyConfirmToken(token)
+  if (!verified) {
     return NextResponse.redirect(`${siteUrl}/subscribe/confirmed?error=expired`)
   }
+  const { email, source } = verified
 
   const apiKey = process.env.BREVO_API_KEY
   const listId = process.env.BREVO_LIST_ID ? Number(process.env.BREVO_LIST_ID) : null
@@ -66,5 +67,8 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  return NextResponse.redirect(`${siteUrl}/subscribe/confirmed`)
+  const confirmedUrl = source
+    ? `${siteUrl}/subscribe/confirmed?source=${encodeURIComponent(source)}`
+    : `${siteUrl}/subscribe/confirmed`
+  return NextResponse.redirect(confirmedUrl)
 }
