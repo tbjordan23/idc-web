@@ -178,8 +178,8 @@ export default function HomeHero() {
               Instructional Design Central
             </h1>
             <p className="hero-animate hero-animate-delay-2 mt-5 max-w-lg text-lg font-medium text-copy-muted lg:max-w-none">
-              A home for instructional designers — courses, community, and resources
-              to help you do your best work.
+              Helping learning designers master the craft — with courses, community,
+              and resources to get you there.
             </p>
             <div className="hero-animate hero-animate-delay-3 mt-10 flex justify-center lg:justify-start">
               <NewsletterForm variant="hero" />

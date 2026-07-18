@@ -424,9 +424,9 @@ export default function IDFoundationsCourse() {
                 Join 2,500+ instructional designers who&rsquo;ve already taken this course and walked away with the skills, confidence, and certificate to show for it.
               </p>
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-extrabold tracking-tight text-heading">$50</span>
+                <span className="text-3xl font-extrabold tracking-tight text-heading">$75</span>
                 <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$100</span>
-                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 50%</span>
+                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
                 href="https://idcentral.thinkific.com/courses/instructional-design-foundations-course/enroll"
@@ -549,9 +549,9 @@ export default function IDFoundationsCourse() {
               </p>
               {/* Pricing */}
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-extrabold tracking-tight text-heading">$50</span>
+                <span className="text-3xl font-extrabold tracking-tight text-heading">$75</span>
                 <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$100</span>
-                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 50%</span>
+                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
                 href="https://idcentral.thinkific.com/courses/instructional-design-foundations-course/enroll"

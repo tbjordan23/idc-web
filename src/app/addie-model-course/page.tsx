@@ -456,9 +456,9 @@ export default function ADDIECourse() {
                 Join thousands of instructional designers who&rsquo;ve made ADDIE their go-to framework — and walked away with the confidence and certificate to prove it.
               </p>
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-extrabold tracking-tight text-heading">$50</span>
+                <span className="text-3xl font-extrabold tracking-tight text-heading">$75</span>
                 <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$100</span>
-                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 50%</span>
+                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
                 href={ENROLL_URL}
@@ -582,9 +582,9 @@ export default function ADDIECourse() {
                 Join thousands of instructional designers who&rsquo;ve made ADDIE their go-to framework — and walked away with the confidence and certificate to prove it.
               </p>
               <div className="flex items-center gap-3">
-                <span className="text-3xl font-extrabold tracking-tight text-heading">$50</span>
+                <span className="text-3xl font-extrabold tracking-tight text-heading">$75</span>
                 <span className="text-3xl font-extrabold text-copy-muted line-through opacity-50">$100</span>
-                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 50%</span>
+                <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save 25%</span>
               </div>
               <Link
                 href={ENROLL_URL}
