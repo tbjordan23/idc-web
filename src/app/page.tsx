@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import HomeHero from "@/components/ui/HomeHero"
 import Card from "@/components/ui/Card"
+import BundleBanner from "@/components/ui/BundleBanner"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
 import { generatePageMetadata } from "@/lib/metadata"
@@ -89,6 +90,13 @@ export default function HomePage() {
             </ScrollReveal>
           ))}
         </div>
+      </section>
+
+      {/* Bundle promo */}
+      <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
+        <ScrollReveal>
+          <BundleBanner />
+        </ScrollReveal>
       </section>
 
       {/* Resources section */}

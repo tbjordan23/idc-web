@@ -191,6 +191,51 @@ export default function CoursesPage() {
               </div>
             </ScrollReveal>
           ))}
+
+          {/* Bundle option */}
+          <ScrollReveal>
+            <div className="flex flex-col gap-10 border-t border-edge py-16 lg:flex-row lg:items-center lg:gap-16">
+              {/* Icon block in place of a course photo */}
+              <div className="w-full shrink-0 lg:w-80">
+                <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden rounded-card bg-[var(--accent-glow)]">
+                  <svg className="h-20 w-20 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.25}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H4.5a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18.375c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                  </svg>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="flex-1">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wider text-white">
+                  <svg className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                  </svg>
+                  Best Value
+                </span>
+                <h2 className="mt-4 text-2xl font-extrabold tracking-tight text-heading">
+                  The Complete Instructional Design Starter Kit
+                </h2>
+                <div className="mt-3 h-0.5 w-8 rounded bg-accent opacity-60" />
+                <p className="mt-4 text-base font-medium leading-relaxed text-copy-muted">
+                  Both courses above, the 13-template kit, and the AI-augmented ID white paper — bundled together so you get everything you need to start designing learning that works.
+                </p>
+                <div className="mt-4 flex items-center gap-3">
+                  <span className="text-2xl font-extrabold tracking-tight text-heading">$150</span>
+                  <span className="text-lg font-extrabold text-copy-muted line-through opacity-50">$260</span>
+                  <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-0.5 text-xs font-bold text-accent">Save $110</span>
+                </div>
+                <Link
+                  href="/bundles/instructional-design-starter-kit"
+                  className="mt-6 inline-flex items-center gap-2 rounded-lg bg-accent px-6 py-2.5 text-sm font-semibold text-white btn-shadow hover:bg-accent-hover"
+                >
+                  Learn More
+                  <svg className="h-4 w-4 text-white/80" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
