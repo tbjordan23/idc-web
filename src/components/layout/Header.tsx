@@ -27,6 +27,7 @@ const navigation = {
     {
       label: "Resources",
       dropdown: [
+        { label: "Starter Kit Bundle", href: "/bundles/instructional-design-starter-kit" },
         { label: "ID Templates", href: "/instructionaldesigntemplates" },
         { label: "Needs Analysis Tool", href: "/needs-analysis-app" },
         { label: "ChatID: ID GPT", href: "/chatid-instructional-design-ai" },
