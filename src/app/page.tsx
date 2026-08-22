@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import HomeHero from "@/components/ui/HomeHero"
 import Card from "@/components/ui/Card"
-import BundleBanner from "@/components/ui/BundleBanner"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
 import { generatePageMetadata } from "@/lib/metadata"
@@ -28,6 +27,13 @@ const featuredCourses = [
       "Take the guesswork out of course design. A practical deep-dive into ADDIE — the most trusted framework in the field — with templates and a certificate included.",
     href: "/addie-model-course",
     tag: "Course",
+  },
+  {
+    title: "The Complete Instructional Design Starter Kit",
+    description:
+      "Both courses above, the 13-template kit, and the AI-augmented ID white paper — bundled together to save you $110.",
+    href: "/bundles/instructional-design-starter-kit",
+    tag: "Bundle & Save",
   },
 ]
 
@@ -83,20 +89,13 @@ export default function HomePage() {
             All courses →
           </Link>
         </ScrollReveal>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2">
+        <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {featuredCourses.map((course, i) => (
-            <ScrollReveal key={course.href} delay={(i + 1) as 1 | 2} className="h-full">
+            <ScrollReveal key={course.href} delay={(i + 1) as 1 | 2 | 3} className="h-full">
               <Card {...course} variant="course" />
             </ScrollReveal>
           ))}
         </div>
-      </section>
-
-      {/* Bundle promo */}
-      <section className="mx-auto max-w-4xl px-4 pb-16 sm:px-6 lg:px-8">
-        <ScrollReveal>
-          <BundleBanner />
-        </ScrollReveal>
       </section>
 
       {/* Resources section */}
