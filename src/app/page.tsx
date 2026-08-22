@@ -31,9 +31,11 @@ const featuredCourses = [
   {
     title: "The Complete Instructional Design Starter Kit",
     description:
-      "Both courses above, the 13-template kit, and the AI-augmented ID white paper — bundled together to save you $110.",
+      "Both IDC courses, the 13-template kit, and the AI-augmented ID white paper — bundled together to save you $110.",
     href: "/bundles/instructional-design-starter-kit",
     tag: "Bundle & Save",
+    ctaLabel: "Buy Bundle",
+    ctaVariant: "solid" as const,
   },
 ]
 

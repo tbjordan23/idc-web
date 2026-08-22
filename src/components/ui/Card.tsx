@@ -9,9 +9,11 @@ interface CardProps {
   variant?: "course" | "resource" | "blog"
   cta?: string
   external?: boolean
+  ctaLabel?: string
+  ctaVariant?: "outline" | "solid"
 }
 
-export default function Card({ title, description, href, tag, date, variant = "blog", cta, external }: CardProps) {
+export default function Card({ title, description, href, tag, date, variant = "blog", cta, external, ctaLabel, ctaVariant = "outline" }: CardProps) {
   const tagColors = {
     course: "bg-[var(--accent-glow)] text-accent",
     resource: "bg-[rgba(74,123,196,0.15)] text-accent-2",
@@ -58,9 +60,15 @@ export default function Card({ title, description, href, tag, date, variant = "b
       </p>
       {href && (
         variant === "course" ? (
-          <span className="mt-5 inline-flex items-center self-start rounded-lg border border-edge px-4 py-2 text-sm font-semibold text-copy-muted btn-shadow-neutral group-hover:border-edge-hover group-hover:text-copy">
-            Enroll now
-          </span>
+          ctaVariant === "solid" ? (
+            <span className="mt-5 inline-flex items-center self-start rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-white btn-shadow group-hover:bg-accent-hover">
+              {ctaLabel ?? "Enroll now"}
+            </span>
+          ) : (
+            <span className="mt-5 inline-flex items-center self-start rounded-lg border border-edge px-4 py-2 text-sm font-semibold text-copy-muted btn-shadow-neutral group-hover:border-edge-hover group-hover:text-copy">
+              {ctaLabel ?? "Enroll now"}
+            </span>
+          )
         ) : (
           <span className="mt-5 text-sm font-semibold text-accent">
             {cta ?? "Read more"} →
