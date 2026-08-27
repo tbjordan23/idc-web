@@ -132,46 +132,6 @@ export default function InstructionalDesignStarterKit() {
         cta={{ label: CTA_LABEL, href: BUNDLE_URL, target: "_blank" }}
       />
 
-      {/* Bundle Preview */}
-      <section className="border-b border-edge py-16">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <ScrollReveal>
-            <p className="text-xs font-bold uppercase tracking-widest text-accent">Preview</p>
-            <h2
-              className="mt-2 font-extrabold tracking-tight text-heading"
-              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
-            >
-              See What You&rsquo;ll Get
-            </h2>
-            <p className="mt-3 text-base font-medium leading-relaxed text-copy-muted">
-              A look inside the dashboard — every course, template, and resource in the bundle, ready the moment you enroll.
-            </p>
-          </ScrollReveal>
-          <ScrollReveal delay={1}>
-            <div className="mx-auto mt-8 max-w-md overflow-hidden rounded-card border border-edge shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)]">
-              {/* Fake browser bar */}
-              <div className="flex items-center gap-1.5 border-b border-edge bg-surface-2 px-4 py-2.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-red-400/50" />
-                <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/50" />
-                <span className="h-2.5 w-2.5 rounded-full bg-green-400/50" />
-                <div className="ml-3 flex-1 rounded bg-edge/60 px-3 py-1 text-[10px] font-medium text-copy-dim">
-                  instructionaldesigncentral.com/dashboard
-                </div>
-              </div>
-              <div className="relative" style={{ aspectRatio: "1290/1798" }}>
-                <Image
-                  src="/images/bundle.png"
-                  alt="Preview of the IDC dashboard showing the four items in the Instructional Design Starter Kit bundle: the ADDIE Model course, Instructional Design Foundations course, Instructional Design Template Kit, and AI-Augmented Instructional Design course"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 448px"
-                />
-              </div>
-            </div>
-          </ScrollReveal>
-        </div>
-      </section>
-
       {/* What's Included */}
       <section className="border-b border-edge py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -222,6 +182,46 @@ export default function InstructionalDesignStarterKit() {
             <p className="border-l-4 border-accent pl-6 text-lg font-medium leading-relaxed text-copy">
               This bundle includes two certified courses on Instructional Design Foundations and the ADDIE Model, 13 robust templates, and a white paper on how to use AI with instructional design. Everything you need to design learning that actually works.
             </p>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Bundle Preview */}
+      <section className="border-b border-edge py-16">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+          <ScrollReveal>
+            <p className="text-xs font-bold uppercase tracking-widest text-accent">Preview</p>
+            <h2
+              className="mt-2 font-extrabold tracking-tight text-heading"
+              style={{ fontSize: "clamp(22px,3vw,34px)", letterSpacing: "-0.05rem" }}
+            >
+              See What You&rsquo;ll Get
+            </h2>
+            <p className="mt-3 text-base font-medium leading-relaxed text-copy-muted">
+              A look inside the dashboard — every course, template, and resource in the bundle, ready the moment you enroll.
+            </p>
+          </ScrollReveal>
+          <ScrollReveal delay={1}>
+            <div className="mx-auto mt-8 max-w-md overflow-hidden rounded-card border border-edge shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)]">
+              {/* Fake browser bar */}
+              <div className="flex items-center gap-1.5 border-b border-edge bg-surface-2 px-4 py-2.5">
+                <span className="h-2.5 w-2.5 rounded-full bg-red-400/50" />
+                <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/50" />
+                <span className="h-2.5 w-2.5 rounded-full bg-green-400/50" />
+                <div className="ml-3 flex-1 rounded bg-edge/60 px-3 py-1 text-[10px] font-medium text-copy-dim">
+                  instructionaldesigncentral.com/dashboard
+                </div>
+              </div>
+              <div className="relative" style={{ aspectRatio: "1290/1798" }}>
+                <Image
+                  src="/images/bundle.png"
+                  alt="Preview of the IDC dashboard showing the four items in the Instructional Design Starter Kit bundle: the ADDIE Model course, Instructional Design Foundations course, Instructional Design Template Kit, and AI-Augmented Instructional Design course"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 448px"
+                />
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>
