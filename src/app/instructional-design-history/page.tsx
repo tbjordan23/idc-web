@@ -1,7 +1,9 @@
 import type { Metadata } from "next"
+import { Fragment } from "react"
 import { generatePageMetadata } from "@/lib/metadata"
 import Link from "next/link"
 import ScrollReveal from "@/components/ui/ScrollReveal"
+import BundleBanner from "@/components/ui/BundleBanner"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "History of Instructional Design",
@@ -341,7 +343,8 @@ export default function IDHistoryPage() {
       {/* ── Timeline ────────────────────────────────────────────────────────── */}
       <div className="mt-16 space-y-20">
         {eras.map((era, eraIndex) => (
-          <ScrollReveal key={era.period} delay={(eraIndex % 3) as 0 | 1 | 2}>
+          <Fragment key={era.period}>
+          <ScrollReveal delay={(eraIndex % 3) as 0 | 1 | 2}>
             <div id={era.id} className="scroll-mt-24">
               {/* Era header */}
               <div className={`mb-8 rounded-card border p-5 ${era.borderAccent} ${era.bgAccent}`}>
@@ -400,6 +403,14 @@ export default function IDHistoryPage() {
               </div>
             </div>
           </ScrollReveal>
+
+          {/* Bundle promo — dropped in about halfway through the timeline */}
+          {era.id === "era-1990s" && (
+            <ScrollReveal>
+              <BundleBanner />
+            </ScrollReveal>
+          )}
+          </Fragment>
         ))}
       </div>
 
