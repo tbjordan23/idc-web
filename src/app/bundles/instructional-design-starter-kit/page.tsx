@@ -92,13 +92,13 @@ const bundleItems = [
 
 const previewSlides: BundlePreviewSlide[] = [
   {
-    src: "/images/bundle.png",
+    src: "/images/dashboard-large.png",
     alt: "Preview of the IDC dashboard showing the four items in the Instructional Design Starter Kit bundle: the ADDIE Model course, Instructional Design Foundations course, Instructional Design Template Kit, and AI-Augmented Instructional Design course",
     caption: "Your dashboard — every course, template, and resource in the bundle, ready the moment you enroll",
     url: "instructionaldesigncentral.com/dashboard",
   },
   {
-    src: "/templates/template-demo.png",
+    src: "/images/templates-large.png",
     alt: "Preview of all 13 instructional design templates included in the kit — including the ADDIE Template, Needs Analysis, Storyboard, Learning Design Canvas, and more",
     caption: "All 13 templates — delivered instantly in Word, PowerPoint, and PDF formats",
     url: "instructionaldesigncentral.com/instructionaldesigntemplates",
