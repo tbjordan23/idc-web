@@ -3,7 +3,7 @@ import { generatePageMetadata } from "@/lib/metadata"
 import Hero from "@/components/ui/Hero"
 import ScrollReveal from "@/components/ui/ScrollReveal"
 import Link from "next/link"
-import Image from "next/image"
+import BundlePreviewCarousel, { type BundlePreviewSlide } from "@/components/ui/BundlePreviewCarousel"
 
 export const metadata: Metadata = generatePageMetadata({
   title: "The Complete Instructional Design Starter Kit",
@@ -87,6 +87,57 @@ const bundleItems = [
         <path strokeLinecap="round" strokeLinejoin="round" d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
       </svg>
     ),
+  },
+]
+
+const previewSlides: BundlePreviewSlide[] = [
+  {
+    src: "/images/bundle.png",
+    alt: "Preview of the IDC dashboard showing the four items in the Instructional Design Starter Kit bundle: the ADDIE Model course, Instructional Design Foundations course, Instructional Design Template Kit, and AI-Augmented Instructional Design course",
+    caption: "Your dashboard — every course, template, and resource in the bundle, ready the moment you enroll",
+    url: "instructionaldesigncentral.com/dashboard",
+  },
+  {
+    src: "/templates/template-demo.png",
+    alt: "Preview of all 13 instructional design templates included in the kit — including the ADDIE Template, Needs Analysis, Storyboard, Learning Design Canvas, and more",
+    caption: "All 13 templates — delivered instantly in Word, PowerPoint, and PDF formats",
+    url: "instructionaldesigncentral.com/instructionaldesigntemplates",
+  },
+  {
+    src: "/course-screenshots/foundations/what-is-id-lesson.png",
+    alt: "Course interface showing the What is Instructional Design lesson with sidebar navigation",
+    caption: "ID Foundations: a clean, distraction-free lesson layout with full course navigation in the sidebar",
+    url: "instructionaldesigncentral.com/instructional-design-course",
+  },
+  {
+    src: "/course-screenshots/foundations/template-downloads.png",
+    alt: "Template downloads available inside the Instructional Design Foundations course",
+    caption: "ID Foundations: professional templates built in — download and start using them right away",
+    url: "instructionaldesigncentral.com/instructional-design-course",
+  },
+  {
+    src: "/course-screenshots/foundations/certificate.png",
+    alt: "Certificate of Completion for Instructional Design Foundations",
+    caption: "ID Foundations: earn a certificate you can share on LinkedIn or include in your portfolio",
+    url: "instructionaldesigncentral.com/instructional-design-course",
+  },
+  {
+    src: "/course-screenshots/addie/modern-layout-navigaton-2.png",
+    alt: "Analysis Phase lesson showing clean layout with sidebar navigation and instructional content",
+    caption: "ADDIE Model: a modern lesson layout with phase-by-phase navigation",
+    url: "instructionaldesigncentral.com/addie-model-course",
+  },
+  {
+    src: "/course-screenshots/addie/agile-application.png",
+    alt: "Design Phase lesson showing Agile Application with Rapid Prototyping, User Stories, and Design Sprints sections",
+    caption: "ADDIE Model: see how ADDIE adapts to fast-moving, iterative design environments",
+    url: "instructionaldesigncentral.com/addie-model-course",
+  },
+  {
+    src: "/course-screenshots/addie/certificate.png",
+    alt: "Certificate of Completion for Mastering the ADDIE Model",
+    caption: "ADDIE Model: earn a certificate you can share on LinkedIn or include in your portfolio",
+    url: "instructionaldesigncentral.com/addie-model-course",
   },
 ]
 
@@ -198,29 +249,12 @@ export default function InstructionalDesignStarterKit() {
               See What You&rsquo;ll Get
             </h2>
             <p className="mt-3 text-base font-medium leading-relaxed text-copy-muted">
-              A look inside the dashboard — every course, template, and resource in the bundle, ready the moment you enroll.
+              A look inside the dashboard, the template kit, and both certification courses — everything in the bundle, ready the moment you enroll.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={1}>
-            <div className="mx-auto mt-8 max-w-md overflow-hidden rounded-card border border-edge shadow-[0_8px_40px_-8px_rgba(0,0,0,0.18)]">
-              {/* Fake browser bar */}
-              <div className="flex items-center gap-1.5 border-b border-edge bg-surface-2 px-4 py-2.5">
-                <span className="h-2.5 w-2.5 rounded-full bg-red-400/50" />
-                <span className="h-2.5 w-2.5 rounded-full bg-yellow-400/50" />
-                <span className="h-2.5 w-2.5 rounded-full bg-green-400/50" />
-                <div className="ml-3 flex-1 rounded bg-edge/60 px-3 py-1 text-[10px] font-medium text-copy-dim">
-                  instructionaldesigncentral.com/dashboard
-                </div>
-              </div>
-              <div className="relative" style={{ aspectRatio: "1290/1798" }}>
-                <Image
-                  src="/images/bundle.png"
-                  alt="Preview of the IDC dashboard showing the four items in the Instructional Design Starter Kit bundle: the ADDIE Model course, Instructional Design Foundations course, Instructional Design Template Kit, and AI-Augmented Instructional Design course"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 448px"
-                />
-              </div>
+            <div className="mt-8">
+              <BundlePreviewCarousel slides={previewSlides} />
             </div>
           </ScrollReveal>
         </div>
