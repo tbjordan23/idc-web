@@ -152,12 +152,6 @@ const previewSlides: BundlePreviewSlide[] = [
     url: "instructionaldesigncentral.com/instructional-design-course",
   },
   {
-    src: "/course-screenshots/foundations/course-management-2.png",
-    alt: "Learner dashboard showing enrolled courses, progress tracking, and certificate downloads",
-    caption: "ID Foundations: your personal dashboard puts everything in one place — track progress and download your certificate when you're done",
-    url: "instructionaldesigncentral.com/instructional-design-course",
-  },
-  {
     src: "/course-screenshots/foundations/activity-slide.png",
     alt: "Course activity slide showing a visual scenario",
     caption: "ID Foundations: visual activities and scenarios throughout keep the experience engaging",
@@ -227,12 +221,6 @@ const previewSlides: BundlePreviewSlide[] = [
     src: "/course-screenshots/addie/community-forum-2.png",
     alt: "IDC online community Feed page with 490+ members and recent discussion posts",
     caption: "ADDIE Model: a built-in community keeps you connected — post questions, share insights, and learn alongside other ID professionals",
-    url: "instructionaldesigncentral.com/addie-model-course",
-  },
-  {
-    src: "/course-screenshots/addie/course-management-2.png",
-    alt: "Learner dashboard showing all enrolled IDC courses with progress indicators",
-    caption: "ADDIE Model: your personal dashboard puts everything in one place — track progress and download your certificate when you're done",
     url: "instructionaldesigncentral.com/addie-model-course",
   },
   {

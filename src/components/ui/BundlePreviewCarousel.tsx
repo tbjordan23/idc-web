@@ -62,7 +62,7 @@ export default function BundlePreviewCarousel({ slides }: Props) {
         </div>
 
         {/* Image stage */}
-        <div className="relative h-[320px] overflow-hidden bg-[#f5f5f5] sm:h-[420px]">
+        <div className="relative h-[320px] overflow-hidden bg-white sm:h-[420px]">
           {slides.map((slide, i) => (
             <div
               key={slide.src}
