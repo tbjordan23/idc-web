@@ -32,47 +32,54 @@ function generateConfirmToken(email: string, source?: string): string {
 }
 
 export async function POST(req: NextRequest) {
-  const { email, source } = await req.json()
+  try {
+    const { email, source } = await req.json()
 
-  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return NextResponse.json({ error: "Valid email required." }, { status: 400 })
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      return NextResponse.json({ error: "Valid email required." }, { status: 400 })
+    }
+
+    const apiKey = process.env.BREVO_API_KEY
+    const whitepaperTemplateId = process.env.BREVO_DOI_TEMPLATE_ID_WHITEPAPER
+      ? Number(process.env.BREVO_DOI_TEMPLATE_ID_WHITEPAPER)
+      : null
+    const templateId =
+      source === "whitepaper" && whitepaperTemplateId
+        ? whitepaperTemplateId
+        : process.env.BREVO_DOI_TEMPLATE_ID
+          ? Number(process.env.BREVO_DOI_TEMPLATE_ID)
+          : null
+    const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.instructionaldesigncentral.com"
+
+    if (!apiKey || !templateId) {
+      console.error("Missing BREVO_API_KEY or BREVO_DOI_TEMPLATE_ID")
+      return NextResponse.json({ error: "Server configuration error." }, { status: 500 })
+    }
+
+    const token = generateConfirmToken(email, source)
+    const confirmationUrl = `${siteUrl}/api/subscribe/confirm?token=${token}`
+
+    const emailRes = await fetch("https://api.brevo.com/v3/smtp/email", {
+      method: "POST",
+      headers: { "api-key": apiKey, "Content-Type": "application/json" },
+      body: JSON.stringify({
+        to: [{ email }],
+        templateId,
+        params: { CONFIRMATION_URL: confirmationUrl },
+      }),
+    })
+
+    if (!emailRes.ok) {
+      const data = await emailRes.json().catch(() => ({}))
+      // Brevo returns 401 with code "unauthorized" for a bad/revoked API key —
+      // log the code so a rotated key shows up clearly in Railway logs.
+      console.error(`Brevo send email error (status ${emailRes.status}):`, data)
+      return NextResponse.json({ error: "Could not subscribe. Please try again." }, { status: 502 })
+    }
+
+    return NextResponse.json({ success: true })
+  } catch (err) {
+    console.error("Unexpected error in /api/subscribe:", err)
+    return NextResponse.json({ error: "Something went wrong. Please try again." }, { status: 500 })
   }
-
-  const apiKey = process.env.BREVO_API_KEY
-  const whitepaperTemplateId = process.env.BREVO_DOI_TEMPLATE_ID_WHITEPAPER
-    ? Number(process.env.BREVO_DOI_TEMPLATE_ID_WHITEPAPER)
-    : null
-  const templateId =
-    source === "whitepaper" && whitepaperTemplateId
-      ? whitepaperTemplateId
-      : process.env.BREVO_DOI_TEMPLATE_ID
-        ? Number(process.env.BREVO_DOI_TEMPLATE_ID)
-        : null
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.instructionaldesigncentral.com"
-
-  if (!apiKey || !templateId) {
-    console.error("Missing BREVO_API_KEY or BREVO_DOI_TEMPLATE_ID")
-    return NextResponse.json({ error: "Server configuration error." }, { status: 500 })
-  }
-
-  const token = generateConfirmToken(email, source)
-  const confirmationUrl = `${siteUrl}/api/subscribe/confirm?token=${token}`
-
-  const emailRes = await fetch("https://api.brevo.com/v3/smtp/email", {
-    method: "POST",
-    headers: { "api-key": apiKey, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      to: [{ email }],
-      templateId,
-      params: { CONFIRMATION_URL: confirmationUrl },
-    }),
-  })
-
-  if (!emailRes.ok) {
-    const data = await emailRes.json().catch(() => ({}))
-    console.error("Brevo send email error:", data)
-    return NextResponse.json({ error: "Could not subscribe. Please try again." }, { status: 502 })
-  }
-
-  return NextResponse.json({ success: true })
 }
